@@ -1,0 +1,24 @@
+80	Creating Block Snake
+	Eating Block Snake
+81	Snake Spawner (Continuous)
+	Snake Spawner (Burst)
+A1	Enemy Stack V2
+A2	Enemy Stack V2 (Upside-down)
+A3	Line-Guided Any Sprite (Vanilla)
+	Line-Guided Any Sprite (Vanilla, Extra Bit set))
+	Line-Guided Any Sprite (Vanilla, Carryable)
+	Line-Guided Any Sprite (Custom)
+	Line-Guided Any Sprite (Custom, Extra Bit set)
+	Line-Guided Any Sprite (Custom, Carryable)
+	Line-Guided Any Sprite (Custom, Extra Bit set, Carryable)
+A4	X Follow Sprite
+	Y Follow Sprite
+A5	Sprite offsetter.
+A6	Pipe Spawner (Down)
+	Pipe Spawner (Left)
+	Pipe Spawner (Up)
+	Pipe Spawner (Right)
+	Pipe Cannon Spawner (Down)
+	Pipe Cannon Spawner (Left)
+	Pipe Cannon Spawner (Up)
+	Pipe Cannon Spawner (Right)

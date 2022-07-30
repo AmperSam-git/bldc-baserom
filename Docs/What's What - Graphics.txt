@@ -1,0 +1,43 @@
+--------
+Graphics
+--------
+
+The following are what vanilla graphics files have been edited in the baserom, backups can be found in the Backups/Graphics folder.
+
+GFX14 : Global Tiles
+ - a couple unused tiles in the bullet launcher were replaced with sideways cloud graphics.
+
+GFX16 : Rope Set Foregroud
+ - the tiles for the line guide have been moved to ExGFXE17 (FG2) as they now are global
+ - a proper corner tiles for rope foreground was added so the objects can be used properly
+ - the graphics for the log bridge from GFX19 was moved here
+ - a version of the Reznor bridge that isn't 2BPP was put into free space
+
+GFX19 : Cloud & Forest Background
+ - tiles for the log bridge have been moved to GFX16
+
+GFX2B : Layer 3 tiles
+ - The unused graphics for "Super Mario Bros. 4" has been replaced with "Romhack Races Baserom"
+
+GFX33 : Global Animation Tiles
+ - tiles for ON/OFF blocks have been added to unused space in the resource
+
+----------
+ExGraphics
+----------
+
+ExGFX61: Global ExAnimation
+ - contains optional animation frames for One-Ways and for the Infinite throw block
+ - see the "What's What - Exanimation.txt" document for more details.
+
+ExGFXB54: ExGraphic Version of Big Bush and Pipe
+ - contains optional animation tiles for the bushes and big pipe that can be used as ExGraphics
+ - must be loaded into slot FG2, and their Map16 Files are found in Backup/Map16. See demo level for example.
+
+ExGFXE17: Custom Global Block Tiles
+ - contains all tiles for custom global blocks and the line guide tiles have been moved here from GFX16
+ - this resource is arranged to be drop in replacement for GFX17 (FG2) as the custom blocks that override the tiles for the Big Bush and Large Slanted Pipe objects.
+ - any level that uses line guides, formerly GFX16 (FG3), will now need ExGFXE17 (FG2), for line guides to properly appear.
+
+ExGFXFF: Font
+ - a basic 8x8 font and symbol set, used in the Demo levels for in-game text.
