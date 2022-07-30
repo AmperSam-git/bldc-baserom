@@ -113,7 +113,7 @@ Erase:
 
 
 	LDA #!sfx_open			;\Play sfx.
-	STA !RAM_port_open		;/
+	STA !sfx_port		;/
 TopCorner:
 MarioAbove:
 	RTL

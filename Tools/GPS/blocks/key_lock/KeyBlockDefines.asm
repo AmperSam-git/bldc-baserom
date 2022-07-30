@@ -10,7 +10,7 @@
 !SpriteNum = $80			;>what sprite number opens the gate, $80 is smw's
 							; key sprite. Not used if "!custom_type" is 2.
 !sfx_open =	$10				;\Door opening sfx
-!RAM_port_open = $1DF9		;/
+!sfx_port = $1DF9|!addr		;/
 
 !AllowNotCarried = 1		; 0 = key must be carried, 1 = key can be tossed into blocks
 
