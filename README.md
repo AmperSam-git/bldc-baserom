@@ -1,6 +1,6 @@
-# Romhack Races Baserom
+# BLDC Baserom
 
-This is the official baserom for creating Super Mario World race levels for [Romhack Races](https://romhackraces.com/). This baserom is tailor-made for both race level creation as well as general purpose hacking, but a lot of the changes made and patches included are to accommodate Kaizo level design in particular (see the [baserom Wiki page](https://github.com/romhackraces/baserom/wiki/Changes-or-Additions-to-Vanilla-Super-Mario-World) for a detailed breakdown of the all changes).
+This is the source of SMW Central's Baserom Level Design Contest baserom.
 
 ## Getting Started
 
@@ -22,16 +22,8 @@ When working on your hack Lunar Helper is your new best friend, you can find it 
 
 In addition to Lunar Helper, a tool is bundled with Lunar Magic to monitor your hack and enable you to quickly export levels, map16, palettes and so forth for rebuilding instead of doing so manually. You'll find when you open Lunar Magic, there will be a new button between the Save and Undo buttons in the toolbar to enable this with one-click. See the Lunar Monitor readme in the Docs folder for more information.
 
-## More Information
-
-For more information about the creating levels for Romhack Races or for additional documentation about what is in the baserom check out the [baserom Wiki](https://github.com/romhackraces/baserom/wiki). If you need more information on how to use some of the resources included in the baserom, check out the documentation in the Docs folder included in this baserom.
-
-If you have feedback or would like additional support with the baserom from the Romhack Races team, please visit the `#baserom-support` in the Romhack Races Discord server.
-
-### Resource Credits
+## Resource Credits
 
 It is good practice to keep track of all resources used in your hacks if you can help it and credit their authors. See the included [CREDITS.txt](CREDITS.txt) file for a list of all resources included in the baserom.
 
-### Contributing
-
-If you have suggestions or improvements for this baserom feel free to open issues or contribute to it on [GitHub](https://github.com/romhackraces/baserom) or reach out on Discord to one of the Romhack Races team. Important: this project has no license nor do the authors or organizers claim any rights to the resources included in this project, those remain the rights of their respective authors.
+Important: this project has no license nor do the authors or organizers claim any rights to the resources included in this project, those remain the rights of their respective authors.
