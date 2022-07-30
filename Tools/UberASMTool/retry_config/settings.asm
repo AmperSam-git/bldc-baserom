@@ -9,7 +9,7 @@
 ; 3 = no retry prompt/respawn (vanilla death: as if "no" is chosen automatically, use this if you only want the multi-midway feature).
 ;
 ; Note: you can override this per sublevel (see "tables.asm") and also at any point by setting a certain RAM address (see "docs/ram_map.txt").
-    !default_prompt_type = 0
+    !default_prompt_type = 3
 
 ;========================================================================
 
