@@ -95,6 +95,18 @@
 3A6:0100 donut/donut_lift_up.asm
 3A7:0100 donut/donut_lift_down.asm
 
+; ICY BLOCKS ----------------------------------------------;
+3C0:0130 icy/ice_block.asm
+3C1:0130 icy/frozen_coin.asm
+3C2:0130 icy/frozen_pswitch.asm
+3C3:0130 icy/frozen_muncher.asm
+3C4:0130 icy/frozen_noteblock.asm
+3C5:0130 icy/frozen_question_block.asm
+3C6:0130 icy/frozen_turnblock.asm
+3C7:0130 icy/frozen_onoffblock.asm
+3C8:0130 icy/frozen_yoshicoin_top.asm
+3D8:0130 icy/frozen_yoshicoin_bottom.asm
+
 ; SCREEN SCROLLING PIPES (DO NOT MODIFY) ------------------;
 
 ; Large Vertical Two-Way Pipe
