@@ -156,10 +156,10 @@
 3c0	0	A frozen block that disappears when thawed.
 3c1	0	A frozen coin.
 3c2	0	A frozen version of sprite 3E.
-3c3	0	A frozen Muncher.
+3c3	0	A frozen version of tile 12F.
 3c4	0	A frozen note block.
 3c5	0	A frozen multiple coin block.
-3c6	0	A frozen coin.
+3c6	0	A frozen turnblock.
 3c7	0	A frozen ON-OFF block.
 3c8	0	The top of a frozen Yoshi coin.
 3d8	0	The bottom of a frozen Yoshi coin.
