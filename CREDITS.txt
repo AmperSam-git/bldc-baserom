@@ -79,8 +79,10 @@ Consistent 8 Frame Cape Float Delay - DJLocks, xHF01x - https://smwc.me/s/28534
 Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
 
 -- Custom Blocks --
+Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
 Hurt / Death Block for Kaizo / Pit Hacks - dacin - https://smwc.me/s/27268
 Icy/Frozen Blocks Pack - Ersanio - https://smwc.me/s/27360
+Key lock blocks* - HammerBrother - https://smwc.me/s/13540
 Key Teleport - smkdan - https://smwc.me/s/21068
 Ledge Vine - ASM - https://smwc.me/s/3944
 No Jump - Darolac - https://smwc.me/s/21777
@@ -91,7 +93,6 @@ Question Mark Blocks v1.3.0* - MarioFanGamer, lx5 - https://smwc.me/s/19775
 Quicksand Blocks - Roy, Sonikku - https://smwc.me/s/21197
 Screen Scrolling Pipes 4.0.2* - HammerBrother - https://smwc.me/s/27019
 Super Bounce Blocks - dogemaster - https://smwc.me/s/22934
-Key lock blocks* - HammerBrother - https://smwc.me/s/13540
 
 * simplified for use in the baserom
 
