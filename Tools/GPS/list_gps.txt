@@ -29,9 +29,9 @@
 2A6:0025 outline_coin.asm
 2A7:0002 mario_passable.asm
 2A8:0130 no_jump.asm
-;2A9
-;2AA
-;2AB
+2A9:0025 silver_pswitch_door_top.asm
+2AA:0025 silver_pswitch_door_small.asm
+2AB:0025 teleport.asm
 ;2AC
 ;2AD
 ;2AE
@@ -98,7 +98,7 @@
 ; ICY BLOCKS ----------------------------------------------;
 3C0:0130 icy/ice_block.asm
 3C1:0130 icy/frozen_coin.asm
-3C2:0130 icy/frozen_pswitch.asm
+3C2:0130 icy/frozen_door.asm
 3C3:0130 icy/frozen_muncher.asm
 3C4:0130 icy/frozen_noteblock.asm
 3C5:0130 icy/frozen_question_block.asm

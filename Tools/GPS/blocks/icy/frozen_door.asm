@@ -6,11 +6,11 @@ FIAR:
 	%fireball_smoke()
 
 	REP #$10
-	LDX.w #$012F ; Map16 tile the ice block should turn into
+	LDX.w #$001F ; Map16 tile the ice block should turn into
 	%change_map16()
 	SEP #$10
 
 Return:
 	RTL
 
-print "A frozen muncher."
+print "A frozen door."

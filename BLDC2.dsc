@@ -23,6 +23,9 @@
 2a6	0	A coin outline that turns into a coin after an amount of time.
 2a7	0	A block that is only passable by Mario. To sprites, it will obey the Act as setting.
 2a8	0	Disables jump/spinjump on contact.
+2a9	0	The top part of a Silver P-switch door.
+2aa	0	A small Silver P-switch door.
+2ab	0	A block that will teleport Mario to the current screen exit.
 2b0	0	The bottom of the 1x2 key block.
 2b1	0	The left of the 2x1 key block.
 2b2	0	The right of the 2x1 key block.
@@ -157,8 +160,8 @@
 3bc	0	Question block that always spawns a Spring.
 3c0	0	A frozen block that disappears when thawed.
 3c1	0	A frozen coin.
-3c2	0	A frozen version of sprite 3E.
-3c3	0	A frozen version of tile 12F.
+3c2	0	A frozen door.
+3c3	0	A frozen muncher.
 3c4	0	A frozen note block.
 3c5	0	A frozen multiple coin block.
 3c6	0	A frozen turnblock.
