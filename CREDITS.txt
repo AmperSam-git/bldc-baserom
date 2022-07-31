@@ -65,9 +65,11 @@ Yoshi Pipe Animation Fix - Kevin https://smwc.me/s/30127
 
 -- Sprites --
 Better Creating/Eating Block Snakes v1.1 - leod - https://smwc.me/s/18725
-Enemy Stack V2 (and Upside-down Stack) - dtothefourth
+Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
 Line-Guided Any Sprite v1.2 - Kevin, dtothefourth - https://smwc.me/s/24672
 Sprite Offsetter - Koopster - https://smwc.me/s/26541
+Pipe Spawner - dtothefourth - https://www.patreon.com/posts/pipe-spawner-48840077
+X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 
 -- Graphics --
 Super Mario Maker: Super Mario World - Conveyor Belt - Ralshi02 -https://smwc.me/s/19259

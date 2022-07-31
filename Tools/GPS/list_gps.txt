@@ -24,8 +24,8 @@
 2A1:0100 PassableLedge.asm
 2A2:0025 set_to_off.asm
 2A3:0025 set_to_on.asm
-;2A4
-;2A5
+2A4:0025 QuicksandNorm.asm
+2A5:0025 QuicksandPit.asm
 2A6:0025 outline_coin.asm
 2A7:0002 mario_passable.asm
 2A8:0130 no_jump.asm

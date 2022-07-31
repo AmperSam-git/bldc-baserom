@@ -1,14 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Quicksand (Pit)
 ; By Sonikku
-; Description: 
+; Description:
 ; Almost exactly like Magus' quicksand block, except this is more customizable.
-; This version makes it very hard for Mario to move left and right. 
+; This version makes it very hard for Mario to move left and right.
 ; Customization:
-; !Power is how hard it is to move while under the effect of the block. Change it 
+; !Power is how hard it is to move while under the effect of the block. Change it
 ; lower to make Mario's jump less effective, set it higher for an easier escape.
 ; !SpriteSink is how fast sprites go in the block. Set it lower for a slower fall, or set it higher
-; so sprites fall faster. 
+; so sprites fall faster.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 print "A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed."

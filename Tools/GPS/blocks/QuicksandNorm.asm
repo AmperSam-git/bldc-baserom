@@ -1,14 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Quicksand (Normal)
 ; By Sonikku
-; Description: 
+; Description:
 ; Almost exactly like Magus' quicksand block, except this is more customizable.
-; This version allows Mario to run and walk as fast as he pleases. 
+; This version allows Mario to run and walk as fast as he pleases.
 ; Customization:
-; !Power is how hard it is to move up while under the effect of the block. Change it 
+; !Power is how hard it is to move up while under the effect of the block. Change it
 ; lower to make Mario's jump less effective, set it higher for an easier escape. Don't go over $7F.
 ; !SpriteSink is how fast sprites go in the block. Set it lower for a slower fall, or set it higher
-; so sprites fall faster. 
+; so sprites fall faster.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 print "A quicksand block that makes Mario and sprites slowly sink but still lets Mario walk at full speed."

@@ -18,6 +18,8 @@
 2a1	0	A ledge that can be passed through by tapping down
 2a2	0	A button that sets the on/off status to off.
 2a3	0	A button that sets the on/off status to on.
+2a4	0	A quicksand block that makes Mario and sprites slowly sink but still lets Mario walk at full speed.
+2a5	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 2a6	0	A coin outline that turns into a coin after an amount of time.
 2a7	0	A block that is only passable by Mario. To sprites, it will obey the Act as setting.
 2a8	0	Disables jump/spinjump on contact.
