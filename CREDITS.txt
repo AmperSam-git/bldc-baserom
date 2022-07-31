@@ -1,5 +1,6 @@
 -- Big Resources --
 Dynamic Spritesheet System v1.01 - lx5 - https://github.com/TheLX5/DynamicSpritesetSystem/releases/tag/v1.01
+SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938
 
 -- Patches --
 Chucks With Extra Bit Retain Type When Hurt - JamesD28 - https://smwc.me/s/28594
@@ -11,12 +12,10 @@ Placeable Kicked Shell v1.1 - Kevin - https://smwc.me/s/28994
 Poison Mushroom v1.0 - JackTheSpades, mikeyk - https://smwc.me/s/20440
 RAM Specific L/R Scroll Disable - Chdata - https://smwc.me/s/20355
 RAM Toggled Status Bar (& IRQ) - Kevin - https://smwc.me/s/28449
-SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
+Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Properties Depending on the Extra Bit v1.1 - Kevin - https://smwc.me/s/27942
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
-Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
-
 
 -- Bug Fixes --
 $13FB Game Crash Fix (Fireberry) - p4plus2 - https://smwc.me/s/18319
