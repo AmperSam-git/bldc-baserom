@@ -40,7 +40,6 @@ Main:
 	BNE .loop
 
 .end
-	%glitter()
 	%erase_block()
 
 Return:
