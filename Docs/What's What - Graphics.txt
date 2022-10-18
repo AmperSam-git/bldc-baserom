@@ -16,28 +16,145 @@ GFX16 : Rope Set Foregroud
 GFX19 : Cloud & Forest Background
  - tiles for the log bridge have been moved to GFX16
 
+GFX29 : Infinity symbol in the status bar
+
 GFX2B : Layer 3 tiles
  - The unused graphics for "Super Mario Bros. 4" has been replaced with "Romhack Races Baserom"
 
 GFX33 : Global Animation Tiles
  - tiles for ON/OFF blocks have been added to unused space in the resource
 
-----------
+
+---------------
 ExGraphics
-----------
-
-ExGFX61: Global ExAnimation
- - contains optional animation frames for One-Ways and for the Infinite throw block
- - see the "What's What - Exanimation.txt" document for more details.
-
-ExGFXB54: ExGraphic Version of Big Bush and Pipe
- - contains optional animation tiles for the bushes and big pipe that can be used as ExGraphics
- - must be loaded into slot FG2, and their Map16 Files are found in Backup/Map16. See demo level for example.
-
-ExGFXE17: Custom Global Block Tiles
- - contains all tiles for custom global blocks and the line guide tiles have been moved here from GFX16
- - this resource is arranged to be drop in replacement for GFX17 (FG2) as the custom blocks that override the tiles for the Big Bush and Large Slanted Pipe objects.
- - any level that uses line guides, formerly GFX16 (FG3), will now need ExGFXE17 (FG2), for line guides to properly appear.
-
-ExGFXFF: Font
- - a basic 8x8 font and symbol set, used in the Demo levels for in-game text.
+---------------
+061 - Global Animation Graphics for P-Switch Doors, On/Off blocks, One-Way Blocks, and Coin Outlines
+080 - Cloud Layer 3 Graphics (use with 81 or 82)
+081 - Cloud 1 Layer 3 Tilemap
+082 - Cloud 2 Layer 3 Tilemap
+083 - Mountain 1 Layer 3 Graphics
+084 - Mountain 1 Layer 3 Tilemap
+085 - Mountain 2 Layer 3 Graphics
+086 - Mountain 2 Layer 3 Tilemap
+087 - Hill Layer 3 Graphics (use with 88, 89, 8A, or 8B)
+088 - Hill 1 Layer 3 Tilemap
+089 - Hill 2 Layer 3 Tilemap
+08A - Hill 3 Layer 3 Tilemap
+08B - Hill 4 Layer 3 Tilemap
+08C - Cave Layer 2 Graphics
+08D - Cave Layer 3 Graphics and Animation
+08E - Cave Layer 3 Tilemap
+08F - Forest Layer 3 Graphics
+090 - Forest Layer 3 Tilemap
+091 - Choco Mountain 1 Layer 3 Graphics
+092 - Choco Mountain 1 Layer 3 Tilemap
+093 - Choco Mountain 2 Layer 3 Graphics
+094 - Choco Mountain 2 Layer 3 Tilemap
+095 - Starry Sky Layer 3 Animation
+096 - Starry Sky Layer 3 Graphics
+097 - Starry Sky Layer 3 Tilemap
+098 - Ghost House Layer 3 Animation
+099 - Ghost House Layer 3 Graphics (use with 9A or 9B)
+09A - Ghost House Layer 3 Tilemap
+09B - Bonus Layer 3 Graphics
+09C - Bonus Layer 3 Tilemap
+09D - Castle 1 Layer 2 Graphics
+09E - Castle 1 Layer 3 Graphics
+09F - Castle 1 Layer 3 Tilemap
+0A0 - Castle 2 Layer 3 Graphics and Animarion
+0A1 - Castle 2 Layer 3 Tilemap
+0A8 - GFX14 for use with GHB's Screen Scrolling Pipes (FG1)
+0A9 - GFX15 for use with GHB's Screen Scrolling Pipes (FG3)
+0AA - Complementary GFX for use with GHB's Screen Scrolling Pipes (BG3)
+0AB - SMAS SMB1 Castle BG (BG1)
+0AC - SMAS SMB1 Mushroom BG (BG1)
+0B3 - SMW Big Bushes (FG2)
+0B4 - SMW Bushes Layer 3 Graphics (LG4)
+0B5 - SMW Bushes Layer 3 Tilemap
+0B6 - SMW Ludwig's Battle Layer 3 Animations (AN2)
+0B7 - SMW Ludwig's Battle Layer 3 Graphics (LG4)
+0B8 - SMW Ludwig's Battle Layer 3 Tilemap (LT3)
+0B9 - SMW Starry Sky Layer 3 Animations (AN2)
+0BA - SMW Starry Sky Layer 3 Graphics (LG4)
+0BB - SMW Starry Sky Layer 3 Tilemap (LT3)
+0BC - SMW Underwater Layer 3 Animations (AN2)
+0BD - SMW Underwater Layer 3 Graphics (LG4)
+0BE - SMW Underwater Layer 3 Tilemap (LT3)
+0BF - SMAS SMB1 Grassland (FG2)
+0C0 - SMAS SMB1 Grassland (FG3)
+0C1 - SMAS SMB1 Night Sky BG (BG1)
+0C2 - SMAS SMB1 Night Sky BG (AN2)
+0C3 - SMAS SMB1 Small Hills BG (BG1)
+0C4 - SMAS SMB2 Cave BG (BG1)
+0C5 - SMAS SMB2 Desert FG (FG2)
+0C6 - SMAS SMB2 Desert FG (FG3)
+0C7 - SMAS SMB2 Desert FG (AN2)
+0C8 - SMAS SMB2 Desert BG (BG1)
+0C9 - SMAS SMB2 Desert BG (AN2)
+0CA - SMAS SMB2 Desert Temple BG (BG1)
+0CB - SMAS SMB2 Giant Tree FG (FG3)
+0CC - SMAS SMB2 Grassland FG (FG2)
+0CD - SMAS SMB2 Grassland FG (FG3)
+0CE - SMAS SMB2 Ice FG (FG3)
+0CF - SMAS SMB2 Ice FG (AN2)
+0D0 - SMAS SMB2 Night Sky BG (BG1)
+0D1 - SMAS SMB2 Night Sky BG (AN2)
+0D2 - SMAS SMB2 Plains BG (BG1)
+0D3 - SMAS SMB2 Pyramid BG (BG1)
+0D4 - SMAS SMB2 Pyramid FG (FG3)
+0D5 - SMAS SMB2 Warehouse BG (BG1)
+0D6 - SMAS SMB2 Woods FG and BG (BG1)
+0D7 - SMAS SMB3 Tank/Airship BG (BG2)
+0D8 - SMAS SMB3 Tank/Airship BG (BG3)
+0D9 - SMAS SMB3 Tank/Airship Animations (AN2)
+0DA - SMAS SMB3 Tank/Airship Layer 3 (LG4)
+0DB - SMAS SMB3 Tank/Airship Inside BG (BG1)
+0DC - SMAS SMB3 Tank/Airship Castle BG (BG1)
+0DD - SMAS SMB3 Tank/Airship Castle Layer 3 Tilemap (LT3)
+0DE - SMAS SMB3 Tank/Airship Treasure Ship BG (BG1)
+0DF - SMAS SMB3 Tank/Airship Treasure Ship Layer 3 Tilemap (LT3)
+0E0 - SMAS SMB3 Tank/Airship Volcano Ship BG (BG1)
+0E1 - SMAS SMB3 Tank/Airship Volcano Ship Layer 3 Tilemap (LT3)
+0E2 - SMAS SMB3 Athletic BG (BG1)
+0E3 - SMAS SMB3 Athletic FG (FG3)
+0E4 - SMAS SMB3 Battle BG (BG1)
+0E5 - SMAS SMB3 Bowser Castle BG (BG1)
+0E6 - SMAS SMB3 Bowser Castle FG (FG3)
+0E7 - SMAS SMB3 Castle FG (FG2)
+0E8 - SMAS SMB3 Castle FG (FG3)
+0E9 - SMAS SMB3 Castle BG (BG1)
+0EA - SMAS SMB3 Castle Cage BG (BG1)
+0EB - SMAS SMB3 Castle Walls BG (BG1)
+0EC - SMAS SMB3 Forest Leaves BG (BG1)
+0ED - SMAS SMB3 Fortress BG (BG1)
+0EE - SMAS SMB3 Giant Land (FG3)
+0EF - SMAS SMB3 Grassland (FG3)
+0F0 - SMAS SMB3 Green Hills BG (BG1)
+0F1 - SMAS SMB3 Help Castle (BG1)
+0F2 - SMAS SMB3 Icy Cave BG (BG1)
+0F3 - SMAS SMB3 Underground FG (FG3)
+0F4 - SMAS SMB3 Underground Animations (AN2)
+0F5 - SMAS SMB3 Toad House BG (BG1)
+0F6 - SMAS SMB3 Toad House Layer 3 (LG3)
+0F7 - SMAS SMB3 Toad House Layer 3 Tilemap (LT3)
+0F8 - SMAS SMB3 Underground BG (BG1)
+0F9 - SMAS SMB3 Volcano BG (BG1)
+0FA - SMAS SMB3 Waterfalls BG (BG1)
+0FB - SMAS SMB3 Waterfalls BG (AN2)
+0FC - SMAS SMB3 Woodland FG (FG3)
+0FD - SMAS SMB3 Woodland Animations (AN2)
+0FE - SMAS SMB2 Warehouse FG (FG3)
+0FF - SMM SMW Castle Decorations (BG2 or BG3)
+100 - SMM SMW Airship (FG3)
+101 - SMM SMW Airship (BG2)
+102 - SMM SMW Airship (BG3)
+103 - SMM SMW Cave Decorations (BG2 or BG3)
+104 - SMM SMW Grassland BG (BG1)
+105 - SMM SMW Underwater Tileset (AN2)
+106 - SMM SMW Underwater Tileset (BG2)
+107 - SMM SMW Underwater Tileset (BG3)
+108 - SMM2 SMW Sky Tileset (FG3)
+109 - SMM SMW Ghost House Tileset (BG2)
+10A - SMM SMW Ghost House Tileset (BG3)
+E17 - GFX17 replacement with the custom block graphics (FG2)
+FFF - Small 8x8 Font and symbols pack (BG2 or BG3)
