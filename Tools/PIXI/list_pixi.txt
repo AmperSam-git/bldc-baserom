@@ -1,3 +1,78 @@
+00 AngrySun.json
+01 BallAndChain.cfg
+02 banzai_bill_9F.json
+03 bowser_bowling_ball_A1.json
+04 BooRing.cfg
+05 BoomerangBro.json
+06 BossBass.cfg
+07 customizable-scale-platform.json
+08 scale-platform-dis.json
+09 MovingHole.cfg
+0A thwomp_red.cfg
+0B FloorBoo.cfg
+0C Goombud.json
+0D HammerBro.json
+0E IceBro.json
+0F FireBro.json
+
+10 MuncherBridge.json
+11 pot.cfg
+12 roto_disc_custom.cfg
+13 roto_disc_vanilla.cfg
+14 SledgeBro.json
+15 blooper.json
+16 SMW_Hammer_Bro.cfg
+17 gray_castle_block_BB.cfg
+18 SMMSpiny.cfg
+19 stationary_magikoopa.cfg
+1A TeleportingMagic.cfg
+1B TrickyMagikoopa.cfg
+1C FireBar.json
+1D FireBar_Shiftable.json
+
+20 RedVenusVerticalSpitTwo.cfg
+21 PiranhaHorizontal.cfg
+22 PiranhaHorizontalShort.cfg
+23 PiranhaVertical.cfg
+24 PiranhaVerticalShort.cfg
+25 RedPiranhaHorizontal.cfg
+26 RedPiranhaHorizontalShort.cfg
+27 RedPiranhaVertical.cfg
+28 RedPiranhaVerticalShort.cfg
+29 RedVenusHorizontal.cfg
+2A RedVenusHorizontalShort.cfg
+2B RedVenusHorizontalShortSpitTwo.cfg
+2C RedVenusHorizontalSpitTwo.cfg
+2D RedVenusVertical.cfg
+2E RedVenusVerticalShort.cfg
+2F RedVenusVerticalShortSpitTwo.cfg
+
+30 boost_plat_2tiles.cfg
+31 boost_plat_2tiles_gold.cfg
+32 boost_plat_3tiles.cfg
+33 boost_plat_3tiles_gold.cfg
+34 boost_plat_4tiles.cfg
+35 boost_plat_4tiles_gold.cfg
+36 punchy_gp_l.cfg
+37 punchy_gp_l_blue.cfg
+38 punchy_gp_l_green.cfg
+39 punchy_gp_l_yellow.cfg
+3A punchy_gp_r.cfg
+3B punchy_gp_r_blue.cfg
+3C punchy_gp_r_green.cfg
+3D punchy_gp_r_yellow.cfg
+
+40 Snifit.cfg
+41 Snifit_carryable.cfg
+42 Snifit_rideable.cfg
+43 Snifit_rideable_spin_kill.cfg
+
+50 Custom_Bro.json
+51 Ball.cfg
+52 Boomerang.cfg
+53 FireBall.cfg
+54 IceBall.cfg
+
 80 bettersnake.json
 81 snakespawner.json
 
@@ -17,3 +92,16 @@ A3 Lineguided_AnySprite.json
 A4 XYFollowSprite.json
 A5 spriteoffsetter.json
 A6 PipeSpawner.json
+
+EXTENDED:
+00 boomerang.asm
+01 fireball.asm
+02 thwomp_fireball.asm
+03 hammer.asm
+04 iceball.asm
+05 Ball.asm
+06 Needle.asm
+07 ElecBall.asm
+
+CLUSTER:
+10 cluster_sparkle.asm

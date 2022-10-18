@@ -1,3 +1,7 @@
+-- Baserom --
+AmperSam - Compilation
+Mario90 - DSS Sprite conversion
+
 -- Big Resources --
 Dynamic Spritesheet System v1.01 - lx5 - https://github.com/TheLX5/DynamicSpritesetSystem/releases/tag/v1.01
 SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938

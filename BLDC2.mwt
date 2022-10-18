@@ -1,3 +1,67 @@
+00	Angry Sun
+02	Banzai Bill, faces left.
+	Banzai Bill, faces right.
+03	Bowser Bowling Ball/Big Steely
+	Bowser Bowling Ball/Big Steely-gd
+05	Boomerang Bro
+07	Customizable Scale Platform (Short)
+	Customizable Scale Platform (Long)
+08	Scale Platform Disassembly
+0C	Ninji
+0D	Hammer Bro
+0E	Ice Bro
+0F	Fire Bro
+10	Muncher Bridge.
+14	Sledge Bro
+15	Blooper
+1C	Fire-Bar Clockwise
+	Fire-Bar Counter
+	Long Fire-Bar Clockwise
+	Long Fire-Bar Counter
+	Fast Fire-Bar Clockwise
+	Fast Fire-Bar Counter
+1D	Fire-Bar Clockwise
+	Fire-Bar Counter
+	Long Fire-Bar Clockwise
+	Long Fire-Bar Counter
+	Fast Fire-Bar Clockwise
+	Fast Fire-Bar Counter
+50	Hammer Bro
+	Boomerang Bro
+	Fire Bro
+	Ice Bro
+	Bomb Bro
+	Shell Bro
+	Bullet Bro
+	Flame Bro
+	Flame Bro (Short Interval)
+	Ball Bro
+	Elec Bro
+	Hammer Bro (Continuous)
+	Sledge Bro
+	Sledge Bro (Continuous)
+	Curve Bro
+	Braze Bro
+	Frost Bro
+	Miracle Bro
+	Hammer Bro, small jump only
+	Boomerang Bro, small jump only
+	Fire Bro, small jump only
+	Ice Bro, small jump only
+	Bomb Bro, small jump only
+	Shell Bro, small jump only
+	Bullet Bro, small jump only
+	Flame Bro, small jump only
+	Flame Bro, small jump only (Short Interval)
+	Ball Bro, small jump only
+	Elec Bro, small jump only
+	Hammer Bro, small jump only (Continuous)
+	Sledge Bro, small jump only
+	Sledge Bro, small jump only (Continuous)
+	Curve Bro, small jump only
+	Braze Bro, small jump only
+	Frost Bro, small jump only
+	Miracle Bro, small jump only
 80	Creating Block Snake
 	Eating Block Snake
 81	Snake Spawner (Continuous)

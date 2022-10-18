@@ -1153,6 +1153,49 @@ F5 D032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 E032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 
+00 0020 Undefined Sprite
+00 0022 0,0,0
+02 0020 A SMW Banzai Bill that faces left.
+02 0022 0,0,0
+02 0030 A SMW Banzai Bill that faces right.
+02 0032 0,0,0 0,0,10A
+03 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it.
+03 0022 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-20,173 16,-4,163
+03 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also.
+03 0032 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-8,173 4,0,163
+05 0020 A Boomerang Bro from Super Mario Bros. 3. It walks back and forth, occasionally hopping and periodically throwing two boomerangs, which it will later try to catch.
+05 0022 0,-16,70E 0,0,70F 8,-16,710
+07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
+07 0022 -8,0,E9 8,0,EA 4,-16,114
+08 0020 A disassembly of the scale platform.
+08 0022 -8,0,E9 8,0,EA
+0C 0020 Undefined Sprite
+0C 0022 0,0,0
+0D 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
+0D 0022 0,-16,711 0,0,712 8,-16,713
+0E 0020 A Ice Bro. It walks back and forth, occasionally hopping and periodically throwing ice balls.
+0E 0022 0,-16,714 0,0,715 10,-10,716
+0F 0020 The Fire Bro from Super Mario Bros. 3. It walks around and occasionally hops. It periodically spits 2 fireballs at Mario.
+0F 0022 0,0,718 0,-16,717 -8,0,719
+10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
+
+10 0022 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
+10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
+10 0032 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
+14 0020 A Sledge Bro from Super Mario Bros. 3. It walks back and forth. It occasionally jumps and creates an earthquake when it lands. It periodically throws two hammers.
+14 0022 12,0,71D 4,0,71C 12,-16,71B 4,-16,71A 20,-22,71E
+15 0020 A Blooper from SMB1.
+15 0022 0,0,0
+1C 0020 Firebar Clockwise
+1C 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
+1C 0030 Firebar Counter
+1C 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
+1D 0020 Firebar Clockwise
+1D 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
+1D 0030 Firebar Counter
+1D 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
+50 0020 Hammer Bro
+50 0022 -5,-14,71F 0,0,720 -2,1,721 4,-20,1DB 5,-6,722
 80 0020 Creating Block Snake
 80 0022 0,0,B8
 80 0030 Eating Block Snake

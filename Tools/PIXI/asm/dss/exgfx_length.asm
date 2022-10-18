@@ -111,7 +111,7 @@ exgfx_length:
     db $01              ;# 6B - Reznor platform
     db $01              ;# 6C - Podoboo
     db $08              ;# 6D - Gas bubble
-    db $02              ;# 6E - Moving hole
+    db $03              ;# 6E - Moving hole
     db $01              ;# 6F - Red coin
     db $01              ;# 70 - Key
     db $01              ;# 71 - Keyhole
@@ -125,31 +125,31 @@ exgfx_length:
     db $01              ;# 79 - Note block
     db $01              ;# 7A - Glass block
     db $01              ;# 7B - Donut Block %
-    db $0              ;# 7C - Unused
-    db $0              ;# 7D - Unused
-    db $0              ;# 7E - Unused
-    db $0              ;# 7F - Unused
-    db $0              ;# 80 - Unused
-    db $0              ;# 81 - Unused
-    db $0              ;# 82 - Unused
-    db $0              ;# 83 - Unused
-    db $0              ;# 84 - Unused
-    db $0              ;# 85 - Unused
-    db $0              ;# 86 - Unused
-    db $0              ;# 87 - Unused
-    db $0              ;# 88 - Unused
-    db $0              ;# 89 - Unused
-    db $0              ;# 8A - Unused
-    db $0              ;# 8B - Unused
-    db $0              ;# 8C - Unused
-    db $0              ;# 8D - Unused
-    db $0              ;# 8E - Unused
-    db $0              ;# 8F - Unused
-    db $0              ;# 90 - Unused
-    db $0              ;# 91 - Unused
-    db $0              ;# 92 - Unused
-    db $0              ;# 93 - Unused
-    db $0              ;# 94 - Unused
+    db $00              ;# 7C - Unused
+    db $08              ;# 7D - Piranha Plants
+    db $04              ;# 7E - SMB3 Sun
+    db $05              ;# 7F - SMM2 Sun
+    db $07              ;# 80 - Happy Moon
+    db $05              ;# 81 - Hammer and Boomerang Bro
+    db $02              ;# 82 - Boomerang Projectile
+    db $05              ;# 83 - Boss Bass
+    db $05              ;# 84 - Fire Bro
+    db $0D              ;# 85 - Floor Boo
+    db $03              ;# 86 - Goombud
+    db $02              ;# 87 - Munchers
+    db $01              ;# 88 - Pot
+    db $01              ;# 89 - Punchy
+    db $01              ;# 8A - Roto Disc
+    db $02              ;# 8B - Custom Roto Disc GFX
+    db $08              ;# 8C - Sledge Bro
+    db $01              ;# 8D - Blooper
+    db $02              ;# 8E - Snifit
+    db $08              ;# 8F - Giant Snifit
+    db $09              ;# 90 - Custom Bro Projectiles
+    db $01              ;# 91 - SMM Spiny Needles
+    db $03              ;# 92 - Custom Bro
+    db $08              ;# 93 - Custom Sledge Bro
+    db $01              ;# 94 - Snifit Projectile
     db $0              ;# 95 - Unused
     db $0              ;# 96 - Unused
     db $0              ;# 97 - Unused

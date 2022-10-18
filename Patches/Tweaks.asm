@@ -19,10 +19,6 @@ org $029500 : db $00 ; capespin-sprite
 org $0280A8 : bra $05
 org $0280B2 : bra $08
 
-; make doors more easy to enter adjust door proximity check
-org $00F44B : db $0A ; width of the enterable region of the door (up to 0x10, default 0x08)
-org $00F447 : db $05 ; offset the enterable region, which is half of above (default 0x04)
-
 ; play SFX when exiting horizontal pipes
 org $00D24E : LDA $7D : NOP : NOP
 
