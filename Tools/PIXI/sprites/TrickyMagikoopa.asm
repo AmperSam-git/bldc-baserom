@@ -7,7 +7,7 @@
 ; uses extra bit. if set, it'll act as stationary, otherwise act like vanilla (don't use both at the same time)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-!MagicNumber = $22              ; The not vanilla sprite to generate (custom Magikoopa magic).
+!MagicNumber = $1A              ; The not vanilla sprite to generate (custom Magikoopa magic).
 !WandTile = $14                 ; The sprite tile to use for the wand.
 
 !MagicSFX = $10                 ; Sound effect to play when shooting magic.

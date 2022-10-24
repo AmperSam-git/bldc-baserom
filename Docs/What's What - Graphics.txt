@@ -24,7 +24,6 @@ GFX2B : Layer 3 tiles
 GFX33 : Global Animation Tiles
  - tiles for ON/OFF blocks have been added to unused space in the resource
 
-
 ---------------
 ExGraphics
 ---------------

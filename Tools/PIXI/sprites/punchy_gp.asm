@@ -26,10 +26,10 @@
 ;				  exploration in the use of this sprite.
 ;				If a user wants to make changes to those exceptions themselves, however,
 ;				be it for vanilla sprites or custom sprites, they may change the table
-;				themselves. You can find the table by looking for "Exceptions_Table" 
-;				(preferably, with Ctrl+F) 
+;				themselves. You can find the table by looking for "Exceptions_Table"
+;				(preferably, with Ctrl+F)
 ;
-;			  2. Alternate inserts for this sprite are now available, 
+;			  2. Alternate inserts for this sprite are now available,
 ;				 each with different colors and fling speeds. Still customizable via defines.
 ;
 ;				Red: Default (High fling speed, both horizontally and vertically)
@@ -64,7 +64,7 @@
 !0303 = $0303|!Base2 ; Properties
 
 !15E9 = $15E9|!Base2 ; "Sprite index for the current sprite that is being processed."
-!1DF9 = $1DF9|!Base2 ; Sound Effects port 
+!1DF9 = $1DF9|!Base2 ; Sound Effects port
 !1DFC = $1DFC|!Base2 ; Sound Effects port
 !1406 = $1406|!Base2 ; Camera things
 
@@ -74,7 +74,7 @@ print	"INIT ", pc
     PLB                     ;  |
 
 	INC !157C,x
-	LDA !7FAB28,x
+	LDA !extra_byte_1,x
 	BNE +
 	STZ !157C,x
 	LDA	!15F6,x
@@ -82,7 +82,7 @@ print	"INIT ", pc
 	STA !15F6,x
 +
 	PHY
-	LDA !7FAB34,x
+	LDA !extra_byte_2,x
 	AND #$03
 	TAY
 	LDA !15F6,x
@@ -90,18 +90,18 @@ print	"INIT ", pc
 	ORA Pals,y
 	STA !15F6,x
 	PLY
-	
+
 	PLB
 	RTL
 
-print	"MAIN ", pc           
+print	"MAIN ", pc
                     PHB                     ; \
                     PHK                     ;  | main sprite function, just calls local subroutine
                     PLB                     ;  |
                     JSR Punchy_Start   ;  |
                     PLB                     ;  |
                     RTL                     ; /
-				
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 Pals:
@@ -135,10 +135,10 @@ Skip:
 	; End of Code:
 	;	- [$C2,x EQ #$01] -- Sprite is in State #$01 (after handling the Timer)
 	;	- [$9D EQ #$01] -- Sprites a locked
-	;	- [%SubOffScreen() > Carry Set] -- Sprite had been deleted during the SubOffScreen routine.	
-	
+	;	- [%SubOffScreen() > Carry Set] -- Sprite had been deleted during the SubOffScreen routine.
+
 ;;;;;;;; START ;;;;;;;;;
-	
+
 Punchy_Start:
 		JSR DrawGraphics
 		LDA $9D	; Lock Flag
@@ -147,7 +147,7 @@ Punchy_Start:
 		LDA #$03
 		%SubOffScreen() ;SubOffScreenYadda
 		BCS Skip
-		
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ;	Behavior code.
@@ -177,22 +177,22 @@ Punchy_Start:
 		BEQ ++
 		; [!C2,x NE #$00] ; If state isn't #$00, use the timer.
 		INC !1528,x
-		
+
 		LDA !C2,x
 		DEC			;v
 		TAY			; y = [$C2,x] minus 1
 		LDA Timer_ChangeStateAt,y
 		CMP !1528,x
 		BNE +
-		
+
 		LDA Timer_ChangeStateTo,y
 		STA !C2,x
-		
+
 ;
-;	Check for Contact.		
+;	Check for Contact.
 ;		If in State 0 or 3, contact will result in the sprite activating.
 ;		If in State 2, contact will result in the source of Contact being flung.
-;		
+;
 ;		In State 0 or 3, the Contact loop will end immediately after activation.
 ;		In State 2, the Contact loop will not cease until every sprite have been checked.
 ;
@@ -209,43 +209,43 @@ Punchy_Start:
 		CMP #$01
 		BEQ Skip
 	; [$C2,x NE #$01]
-		
+
 ++	; Entry point for Sprite State 0.
 
 		JSR SpriteHitbox	; Get Sprite Clipping (ClipRAM A)
-		
+
 		JSL $03B664			; Get Player Clipping (ClipRAM B)
 		JSL $03B72B 		; Check for Contact
 		BCC MarioSkip
-	
+
 		LDA $5A			; copy of Punchy's !C2,x
 		CMP #$02
 		BNE ActivatePunchy
 
 		LDY $59			; Copy of Sprite's Direction and color (in Scratch RAM)
-		
+
 		LDA FlingSpeed_LR,y
 		STA $7B 		; Player X Speed
-		
+
 		LDA FlingSpeed_Upwards,y
 		STA $7D			; Player Y Speed
-		
+
 		LDA #$80		; Allow camera to scroll upwards if
 		STA !1406		; vertical scrolling is enabled.
-		
+
 		LDA #$01		;
 		STA !1DF9		; Play Sound Effect (hit head)
-		
+
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	;	Sprite Loop
-	
+
 MarioSkip:	; Entry point if Mario didn't make contact.
 
 		LDX.b #!SprSize-1
 --
 		DEX
 		BMI ++
-		
+
 		LDA !14C8,x		; Sprite Status
 		BEQ --			; Don't interact with null sprites
 		CMP #$08		; If the Sprite's status is normal, A-ok
@@ -257,51 +257,51 @@ MarioSkip:	; Entry point if Mario didn't make contact.
 +
 		CPX !15E9
 		BEQ --
-		
+
 		JSR CheckExceptions ; Check for Exceptions
 		BNE --
-		
+
 		;LDA !1686,x		; "Sprite properties, fifth Tweaker/MWR byte."
 		;BMI --			; Specifically checking "d=Don't interact with objects"
 		;AND #$08
 		;BNE --			; And also "s=Don't interact with other sprites"
-		
+
 		JSL $03B6E5		; Get Sprite Clipping (ClipRAM B)
 		JSL $03B72B 	; Check for Contact
 		BCC --
-				
+
 		LDA $5A			; copy of Punchy's !C2,x
 		CMP #$02
 		BNE ActivatePunchy_Sprites
-		
+
 		LDY $59			; Copy of Punchy's Direction and color (in Scratch RAM)
 
 		LDA FlingDirection,y
 		STA !157C,x
-		
+
 		LDA FlingSpeed_LR,y
 		STA !B6,x 		; Sprite X Speed
-		
+
 		LDA FlingSpeed_Upwards,y
 		STA !AA,x		; Sprite Y Speed
 
 		LDA #$01		;
 		STA !1DF9		; Play Sound Effect (hit head)
-		
+
 		LDA !14C8,x		; Sprite status
 		CMP #$09
 		BNE --
 		; [!14C8,x EQ #$09] -- other sprite is in "Carryable" state.
 		LDA #$0A
 		STA !14C8,x
-		
+
 		BRA -- ; Next Sprite
 ++
 	LDX !15E9
-	
+
 	RTS
 	; End of Code (Sprite Loops)
-	
+
 ;
 ;	Activating Punchy.
 ;		Only happens in state 0 or 3.
@@ -316,7 +316,7 @@ ActivatePunchy:
 	STZ !1528,x
 	RTS
 	; End of Code (Punchy Activated)
-	
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;
@@ -350,12 +350,12 @@ SpriteHitbox:
 	INY			; If facing right, y gets +2
 	INY
 +
-	LDA !7FAB34,x
+	LDA !extra_prop_2,x
 	AND #$03
 	ASL
-	ORA $59		; (copy of !157C,x combined with a copy of !7FAB34 in Scratch RAM)
+	ORA $59		; (copy of !157C,x combined with a copy of !extra_prop_2 in Scratch RAM)
 	STA $59
-	
+
 	LDA !E4,x	;v
 	CLC
 	ADC Hitbox_XDisp,y
@@ -364,10 +364,10 @@ SpriteHitbox:
 	LDA !14E0,x	;v
 	ADC #$00
 	STA $0A		; X-Disp, High Byte
-	
+
 	LDA Hitbox_XLength,y	;v
 	STA $06		; X-Disp, Length
-	
+
 	STZ $0F
 	LDA Hitbox_YDisp,y
 	BPL +
@@ -384,9 +384,9 @@ SpriteHitbox:
 	LDA Hitbox_YHeight,y	;v
 	STA $07		; Y-Disp, Height
 
-	
-	RTS	
-	
+
+	RTS
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ;	[EXCEPTIONS]
@@ -400,23 +400,23 @@ CheckExceptions:
 	TAY
 	LDA ExtraBitMask,y
 	STA $00
-	
+
 	LDA !7FAB9E,x
 	LSR #3
 	ORA $00
 	TAY
 	LDA Exceptions_Table,y
 	STA $00
-	
+
 	; $00 now contains the bits from the Exceptions Table
-	
+
 	LDA !7FAB9E,x
 	AND #$07
 	TAY
 	LDA BitTable,y
 	AND $00
 	RTS
-	
+
 ;Vanilla_Exceptions:
 ;db $0E,$1A,$1C,$45,$59,$5A,$6B,$6C
 ;db $6D,$79,$7B,$B1,$B9,$C7,$1E,$2C
@@ -463,8 +463,8 @@ db %00000000,%00000000	; $2x
 db %00000000,%00000000	; $3x
 db %00000000,%00000000	; $4x
 db %00000000,%00000000	; $5x
-db %00000000,%00000000	; $6x   
-db %00000000,%00000000	; $7x 
+db %00000000,%00000000	; $6x
+db %00000000,%00000000	; $7x
 db %00000000,%00000000	; $8x
 db %00000000,%00000000	; $9x
 db %00000000,%00000000	; $Ax
@@ -482,8 +482,8 @@ db %00000000,%00000000	; $2x
 db %00000000,%00000000	; $3x
 db %00000000,%00000000	; $4x
 db %00000000,%00000000	; $5x
-db %00000000,%00000000	; $6x   
-db %00000000,%00000000	; $7x 
+db %00000000,%00000000	; $6x
+db %00000000,%00000000	; $7x
 db %00000000,%00000000	; $8x
 db %00000000,%00000000	; $9x
 db %00000000,%00000000	; $Ax
@@ -501,8 +501,8 @@ db %00000000,%00000000	; $2x
 db %00000000,%00000000	; $3x
 db %00000000,%00000000	; $4x
 db %00000000,%00000000	; $5x
-db %00000000,%00000000	; $6x   
-db %00000000,%00000000	; $7x 
+db %00000000,%00000000	; $6x
+db %00000000,%00000000	; $7x
 db %00000000,%00000000	; $8x
 db %00000000,%00000000	; $9x
 db %00000000,%00000000	; $Ax
@@ -515,7 +515,7 @@ db %00000000,%00000000	; $Fx
 
 
 
-	
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
 ; DrawGraphics
@@ -525,7 +525,7 @@ db %00000000,%00000000	; $Fx
 DirectionOffset:
 db $00,$0C
 
-XDisp: 
+XDisp:
 ; - Facing Right
 db	$F0,$EC,$EF,$F6
 db  $FE,$00,$00,$00
@@ -539,43 +539,43 @@ DrawGraphics:
 	lda #!GFX_FileNum        ; find or queue GFX
 	%FindAndQueueGFX()
 	bcs .gfx_loaded
-	rts                      ; don't draw gfx if ExGFX isn't ready	
+	rts                      ; don't draw gfx if ExGFX isn't ready
 .gfx_loaded
 	%GetDrawInfo()
-	
+
 	LDA !15F6,x ; Properties
 	STA $04		; Scratch RAM
-	
+
 	LDA !1528,x ; Timer
 	STA $05		; Scratch RAM
-	
+
 	LDA !157C,x
 	TAX
 	LDA DirectionOffset,x
 	CLC
 	ADC $05
 	TAX
-	
+
 	LDA $00
 	CLC
 	ADC XDisp,x
 	STA !0300,y
-	
+
 	LDA $01
 	STA !0301,y
-	
+
 	LDX #!Tile
 	lda !dss_tile_buffer,x
 	STA !0302,y
-	
+
 	LDA $04		; Properties
 	ORA $64
 	STA !0303,y
-	
+
 	LDX !15E9	; Regain Punchy's Sprite Slot
-	
+
 	LDA #$00	; 1 tile
 	LDY #$02	; 16x16
 	JSL $01B7B3	; Finish OAM Write
-	
+
 	RTS

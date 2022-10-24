@@ -4,7 +4,7 @@
 ;; Description: This sprite walks back and forth, occasionally firing balls at Mario.
 ;;
 ;; Note: When rideable, clipping tables values should be: 03 0A FE 0E
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Uses first extra bit: YES
 ;; clear: normal Snifit (16x16)
 ;; set: giant Snifit (32x32)
@@ -22,7 +22,7 @@
 ;; * extension options set these automatically depending on their value
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Extra Property Byte 2
-;;    bit 0 - use turning image	
+;;    bit 0 - use turning image
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Extra Byte (Extension) 1
 ;; 00 = red Snifit, falls from ledges
@@ -166,7 +166,7 @@ db $0C,$F4	;right, left (fast)
 ++
 	LDA !167A,x
 	STA !1528,x
-	
+
 	LDA #$01
 	STA !151C,x
 
@@ -178,7 +178,7 @@ db $0C,$F4	;right, left (fast)
 	AND #$C0		;preserve properties and clear clipping value
 	ORA #!GiantClipping	;add new clipping value
 	STA !1662,x		;store result back.
-		
+
 +
         %SubHorzPos()
         TYA
@@ -195,15 +195,15 @@ db $0C,$F4	;right, left (fast)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         print "MAIN ",pc
-	PHB                  
-        PHK                  
+	PHB
+        PHK
         PLB
         JSR SpriteMainSub
-        PLB                  
+        PLB
         RTL
-	
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; sprite main code 
+; sprite main code
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 DecrementTimers:
@@ -224,7 +224,7 @@ Return:
 
 SpriteMainSub:
 	JSR SubGfx
-	
+
         LDA $9D                 ; \ if sprites locked, return
         BNE Return              ; /
 	LDA !14C8,x
@@ -237,11 +237,11 @@ SpriteMainSub:
 
 	JSR DecrementTimers
 
-	LDA !1504,x             
-        CMP #!PreSpawn  
+	LDA !1504,x
+        CMP #!PreSpawn
 	BCS WalkingState
 
-	LDA !1504,x    
+	LDA !1504,x
         CMP #!PreSpawn
         BCS NO_THROW
         STZ !1602,x
@@ -260,7 +260,7 @@ SpriteMainSub:
         STA !1504,x		; /
 
 NO_TIME_SET:
-	CMP #$01                ; \ call the ball routine if the timer is 
+	CMP #$01                ; \ call the ball routine if the timer is
         BNE NO_THROW            ;  | about to tun out
         JSR SUB_BALL_THROW      ; /
 
@@ -270,13 +270,13 @@ NO_THROW:
 	BNE WalkingState
 
 	JMP SharedCode
-	
-WalkingState:	
+
+WalkingState:
         LDA $14                 ; Set walking frame based on frame counter
         LSR #3
         CLC
         ADC $15E9|!Base2
-        AND #$01               
+        AND #$01
         STA !1602,x
 
 	LDA !7FAB28,x
@@ -302,19 +302,19 @@ GigaFast:
 	INY #2
 
 NoFastSpeed:
-        LDA SpeedX,y           
+        LDA SpeedX,y
         STA !B6,x
 
 DontWalk:
 	JSL $01802A|!BankB     ; Update position based on speed values
 
 	LDA !1588,x             ; If sprite is in contact with an object...
-        AND #$03                  
-        BEQ NoObjContact	
+        AND #$03
+        BEQ NoObjContact
         JSR SetSpriteTurning    ;    ...change direction
 NoObjContact:
 	JSR MaybeStayOnLedges
-	
+
 	LDA !1588,x             ; if on the ground, reset the turn counter
         AND #$04
         BEQ SharedCode
@@ -324,14 +324,14 @@ NoObjContact:
 	JSR MaybeFaceMario
 	JSR MaybeJumpShells
 
-SharedCode:	
+SharedCode:
 	LDA !1528,x
 	STA !167A,x
-	
+
         JSL $018032|!BankB	; Interact with other sprites
 	JSL $01A7DC|!BankB	; Check for mario/sprite contact (carry set = contact)
         BCC Return11             ; return if no contact
-	
+
         %SubVertPos()           ; \
         LDA $0E                 ;  | if mario isn't above sprite, and there's vertical contact...
         CMP #$E6                ;  |     ... sprite wins
@@ -349,12 +349,12 @@ endif
 
         LDA !7FAB28,x			; Check property byte to see if sprite can be spin jumped
         AND #$10
-        BEQ SpinKillDisabled    
+        BEQ SpinKillDisabled
         LDA $140D|!Base2               ; Branch if mario is spin jumping
         BEQ SpinKillDisabled
 	JMP SpinKill			;O.B.
 
-SpinKillDisabled:	
+SpinKillDisabled:
 	LDA $187A|!Base2
 	BNE RideSprite
 	LDA !7FAB28,x
@@ -379,7 +379,7 @@ endif
 Return11:
 	RTS
 
-RideSprite:	
+RideSprite:
 	LDA !7FAB10,x
 	AND #$04
 	BEQ +
@@ -400,7 +400,7 @@ DoneIndexing:
 	LDA #$01                ; \ set "on sprite" flag
         STA $1471|!Base2        ; /
         LDA #$06                ; Disable interactions for a few frames
-        STA !154C,x             
+        STA !154C,x
         STZ $7D                 ; Y speed = 0
         LDA !1534,x             ; \
         LDY $187A|!Base2        ;  | mario's y position += E1 or D1 depending if on yoshi
@@ -413,7 +413,7 @@ NO_YOSHI:
         LDA !14D4,x             ;  |
         ADC #$FF                ;  |
         STA $97                 ; /
-        LDY #$00                ; \ 
+        LDY #$00                ; \
         LDA $1491|!Base2        ;  | $1491 == 01 or FF, depending on direction
         BPL LABEL9              ;  | set mario's new x position
         DEY                     ;  |
@@ -424,17 +424,17 @@ LABEL9:
         TYA                     ;  |
         ADC $95                 ;  |
         STA $95                 ; /
-        RTS                     
+        RTS
 
 SpriteWins:
 	LDA !154C,x             ; \ if disable interaction set...
         ORA !15D0,x             ;  |   ...or sprite being eaten...
         BNE Return1             ; /   ...return
         LDA $1490|!Base2        ; Branch if Mario has a star
-        BNE MarioHasStar        
-        JSL $00F5B7|!BankB	
+        BNE MarioHasStar
+        JSL $00F5B7|!BankB
 Return1:
-	RTS                    
+	RTS
 
 SpinKill:
 	JSR SUB_STOMP_PTS       ; give mario points
@@ -442,7 +442,7 @@ SpinKill:
 	STA $7D
         JSL $01AB99|!BankB	; display contact graphic
         LDA #$04                ; \ status = 4 (being killed by spin jump)
-        STA !14C8,x             ; /   
+        STA !14C8,x             ; /
         LDA #$1F                ; \ set spin jump animation timer
         STA !1540,x             ; /
         JSL $07FC3B|!BankB
@@ -452,20 +452,20 @@ SpinKill:
 
 MarioHasStar:
 		%Star()
-		RTS 
+		RTS
 
 ;hop code from grey snifit by Sonikku, adapted by Blind Devil
 Hop:
 	STZ !C2,x		;reset shake displacement index.
 
         LDA !1594,x		; If timer isn't equal or higher...
-        CMP #!HopInterval	; 
+        CMP #!HopInterval	;
         BCC IncreaseHop		; Increase it.
         LDA !1588,x		; Don't jump if already on ground.
-        AND #$04		; 
+        AND #$04		;
         BEQ RETURN3
         LDA #!SpeedY		; Set jump height.
-        STA !AA,x		; Store it too. 
+        STA !AA,x		; Store it too.
         STZ !1594,x		; Reset timer.
         RTS			; Return
 IncreaseHop:
@@ -477,21 +477,21 @@ RETURN3:
 ; sprite graphics routine
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-SubGfx:	
+SubGfx:
 LDA !7FAB10,x
 AND #$04
 BNE GiantSnifit
 	lda #!GFX_FileNum        ; find or queue GFX
 	%FindAndQueueGFX()
 	bcs gfx_loaded
-	rts                      ; don't draw gfx if ExGFX isn't ready	
-	
+	rts                      ; don't draw gfx if ExGFX isn't ready
+
 GiantSnifit:
 	lda #!GFX_FileNum_Giant        ; find or queue GFX
 	%FindAndQueueGFX()
 	bcs gfx_loaded
-	rts                      ; don't draw gfx if ExGFX isn't ready	
-	
+	rts                      ; don't draw gfx if ExGFX isn't ready
+
 gfx_loaded:
 	%GetDrawInfo()
 
@@ -499,7 +499,7 @@ gfx_loaded:
 		    STZ $06		    ;reset scratch RAM. it'll hold number of tiles drawn.
 
         LDA !157C,x             ; \ $02 = direction
-        STA $02                 ; / 
+        STA $02                 ; /
 
         LDA !1602,x
         STA $03                 ;holds animation frame
@@ -524,7 +524,7 @@ Stunned:
 NotKilled:
 	LDA !7FAB34,x		; If turning frame enambled...
 	AND #$01
-	BEQ DrawSprite	
+	BEQ DrawSprite
 	LDA !15AC,x		;    ...and turning...
 	BEQ DrawSprite
 	LDA #$02		;    ...set turning frame
@@ -548,7 +548,7 @@ DrawSprite:
 	LDX $03			;load tile index
         LDA Tilemap,x           ; \
 	TAX
-	lda !dss_tile_buffer,x		
+	lda !dss_tile_buffer,x
         STA $0302|!Base2,y      ; /
 
 	LDX $15E9|!Base2
@@ -702,7 +702,7 @@ endif
 
 		LDA #!SnifitProjectile+!ExtendedOffset
 SpawnExt:
-		%SpawnExtended()	
+		%SpawnExtended()
 		BCS .Re
 
 LDA #$00
@@ -779,67 +779,67 @@ Fireballs:
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-MaybeStayOnLedges:	
+MaybeStayOnLedges:
 	LDA !7FAB28,x		; Stay on ledges if bit 1 is set
-	AND #$02                
+	AND #$02
 	BEQ NoFlipDirection
 	LDA !1588,x             ; If the sprite is in the air
 	ORA !151C,x             ;   and not already turning
 	BNE NoFlipDirection
 	JSR SetSpriteTurning 	;   flip direction
         LDA #$01                ;   set turning flag
-	STA !151C,x    
+	STA !151C,x
 NoFlipDirection:
-	RTS
-	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	
-MaybeFaceMario:
-	LDA !7FAB28,x	; Face Mario if bit 2 is set
-	AND #$04
-	BEQ Return4	
-	LDA !1570,x
-	AND #$7F
-	BNE Return4
-	LDA !157C,x
-	PHA
-	
-	%SubHorzPos()         	; Face Mario
-        TYA                       
-	STA !157C,X
-	
-	PLA
-	CMP !157C,x
-	BEQ Return4
-	LDA #$08
-	STA !15AC,x
-Return4:	
 	RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	
+
+MaybeFaceMario:
+	LDA !7FAB28,x	; Face Mario if bit 2 is set
+	AND #$04
+	BEQ Return4
+	LDA !1570,x
+	AND #$7F
+	BNE Return4
+	LDA !157C,x
+	PHA
+
+	%SubHorzPos()         	; Face Mario
+        TYA
+	STA !157C,X
+
+	PLA
+	CMP !157C,x
+	BEQ Return4
+	LDA #$08
+	STA !15AC,x
+Return4:
+	RTS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 MaybeJumpShells:
 	LDA !7FAB28,x		; Face Mario if bit 3 is set
 	AND #$08
 	BEQ Return4
-	TXA                     ; \ Process every 4 frames 
-        EOR $14                 ;  | 
-        AND #$03		;  | 
-        BNE Return0188AB        ; / 
-        LDY #!SprSize-3		; \ Loop over sprites: 
+	TXA                     ; \ Process every 4 frames
+        EOR $14                 ;  |
+        AND #$03		;  |
+        BNE Return0188AB        ; /
+        LDY #!SprSize-3		; \ Loop over sprites:
 JumpLoopStart:
-	LDA !14C8,Y             ;  | 
-        CMP #$0A       		;  | If sprite status = kicked, try to jump it 
-        BEQ HandleJumpOver	;  | 
+	LDA !14C8,Y             ;  |
+        CMP #$0A       		;  | If sprite status = kicked, try to jump it
+        BEQ HandleJumpOver	;  |
 JumpLoopNext:
-	DEY                     ;  | 
-        BPL JumpLoopStart       ; / 
+	DEY                     ;  |
+        BPL JumpLoopStart       ; /
 Return0188AB:
-	RTS                     ; Return 
+	RTS                     ; Return
 
 HandleJumpOver:
 	LDA !E4,y             ;man
@@ -860,28 +860,28 @@ HandleJumpOver:
         JSL $03B69F|!BankB  ;all?
         JSL $03B72B|!BankB     ;well they have a reason now, as I wrote a fuckton of crap in them lol
         BCC JumpLoopNext        ; If not close to shell, go back to main loop
-	LDA !1588,x 		; \ If sprite not on ground, go back to main loop 
+	LDA !1588,x 		; \ If sprite not on ground, go back to main loop
 	AND #$04		;  |
-        BEQ JumpLoopNext        ; / 
-        LDA !157C,Y             ; \ If sprite not facing shell, don't jump 
-        CMP !157C,x             ;  | 
-        BEQ Return0188EB        ; / 
-        LDA #$C0                ; \ Finally set jump speed 
-        STA !AA,x               ; / 
+        BEQ JumpLoopNext        ; /
+        LDA !157C,Y             ; \ If sprite not facing shell, don't jump
+        CMP !157C,x             ;  |
+        BEQ Return0188EB        ; /
+        LDA #$C0                ; \ Finally set jump speed
+        STA !AA,x               ; /
 Return0188EB:
 	RTS                     ; Return
-	
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 SetSpriteTurning:
-	LDA #$08                ; Set turning timer 
-	STA !15AC,X   
+	LDA #$08                ; Set turning timer
+	STA !15AC,X
         LDA !157C,x
         EOR #$01
         STA !157C,x
-Return0190B1:	
+Return0190B1:
         RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -890,19 +890,19 @@ Return0190B1:
 
 STAR_SOUNDS:
 db $00,$13,$14,$15,$16,$17,$18,$19
-             
+
 SUB_STOMP_PTS:
-	PHY                      
+	PHY
         LDA $1697|!Base2        ; \
-        CLC                     ;  | 
+        CLC                     ;  |
         ADC !1626,x             ; / some enemies give higher pts/1ups quicker??
         INC $1697|!Base2        ; increase consecutive enemies stomped
         TAY                     ;
         INY                     ;
         CPY #$08                ; \ if consecutive enemies stomped >= 8 ...
-        BCS NO_SOUND            ; /    ... don't play sound 
+        BCS NO_SOUND            ; /    ... don't play sound
         LDA STAR_SOUNDS,y       ; \ play sound effect
-        STA $1DF9|!Base2        ; /   
+        STA $1DF9|!Base2        ; /
 NO_SOUND:
 	TYA                     ; \
         CMP #$08                ;  | if consecutive enemies stomped >= 8, reset to 8
@@ -910,5 +910,5 @@ NO_SOUND:
         LDA #$08                ; /
 NO_RESET:
 	JSL $02ACE5|!BankB
-        PLY                     
+        PLY
         RTS                     ; return

@@ -5,20 +5,18 @@
 ;; This sprite encompasses all 48 Classic Piranha Plants and Venus Fire Traps,
 ;; using the extra property bytes to determine which sprite to act like.
 ;;
-;; Uses first extra bit: YES
-;; Uses extra property bytes: YES
+;; Uses 1 extra byte.
 ;;
-;; If the first extra bit is clear, the sprite will use the first extra property byte.
-;; If the first extra bit is set, the sprite will use the second extra property byte.
+;; Extra Byte 1 uses its 8 bits as the following:
 ;;
-;; Extra Property Bytes:
+;; Bit 0: Direction.  0 = up/left, 1 = right/down. (d)
+;; Bit 1: Orientation.  0 = vertical, 1 = horizontal. (o)
+;; Bit 2: Stem length.  0 = long, 1 = short. (s)
+;; Bit 3: Color.  0 = green, 1 = red. (c)
+;; Bit 4: Sprite type.  0 = Piranha Plant, 1 = Venus Fire Trap. (s)
+;; Bit 5: Number of fireballs.  0 = spit 1, 1 = spit 2.  This is used only if bit 4 is set. (n)
 ;;
-;; Bit 0: Direction.  0 = up/left, 1 = right/down.
-;; Bit 1: Orientation.  0 = vertical, 1 = horizontal.
-;; Bit 2: Stem length.  0 = long, 1 = short.
-;; Bit 3: Color.  0 = green, 1 = red.
-;; Bit 4: Sprite type.  0 = Piranha Plant, 1 = Venus Fire Trap.
-;; Bit 5: Number of fireballs.  0 = spit 1, 1 = spit 2.  This is used only if bit 4 is set.
+;; Therefore the bit arrangment is (- indicates unused bits): --ns csod
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -154,14 +152,7 @@ RTL
 
 PiranhaInit:
 
-LDA !extra_bits,x	; check the extra bit
-AND #$04	; if the extra bit is clear...
-BNE EP2		;
-LDA !extra_prop_1,x	; use the extra property byte 1
-BRA StoreEP	;
-EP2:		;
-LDA !extra_prop_2,x	;
-StoreEP:		;
+LDA !extra_byte_1,x
 STA !1510,x	;
 
 AND #$03	;
@@ -432,7 +423,7 @@ lda #!GFX_FileNum                  ; find or queue GFX
 bcs .gfx_loaded
 rts                      ; don't draw gfx if ExGFX D7B isn't ready
 
-.gfx_loaded  
+.gfx_loaded
 %GetDrawInfo()		; set some variables up for writing to OAM
 
 LDA !1510,x		;

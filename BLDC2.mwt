@@ -1,19 +1,37 @@
 00	Angry Sun
+01	Ball n Chain
 02	Banzai Bill, faces left.
 	Banzai Bill, faces right.
 03	Bowser Bowling Ball/Big Steely
 	Bowser Bowling Ball/Big Steely-gd
+04	Boo Ring, clockwise (Vanilla)
+	Boo Ring, counter-clockwise (Vanilla)
 05	Boomerang Bro
+06	Boss Bass
+	Boss Bass, small
 07	Customizable Scale Platform (Short)
 	Customizable Scale Platform (Long)
 08	Scale Platform Disassembly
+09	Moving Hole
+0A	Fire Thwomp
+0B	Floor Boo
 0C	Ninji
 0D	Hammer Bro
 0E	Ice Bro
 0F	Fire Bro
 10	Muncher Bridge.
+11	Pot
+12	Custom Roto Disc, clockwise (Vanilla)
+	Custom Roto Disc, counter-clockwise (Vanilla)
 14	Sledge Bro
 15	Blooper
+16	Stationary Hammer Bro
+17	Gray Castle Block, horizontal
+	Gray Castle Block, vertical
+18	Flying Spiny
+19	Stationary Magikoopa
+1B	Tricky Magikoopa, vanilla
+	Tricky Magikoopa, stationary
 1C	Fire-Bar Clockwise
 	Fire-Bar Counter
 	Long Fire-Bar Clockwise
@@ -26,6 +44,68 @@
 	Long Fire-Bar Counter
 	Fast Fire-Bar Clockwise
 	Fast Fire-Bar Counter
+20	PiranhaHorizontalLeft
+	PiranhaHorizontalRight
+	PiranhaHorizontalShortLeft
+	PiranhaHorizontalShortRight
+	PiranhaVerticalUp
+	PiranhaVerticalDown
+	PiranhaVerticalShortUp
+	PiranhaVerticalShortDown
+	RedPiranhaHorizontalLeft
+	RedPiranhaHorizontalRight
+	RedPiranhaHorizontalShortLeft
+	RedPiranhaHorizontalShortRight
+	RedPiranhaVerticalUp
+	RedPiranhaVerticalDown
+	RedPiranhaVerticalShortUp
+	RedPiranhaVeritcalShortDown
+	RedVenusHorizontalLeft
+	RedVenusHorizontalRight
+	RedVenusHorizontalShortLeft
+	RedVenusHorizontalShortRight
+	RedVenusHorizontalShortSpitTwoLeft
+	RedVenusHorizontalShortSpitTwoRight
+	RedVenusHorizontalSpitTwoLeft
+	RedVenusHorizontalSpitTwoRight
+	RedVenusVerticalUp
+	RedVenusVerticalDown
+	RedVenusVerticalShortUp
+	RedVenusVerticalShortDown
+	RedVenusVerticalShortSpitTwoUp
+	RedVenusVerticalShortSpitTwoDown
+	RedVenusVerticalSpitTwoUp
+	RedVenusVerticalSpitTwoDown
+	VenusHorizontalLeft
+	VenusHorizontalRight
+	VenusHorizontalShortLeft
+	VenusHorizontalShortRight
+	VenusHorizontalShortSpitTwoLeft
+	VenusHorizontalShortSpitTwoRight
+	VenusHorizontalSpitTwoLeft
+	VenusHorizontalSpitTwoRight
+	VenusVerticalUp
+	VenusVerticalDown
+	VenusVerticalShortUp
+	VenusVerticalShortDown
+	VenusVerticalShortSpitTwoUp
+	VenusVerticalShortSpitTwoDown
+	VenusVerticalSpitTwoUp
+	VenusVerticalSpitTwoDown
+30	Boost Platform, 2 tiles
+	Boost Platform, 3 tiles
+	Boost Platform, 4 tiles
+	Boost Platform, 2 tiles (Endless)
+	Boost Platform, 3 tiles (Endless)
+	Boost Platform, 4 tiles (Endless)
+36	Punchy Gp L
+	Punchy Gp L Blue
+	Punchy Gp L Green
+	Punchy Gp L Yellow
+	Punchy Gp R
+	Punchy Gp R Blue
+	Punchy Gp R Green
+	Punchy Gp R Yellow
 50	Hammer Bro
 	Boomerang Bro
 	Fire Bro
