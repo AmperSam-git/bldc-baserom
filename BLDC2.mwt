@@ -1,4 +1,5 @@
 00	Angry Sun
+	Happy Moon
 01	Ball n Chain
 02	Banzai Bill, faces left.
 	Banzai Bill, faces right.
@@ -15,7 +16,14 @@
 09	Moving Hole
 0A	Fire Thwomp
 0B	Floor Boo
-0C	Ninji
+0C	Goombud
+	Para-Goombud, walking
+	Para-Goombud, flying
+	Para-Goombud, bounces
+	Para-Goombud, flies left/right
+	Para-Goombud, flies up/down
+	Para-Goombud, oscillates up/down
+	Para-Goombud, sliding
 0D	Hammer Bro
 0E	Ice Bro
 0F	Fire Bro
@@ -44,54 +52,54 @@
 	Long Fire-Bar Counter
 	Fast Fire-Bar Clockwise
 	Fast Fire-Bar Counter
-20	PiranhaHorizontalLeft
-	PiranhaHorizontalRight
-	PiranhaHorizontalShortLeft
-	PiranhaHorizontalShortRight
-	PiranhaVerticalUp
-	PiranhaVerticalDown
-	PiranhaVerticalShortUp
-	PiranhaVerticalShortDown
-	RedPiranhaHorizontalLeft
-	RedPiranhaHorizontalRight
-	RedPiranhaHorizontalShortLeft
-	RedPiranhaHorizontalShortRight
-	RedPiranhaVerticalUp
-	RedPiranhaVerticalDown
-	RedPiranhaVerticalShortUp
-	RedPiranhaVeritcalShortDown
-	RedVenusHorizontalLeft
-	RedVenusHorizontalRight
-	RedVenusHorizontalShortLeft
-	RedVenusHorizontalShortRight
-	RedVenusHorizontalShortSpitTwoLeft
-	RedVenusHorizontalShortSpitTwoRight
-	RedVenusHorizontalSpitTwoLeft
-	RedVenusHorizontalSpitTwoRight
-	RedVenusVerticalUp
-	RedVenusVerticalDown
-	RedVenusVerticalShortUp
-	RedVenusVerticalShortDown
-	RedVenusVerticalShortSpitTwoUp
-	RedVenusVerticalShortSpitTwoDown
-	RedVenusVerticalSpitTwoUp
-	RedVenusVerticalSpitTwoDown
-	VenusHorizontalLeft
-	VenusHorizontalRight
-	VenusHorizontalShortLeft
-	VenusHorizontalShortRight
-	VenusHorizontalShortSpitTwoLeft
-	VenusHorizontalShortSpitTwoRight
-	VenusHorizontalSpitTwoLeft
-	VenusHorizontalSpitTwoRight
-	VenusVerticalUp
-	VenusVerticalDown
-	VenusVerticalShortUp
-	VenusVerticalShortDown
-	VenusVerticalShortSpitTwoUp
-	VenusVerticalShortSpitTwoDown
-	VenusVerticalSpitTwoUp
-	VenusVerticalSpitTwoDown
+20	Piranha Horizontal Left
+	Piranha Horizontal Right
+	Piranha Horizontal Short Left
+	Piranha Horizontal Short Right
+	Piranha Vertical Up
+	Piranha Vertical Down
+	Piranha Vertical Short Up
+	Piranha Vertical Short Down
+	Red Piranha Horizontal Left
+	Red Piranha Horizontal Right
+	Red Piranha Horizontal Short Left
+	Red Piranha Horizontal Short Right
+	Red Piranha Vertical Up
+	Red Piranha Vertical Down
+	Red Piranha Vertical Short Up
+	Red PiranhaVeritcalShort Down
+	Red Venus Horizontal Left
+	Red Venus Horizontal Right
+	Red Venus Horizontal Short Left
+	Red Venus Horizontal Short Right
+	Red Venus Horizontal Short Spit Two Left
+	Red Venus Horizontal Short Spit Two Right
+	Red Venus Horizontal Spit Two Left
+	Red Venus Horizontal Spit Two Right
+	Red Venus Vertical Up
+	Red Venus Vertical Down
+	Red Venus Vertical Short Up
+	Red Venus Vertical Short Down
+	Red Venus Vertical Short Spit Two Up
+	Red Venus Vertical Short Spit Two Down
+	Red Venus Vertical Spit Two Up
+	Red Venus Vertical Spit Two Down
+	Venus Horizontal Left
+	Venus Horizontal Right
+	Venus Horizontal Short Left
+	Venus Horizontal Short Right
+	Venus Horizontal Short Spit Two Left
+	Venus Horizontal Short Spit Two Right
+	Venus Horizontal Spit Two Left
+	Venus Horizontal Spit Two Right
+	Venus Vertical Up
+	Venus Vertical Down
+	Venus Vertical Short Up
+	Venus Vertical Short Down
+	Venus Vertical Short Spit Two Up
+	Venus Vertical Short Spit Two Down
+	Venus Vertical Spit Two Up
+	Venus Vertical Spit Two Down
 30	Boost Platform, 2 tiles
 	Boost Platform, 3 tiles
 	Boost Platform, 4 tiles

@@ -59,8 +59,23 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Undefined Sprite",
+      "Description": "Angry Sun",
       "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 0
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    },
+    {
+      "Description": "Happy Moon",
+      "ExtraBit": true,
       "Tiles": [
         {
           "X offset": 0,
@@ -81,7 +96,31 @@
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Happy Moon",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     }
   ]
 }
