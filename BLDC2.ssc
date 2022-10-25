@@ -1155,9 +1155,9 @@ F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 
 ; Custom Sprites
 00 0020 Angry Sun
-00 0022 0,0,6C9 16,0,6CA 0,16,6D9 16,16,6DA
+00 0022 0,0,6CA 16,0,6CB 0,16,6DA 16,16,6DB
 00 0030 Happy Moon
-00 0032 0,0,6C7 16,0,6C8 0,16,6D7 16,16,6D8
+00 0032 16,0,6CD 0,16,6DC 16,16,6DD
 
 01 0020 Customizable Ball n Chain, uses the Extension bytes: RR AA SS MD
 -- RR = Radius (0-74)
@@ -1179,10 +1179,9 @@ See .asm file for more details
 04 0022 -29,75,68F 9,80,68A 45,67,68A 71,38,68D 81,0,68F 70,-37,68A 43,-66,68A 7,-79,68D -30,-72,68F -62,-49,68A -29,0,114
 04 0030 Customizable Boo Ring, counter-clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
 04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
-05 0020 A Boomerang Bro from Super Mario Bros. 3. It walks back and forth, occasionally hopping and periodically throwing two boomerangs, which it will later try to catch.
-05 0022 0,-16,6EB 0,0,6FB 8,-16,6E9
+
 06 0020 Boss Bass
-06 0022 0,0,6E6 16,0,6E7 0,16,6F6 16,16,6F7
+06 0022 0,0,6EE 16,0,6EF 0,16,6FE 16,16,6FF
 06 0030 Boss Bass, small
 06 0032 0,0,4DA
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
@@ -1194,31 +1193,24 @@ See .asm file for more details
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
 0A 0022 0,0,0
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
-0B 0022 0,0,6E8
+0B 0022 0,0,6D7
 0C 0020 Goombrat/Goombud
-0C 0022 0,0,6F1
-0D 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
-0D 0022 0,-16,711 0,0,712 8,-16,713
-0E 0020 A Ice Bro. It walks back and forth, occasionally hopping and periodically throwing ice balls.
-0E 0022 0,-16,714 0,0,715 10,-10,716
-0F 0020 The Fire Bro from Super Mario Bros. 3. It walks around and occasionally hops. It periodically spits 2 fireballs at Mario.
-0F 0022 0,0,718 0,-16,717 -8,0,719
+0C 0022 0,0,6D6
 
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
-10 0022 -32,0,6F0 -16,0,6F0 0,0,6F0 16,0,6F0 32,0,6F0
+10 0022 -32,0,6D5 -16,0,6D5 0,0,6D5 16,0,6D5 32,0,6D5
 10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
-10 0032 -32,0,6F0 -16,0,6F0 0,0,17 16,0,6F0 32,0,6F0
+10 0032 -32,0,6D5 -16,0,6D5 0,0,17 16,0,6D5 32,0,6D5
 11 0020 A pot
-11 0022 0,0,6D6
+11 0022 0,0,6CC
 12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0022 0,0,6F2
+12 0022 0,0,6F3
 12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0032 0,0,6F2
-14 0020 A Sledge Bro from Super Mario Bros. 3. It walks back and forth. It occasionally jumps and creates an earthquake when it lands. It periodically throws two hammers.
-14 0022 12,0,6FD 4,0,6FC 12,-16,6ED 4,-16,6EC 20,-22,5BB
+12 0032 0,0,6F3
+
 15 0020 A Blooper from SMB1.
-15 0022 0,-16,6EA 0,0,6FA
+15 0022 0,-16,6A3 0,0,6B3
 16 0020 Stationary Hammer Bro, doesn't require platform.
 16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
 17 0020 Gray Castle Block, horizontal
@@ -1251,17 +1243,59 @@ See .asm file for more details
 30 31222 0,1,574 16,1,575 32,1,575 48,1,576
 
 36 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
-36 0022 0,0,0
-50 0020 Hammer Bro
-50 0022 -5,-14,71F 0,0,720 -2,1,721 4,-20,1DB 5,-6,722
+36 40022 0,0,6E7
+36 40122 0,0,6E8
+36 40222 0,0,6E9
+36 40322 0,0,6EA
+36 41022 0,0,6F7
+36 41122 0,0,6F8
+36 41222 0,0,6F9
+36 41322 0,0,6FA
+
+50 30020 Hammer Bro
+50 30022 0,-16,6E4 0,0,6F4 8,-16,5BB
+50 30122 0,-16,6E4 0,0,6F4 8,-16,6F0
+50 30222 0,-16,6E4 0,0,6F4 8,-16,4AE
+50 30322 0,-16,6E4 0,0,6F4 8,-16,6F2
+50 30422 0,-16,6E4 0,0,6F4 8,-16,427
+50 30522 0,-16,6E4 0,0,6F4 8,-16,440
+50 30622 0,-16,6E4 0,0,6F4 8,-16,41E
+50 30722 0,-16,6E4 0,0,6F4 8,-16,688
+50 30822 0,-16,6E4 0,0,6F4 8,-16,688
+50 30922 0,-16,6E4 0,0,6F4 8,-16,6F1
+50 30A22 0,-16,6E4 0,0,6F4 8,-16,6F3
+50 30B22 0,-16,6E4 0,0,6F4 8,-16,5BB
+50 30C22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB
+50 30D22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB
+50 30E22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F0
+50 30F22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,4AE
+50 31022 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F2
+50 30032 0,-16,6E4 0,0,6F4 8,-16,5BB 0,-16,10A
+50 30132 0,-16,6E4 0,0,6F4 8,-16,6F0 0,-16,10A
+50 30232 0,-16,6E4 0,0,6F4 8,-16,4AE 0,-16,10A
+50 30332 0,-16,6E4 0,0,6F4 8,-16,6F2 0,-16,10A
+50 30432 0,-16,6E4 0,0,6F4 8,-16,427 0,-16,10A
+50 30532 0,-16,6E4 0,0,6F4 8,-16,440 0,-16,10A
+50 30632 0,-16,6E4 0,0,6F4 8,-16,41E 0,-16,10A
+50 30732 0,-16,6E4 0,0,6F4 8,-16,688 0,-16,10A
+50 30832 0,-16,6E4 0,0,6F4 8,-16,688 0,-16,10A
+50 30932 0,-16,6E4 0,0,6F4 8,-16,6F1 0,-16,10A
+50 30A32 0,-16,6E4 0,0,6F4 8,-16,6F3 0,-16,10A
+50 30B32 0,-16,6E4 0,0,6F4 8,-16,5BB 0,-16,10A
+50 30C32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB 0,-16,10A
+50 30D32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB 0,-16,10A
+50 30E32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F0 0,-16,10A
+50 30F32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,4AE 0,-16,10A
+50 31032 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F2 0,-16,10A
+
 80 0020 Creating Block Snake
-80 0022 0,0,B8
+80 0022 0,0,40A
 80 0030 Eating Block Snake
-80 0032 0,0,B8 0,0,10A
+80 0032 0,0,40A 0,0,10A
 81 0020 Continuously spawns Snakes
-81 0022 0,0,B8 0,0,114
+81 0022 0,0,40A 0,0,114
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
-81 0032 0,0,B8 0,0,114
+81 0032 0,0,40A 0,0,114
 A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
 A1 0022 0,0,0
 A2 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.

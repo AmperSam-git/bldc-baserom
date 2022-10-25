@@ -3,7 +3,7 @@
 02 banzai_bill_9F.json
 03 bowser_bowling_ball_A1.json
 04 BooRing.json
-05 BoomerangBro.json
+
 06 BossBass.json
 07 customizable-scale-platform.json
 08 scale-platform-dis.json
@@ -11,15 +11,12 @@
 0A thwomp_red.json
 0B FloorBoo.json
 0C Goombud.json
-0D HammerBro.json
-0E IceBro.json
-0F FireBro.json
 
 10 MuncherBridge.json
 11 pot.json
 12 roto_disc.json
 
-14 SledgeBro.json
+
 15 blooper.json
 16 SMW_Hammer_Bro.json
 17 gray_castle_block.json

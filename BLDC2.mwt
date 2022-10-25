@@ -7,7 +7,6 @@
 	Bowser Bowling Ball/Big Steely-gd
 04	Boo Ring, clockwise (Vanilla)
 	Boo Ring, counter-clockwise (Vanilla)
-05	Boomerang Bro
 06	Boss Bass
 	Boss Bass, small
 07	Customizable Scale Platform (Short)
@@ -24,14 +23,10 @@
 	Para-Goombud, flies up/down
 	Para-Goombud, oscillates up/down
 	Para-Goombud, sliding
-0D	Hammer Bro
-0E	Ice Bro
-0F	Fire Bro
 10	Muncher Bridge.
 11	Pot
 12	Custom Roto Disc, clockwise (Vanilla)
 	Custom Roto Disc, counter-clockwise (Vanilla)
-14	Sledge Bro
 15	Blooper
 16	Stationary Hammer Bro
 17	Gray Castle Block, horizontal
@@ -131,7 +126,6 @@
 	Curve Bro
 	Braze Bro
 	Frost Bro
-	Miracle Bro
 	Hammer Bro, small jump only
 	Boomerang Bro, small jump only
 	Fire Bro, small jump only
