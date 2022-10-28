@@ -155,5 +155,7 @@ ExGraphics
 108 - SMM2 SMW Sky Tileset (FG3)
 109 - SMM SMW Ghost House Tileset (BG2)
 10A - SMM SMW Ghost House Tileset (BG3)
+10B - SMM SMW Forest BG (BG1)
+10C - SMM SMW Ghost House Night BG (BG3)
 E17 - GFX17 replacement with the custom block graphics (FG2)
 FFF - Small 8x8 Font and symbols pack (BG2 or BG3)
