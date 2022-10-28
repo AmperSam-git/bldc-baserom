@@ -81,6 +81,8 @@ Super Mario Maker: Super Mario World - Conveyor Belt - Ralshi02 - https://smwc.m
 Super Mario Maker: Super Mario World - Underwater - Dan - https://smwc.me/s/21074
 Super Mario Maker: Super Mario World - Grassland - Green Jerry - https://smwc.me/s/17832
 Super Mario All-Stars: Super Mario Bros. 3 - Quicksand - Batata Douce - https://smwc.me/s/24120
+Super Mario All-Stars: Super Mario Bros. 2 - Desert - Skewer - https://smwc.me/s/5985
+Super Mario All-Stars: Super Mario Bros. 3 - Castle - AmperSam, Black Sabbath - https://smwc.me/s/30076
 
 -- UberASM --
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
