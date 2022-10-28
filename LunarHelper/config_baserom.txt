@@ -38,9 +38,9 @@ lm_level_import_flags = 0
 shared_folder = Shared
 
 -- content
-levels = Levels/latest
-shared_palette = Backup/Palettes/Shared_latest.pal
-map16 = Backup/Map16/AllMap16_latest.map16
+levels = Levels
+shared_palette = Palettes/Shared_latest.pal
+map16 = Map16/AllMap16_latest.map16
 -- title_moves = Other/smwtitledemo.zst
 
 -- global_data is a BPS patch file, to be created by Lunar Helper,
