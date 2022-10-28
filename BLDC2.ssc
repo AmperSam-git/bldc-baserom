@@ -1,5 +1,5 @@
 ; External GFX setup
-10000 0 400-69F,0 6A0-6FF,400
+10000 0 400-69F,0 6A0-6FF,400 800-8FF,400
 
 ; Fixes block contents
 10000 0 100-106,0 219-21A,0 00B-00B,0 0BA-0BA,0 030-030,0 096-096,0 055-055,0 065-065,0 070-070,0, 0C8-0C8,0
@@ -1153,11 +1153,12 @@ F5 D032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 E032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 
+
 ; Custom Sprites
 00 0020 Angry Sun
-00 0022 0,0,6CA 16,0,6CB 0,16,6DA 16,16,6DB
+00 0022 0,0,870 16,0,871 0,16,880 16,16,881
 00 0030 Happy Moon
-00 0032 16,0,6CD 0,16,6DC 16,16,6DD
+00 0032 16,0,873 0,16,882 16,16,883
 
 01 0020 Customizable Ball n Chain, uses the Extension bytes: RR AA SS MD
 -- RR = Radius (0-74)
@@ -1181,7 +1182,7 @@ See .asm file for more details
 04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
 
 06 0020 Boss Bass
-06 0022 0,0,6EE 16,0,6EF 0,16,6FE 16,16,6FF
+06 0022 0,0,876 16,0,877 0,16,886 16,16,887
 06 0030 Boss Bass, small
 06 0032 0,0,4DA
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
@@ -1193,24 +1194,25 @@ See .asm file for more details
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
 0A 0022 0,0,0
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
-0B 0022 0,0,6D7
+0B 0022 0,0,832
 0C 0020 Goombrat/Goombud
-0C 0022 0,0,6D6
+0C 0022 0,0,831
 
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
-10 0022 -32,0,6D5 -16,0,6D5 0,0,6D5 16,0,6D5 32,0,6D5
+10 0022 -32,0,830 -16,0,830 0,0,830 16,0,830 32,0,830
 10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
-10 0032 -32,0,6D5 -16,0,6D5 0,0,17 16,0,6D5 32,0,6D5
+10 0032 -32,0,830 -16,0,830 0,0,17 16,0,830 32,0,830
 11 0020 A pot
-11 0022 0,0,6CC
+11 0022 0,0,834
 12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0022 0,0,6F3
+12 0022 0,0,835
 12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0032 0,0,6F3
+12 0032 0,0,835
 
 15 0020 A Blooper from SMB1.
-15 0022 0,-16,6A3 0,0,6B3
+15 0022 0,-16,890 0,0,8A0
+
 16 0020 Stationary Hammer Bro, doesn't require platform.
 16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
 17 0020 Gray Castle Block, horizontal
@@ -1243,50 +1245,50 @@ See .asm file for more details
 30 31222 0,1,574 16,1,575 32,1,575 48,1,576
 
 36 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
-36 40022 0,0,6E7
-36 40122 0,0,6E8
-36 40222 0,0,6E9
-36 40322 0,0,6EA
-36 41022 0,0,6F7
-36 41122 0,0,6F8
-36 41222 0,0,6F9
-36 41322 0,0,6FA
+36 40022 0,0,840
+36 40122 0,0,841
+36 40222 0,0,842
+36 40322 0,0,843
+36 41022 0,0,850
+36 41122 0,0,851
+36 41222 0,0,852
+36 41322 0,0,853
 
 50 30020 Hammer Bro
-50 30022 0,-16,6E4 0,0,6F4 8,-16,5BB
-50 30122 0,-16,6E4 0,0,6F4 8,-16,6F0
-50 30222 0,-16,6E4 0,0,6F4 8,-16,4AE
-50 30322 0,-16,6E4 0,0,6F4 8,-16,6F2
-50 30422 0,-16,6E4 0,0,6F4 8,-16,427
-50 30522 0,-16,6E4 0,0,6F4 8,-16,440
-50 30622 0,-16,6E4 0,0,6F4 8,-16,41E
-50 30722 0,-16,6E4 0,0,6F4 8,-16,688
-50 30822 0,-16,6E4 0,0,6F4 8,-16,688
-50 30922 0,-16,6E4 0,0,6F4 8,-16,6F1
-50 30A22 0,-16,6E4 0,0,6F4 8,-16,6F3
-50 30B22 0,-16,6E4 0,0,6F4 8,-16,5BB
-50 30C22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB
-50 30D22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB
-50 30E22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F0
-50 30F22 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,4AE
-50 31022 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F2
-50 30032 0,-16,6E4 0,0,6F4 8,-16,5BB 0,-16,10A
-50 30132 0,-16,6E4 0,0,6F4 8,-16,6F0 0,-16,10A
-50 30232 0,-16,6E4 0,0,6F4 8,-16,4AE 0,-16,10A
-50 30332 0,-16,6E4 0,0,6F4 8,-16,6F2 0,-16,10A
-50 30432 0,-16,6E4 0,0,6F4 8,-16,427 0,-16,10A
-50 30532 0,-16,6E4 0,0,6F4 8,-16,440 0,-16,10A
-50 30632 0,-16,6E4 0,0,6F4 8,-16,41E 0,-16,10A
-50 30732 0,-16,6E4 0,0,6F4 8,-16,688 0,-16,10A
-50 30832 0,-16,6E4 0,0,6F4 8,-16,688 0,-16,10A
-50 30932 0,-16,6E4 0,0,6F4 8,-16,6F1 0,-16,10A
-50 30A32 0,-16,6E4 0,0,6F4 8,-16,6F3 0,-16,10A
-50 30B32 0,-16,6E4 0,0,6F4 8,-16,5BB 0,-16,10A
-50 30C32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB 0,-16,10A
-50 30D32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,5BB 0,-16,10A
-50 30E32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F0 0,-16,10A
-50 30F32 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,4AE 0,-16,10A
-50 31032 0,-16,6E5 0,0,6F5 16,-16,6E6 16,0,6F6 16,-16,6F2 0,-16,10A
+50 30022 0,-16,891 0,0,8A1 8,-16,5BB
+50 30122 0,-16,891 0,0,8A1 8,-16,838
+50 30222 0,-16,891 0,0,8A1 8,-16,4AE
+50 30322 0,-16,891 0,0,8A1 8,-16,836
+50 30422 0,-16,891 0,0,8A1 8,-16,427
+50 30522 0,-16,891 0,0,8A1 8,-16,440
+50 30622 0,-16,891 0,0,8A1 8,-16,41E
+50 30722 0,-16,891 0,0,8A1 8,-16,688
+50 30822 0,-16,891 0,0,8A1 8,-16,688
+50 30922 0,-16,891 0,0,8A1 8,-16,6AE
+50 30A22 0,-16,891 0,0,8A1 8,-16,837
+50 30B22 0,-16,891 0,0,8A1 8,-16,5BB
+50 30C22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB
+50 30D22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB
+50 30E22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,838
+50 30F22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,4AE
+50 31022 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,836
+50 30032 0,-16,891 0,0,8A1 8,-16,5BB 0,-16,10A
+50 30132 0,-16,891 0,0,8A1 8,-16,838 0,-16,10A
+50 30232 0,-16,891 0,0,8A1 8,-16,4AE 0,-16,10A
+50 30332 0,-16,891 0,0,8A1 8,-16,836 0,-16,10A
+50 30432 0,-16,891 0,0,8A1 8,-16,427 0,-16,10A
+50 30532 0,-16,891 0,0,8A1 8,-16,440 0,-16,10A
+50 30632 0,-16,891 0,0,8A1 8,-16,41E 0,-16,10A
+50 30732 0,-16,891 0,0,8A1 8,-16,688 0,-16,10A
+50 30832 0,-16,891 0,0,8A1 8,-16,688 0,-16,10A
+50 30932 0,-16,891 0,0,8A1 8,-16,6AE 0,-16,10A
+50 30A32 0,-16,891 0,0,8A1 8,-16,837 0,-16,10A
+50 30B32 0,-16,891 0,0,8A1 8,-16,5BB 0,-16,10A
+50 30C32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB 0,-16,10A
+50 30D32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB 0,-16,10A
+50 30E32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,838 0,-16,10A
+50 30F32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,4AE 0,-16,10A
+50 31032 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,836 0,-16,10A
 
 80 0020 Creating Block Snake
 80 0022 0,0,40A

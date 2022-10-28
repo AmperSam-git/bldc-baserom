@@ -68,6 +68,7 @@ Walljump/Note Block Glitch Fix v1.6 - lolcats439 - https://smwc.me/s/19932
 Yoshi Pipe Animation Fix - Kevin https://smwc.me/s/30127
 
 -- Sprites --
+Custom Bro - Isikoro - https://smwc.me/s/25577
 Better Creating/Eating Block Snakes v1.1 - leod - https://smwc.me/s/18725
 Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
 Line-Guided Any Sprite v1.2 - Kevin, dtothefourth - https://smwc.me/s/24672

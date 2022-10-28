@@ -76,7 +76,7 @@
   ],
   "Collection": [
     {
-      "Name": "Punchy Gp L",
+      "Name": "Punchy Left",
       "ExtraBit": false,
       "Extra Property Byte 1": 1,
       "Extra Property Byte 2": 0,
@@ -92,7 +92,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp L Blue",
+      "Name": "Punchy Left Blue",
       "ExtraBit": false,
       "Extra Property Byte 1": 1,
       "Extra Property Byte 2": 1,
@@ -108,7 +108,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp L Green",
+      "Name": "Punchy Left Green",
       "ExtraBit": false,
       "Extra Property Byte 1": 1,
       "Extra Property Byte 2": 2,
@@ -124,7 +124,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp L Yellow",
+      "Name": "Punchy Left Yellow",
       "ExtraBit": false,
       "Extra Property Byte 1": 1,
       "Extra Property Byte 2": 3,
@@ -140,7 +140,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp R",
+      "Name": "Punchy Right",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
@@ -156,7 +156,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp R Blue",
+      "Name": "Punchy Right Blue",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 1,
@@ -172,7 +172,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp R Green",
+      "Name": "Punchy Right Green",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 2,
@@ -188,7 +188,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Punchy Gp R Yellow",
+      "Name": "Punchy Right Yellow",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 3,
