@@ -34,20 +34,23 @@ org $03989F : db $EA,$EA,$EA,$EA
 ; disable gaining lives & fix halo Mario
 org $028AD2 : NOP #3
 
+; remove life counter from status bar
+org $008F55 : NOP #6
+
+; remap tiles where life counter used to be
+org $008CC1 : dw $3826,$3887,$3888 ; uses "x" and "*96" tiles
+
+; hide number of lives on the overworld
+org $00A15A : BRA $02
+
+; don't show the X next to lives on overworld
+org $04A530 : db $FE
+
 ; remove RNG from Podobos/Jumping Fireballs
 org $01E0D7 : LDA #$7F : NOP #6
 
 ; shorten intro message skip timer
 org $00A09C : db $04
-
-; don't shoot fireballs while spinjumping
-org $00D093 : db $80
-
-; prevent Mario clipping on Mega Moles when they have upwards speed
-org $0387E3 : db $DF
-org $0387E6 : bra $02
-org $0387F4 : bra $00
-
 
 ;;;;;;;;;;;;;;;;;
 ;; Minor Fixes ;;
@@ -75,9 +78,6 @@ endif
 ; fix sprite screen edge interaction bug
 org $01A7F0 : db $EA,$EA,$EA
 
-; fix Yellow Koopa jump framerule
-org $018898 : BRA $05
-
 ; fix Message Box removing some sprite tiles when closing
 org $05B31B : RTS
 
@@ -99,9 +99,6 @@ org $03C511 : db $0C
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GFX Tweaks & Fixes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
-
-; activate unused Yoshi dust
-org $028BB4 : db $B9
 
 ; fix palette of the white tile in the cave layer 3 background
 org $05A312 : db $15
