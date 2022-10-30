@@ -7,7 +7,7 @@ JMP Return : JMP MarioInside : JMP Return
 
 MarioInside:
 	LDA $14AE|!addr	;   If a silver P-switch
-	BNE Return		;   ...is active, return
+	BEQ Return		;   ...is active, return
 
 	LDA $16			;\  Only enter the door if you press up.
 	AND #$08		; |
