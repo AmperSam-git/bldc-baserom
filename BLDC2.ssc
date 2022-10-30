@@ -1152,10 +1152,269 @@ F5 C032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 D032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 E032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
+
+; Poison mushroom
+85 0002 0,0,839
+85 0000 A poison mushroom which hurts the player.
+85 0008 7F,100,7F,7F 7F,103,7F,7F
+
+; Extra Bitted Sprites
+
+; Kicked shells
+04 0012 0,0,30 0,0,10A
+05 0012 0,0,31 0,0,10A
+06 0012 0,0,32 0,0,10A
+07 0012 0,0,33 0,0,10A
+08 0012 0,0,30 0,0,10A 8,0,10A
+
+04 0010 A green shell that spawns kicked towards the player.
+05 0010 A red shell that spawns kicked towards the player.
+06 0010 A blue hell that spawns kicked towards the player.
+07 0010 A yellow shell that spawns kicked towards the player.
+08 0010 A double hit green shell that spawns kicked towards the player.
+
+; Kicked Buzzy Beetle
+11 0012 0,0,D 0,0,10A
+
+11 0010 A Buzzy Beetle which spawns kicked towards the player.
+
+; Throwblock
+53 0002 0,-1,402
+53 0012 0,-1,402 0,0,10A
+
+53 0000 A stationary throwblock sprite with infinite timer.
+53 0010 A throwblock sprite that spawns kicked towards the player.
+
+; Disco shell
+DA 0012 0,0,30 0,0,114
+DB 0012 0,0,31 0,0,114
+DC 0012 0,0,32 0,0,114
+DD 0012 0,0,33 0,0,114
+DF 0012 0,0,30 0,0,114
+
+DA 0010 A Disco Shell.
+DB 0010 A Disco Shell.
+DC 0010 A Disco Shell.
+DD 0010 A Disco Shell.
+DF 0010 A Disco Shell.
+
+; Green bouncing parakoopa
+09 0002 0,-14,10 0,2,20 9,-11,7
+09 0012 0,-15,10 0,1,140 1,-11,8
+
+09 0000 A green bouncing parakoopa. It will jump high (7 tiles up) or low (2 tiles up) depending on its extra bit. It's currently set to jump high.\nIGNORE THIS -->
+09 0010 A green bouncing parakoopa. It will jump high (7 tiles up) or low (2 tiles up) depending on its extra bit. It's currently set to jump low.
+
+; Lakitu
+1E 0002 -5,0,27 5,1,27 1,-16,19 1,0,29 3,4,27 -3,4,27 4,8,9C
+1E 0012 -5,0,27 5,1,27 -12,-14,FD -28,-14,FE -28,2,FE -28,18,FE -28,34,FE -20,50,210 1,-16,19 1,0,29 3,4,27 -3,4,27 4,8,9C
+
+1E 0010 Lakitu will "fish" for Mario with a 1-UP depending on the extra bit. Mario can ride in the cloud for a limited time if Lakitu is killed first, although the cloud will last forever if Mario uses fireballs to do it. Use Sprite Command 0xD2 to make him go away.
+
+; Net koopas
+22 0002 0,-4,50 0,12,60
+22 0012 0,-4,124 0,12,134
+23 0002 0,-4,51 0,12,61
+23 0012 0,-4,125 0,12,135
+24 0002 0,-4,52 0,12,62
+24 0012 0,-4,126 0,12,136
+25 0002 0,-4,53 0,12,63
+25 0012 0,-4,127 0,12,137
+
+22 0000 A green koopa that climbs nets vertically. It will be below/above the net depending on its extra bit. It's currently set to be below the net.\nIGNORE THIS -->
+22 0010 A green koopa that climbs nets vertically. It will be below/above the net depending on its extra bit. It's currently set to be above the net.
+23 0000 A red koopa that quickly climbs nets vertically. It will be below/above the net depending on its extra bit. It's currently set to be below the net.\nIGNORE THIS -->
+23 0010 A red koopa that quickly climbs nets vertically. It will be below/above the net depending on its extra bit. It's currently set to be above the net.
+24 0000 A green koopa that climbs nets horizontally. It will be below/above the net depending on its extra bit. It's currently set to be below the net.\nIGNORE THIS -->
+24 0010 A green koopa that climbs nets horizontally. It will be below/above the net depending on its extra bit. It's currently set to be above the net.
+25 0000 A red koopa that quickly climbs nets horizontally. It will be below/above the net depending on its extra bit. It's currently set to be below the net.\nIGNORE THIS -->
+25 0010 A red koopa that quickly climbs nets horizontally. It will be below/above the net depending on its extra bit. It's currently set to be above the net.
+
+; Urchins
+3A 0002 0,0,39 0,16,49 16,16,4A 16,0,3A 8,9,3F
+3A 0012 0,0,39 0,16,49 16,16,4A 16,0,3A 8,9,4F
+3B 0002 0,0,3B 0,16,4B 16,16,4C 16,0,3C 8,9,3F
+3B 0012 0,0,3B 0,16,4B 16,16,4C 16,0,3C 8,9,4F
+3C 0002 0,0,3D 0,16,4D 16,16,4E 16,0,3E 8,9,3F
+3C 0012 0,0,3D 0,16,4D 16,16,4E 16,0,3E 8,9,4F
+
+3A 0000 An urchin that moves back and forth a fixed distance of 6 tiles vertically or horizontally depending on its extra bit. The distance can be shorter if it encounters a solid object first. It does not require water. It's currently set to go vertically.\nIGNORE THIS -->
+3A 0010 An urchin that moves back and forth a fixed distance of 6 tiles vertically or horizontally depending on its extra bit. The distance can be shorter if it encounters a solid object first. It does not require water. It's currently set to go horizontally.
+3B 0000 An urchin that moves back and forth between two walls vertically or horizontally depending on its extra bit. It does not require water. It's currently set to go vertically.\nIGNORE THIS -->
+3B 0010 An urchin that moves back and forth between two walls vertically or horizontally depending on its extra bit. It does not require water. It's currently set to go horizontally.
+3C 0000 An urchin that will follow the edge of a wall counter-clockwise or clockwise depending on its extra bit. It should be placed directly on top of the wall to follow, and does not require water. It's currently set to go counter clockwise.\nIGNORE THIS-->
+3C 0010 An urchin that will follow the edge of a wall counter-clockwise or clockwise depending on its extra bit. It should be placed directly on top of the wall to follow, and does not require water. It's currently set to go clockwise.
+
+; P-Switch
+3E 0002 0,1,55
+3E 0012 0,1,65
+
+3E 0000 A Blue P-Switch.
+3E 0010 A Silver P-Switch.
+
+; Monty Moles
+4D 0012 0,1,A7 0,1,A8
+4E 0012 0,1,A7 -4,-4,B0 -4,8,B2 12,-4,B1 12,8,B3
+
+4D 0000 A ground dwelling monty mole that will explode from its hiding place and either follow Mario or walk with a hop depending on its extra bit. It's currently set to follow.\nIGNORE THIS -->
+4D 0010 A ground dwelling monty mole that will explode from its hiding place and either follow Mario or walk with a hop depending on its extra bit. It's currently set to walk with a hop.
+4E 0000 A ledge dwelling monty mole that will explode from its hiding place (leaving behind tile C6) and either follow Mario or walk with a hop depending on its extra bit. It's currently set to follow.\nIGNORE THIS -->
+4E 0010 A ledge dwelling monty mole that will explode from its hiding place (leaving behind tile C6) and either follow Mario or walk with a hop depending on its extra bit. It's currently set to walk with a hop.
+
+; Turn block bridge, vertical
+59 0002 0,-31,5C 0,-15,5C 0,1,5C 0,17,5C 0,33,5C
+
+; Turn block bridge, horizontal
+5A 0002 -32,1,5C -16,1,5C 0,1,5C 16,1,5C 32,1,5C
+
+; Checker/brown platform, line guided
+63 0002 -24,-7,7C -8,-7,7D 8,-7,7E
+63 0012 -40,-7,7B -24,-7,6B -8,-7,6B 8,-7,6B 24,-7,7A
+
+63 0000 A line guided platform that moves right/down and will be brown or checkered depending on its extra bit. It won't start moving until Mario jumps on it.
+63 0010 A line guided platform that moves right/down and will be brown or checkered depending on its extra bit. It won't start moving until Mario jumps on it.
+
+; Rope mechanism
+64 0002 -8,-7,8E -8,9,8F -8,21,8F -8,37,8F -8,41,8F -8,57,9F
+64 0012 -8,-7,8E -8,9,8F -8,21,8F -8,37,8F -8,53,8F -8,69,8F -8,85,8F -8,101,8F -8,105,8F -8,121,9F
+
+64 0000 A line guided rope mechanism that will be short or long depending on its extra bit.\nNote: long ropes don't require sprite header 1.
+64 0010 A line guided rope mechanism that will be short or long depending on its extra bit.\nNote: long ropes don't require sprite header 1.
+
+; Line-guided chainsaws
+65 0002 -328,-20,BF -328,-34,AF -328,-6,8E -328,-12,201 -333,-12,202
+65 0012 8,-21,BF 8,-35,AF 8,-7,9E 16,-13,201 21,-13,202
+
+66 0002 -328,9,11C -328,23,12C -328,-6,8E -328,-12,201 -333,-12,202
+66 0012 8,7,11C 8,21,12C 8,-7,9E 16,-13,201 21,-13,202
+
+65 0000 A line guided chainsaw that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go right/down (X positions <= 0x12 are invalid).\nIGNORE THIS -->
+65 0010 A line guided chainsaw that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go left/up.
+66 0000 An upside down line guided chainsaw that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go right/down (X positions <= 0x12 are invalid).\nIGNORE THIS -->
+66 0010 An upside down line guided chainsaw that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go left/up.
+
+65 0018 7F,7F,7F,05
+66 0018 7F,7F,7F,05
+
+; Line-guided grinder
+67 0002 -336,-15,AD -320,-15,AE -336,1,BD -320,1,BE
+67 0012 0,-15,AB 16,-15,AC 0,1,BB 16,1,BC
+
+67 0000 A line guided grinder that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go right/down (X positions <= 0x12 are invalid).\nIGNORE THIS -->
+67 0010 A line guided grinder that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go left/up.
+
+67 0018 7F,7F,12,7F
+
+; Line-guided fuzzy
+68 0002 -328,-7,AA
+68 0012 8,-7,A9
+
+68 0000 A line guided fuzz ball that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go right/down (X positions <= 0x12 are invalid).\nIGNORE THIS -->
+68 0010 A line guided fuzz ball that will move right/down or left/up depending on its extra bit. If set to go right/down, it will generally only appear if Mario is going right and the sprite is just offscreen on the left. As an alternative to this, you can place one that's set to go left at least 3 (tile 92) to 4 (tile 93) tiles above a line guide, and it will go right once it fall onto the line. It's currently set to go left/up.
+
+68 0018 7F,7F,7F,05
+
+; Super Koopas
+73 0002 0,1,42 8,1,E8
+73 0012 0,1,42 8,1,F8
+
+73 0010 A Super Koopa with a feather or a yellow cape depending on its extra bit. It starts off on the ground, then takes a small jump and flies towards Mario.
+
+; Mushroom scales
+8F 0002 -8,0,E9 8,0,EA 120,0,E9 136,0,EA
+8F 0012 -8,0,E9 8,0,EA 56,0,E9 72,0,EA
+
+8F 0010 These are scale platforms that will be farther or closer together depending on their extra bit. When Mario stands on one scale, the other scale rises.
+
+; Whistlin' chuck
+94 0002 -4,1,1FA 12,1,1FB -5,-15,1EA 13,-15,1EB 0,-11,169 14,-24,54
+94 0012 -4,1,1FA 12,1,1FB -5,-15,1EA 13,-15,1EB 0,-11,1ED
+
+94 0000 Whistlin' chuck. It'll wake sleeping fish or summon flying super koopas depending on its extra bit. It's currently set to wake sleeping fish.\nIGNORE THIS -->
+94 0010 Whistlin' chuck. It'll wake sleeping fish or summon flying super koopas depending on its extra bit. It's currently set to summon flying super koopas.
+
+; Ball n' chain
+9E 0002 -1,16,1D6 -3,32,1D6 -16,48,1C4 0,48,1C5 -16,64,1D4 0,64,1D5
+9E 0012 1,16,1D6 3,32,1D6 0,48,1C4 16,48,1C5 0,64,1D4 16,64,1D5
+
+9E 0000 A ball and chain which will move clockwise or counter-clockwise depending on its extra bit. It's currently set to go clockwise.\nIGNORE THIS -->
+9E 0010 A ball and chain which will move clockwise or counter-clockwise depending on its extra bit. It's currently set to go counter clockwise.
+
+; Rotating gray platform
+A3 0002 -1,16,EB -3,32,EB -6,48,EB -22,48,EC -6,48,ED 10,48,EE
+A3 0012 1,16,EB 3,32,EB 6,48,EB -10,48,EC 6,48,ED 22,48,EE
+
+A3 0000 A grey platform on a chain that moves clockwise or counter-clockwise depending on its extra bit. It's currently set to go clockwise.\nIGNORE THIS -->
+A3 0010 A grey platform on a chain that moves clockwise or counter-clockwise depending on its extra bit. It's currently set to go counter clockwise.
+
+; Floating spike ball
+A4 0002 -8,-8,120 8,-8,121 -8,8,130 8,8,131
+A4 0012 -8,-8,122 8,-8,123 -8,8,132 8,8,133
+
+A4 0000 A spike ball that floats on a water surface towards Mario when he enters the screen, but doesn't follow him. Requires sprite buoyancy to be enabled. It will move slowly or quickly depending on its extra bit. It's currently set to go slow.\nIGNORE THIS -->
+A4 0010 A spike ball that floats on a water surface towards Mario when he enters the screen, but doesn't follow him. Requires sprite buoyancy to be enabled. It will move slowly or quickly depending on its extra bit. It's currently set to go fast.
+
+; Sparky/Fuzzy
+;A5 0002 0,1,A9
+A5 0012 0,1,AA
+
+A5 0000 A sparky or fuzzball that follows the wall. If the sprite GFX index in the level header is 2 it will be a fuzzball (SP4=05), otherwise it will be a sparky (SP3=12) (sparky will appear glitched in Lunar Magic). It will move left or right depending on its extra bit. It's currently set to go left.\nIGNORE THIS -->
+A5 0010 A sparky or fuzzball that follows the wall. If the sprite GFX index in the level header is 2 it will be a fuzzball (SP4=05), otherwise it will be a sparky (SP3=12) (sparky will appear glitched in Lunar Magic). It will move left or right depending on its extra bit. It's currently set to go right.
+
+; Hothead
+A6 0002 -8,-8,1C7 8,-8,1C8 -8,8,1D7 8,8,1D8 0,0,1C6
+A6 0012 -8,-8,1C7 8,-8,1C8 -8,8,1D7 8,8,1D8 8,0,1C6
+
+A6 0000 A HotHead that follows the wall. It will move left or right depending on its extra bit. It's currently set to go left.\nIGNORE THIS -->
+A7 0010 A HotHead that follows the wall. It will move left or right depending on its extra bit. It's currently set to go right.
+
+; Wooden spike / pencil, up
+AD 0012 0,1,17D 0,17,16E 0,33,16E 0,49,16E 0,65,16E
+
+AD 0000 A wooden spike that will move up and down by 3 tiles. It will first move up or down depending on its extra bit. It's currently set to go down first.\nIGNORE THIS -->
+AD 0010 A wooden spike that will move up and down by 3 tiles. It will first move up or down depending on its extra bit. It's currently set to go up first.
+
+; Creating block
+B1 0012 0,0,B8
+
+B1 0000 A creating/eating path block sprite, depending on its extra bit. This is currently a creating block.\nIGNORE THIS -->
+B1 0010 A creating/eating path block sprite, depending on its extra bit. This is currently an eating block.
+
+; Info box
+B9 0002 0,1,10B 0,1,10C 3,1,10A
+B9 0012 0,1,10B 0,1,10D 3,1,10A
+
+B9 0000 A message block that will display one of two messages depending on its extra bit. It's currently set to display message 1.\nIGNORE THIS -->
+B9 0010 A message block that will display one of two messages depending on its extra bit. It's currently set to display message 2.
+
+; Timed lift
+BA 0002 0,1,198 16,1,199 12,5,184
+BA 0012 0,1,198 16,1,199 12,5,187
+
+BA 0000 A timed lift that will last 4 or 1 seconds depending on its extra bit.
+BA 0010 A timed lift that will last 4 or 1 seconds depending on its extra bit.
+
+; Flying grey turn blocks
+C1 0002 0,-2,1CB 16,-2,1CB 32,-2,1CB -14,-12,1D9 46,-12,1DA
+C1 0012 0,2,1CB 16,2,1CB 32,2,1CB -14,-8,1D9 46,-8,1DA
+
+C1 0000 Flying grey turnblocks that move to the right. It will fly up or down first depending on its extra bit. It's currently set to go up first.\nIGNORE THIS -->
+C1 0010 Flying grey turnblocks that move to the right. It will fly up or down first depending on its extra bit. It's currently set to go down first.
+
+; Three rotating gray platforms
+E0 0002 -1,16,EB -3,32,EB -6,48,EB -22,48,EC -6,48,ED 10,48,EE -12,-10,EB -24,-20,EB -36,-30,EB -20,-30,EE -36,-30,ED -52,-30,EC 15,-6,EB 30,-12,EB 45,-18,EB 61,-18,EE 45,-18,ED 29,-18,EC
+E0 0012 1,16,EB 3,32,EB 6,48,EB -10,48,EC 6,48,ED 22,48,EE 12,-10,EB 24,-20,EB 36,-30,EB 20,-30,EC 36,-30,ED 52,-30,EE -15,-6,EB -30,-12,EB -45,-18,EB -61,-18,EC -45,-18,ED -29,-18,EE
+
+E0 0000 3 platforms on chains that move clockwise or counter-clockwise depending on their extra bit. It's currently set to go clockwise.\nIGNORE THIS -->
+E0 0010 3 platforms on chains that move clockwise or counter-clockwise depending on their extra bit. It's currently set to go counter clockwise.
+
+
+; Custom Sprites
 00 0020 Angry Sun
-00 0022 0,0,0
+00 0022 0,0,870 16,0,871 0,16,880 16,16,881
 00 0030 Happy Moon
-00 0032 0,0,0
+00 0032 16,0,873 0,16,882 16,16,883
+
 01 0020 Customizable Ball n Chain, uses the Extension bytes: RR AA SS MD
 -- RR = Radius (0-74)
 -- AA = Angle
@@ -1163,60 +1422,64 @@ F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 -- M = momentum enabled
 -- D = dynamic
 See .asm file for more details
-01 0022 0,0,0
+01 0022 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA
 02 0020 A SMW Banzai Bill that faces left.
-02 0022 0,0,0
+02 0022 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF
 02 0030 A SMW Banzai Bill that faces right.
-02 0032 0,0,0 0,0,10A
+02 0032 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF 0,0,10A
 03 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it.
-03 0022 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-20,173 16,-4,163
+03 0022 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
 03 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also.
-03 0032 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-8,173 4,0,163
+03 0032 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
 04 0020 Customizable Boo Ring, clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
-04 0022 0,0,0
+04 0022 -29,75,68F 9,80,68A 45,67,68A 71,38,68D 81,0,68F 70,-37,68A 43,-66,68A 7,-79,68D -30,-72,68F -62,-49,68A -29,0,114
 04 0030 Customizable Boo Ring, counter-clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
-04 0032 0,0,0 0,0,114
+04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
+
 06 0020 Boss Bass
-06 0022 0,0,0
+06 0022 0,0,876 16,0,877 0,16,886 16,16,887
 06 0030 Boss Bass, small
-06 0032 0,0,0
+06 0032 0,0,4DA
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
-07 0022 -8,0,E9 8,0,EA 4,-16,114
+07 0022 -8,0,587 8,0,588 4,-16,114
 08 0020 A disassembly of the scale platform.
-08 0022 -8,0,E9 8,0,EA
+08 0022 -8,0,587 8,0,588
 09 0020 Customizable Moving hole, uses 4 extra bytes: SP TT WD DD:\nSP - Speed\nTT - Turn Time - How many frames before changing direction\nW - Width of hole in tiles (1-6 recommended, doesn't cound the end tiles, 1 is vanilla)\nD - Depth of hole in tiles (1-6 recommended)\nDD - Direction 0=horizontal, 1=vertical
-09 0022 0,0,0
+09 0022 -4,0,549 12,0,54A 28,0,54B
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
 0A 0022 0,0,0
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
-0B 0022 0,0,0
+0B 0022 0,0,832
 0C 0020 Goombrat/Goombud
-0C 0022 0,0,0
+0C 0022 0,0,831
+
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
-10 0022 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
+10 0022 -32,0,830 -16,0,830 0,0,830 16,0,830 32,0,830
 10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
-10 0032 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
+10 0032 -32,0,830 -16,0,830 0,0,17 16,0,830 32,0,830
 11 0020 A pot
-11 0022 0,0,0
+11 0022 0,0,834
 12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0022 0,0,0
+12 0022 0,0,835
 12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0032 0,0,0
+12 0032 0,0,835
+
 15 0020 A Blooper from SMB1.
-15 0022 0,0,0
+15 0022 0,-16,890 0,0,8A0
+
 16 0020 Stationary Hammer Bro, doesn't require platform.
-16 0022 0,0,0
+16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
 17 0020 Gray Castle Block, horizontal
-17 0022 0,0,0
+17 0022 0,1,498 16,1,499 0,17,4A8 16,17,4A9
 17 0030 Gray Castle Block, vertical
-17 0032 0,0,0 0,0,10A
+17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 0,0,10A
 18 0020 Flying Spiny
-18 0022 0,0,0
+18 0022 0,0,429 8,-8,414
 19 0020 Magikoopa sits in one place repeatedly firing magic.
-19 0022 0,0,0
+19 0022 0,1,454 0,-15,444
 1B 0020 This magikoopa casts magic that teleports player to a different level/entrance.
-1B 0022 0,0,0
+1B 0022 0,1,454 0,-15,444
 1C 0020 Firebar Clockwise
 1C 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1C 0030 Firebar Counter
@@ -1227,21 +1490,69 @@ See .asm file for more details
 1D 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
 20 0020 All pirahna plants and venus variations. Red plants ignore Mario's proximity.
 20 0022 0,0,0
-30 0020 Grey Boost Platforms. \n - Grey: can only jump from their starting position.\n - Grey: can only jump from their starting position.
 
-30 0022 0,0,0
+30 0020 Grey Boost Platforms. \n - Grey: can only jump from their starting position.\n - Grey: can only jump from their starting position.
+30 30022 0,1,574 16,1,576
+30 30122 0,1,574 16,1,575 32,1,576
+30 30222 0,1,574 16,1,575 32,1,575 48,1,576
+30 31022 0,1,574 16,1,576
+30 31122 0,1,574 16,1,575 32,1,576
+30 31222 0,1,574 16,1,575 32,1,575 48,1,576
+
 36 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
-36 0022 0,0,0
-50 0020 Hammer Bro
-50 0022 -5,-14,70E 0,0,70F -2,1,710 4,-20,1DB 5,-6,711
+36 40022 0,0,840
+36 40122 0,0,841
+36 40222 0,0,842
+36 40322 0,0,843
+36 41022 0,0,850
+36 41122 0,0,851
+36 41222 0,0,852
+36 41322 0,0,853
+
+50 30020 Hammer Bro
+50 30022 0,-16,891 0,0,8A1 8,-16,5BB
+50 30122 0,-16,891 0,0,8A1 8,-16,838
+50 30222 0,-16,891 0,0,8A1 8,-16,4AE
+50 30322 0,-16,891 0,0,8A1 8,-16,836
+50 30422 0,-16,891 0,0,8A1 8,-16,427
+50 30522 0,-16,891 0,0,8A1 8,-16,440
+50 30622 0,-16,891 0,0,8A1 8,-16,41E
+50 30722 0,-16,891 0,0,8A1 8,-16,688
+50 30822 0,-16,891 0,0,8A1 8,-16,688
+50 30922 0,-16,891 0,0,8A1 8,-16,6AE
+50 30A22 0,-16,891 0,0,8A1 8,-16,837
+50 30B22 0,-16,891 0,0,8A1 8,-16,5BB
+50 30C22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB
+50 30D22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB
+50 30E22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,838
+50 30F22 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,4AE
+50 31022 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,836
+50 30032 0,-16,891 0,0,8A1 8,-16,5BB 0,-16,10A
+50 30132 0,-16,891 0,0,8A1 8,-16,838 0,-16,10A
+50 30232 0,-16,891 0,0,8A1 8,-16,4AE 0,-16,10A
+50 30332 0,-16,891 0,0,8A1 8,-16,836 0,-16,10A
+50 30432 0,-16,891 0,0,8A1 8,-16,427 0,-16,10A
+50 30532 0,-16,891 0,0,8A1 8,-16,440 0,-16,10A
+50 30632 0,-16,891 0,0,8A1 8,-16,41E 0,-16,10A
+50 30732 0,-16,891 0,0,8A1 8,-16,688 0,-16,10A
+50 30832 0,-16,891 0,0,8A1 8,-16,688 0,-16,10A
+50 30932 0,-16,891 0,0,8A1 8,-16,6AE 0,-16,10A
+50 30A32 0,-16,891 0,0,8A1 8,-16,837 0,-16,10A
+50 30B32 0,-16,891 0,0,8A1 8,-16,5BB 0,-16,10A
+50 30C32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB 0,-16,10A
+50 30D32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,5BB 0,-16,10A
+50 30E32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,838 0,-16,10A
+50 30F32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,4AE 0,-16,10A
+50 31032 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,836 0,-16,10A
+
 80 0020 Creating Block Snake
-80 0022 0,0,B8
+80 0022 0,0,40A
 80 0030 Eating Block Snake
-80 0032 0,0,B8 0,0,10A
+80 0032 0,0,40A 0,0,10A
 81 0020 Continuously spawns Snakes
-81 0022 0,0,B8 0,0,114
+81 0022 0,0,40A 0,0,114
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
-81 0032 0,0,B8 0,0,114
+81 0032 0,0,40A 0,0,114
 A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
 A1 0022 0,0,0
 A2 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.

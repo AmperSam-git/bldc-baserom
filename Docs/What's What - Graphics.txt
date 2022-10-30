@@ -2,19 +2,18 @@
 Graphics
 --------
 
-The following are what vanilla graphics files have been edited in the baserom, backups can be found in the Backups/Graphics folder.
-
 GFX14 : Global Tiles
- - a couple unused tiles in the bullet launcher were replaced with sideways cloud graphics.
+ - unused tiles in the bullet launcher were replaced with sideways cloud graphics
 
-GFX29 : Infinity symbol in the status bar
+GFX29 : Layer 3
+ - an infinity symbol replaces *96 in the status bar
 
 GFX33 : Global Animation Tiles
  - midway animation frames have been corrected
 
----------------
+----------
 ExGraphics
----------------
+----------
 61 - Global Animation Graphics for P-Switch Doors, On/Off blocks, One-Way Blocks, and Coin Outlines
 80 - Cloud Layer 3 Graphics (use with 81 or 82)
 81 - Cloud 1 Layer 3 Tilemap
@@ -48,14 +47,14 @@ ExGraphics
 9D - Castle 1 Layer 2 Graphics
 9E - Castle 1 Layer 3 Graphics
 9F - Castle 1 Layer 3 Tilemap
-A0 - Castle 2 Layer 3 Graphics and Animarion
+A0 - Castle 2 Layer 3 Graphics and Animation
 A1 - Castle 2 Layer 3 Tilemap
 A8 - GFX14 for use with GHB's Screen Scrolling Pipes (FG1)
 A9 - GFX15 for use with GHB's Screen Scrolling Pipes (FG3)
 AA - Complementary GFX for use with GHB's Screen Scrolling Pipes (BG3)
 AB - SMAS SMB1 Castle BG (BG1)
 AC - SMAS SMB1 Mushroom BG (BG1)
-B3 - SMW Big Bushes (FG2)
+B3 - SMW Big Bushes and Big Pipe (FG2)
 B4 - SMW Bushes Layer 3 Graphics (LG4)
 B5 - SMW Bushes Layer 3 Tilemap
 B6 - SMW Ludwig's Battle Layer 3 Animations (AN2)
@@ -131,19 +130,30 @@ FB - SMAS SMB3 Waterfalls BG (AN2)
 FC - SMAS SMB3 Woodland FG (FG3)
 FD - SMAS SMB3 Woodland Animations (AN2)
 FE - SMAS SMB2 Warehouse FG (FG3)
-FF - SMM SMW Castle Decorations (BG2 or BG3)
+FF - Small 8x8 Font and symbols pack (BG2 or BG3)
 100 - SMM SMW Airship (FG3)
 101 - SMM SMW Airship (BG2)
 102 - SMM SMW Airship (BG3)
 103 - SMM SMW Cave Decorations (BG2 or BG3)
 104 - SMM SMW Grassland BG (BG1)
-105 - SMM SMW Underwater Tileset (AN2)
-106 - SMM SMW Underwater Tileset (BG2)
-107 - SMM SMW Underwater Tileset (BG3)
-108 - SMM2 SMW Sky Tileset (FG3)
+105 - SMM SMW Airship Tileset ()
+106 - SMM SMW Airship Tileset ()
+107 - SMM SMW Airship Tileset ()
+108 - SMM SMW Castle Decorations (BG2 or BG3)
 109 - SMM SMW Ghost House Tileset (BG2)
 10A - SMM SMW Ghost House Tileset (BG3)
 10B - SMM SMW Forest BG (BG1)
 10C - SMM SMW Ghost House Night BG (BG3)
+10E - SMM SMW Forest FG ()
+10F - SMM SMW Desert FG ()
+111 - SMM SMW Underwater Urchins (AN2)
+112 - SMM SMW Underwater Tileset (BG2)
+113 - SMM SMW Underwater Tileset (BG3)
+114 - SMM SMW Snow Tileset ()
+115 - SMM SMW Snow Tileset (BG1)
+116 - SMM SMW Sky Tileset ()
+117 - SMM SMW Sky Tileset ()
+118 - SMM SMW Sky Tileset ()
 E17 - GFX17 replacement with the custom block graphics (FG2)
-FFF - Small 8x8 Font and symbols pack (BG2 or BG3)
+200 - Custom global blocks (Key and ice blocks)
+D00-DFF - DSS Sprite Graphics
