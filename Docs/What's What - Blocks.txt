@@ -2,12 +2,12 @@
 GPS Inserted Blocks
 -------------------
 
+Page 2
+------
+
 290 - Block that is solid to sprites, passable by Mario
 291 - Block that is solid to Mario, passable by sprites
-292 - Block that bounces sprites but is passable by Mario
-293 - Solid if anything goes up
-294 - Solid if anything goes right
-295 - Solid if anything goes left
+292-295 - One-way Blocks
 296 - ON/OFF Switch block.
 297 - Inverted ON/OFF Switch block.
 298 - Block that can be broken by a kicked or thrown item
@@ -15,9 +15,34 @@ GPS Inserted Blocks
 29A - Block that kills the player (even on yoshi), is solid for sprites and kills on wall running.
 29B - Block that kills the player (even on yoshi), is passable for sprites and kills on wall running.
 29C - Block that removes any powerup or item from Mario as well as flight state
-29D - A Donut Lift, which will fall shortly after being stepped on.
-29E - A Donut Lift, which will fall shortly after being stepped on.
+29D - Block that bounces sprites but is passable by Mario
+29E - Block with infinite supply of throwblocks.
 29F - A ledge that is climbable.
-29D - Block with infinite supply of throwblocks.
-2A0-2AC - Custom Question Blocks (hover for descriptions)
+2A0, 2B0-2B3 - Key locked blocks
+2A1 - A ledge that is passable when pressing down
+2A2 - Block that will set ON/OFF state to OFF
+2A3 - Block that will set ON/OFF state to ON
+2A4 - Quicksand
+2A5 - Quicksand, harder to escape
+2A6 - Outline coin that will turn into a coin after a moment
+2A7 - Block that is WATER to sprites, passable by Mario
+2A8 - No Jump block
+2A9 - Top of sliber pswitch door
+2AA - Small silver pswitch door/bottom
+2AB - Teleport block
+2B3 - Teleport block, requires Key
+2B4 - Turn off water
+2B5 - Turn on water
+
+Page 3
+------
+
 300-36F - Screen Scrolling Pipe Tiles (hover for descriptions)
+370-375 - Conveyor tiles (Fast)
+380-385 - Conveyor tiles
+390-395 - Conveyor tiles (Slow)
+3A0-3A3 - Stack blocks
+3A3-3A7 - Directional Donut blocks
+3B0-3BC - Custom Question Blocks (hover for descriptions)
+3C0-3C8,3D8 - Ice/Frozen blocks
+3F2-3FF - Creating/eating block assistance tiles (hover for descriptions)
