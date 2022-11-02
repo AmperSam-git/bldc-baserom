@@ -31,4 +31,5 @@ temp.*
 *.smc~
 *.spc
 *.sym
+*.srm
 *.zip

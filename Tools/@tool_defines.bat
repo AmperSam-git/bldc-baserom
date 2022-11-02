@@ -39,8 +39,9 @@ set LM_ZIP="lm331.zip"
 set LM_JUNK="readme.txt"
 
 :: Lunar Helper
-set LUN_HLP_DL="https://github.com/Underrout/LunarHelper/releases/download/v1.5.0-LMC/LunarHelper-v1.5.0.zip"
-set LUN_HLP_ZIP="LunarHelper-v1.5.0.zip"
+set LUN_HLP_DIR=%WORKING_DIR%LunarHelper\
+set LUN_HLP_DL="https://github.com/Underrout/LunarHelper/releases/download/v2.5.1/LunarHelper-v2.5.1.zip"
+set LUN_HLP_ZIP="LunarHelper-v2.5.1.zip"
 set LUN_HLP_JUNK="LICENSE" "config_project.txt" "config_user.txt"
 set LUN_HLP_JUNK_DIR="initial_patches"
 

@@ -53,6 +53,8 @@ SpawnItem:
 	LDX #$0D
 	LDY #$00
 	%spawn_bounce_sprite()
+	LDA #$00
+	STA $1901,y
 
 
 	LDA #$02

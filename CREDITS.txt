@@ -87,7 +87,6 @@ Super Mario All-Stars: Super Mario Bros. 3 - Castle - AmperSam, Black Sabbath - 
 -- UberASM --
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
-Consistent 8 Frame Cape Float Delay - DJLocks, xHF01x - https://smwc.me/s/28534
 Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
 
 -- Custom Blocks --
@@ -105,7 +104,7 @@ Question Mark Blocks v1.3.0* - MarioFanGamer, lx5 - https://smwc.me/s/19775
 Quicksand Blocks - Roy, Sonikku - https://smwc.me/s/21197
 Screen Scrolling Pipes 4.0.2* - HammerBrother - https://smwc.me/s/27019
 Super Bounce Blocks - dogemaster - https://smwc.me/s/22934
-Doors - MarioFanGamer - https://smwc.me/s/21130
+Doors* - MarioFanGamer - https://smwc.me/s/21130
 
 * simplified for use in the baserom
 

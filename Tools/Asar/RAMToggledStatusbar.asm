@@ -10,7 +10,7 @@
 ; 0 = disable the status bar by default, enable it with the RAM
 ; 1 = enable the status bar by default, disable it with the RAM
 ; Choose this depending on if you want it to be enabled or disabled more often.
-!default = 0
+!default = 1
 
 ; 1 byte of freeram. Must be reset on level load.
 ; To toggle the status bar, set this to 1 in UberASM level "load:" like this:

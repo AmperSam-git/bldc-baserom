@@ -5,8 +5,6 @@ verbose: on
 
 ; Level list. Valid values: 000-1FF.
 level:
-    105 Level105.asm
-
     ; DSS LevelASM
     CC mode_7_fights.asm
     D3 lemmy_wendy_fight.asm

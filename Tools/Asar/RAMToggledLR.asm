@@ -14,7 +14,7 @@ org $00CDF6
 freecode
 LRcheck:
 	LDA !Freeram
-	BEQ DisableLR
+	BNE DisableLR
 	LDA $17
 	AND.b #$CF
 	JML $00CDFA

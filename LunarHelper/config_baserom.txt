@@ -1,4 +1,4 @@
--- working directory (all paths are relative to this one)
+-- working directory
 dir = ../
 
 -- rom paths
@@ -9,11 +9,7 @@ output = BLDC2.smc
 -- outfile
 package = BLDC2.bps
 
--- initial patch (FastROM)
--- initial_patch = Other/initial_patch.bps
-
--- initial patch (SA-1)
--- if you are building a hack using SA-1, uncomment the line below
+-- initial patch
 initial_patch = Other/initial_patch_sa1.bps
 
 -- tool paths
@@ -34,17 +30,34 @@ pixi_options = -l Tools/PIXI/list_pixi.txt -ssc "Tools\PIXI\append.ssc" -s16 "To
 uberasm_options = list_uberasm.txt
 lm_level_import_flags = 0
 
--- shared config folder
-shared_folder = Shared
-
 -- content
 levels = Levels
 shared_palette = Palettes/Shared_latest.pal
 map16 = Map16/AllMap16_latest.map16
 -- title_moves = Other/smwtitledemo.zst
-
--- global_data is a BPS patch file, to be created by Lunar Helper,
--- that will hold the overworld, ex global animations, credits, intro screen, and title moves.
--- You will work on these things from the built output ROM in Lunar Magic,
--- and Lunar Monitor will automatically export them as you save your changes
 global_data = Other/global_data.bps
+
+-- build order
+build_order
+[
+    Graphics                -- Insert standard GFX
+    ExGraphics              -- Insert ExGFX
+    Map16                   -- Insert Map16
+
+--  TitleMoves              -- Uncomment this if you're inserting title moves
+
+    SharedPalettes          -- Insert Shared Palettes 
+    GlobalData              -- Insert Overworld, Title Screen and Credits 
+
+    Patches                 -- Insert all remaining patches from the patches list that 
+                            -- are not explicitly mentioned in this build order
+
+    PIXI                    -- Insert custom sprites
+    Levels                  -- Insert all levels
+
+   PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
+
+    AddMusicK               -- Insert custom music
+    GPS                     -- Insert custom blocks
+    UberASM                 -- Insert UberASM code
+]

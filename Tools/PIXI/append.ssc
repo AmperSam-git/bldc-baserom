@@ -1408,3 +1408,5 @@ E0 0012 1,16,EB 3,32,EB 6,48,EB -10,48,EC 6,48,ED 22,48,EE 12,-10,EB 24,-20,EB 3
 
 E0 0000 3 platforms on chains that move clockwise or counter-clockwise depending on their extra bit. It's currently set to go clockwise.\nIGNORE THIS -->
 E0 0010 3 platforms on chains that move clockwise or counter-clockwise depending on their extra bit. It's currently set to go counter clockwise.
+
+; Custom Sprites Below
