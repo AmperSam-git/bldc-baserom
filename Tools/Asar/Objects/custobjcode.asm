@@ -1,8 +1,6 @@
 @includefrom objectool.asm
 
 !level_flags = $140B|!addr; FreeRAM to activate certain UberASM code (cleared at level load)
-!lr_reset = $140C|!addr ; FreeRAM to handle L&R reset
-!retry_prompt_override_ram = $40A411
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;
@@ -89,13 +87,16 @@ CustExObjA2:
 	LDA #$01 : STA $7C
 RTS
 
-; Prompt Retry
+; Retry
+!retry_prompt_override_ram = $40A411
+
 CustExObjA3:
+	; Prompt Retry
 	LDA #$02 : sta !retry_prompt_override_ram
 RTS
 
-; Instant Retry
 CustExObjA4:
+	; Instant Retry
 	LDA #$03 : sta !retry_prompt_override_ram
 RTS
 
@@ -198,26 +199,9 @@ CustExObjFF:
 ;
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-; Set main screen
 CustObj00:
-	LDA $58
-	STA $0D9D|!addr
-RTS
-
-; Set sub screen
 CustObj01:
-	LDA $58
-	STA $0D9E|!addr
-RTS
-
-; L&R Reset
 CustObj02:
-	LDA $58
-	INC
-	ASL
-	STA !lr_reset
-RTS
-
 CustObj03:
 CustObj04:
 CustObj05:

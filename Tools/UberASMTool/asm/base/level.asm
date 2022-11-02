@@ -1,10 +1,6 @@
 !level	= $010B|!addr	;Patches rely on this, changing this is bad. Don't.
 
 !level_flags = $140B|!addr; FreeRAM to activate certain UberASM code (cleared at level load)
-!lr_reset = $140C|!addr ; FreeRAM to handle L&R reset
-
-; OHKO defines
-!ohko_death_sfx = $20
 
 macro RunCode(code_id, code)
 	LDA !level_flags
@@ -128,11 +124,6 @@ handle_main_codes:
 	%RunCode(5, block_right)
 	%RunCode(6, block_up)
 	%RunCode(7, block_down)
-	
-	LDX !lr_reset
-	BEQ .Return
-	JMP (lr_ptrs-2,x)
-.Return
 RTS
 
 free_vert_scroll:
@@ -145,8 +136,8 @@ insta_death:
 	CMP #$01
 	BNE +
 
-	LDA #!ohko_death_sfx
-	STA $1DF9|!addr
+	LDA #$36
+	STA $1DFC|!addr
 	JSL $00F606|!bank
 +
 RTS
@@ -330,143 +321,4 @@ block_down:
 	BPL +
 	INY
 +	STY $1412|!addr
-RTS
-
-!EXLEVEL = 0
-if (((read1($0FF0B4)-'0')*100)+((read1($0FF0B4+2)-'0')*10)+(read1($0FF0B4+3)-'0')) > 253
-	!EXLEVEL = 1
-endif
-
-lr_ptrs:
-dw lr_translevel
-dw lr_current
-dw lr_midpoint
-
-
-lr_translevel:
-    STZ $0D
-    LDA $13BF|!addr
-    CMP #$25
-    BCC +
-    SEC
-    SBC #$24
-    INC $0D
-  +
-    STA $0C
-    JSR LRReset
-    RTS
-
-lr_current:
-    LDA $010B|!addr
-    STA $0C
-    LDA $010C|!addr
-    STA $0D
-    JSR LRReset
-    RTS
-
-lr_midpoint:
-    LDY #$00
-    LDA $13CE|!addr
-    BNE ++
-    LDX $13BF|!addr
-    BIT $1EA2|!addr,x
-    BVC +
- ++ LDY #$0C
-  +
-    LDA $13BF|!addr
-    CMP #$25
-    BCC +
-    SEC
-    SBC #$24
-    INY
-  +
-    STY $0D
-    STA $0C
-    JSR LRReset
-    RTS
-
-!timeToPlayDeathSFX     =   $1B
-
-; Sound effect for resetting.
-!resetSound     = $2A
-!resetPort      = $1DFC
-
-!arg1 = $0C
-!arg2 = $0D
-
-LRReset:
-    LDA $17
-    AND #$30
-    CMP #$30
-    BEQ .reloadLR       ; L+R pressed
-  .return
-    RTS
-
-  .reloadLR
-    LDA $71
-    SEC : SBC #$09
-    ORA $1493|!addr ; don't allow L+R reset on level end
-    ORA $13D4|!addr ; ...or game paused
-    ORA $1B89|!addr ; ...or message box
-    BNE .return
-    JSL $00F614|!bank     ; kill mario
-  .reload
-    LDA #!resetSound
-    STA !resetPort|!addr
-    
-    STZ $1B93|!addr ; reload specified sublevel
-if !EXLEVEL
-	JSL $03BCDC|!bank
-else
-	LDA $5B
-	AND #$01
-	ASL 
-	TAX 
-	LDA $95,x
-	TAX
-endif
-    LDA !arg1
-    STA $19B8|!addr,x
-    LDA !arg2
-    STA $19D8|!addr,x
-    LDA #$06
-    STA $71
-    STZ $88
-    STZ $89
-    
-    STZ $1496|!addr ; clear death timer
-    STZ $1493|!addr ; clear end level timer
-    STZ $1497|!addr ; clear invulnerability timer
-    
-    REP #$20
-    STZ $148B|!addr ; clear rng
-    STZ $0FAE|!addr ; clear boo ring angles
-    STZ $0FB0|!addr
-    SEP #$20
-
-    STZ $0DC1|!addr ; clear yoshi
-    STZ $18E2|!addr
-    STZ $19         ; clear powerup
-    STZ $0DC2|!addr ; clear item box
-    STZ $14AF|!addr ; clear on/off switch
-    STZ $1432|!addr ; clear directional coin flag
-
-    LDA $13BE|!addr ; clear item memory
-    CMP #$03
-    BCS .noTrack
-    ASL
-    TAX
-    REP #$21
-    LDA $00BFFF|!bank,x
-    ADC #$19F8
-    STA $00
-    LDA #$0000
-    LDY #$80
-  .clearLoop
-    STA ($00),y
-    DEY
-    DEY
-    BPL .clearLoop
-    SEP #$20
-  .noTrack
 RTS
