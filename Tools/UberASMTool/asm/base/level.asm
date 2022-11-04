@@ -1,6 +1,7 @@
 !level	= $010B|!addr	;Patches rely on this, changing this is bad. Don't.
 
 !level_flags = $140B|!addr; FreeRAM to activate certain UberASM code (cleared at level load)
+!lr_reset = $140C|!addr ; FreeRAM to handle L&R reset
 
 macro RunCode(code_id, code)
 	LDA !level_flags
@@ -124,6 +125,7 @@ handle_main_codes:
 	%RunCode(5, block_right)
 	%RunCode(6, block_up)
 	%RunCode(7, block_down)
+.Return
 RTS
 
 free_vert_scroll:

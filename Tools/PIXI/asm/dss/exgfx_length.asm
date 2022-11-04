@@ -43,7 +43,7 @@ exgfx_length:
     db $04              ;# 27 - Bones
     db $02              ;# 28 - Bone projectile
     db $03              ;# 29 - Fishbone
-    db $04              ;# 2A - Thwomp
+    db $09              ;# 2A - Thwomp
     db $01              ;# 2B - Thwimp
     db $05              ;# 2C - Magikoopa
     db $01              ;# 2D - Magikoopa's magic
