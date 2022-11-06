@@ -10,7 +10,6 @@
 09 MovingHole.json
 0A thwomp_red.json
 0B FloorBoo.json
-0C Goombud.json
 
 10 MuncherBridge.json
 11 pot.json
@@ -33,10 +32,7 @@
 
 36 punchy_gp.json
 
-40 Snifit.cfg
-41 Snifit_carryable.cfg
-42 Snifit_rideable.cfg
-43 Snifit_rideable_spin_kill.cfg
+40 Snifit.json
 
 50 Custom_Bro.json
 51 Ball.cfg

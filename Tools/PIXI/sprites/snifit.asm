@@ -16,7 +16,7 @@
 ;;    bit 3 - jump over shells
 ;;    bit 4 - enable spin killing (if rideable)
 ;;    bit 5 - can be carried (if rideable)
-;;    bit 6 - won't walk, eventually hops (grey snifit behavior)*
+;;    bit 6 - won't walk, eventually hops (green snifit behavior)*
 ;;    bit 7 - spit three fireballs instead of spitting a ball*
 ;;
 ;; * extension options set these automatically depending on their value
@@ -27,10 +27,10 @@
 ;; Extra Byte (Extension) 1
 ;; 00 = red Snifit, falls from ledges
 ;; 01 = blue Snifit, stays on ledges
-;; 02 = grey Snifit, hops in place
+;; 02 = green Snifit, hops in place
 ;; 03 = fire-spitting red Snifit, falls from ledges
 ;; 04 = fire-spitting blue Snifit, stays on ledges
-;; 05 = fire-spitting grey Snifit, hops in place
+;; 05 = fire-spitting green Snifit, hops in place
 ;; 06-FF = uses palette/extra property byte configs from CFG - don't override configs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -51,7 +51,7 @@ db $00,$01,$02,$03	;top-left, top-right, bottom-left, bottom-right (turning, if 
 ;Palettes (YXPPCCCT format)
 !NoLedgeSnifitPal = $08		;a.k.a. red Snifit palette
 !LedgeSnifitPal = $06		;a.k.a. blue Snifit palette
-!HopSnifitPal = $02		;a.k.a. grey Snifit palette
+!HopSnifitPal = $0A		;a.k.a. green Snifit palette
 
 ;Sprite speeds
 SpeedX:
@@ -63,7 +63,7 @@ db $0C,$F4	;right, left (fast)
 !SpawnInterval = $E8	;interval between firing balls
 !HopInterval = $40	;interval between Snifit hops
 
-;Grey Snifit hop height
+;green Snifit hop height
 !SpeedY = $DC
 
 ;Giant sprite clipping
@@ -92,7 +92,7 @@ db $0C,$F4	;right, left (fast)
 	CMP #$01
 	BEQ .RegularBlue
 	CMP #$02
-	BEQ .RegularGrey
+	BEQ .RegularGreen
 	CMP #$03
 	BEQ .FireRed
 	CMP #$04
@@ -104,7 +104,7 @@ db $0C,$F4	;right, left (fast)
 	AND #$39
 	ORA #$C4
 	STA !7FAB28,x
-	BRA .greypal
+	BRA .greenpal
 
 .FireBlue
 	PLA
@@ -126,12 +126,12 @@ db $0C,$F4	;right, left (fast)
 	STA !7FAB28,x
 	BRA .bluepal
 
-.RegularGrey
+.RegularGreen
 	PLA
 	AND #$39
 	ORA #$44
 	STA !7FAB28,x
-	BRA .greypal
+	BRA .greenpal
 
 .FireRed
 	PLA
@@ -151,7 +151,7 @@ db $0C,$F4	;right, left (fast)
 	ORA #!LedgeSnifitPal
 	BRA .storepal
 
-.greypal
+.greenpal
 	LDA !15F6,x
 	AND #$F1
 	ORA #!HopSnifitPal
@@ -454,7 +454,7 @@ MarioHasStar:
 		%Star()
 		RTS
 
-;hop code from grey snifit by Sonikku, adapted by Blind Devil
+;hop code from green snifit by Sonikku, adapted by Blind Devil
 Hop:
 	STZ !C2,x		;reset shake displacement index.
 

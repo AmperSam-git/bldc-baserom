@@ -74,7 +74,8 @@ print	"INIT ", pc
     PLB                     ;  |
 
 	INC !157C,x
-	LDA !extra_byte_1,x
+	lda !extra_bits,x
+  and #$04
 	BNE +
 	STZ !157C,x
 	LDA	!15F6,x
@@ -82,7 +83,7 @@ print	"INIT ", pc
 	STA !15F6,x
 +
 	PHY
-	LDA !extra_byte_2,x
+	LDA !extra_byte_1,x
 	AND #$03
 	TAY
 	LDA !15F6,x

@@ -53,14 +53,15 @@ See .asm file for more details
 12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0032 0,0,835
 
+; Thwomps
 13 30022 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 
-13 30032 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 8,8,8B8
+13 30032 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 8,8,894
 13 30122 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3
-13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 8,8,8B9
+13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 0,8,8A4
 13 30222 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5
-13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 8,8,8C8
+13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 0,8,895
 13 30322 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7
-13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8C9
+13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8A5
 
 
 15 0020 A Blooper from SMB1.
@@ -76,8 +77,10 @@ See .asm file for more details
 18 0022 0,0,429 8,-8,414
 19 0020 Magikoopa sits in one place repeatedly firing magic.
 19 0022 0,1,454 0,-15,444
-1B 0020 This magikoopa casts magic that teleports player to a different level/entrance.
-1B 0022 0,1,454 0,-15,444
+1B 30020 This magikoopa casts magic that teleports player to a different level/entrance.
+1B 30022 0,1,454 0,-15,444
+1B 30030 Same as above but stationary.
+1B 30032 0,1,454 0,-15,444 0,-16,10A
 1C 0020 Firebar Clockwise
 1C 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1C 0030 Firebar Counter
@@ -289,15 +292,42 @@ See .asm file for more details
 30 31122 0,1,574 16,1,575 32,1,576
 30 31222 0,1,574 16,1,575 32,1,575 48,1,576
 
-36 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
-36 40022 0,0,840
-36 40122 0,0,841
-36 40222 0,0,842
-36 40322 0,0,843
-36 41022 0,0,850
-36 41122 0,0,851
-36 41222 0,0,852
-36 41322 0,0,853
+36 30020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
+36 30022 -16,0,840
+36 30122 -16,0,841
+36 30222 -16,0,842
+36 30322 -16,0,843
+36 30032 16,0,850
+36 30132 16,0,851
+36 30232 16,0,852
+36 30332 16,0,853
+
+40 30020 Red Snifit, falls from ledges
+40 30022 0,0,8A8
+40 30320 Fire-spitting red Snifit, falls from ledges
+40 30322 0,0,8A8 -16,0,822
+40 30030 Big red Snifit, falls from ledges
+40 30032 0,-16,8B8 16,-16,8B9 0,0,8C8 16,0,8C9
+40 30330 Big fire-spitting red Snifit, falls from ledges
+40 30332 0,-16,8B8 16,-16,8B9 0,0,8C8 16,0,8C9 -16,0,822
+
+40 30120 Blue Snifit, stays on ledges
+40 30122 0,0,8AA
+40 30420 Fire-spitting blue Snifit, stays on ledges
+40 30422 0,0,8AA -16,0,822
+40 30130 Big blue Snifit, stays on ledges
+40 30132 0,-16,8BA 16,-16,8BB 0,0,8CA 16,0,8CB
+40 30430 Big fire-spitting blue Snifit, stays on ledges
+40 30432 0,-16,8BA 16,-16,8BB 0,0,8CA 16,0,8CB -16,0,822
+
+40 30220 Green Snifit, hops in place
+40 30222 0,0,8AC
+40 30520 Fire-spitting green Snifit, hops in place
+40 30522 0,0,8AC -16,0,822
+40 30230 Big green Snifit, hops in place
+40 30232 0,-16,8BC 16,-16,8BD 0,0,8CC 16,0,8CD
+40 30530 Big fire-spitting green Snifit, hops in place
+40 30532 0,-16,8BC 16,-16,8BD 0,0,8CC 16,0,8CD -16,0,822
 
 50 30020 Hammer Bro
 50 30022 0,-16,891 0,0,8A1 8,-16,5BB

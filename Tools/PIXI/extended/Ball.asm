@@ -17,7 +17,7 @@
 !SP1SP2 = %00000000
 !SP3SP4 = %00000001
 
-!Prop = !PaletteC|!SP3SP4
+!Prop = !Palette9|!SP3SP4
 
 ;don't edit
 !HitSmthFlag = $1765|!addr			;when the ball hits an object it falls down with slight backward speed

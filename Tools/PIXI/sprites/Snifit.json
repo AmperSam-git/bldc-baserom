@@ -9,11 +9,11 @@
   "$1662": {
     "Sprite Clipping": 0,
     "Use shell as death frame": false,
-    "Fall straight down when killed": false
+    "Fall straight down when killed": true
   },
   "$166E": {
     "Use second graphics page": true,
-    "Palette": 5,
+    "Palette": 2,
     "Disable fireball killing": false,
     "Disable cape killing": false,
     "Disable water splash": false,
@@ -45,11 +45,11 @@
     "Can't be killed by sliding": false,
     "Takes 5 fireballs to kill": false,
     "Can be jumped on with upwards Y speed": false,
-    "Death frame two tiles high": true,
+    "Death frame two tiles high": false,
     "Don't turn into a coin with silver POW": false,
-    "Don't get stuck in walls (carryable sprites)": true
+    "Don't get stuck in walls (carryable sprites)": false
   },
-  "AsmFile": "Goombud.asm",
+  "AsmFile": "snifit.asm",
   "ActLike": 15,
   "Type": 1,
   "Extra Property Byte 1": 0,
@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Goombrat/Goombud",
+      "Description": "Small snifit",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -76,7 +76,7 @@
   ],
   "Collection": [
     {
-      "Name": "Goombud",
+      "Name": "Red Snifit, falls from ledges",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
@@ -92,7 +92,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, walking",
+      "Name": "Blue Snifit, stays on ledges",
       "ExtraBit": false,
       "Extra Property Byte 1": 1,
       "Extra Property Byte 2": 0,
@@ -108,7 +108,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, flying",
+      "Name": "Green Snifit, hops in place",
       "ExtraBit": false,
       "Extra Property Byte 1": 2,
       "Extra Property Byte 2": 0,
@@ -124,7 +124,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, bounces",
+      "Name": "Fire-spitting red Snifit, falls from ledges",
       "ExtraBit": false,
       "Extra Property Byte 1": 3,
       "Extra Property Byte 2": 0,
@@ -140,7 +140,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, flies left/right",
+      "Name": "Fire-spitting blue Snifit, stays on ledges",
       "ExtraBit": false,
       "Extra Property Byte 1": 4,
       "Extra Property Byte 2": 0,
@@ -156,7 +156,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, flies up/down",
+      "Name": "Fire-spitting green Snifit, hops in place",
       "ExtraBit": false,
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 0,
@@ -172,9 +172,9 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, oscillates up/down",
-      "ExtraBit": false,
-      "Extra Property Byte 1": 6,
+      "Name": "Big red Snifit, falls from ledges",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
       "Extra Property Byte 4": 0,
@@ -188,9 +188,73 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Para-Goombud, sliding",
-      "ExtraBit": false,
-      "Extra Property Byte 1": 7,
+      "Name": "Big blue Snifit, stays on ledges",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 1,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Big green Snifit, hops in place",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 2,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Big fire-spitting red Snifit, falls from ledges",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 3,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Big fire-spitting blue Snifit, stays on ledges",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 4,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Big fire-spitting green Snifit, hops in place",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
       "Extra Property Byte 4": 0,
