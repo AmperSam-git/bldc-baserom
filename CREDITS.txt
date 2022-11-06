@@ -68,13 +68,41 @@ Walljump/Note Block Glitch Fix v1.6 - lolcats439 - https://smwc.me/s/19932
 Yoshi Pipe Animation Fix - Kevin https://smwc.me/s/30127
 
 -- Sprites --
-Custom Bro - Isikoro - https://smwc.me/s/25577
+Angry Sun/Happy Moon (v1.3) - Sonikku - https://smwc.me/s/22630
+Banzai Bill v1.12 - imamelia - https://smwc.me/s/23480
 Better Creating/Eating Block Snakes v1.1 - leod - https://smwc.me/s/18725
+Betterer Boss Bass - Sonikku - https://smwc.me/s/15484
+Big Steely / Bowser's Bowling Ball - imamelia - https://smwc.me/s/25867
+Blooper - Romi - https://smwc.me/s/23857
+Boo Ring - Akaginite - https://smwc.me/s/13807
+Custom Bro - Isikoro - https://smwc.me/s/25577
+Custom Bro - Isikoro - https://smwc.me/s/25577
+Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
+Customizable Firebar - Isikoro - https://smwc.me/s/24411
 Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
+Fire Thwomp - RussianMan - https://smwc.me/s/25417
+Floor Boo - dtothefourth - https://www.patreon.com/posts/floor-boo-52666747
 Line-Guided Any Sprite v1.2 - Kevin, dtothefourth - https://smwc.me/s/24672
-Sprite Offsetter - Koopster - https://smwc.me/s/26541
+Moving Castle Block - imamelia - https://smwc.me/s/3609
+Muncher Bridge - Abdu - https://smwc.me/s/28620
 Pipe Spawner - dtothefourth - https://www.patreon.com/posts/pipe-spawner-48840077
+Piranha Plants and Venus Fire Traps v1.1 - imamelia - https://smwc.me/s/24223
+Platform Megapack v1.0 - Mandew - https://smwc.me/s/16281
+Poison Mushroom - Thomas, imamelia - https://smwc.me/s/25835
+Pot - wiiqwertyuiop - https://smwc.me/s/3748
+Programmable Ball & Chain - dtothefourth - https://www.patreon.com/posts/programmable-30781169
+Punchy - Mandew - https://smwc.me/s/20780
+Roto Disc V1.1 - DigitalSine, JackTheSpades, mikeyk - https://smwc.me/s/20573
+SMB2 Snifit + Giant Snifit - 1524, Sonikku, mikeyk https://smwc.me/s/16801
+SMW Hammer Bro (Stationary) - Sonikku - https://smwc.me/s/3406
+Sprite Offsetter - Koopster - https://smwc.me/s/26541
+Stationary Magikoopa - yoshicookiezeus - https://smwc.me/s/9479
+Super Mario Maker Flying Spiny - RussianMan - https://smwc.me/s/22096
+Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
+Tricky Magikoopa - RussianMan - https://smwc.me/s/27365 
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
+
+NOTE: All sprites have been modified to work with DSS
 
 -- Graphics --
 Super Mario Maker: Super Mario World - Conveyor Belt - Ralshi02 - https://smwc.me/s/19259
@@ -91,6 +119,8 @@ Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
 
 -- Custom Blocks --
 Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
+Donut Lift Block v1.1 - Davros, mikeyk, AmperSam (modifications) - https://smwc.me/s/20418
+Doors* - MarioFanGamer - https://smwc.me/s/21130
 Hurt / Death Block for Kaizo / Pit Hacks - dacin - https://smwc.me/s/27268
 Icy/Frozen Blocks Pack - Ersanio - https://smwc.me/s/27360
 Key lock blocks* - HammerBrother - https://smwc.me/s/13540
@@ -103,8 +133,8 @@ Passable Ledge with SFX  - Passable Ledge with SFX - https://smwc.me/s/21361
 Question Mark Blocks v1.3.0* - MarioFanGamer, lx5 - https://smwc.me/s/19775
 Quicksand Blocks - Roy, Sonikku - https://smwc.me/s/21197
 Screen Scrolling Pipes 4.0.2* - HammerBrother - https://smwc.me/s/27019
+Stacking Blocks - dtothefourth - https://www.patreon.com/posts/stacking-blocks-45080036
 Super Bounce Blocks - dogemaster - https://smwc.me/s/22934
-Doors* - MarioFanGamer - https://smwc.me/s/21130
 
 * simplified for use in the baserom
 
