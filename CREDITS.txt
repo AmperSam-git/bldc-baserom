@@ -14,7 +14,6 @@ Monty Mole, Hammer Bro and Dry Bone Behavior on Extra Bit - Kevin - https://smwc
 Placeable (Kicked) Throw Block - Kevin - https://smwc.me/s/22809
 Placeable Disco Shell - Alcaro - https://smwc.me/s/21597
 Placeable Kicked Shell v1.1 - Kevin - https://smwc.me/s/28994
-Poison Mushroom v1.0 - JackTheSpades, mikeyk - https://smwc.me/s/20440
 RAM Specific L/R Scroll Disable - Chdata - https://smwc.me/s/20355
 RAM Toggled Status Bar (& IRQ) - Kevin - https://smwc.me/s/28449
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
@@ -82,6 +81,7 @@ Customizable Firebar - Isikoro - https://smwc.me/s/24411
 Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
 Fire Thwomp - RussianMan - https://smwc.me/s/25417
 Floor Boo - dtothefourth - https://www.patreon.com/posts/floor-boo-52666747
+Galoomba/Goombud v0.2 - Sonikku - https://smwc.me/s/21391
 Line-Guided Any Sprite v1.2 - Kevin, dtothefourth - https://smwc.me/s/24672
 Moving Castle Block - imamelia - https://smwc.me/s/3609
 Muncher Bridge - Abdu - https://smwc.me/s/28620
