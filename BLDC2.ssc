@@ -1409,18 +1409,13 @@ E0 0010 3 platforms on chains that move clockwise or counter-clockwise depending
 00 0030 Happy Moon
 00 0032 16,0,873 0,16,882 16,16,883
 
-01 0020 Customizable Ball n Chain, uses the Extension bytes: RR AA SS MD
--- RR = Radius (0-74)
--- AA = Angle
--- SS = Speed
--- M = momentum enabled
--- D = dynamic
+01 0020 Customizable Ball n Chain, uses the Extension bytes (RR AA SS MD):\n-- RR = Radius (0-74)\n-- AA = Angle\n-- SS = Speed\n-- M = momentum enabled\n-- D = dynamic
 See .asm file for more details
 01 0022 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA
 02 0020 A SMW Banzai Bill that faces left.
 02 0022 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF
 02 0030 A SMW Banzai Bill that faces right.
-02 0032 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF 0,0,10A
+02 0032 0,0,82C 16,0,82D 32,0,82E 48,0,82F 0,16,83C 16,16,83D 32,16,83E 48,16,83F 0,32,84C 16,32,84D 32,32,84E 48,32,84F 0,48,85C 16,48,85D 32,48,85E 48,48,85F
 03 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it.
 03 0022 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
 03 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also.
@@ -1436,7 +1431,7 @@ See .asm file for more details
 06 0020 Boss Bass
 06 0022 0,0,876 16,0,877 0,16,886 16,16,887
 06 0030 Boss Bass, small
-06 0032 0,0,4DA
+06 0032 0,0,833
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
 07 0022 -8,0,587 8,0,588 4,-16,114
 08 0020 A disassembly of the scale platform.
@@ -1447,8 +1442,16 @@ See .asm file for more details
 0A 0022 -4,0,896 12,0,897 -4,16,8A6 12,16,8A7 -8,16,820 24,16,821
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
 0B 0022 0,0,832
-0C 0020 Goombrat/Goombud
-0C 0022 0,0,831
+
+0C 30020 Goombrat/Goombud
+0C 30022 0,0,831
+0C 30122 -12,-8,415 0,0,831 12,-8,414
+0C 30222 -12,-8,415 0,0,831 12,-8,414
+0C 30322 -12,-8,415 0,0,831 12,-8,414
+0C 30422 -12,-8,415 0,0,831 12,-8,414
+0C 30522 -12,-8,415 0,0,831 12,-8,414
+0C 30622 -12,-8,415 0,0,831 12,-8,414
+0C 30722 0,0,83A
 
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
@@ -1466,9 +1469,9 @@ See .asm file for more details
 13 30022 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 
 13 30032 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 8,8,894
 13 30122 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3
-13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 0,8,8A4
+13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 8,8,8A4
 13 30222 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5
-13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 0,8,895
+13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 8,8,895
 13 30322 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7
 13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8A5
 
@@ -1479,11 +1482,11 @@ See .asm file for more details
 16 0020 Stationary Hammer Bro, doesn't require platform.
 16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
 17 0020 Gray Castle Block, horizontal
-17 0022 0,1,498 16,1,499 0,17,4A8 16,17,4A9
+17 0022 0,1,498 16,1,499 0,17,4A8 16,17,4A9 0,9,825
 17 0030 Gray Castle Block, vertical
-17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 0,0,10A
+17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 8,8,823
 18 0020 Flying Spiny
-18 0022 0,0,429 8,-8,414
+18 0022 0,0,429 12,-8,414
 19 0020 Magikoopa sits in one place repeatedly firing magic.
 19 0022 0,1,454 0,-15,444
 1B 30020 This magikoopa casts magic that teleports player to a different level/entrance.
