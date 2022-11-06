@@ -23,7 +23,10 @@ See .asm file for more details
 04 0022 -29,75,68F 9,80,68A 45,67,68A 71,38,68D 81,0,68F 70,-37,68A 43,-66,68A 7,-79,68D -30,-72,68F -62,-49,68A -29,0,114
 04 0030 Customizable Boo Ring, counter-clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
 04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
-
+05 0020 A poison mushroom which hurts the player.
+05 0022 0,0,839
+05 0030 A poison mushroom which kills the player.
+05 0032 0,0,839  0,0,10A
 06 0020 Boss Bass
 06 0022 0,0,876 16,0,877 0,16,886 16,16,887
 06 0030 Boss Bass, small
@@ -364,6 +367,40 @@ See .asm file for more details
 50 30E32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,838 0,-16,10A
 50 30F32 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,4AE 0,-16,10A
 50 31032 0,-16,892 0,0,8A2 16,-16,893 16,0,8A3 16,-16,836 0,-16,10A
+
+;Platform Megapack, extension values:
+60 30020 Boost platform
+60 30022 0,1,584 16,1,586
+60 30120 Boost platform, infinite
+60 30122 0,1,584 16,1,586 0,-8,10A
+60 30220 Grey falling platform, 2-tiles, falling down
+60 30222 0,1,574 16,1,576 0,16,824
+60 30320 Grey falling platform, 4-tiles, falling down
+60 30322 0,1,574 16,1,575 32,1,575 48,1,576 0,16,824
+60 30420 Grey falling platform, 2-tiles, falling up
+60 30422 0,1,574 16,1,576 0,-16,823
+60 30520 Grey falling platform, 4-tiles, falling up
+60 30522 0,1,574 16,1,575 32,1,575 48,1,576 0,-16,823
+60 30620 Grey falling platform, 2-tiles, falling right
+60 30622 0,1,574 16,1,576 32,0,826
+60 30720 Grey falling platform, 4-tiles, falling right
+60 30722 0,1,574 16,1,575 32,1,575 48,1,576 64,0,826
+60 30820 Grey falling platform, 2-tiles, falling left
+60 30822 0,1,574 16,1,576 -16,0,825
+60 30920 Grey falling platform, 4-tiles, falling left
+60 30922 0,1,574 16,1,575 32,1,575 48,1,576 -16,0,825
+60 30A20 Grey left-drifting platform, 3-tiles, falling down
+60 30A22 0,1,574 16,1,575 32,1,576 16,-16,827
+60 30B20 Grey right-drifting platform, 3-tiles, falling down
+60 30B22 0,1,574 16,1,575 32,1,576 16,-16,828
+60 30C20 Vertical Wrapping Platform, 2-tiles, going down
+60 30C22 0,1,584 16,1,586 0,16,824 0,-8,824
+60 30D20 Vertical Wrapping Platform, 4-tiles, going down
+60 30D22 0,1,584 16,1,585 32,1,585 48,1,586 0,16,824 0,-8,824
+60 30E20 Vertical Wrapping Platform, 2-tiles, going up
+60 30E22 0,1,584 16,1,586 0,8,823 0,-16,823
+60 30F20 Vertical Wrapping Platform, 4-tiles, going up
+60 30F22 0,1,584 16,1,585 32,1,585 48,1,586 0,8,823 0,-16,823
 
 80 0020 Creating Block Snake
 80 0022 0,0,40A

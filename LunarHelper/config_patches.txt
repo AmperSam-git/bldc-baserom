@@ -52,7 +52,6 @@ patches
 	Tools/Asar/PlaceableDiscoShell.asm
 	Tools/Asar/PlaceableKickedShell.asm
 	Tools/Asar/PlaceableThrowBlock.asm
-	Tools/Asar/PoisonMushroom.asm
 	Tools/Asar/RAMToggledLR.asm
 	Tools/Asar/RAMToggledStatusbar.asm
 	Tools/Asar/SpikeTopCeilingCling.asm

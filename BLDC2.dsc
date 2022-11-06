@@ -152,7 +152,6 @@
 3b4	0	Question block that always spawns a Vine.
 3b5	0	Question block that always spawns a P-Balloon.
 3b6	0	Question block that always spawns a Key.
-3b7	0	Question block that always spawns a Poison Mushroom.
 3b8	0	Question block that always spawns a Galoomba.
 3b9	0	Question block that always spawns a Fish.
 3ba	0	Question block that always spawns a Blue P-Switch/POW.

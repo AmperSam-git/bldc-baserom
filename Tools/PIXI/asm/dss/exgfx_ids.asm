@@ -814,7 +814,7 @@ exgfx_ids:
 ;.89
     db !dss_id_null
 ;.8A
-    db !dss_id_donut_block
+    db !dss_id_null
 ;.8B
     db !dss_id_null
 ;.8C

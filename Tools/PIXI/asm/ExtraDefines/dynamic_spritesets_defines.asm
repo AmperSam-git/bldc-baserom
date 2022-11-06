@@ -307,7 +307,7 @@
     !dss_id_on_off_bounce_block     ?= $78
     !dss_id_note_block              ?= $79
     !dss_id_glass_block             ?= $7A
-    !dss_id_donut_block             ?= $7B
+    !dss_id_            ?= $7B
     !dss_id_            ?= $7C
     !dss_id_            ?= $7D
     !dss_id_            ?= $7E

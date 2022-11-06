@@ -1153,12 +1153,6 @@ F5 D032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 E032 0,0,*  Layer 2  \nMAY GLITCH!*
 F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 
-
-; Poison mushroom
-85 0002 0,0,839
-85 0000 A poison mushroom which hurts the player.
-85 0008 7F,100,7F,7F 7F,103,7F,7F
-
 ; Extra Bitted Sprites
 
 ; Kicked shells

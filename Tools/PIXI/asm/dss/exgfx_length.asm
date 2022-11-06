@@ -125,7 +125,7 @@ exgfx_length:
     db $01              ;# 79 - Note block
     db $01              ;# 7A - Glass block
     db $01              ;# 7B - Donut Block %
-    db $00              ;# 7C - Unused
+    db $01              ;# 7C - Poison Mush
     db $08              ;# 7D - Piranha Plants
     db $04              ;# 7E - SMB3 Sun
     db $05              ;# 7F - SMM2 Sun

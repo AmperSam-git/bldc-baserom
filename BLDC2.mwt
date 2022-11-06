@@ -7,6 +7,8 @@
 	Bowser Bowling Ball/Big Steely-gd
 04	Boo Ring, clockwise (Vanilla)
 	Boo Ring, counter-clockwise (Vanilla)
+05	Poison Mushroom (Hurt)
+	Poison Mushroom (Kill)
 06	Boss Bass
 	Boss Bass, small
 07	Customizable Scale Platform (Short)
@@ -15,14 +17,6 @@
 09	Moving Hole
 0A	Fire Thwomp
 0B	Floor Boo
-0C	Goombud
-	Para-Goombud, walking
-	Para-Goombud, flying
-	Para-Goombud, bounces
-	Para-Goombud, flies left/right
-	Para-Goombud, flies up/down
-	Para-Goombud, oscillates up/down
-	Para-Goombud, sliding
 10	Muncher Bridge.
 11	Pot
 12	Custom Roto Disc, clockwise (Vanilla)
@@ -111,12 +105,6 @@
 	Venus Vertical Short Spit Two Down
 	Venus Vertical Spit Two Up
 	Venus Vertical Spit Two Down
-30	Boost Platform, 2 tiles
-	Boost Platform, 3 tiles
-	Boost Platform, 4 tiles
-	Boost Platform, 2 tiles (Endless)
-	Boost Platform, 3 tiles (Endless)
-	Boost Platform, 4 tiles (Endless)
 36	Punchy Left
 	Punchy Left Blue
 	Punchy Left Green
@@ -172,6 +160,22 @@
 	Braze Bro, small jump only
 	Frost Bro, small jump only
 	Miracle Bro, small jump only
+60	Boost platform
+	Boost platform, infinite
+	Grey falling platform, 2-tiles, falling down
+	Grey falling platform, 4-tiles, falling down
+	 Grey falling platform, 2-tiles, falling up
+	Grey falling platform, 4-tiles, falling up
+	Grey falling platform, 2-tiles, falling right
+	Grey falling platform, 4-tiles, falling right
+	Grey falling platform, 2-tiles, falling left
+	Grey falling platform, 4-tiles, falling left
+	Grey left-drifting platform, 3-tiles, falling down
+	Grey right-drifting platform, 3-tiles, falling down
+	Vertical Wrapping Platform, 2-tiles, going down
+	Vertical Wrapping Platform, 4-tiles, going down
+	Vertical Wrapping Platform, 2-tiles, going up
+	Vertical Wrapping Platform, 4-tiles, going up
 80	Creating Block Snake
 	Eating Block Snake
 81	Snake Spawner (Continuous)

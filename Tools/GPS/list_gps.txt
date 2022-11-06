@@ -61,7 +61,7 @@
 3B4 question_blocks/79_vine.asm
 3B5 question_blocks/7D_p-balloon.asm
 3B6 question_blocks/80_key.asm
-3B7 question_blocks/85_poison_mushroom.asm
+
 3B8 question_blocks/0F_goomba.asm
 3B9 question_blocks/18_fish.asm
 3BA question_blocks/3E_blue_pswitch.asm
