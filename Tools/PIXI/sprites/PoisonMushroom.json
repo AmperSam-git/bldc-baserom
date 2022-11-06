@@ -12,8 +12,8 @@
     "Fall straight down when killed": false
   },
   "$166E": {
-    "Use second graphics page": false,
-    "Palette": 4,
+    "Use second graphics page": true,
+    "Palette": 2,
     "Disable fireball killing": true,
     "Disable cape killing": false,
     "Disable water splash": false,

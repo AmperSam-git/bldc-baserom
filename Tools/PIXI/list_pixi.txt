@@ -10,6 +10,7 @@
 09 MovingHole.json
 0A thwomp_red.json
 0B FloorBoo.json
+0C Goombud.json
 
 10 MuncherBridge.json
 11 pot.json

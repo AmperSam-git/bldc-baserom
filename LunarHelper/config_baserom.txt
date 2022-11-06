@@ -55,9 +55,10 @@ build_order
     PIXI                    -- Insert custom sprites
     Levels                  -- Insert all levels
 
-   PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
 
     AddMusicK               -- Insert custom music
     GPS                     -- Insert custom blocks
     UberASM                 -- Insert UberASM code
+    
+    PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
 ]

@@ -141,7 +141,7 @@ SubGFX:
 	LDA $00 : STA $0300|!Base2,y
 	LDA $01 : STA $0301|!Base2,y
 	PHX
-    LDX.b #!Tile            ;\ Set the tile number.
+    LDX.b #$00            ;\ Set the tile number.
 	lda !dss_tile_buffer,x
 	PLX
 	STA $0302|!Base2,y

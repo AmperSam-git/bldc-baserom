@@ -17,8 +17,18 @@
 09	Moving Hole
 0A	Fire Thwomp
 0B	Floor Boo
+0C	Goombud
+	Para-Goombud, walking
+	Para-Goombud, flying
+	Para-Goombud, bounces
+	Para-Goombud, flies left/right
+	Para-Goombud, flies up/down
+	Para-Goombud, oscillates up/down
+	Goombud, sliding
 10	Muncher Bridge.
-11	Pot
+11	Pot (Empty)
+	Pot with a Key inside
+	Pot with a Blooper inside
 12	Custom Roto Disc, clockwise (Vanilla)
 	Custom Roto Disc, counter-clockwise (Vanilla)
 13	Thwomp Up

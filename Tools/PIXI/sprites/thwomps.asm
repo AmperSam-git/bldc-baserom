@@ -846,6 +846,7 @@ ThwompUp:
 	%UploadSize()
 	CPX.b #$06
 	BNE .PrepareNextGFXLoop
+	lda.w ThwompUpTiles,x
 	%FacialExpression(1)
 	BRA .Expression
 .BigTile
@@ -891,6 +892,7 @@ ThwompDown:
 	%UploadSize()
 	CPX.b #$06
 	BNE .PrepareNextGFXLoop
+	lda.w ThwompDownTiles,x
 	%FacialExpression(1)
 	BRA .Expression
 .BigTile
@@ -935,6 +937,7 @@ ThwompLeft:
 	%UploadSize()
 	CPX.b #$06
 	BNE .PrepareNextGFXLoop
+	lda.w ThwompLeftTiles,x
 	%FacialExpression(0)
 	BRA .Expression
 .BigTile
@@ -979,6 +982,7 @@ ThwompRight:
 	%UploadSize()
 	CPX.b #$06
 	BNE .PrepareNextGFXLoop
+	lda.w ThwompRightTiles,x
 	%FacialExpression(0)
 	BRA .Expression
 .BigTile

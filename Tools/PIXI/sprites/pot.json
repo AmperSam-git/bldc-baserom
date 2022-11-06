@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "A pot",
+      "Description": "The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -76,10 +76,42 @@
   ],
   "Collection": [
     {
-      "Name": "Pot",
+      "Name": "Pot (Empty)",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Pot with a Key inside",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 128,
+      "Extra Property Byte 2": 16,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Pot with a Blooper inside",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 21,
+      "Extra Property Byte 2": 130,
       "Extra Property Byte 3": 0,
       "Extra Property Byte 4": 0,
       "Extra Property Byte 5": 0,

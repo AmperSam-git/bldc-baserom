@@ -34,10 +34,10 @@ macro FacialExpression(isUpDown)
     LDX $15E9|!addr
     LDA !extra_prop_1,x
     BEQ ?+
-    BRA ?++
+    ;BRA ?++
     ?+
     PLA
-    ?++
+    ;?++
 	if <isUpDown>
 		XBA
 		PHY

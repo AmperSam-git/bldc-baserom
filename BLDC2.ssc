@@ -1444,7 +1444,7 @@ See .asm file for more details
 09 0020 Customizable Moving hole, uses 4 extra bytes: SP TT WD DD:\nSP - Speed\nTT - Turn Time - How many frames before changing direction\nW - Width of hole in tiles (1-6 recommended, doesn't cound the end tiles, 1 is vanilla)\nD - Depth of hole in tiles (1-6 recommended)\nDD - Direction 0=horizontal, 1=vertical
 09 0022 -4,0,549 12,0,54A 28,0,54B
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
-0A 0022 0,0,0
+0A 0022 -4,0,896 12,0,897 -4,16,8A6 12,16,8A7 -8,16,820 24,16,821
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
 0B 0022 0,0,832
 0C 0020 Goombrat/Goombud
@@ -1455,7 +1455,7 @@ See .asm file for more details
 10 0022 -32,0,830 -16,0,830 0,0,830 16,0,830 32,0,830
 10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 10 0032 -32,0,830 -16,0,830 0,0,17 16,0,830 32,0,830
-11 0020 A pot
+11 0020 The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.
 11 0022 0,0,834
 12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0022 0,0,835
