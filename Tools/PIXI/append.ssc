@@ -1234,6 +1234,16 @@ DF 0010 A Disco Shell.
 4E 0000 A ledge dwelling monty mole that will have different digging speed depending on its extra bit. It's currently set to dig quickly.
 4E 0010 A ledge dwelling monty mole that will have different digging speed depending on its extra bit. It's currently set to dig slowly.
 
+; Growing pipe
+49 0000 A pipe end that will rise up 4 tiles and then sink, will be exit-enabled if it's extra bit is set. It's currently a normal pipe.
+49 0012 0,0,552 16,0,553 0,-8,10A
+49 0010 A pipe end that will rise up 4 tiles and then sink, will be exit-enabled if it's extra bit is set. It's currently an exit-enabled pipe.
+
+; Rex
+AB 0000 A rex. It will be squished if it's extra bit is set.
+AB 0010 A squished rex. It will be a normal rex if it's extra bit is clear.
+AB 0012 0,1,83B
+
 ; Hammer Bro
 9B 0012 0,-15,5BC 16,-15,5BD 8,-23,5AE -16,-15,5BB 0,0,10A
 9B 0002 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to infrequently.
@@ -1254,8 +1264,6 @@ E0 0012 -1,16,5FA -3,32,5FA -16,48,5D9 0,48,5DA -16,64,5E9 0,64,5EA -12,-10,5FA 
 E0 0112 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA 12,-10,5FA 24,-20,5FA 32,-40,5D9 48,-40,5DA 32,-24,5E9 48,-24,5EA -15,-6,5FA -30,-12,5FA -56,-28,5D9 -40,-28,5DA -56,-12,5E9 -40,-12,5EA 0,-16,10A
 
 E0 0000 3 platforms on chains that move will be a triple ball n' chain if the extra bit is set. Changes direction based on it's X position.
-E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the extra bit is unset. Changes direction based on it's X position.
-
-; Custom Sprites Below
+E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the extra bit is clear. Changes direction based on it's X position.
 
 ; Custom Sprites Below

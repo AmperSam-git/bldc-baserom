@@ -49,10 +49,10 @@ build_order
     SharedPalettes          -- Insert Shared Palettes
     GlobalData              -- Insert Overworld, Title Screen and Credits
 
+    PIXI                    -- Insert custom sprites
     Patches                 -- Insert all remaining patches from the patches list that
                             -- are not explicitly mentioned in this build order
 
-    PIXI                    -- Insert custom sprites
     Levels                  -- Insert all levels
 
     UberASM                 -- Insert UberASM code

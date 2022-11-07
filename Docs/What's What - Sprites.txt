@@ -28,7 +28,7 @@ Throw Block
 
 3 Platforms on Chains
 - extra bit = 0: normal, grey platforms
-- extra bit = 1: spike ball
+- extra bit = 1: triple spike ball
 
 Monty Moles
 - extra bit = 0: fast digging
@@ -41,6 +41,14 @@ Amazing Flying Hammer Bro
 Dry Bones, stay on ledge
 - extra bit = 0: throws bones
 - extra bit = 1: doesn't throw bones
+
+Rex
+- extra bit = 0: normal
+- extra bit = 1: squished
+
+Growing Pipe
+- extra bit = 0: normal
+- extra bit = 1: exit-enabled
 
 ---------------------------------
 Custom Sprites inserted with PIXI

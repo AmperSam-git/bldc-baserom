@@ -12,6 +12,7 @@ Chucks With Extra Bit Retain Type When Hurt - JamesD28 - https://smwc.me/s/28594
 Extended No Sprite Tile Limits v3.1 - DiscoTheBat, Kevin, Roy, imamelia, worldpeace - https://smwc.me/s/24642
 Free $7F0000 (OW Event Restore)* - Erik, Kaijyuu- https://smwc.me/s/19580
 Free 7F4000* - RPG Hacker - https://smwc.me/s/14237
+Growing/Shrinking Pipe Exit on Extra Bit - JamesD28 - https://smwc.me/s/24160
 Monty Mole, Hammer Bro and Dry Bone Behavior on Extra Bit - Kevin - https://smwc.me/s/30450
 ObjecTool 0.5 - 0x400, imamelia - https://smwc.me/s/24217
 Placeable (Kicked) Throw Block - Kevin - https://smwc.me/s/22809
@@ -19,6 +20,7 @@ Placeable Disco Shell - Alcaro - https://smwc.me/s/21597
 Placeable Kicked Shell v1.1 - Kevin - https://smwc.me/s/28994
 RAM Specific L/R Scroll Disable - Chdata - https://smwc.me/s/20355
 RAM Toggled Status Bar (& IRQ) - Kevin - https://smwc.me/s/28449
+Rexes With Extra Bit Set Are Squished - Supermario1313 - https://smwc.me/s/27788
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Item Box - Kevin - https://smwc.me/s/26887

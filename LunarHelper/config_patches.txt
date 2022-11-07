@@ -58,6 +58,8 @@ patches
 	Tools/Asar/SpikeTopCeilingCling.asm
 	Tools/Asar/SpriteItemBox.asm
 	Tools/Asar/SpriteSubmapBehaviorAsExtraBit.asm
+	Tools/Asar/SquishedRexOnExtraBit.asm
+	Tools/Asar/GrowPipeExitOnExtraBit.asm
 	Tools/Asar/TripleBallNChain.asm
 	Tools/Asar/Tweaks.asm
 	Tools/Asar/VertWrapPrep.asm
