@@ -1,5 +1,5 @@
 TODO:
 - fix sample levels
 - update credits for everything
-- add more SMM2 graphics
-- update credits with sprites
+- fix display for bitwise sprites
+- update exanimation docs
