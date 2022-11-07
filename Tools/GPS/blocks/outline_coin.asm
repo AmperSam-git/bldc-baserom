@@ -11,7 +11,7 @@ JMP Main : JMP Main : JMP Main
 JMP Return : JMP Return : JMP Return : JMP Return
 JMP Main : JMP Main : JMP Main
 
-!delay = $3F				; Coin delay
+!delay = $1F				; Coin delay
 
 if read1($00FFD5) == $23	;sa-1 compatibility
   sa1rom
