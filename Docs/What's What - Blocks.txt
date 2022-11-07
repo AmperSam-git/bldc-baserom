@@ -43,6 +43,5 @@ Page 3
 390-395 - Conveyor tiles (Slow)
 3A0-3A3 - Stack blocks
 3A3-3A7 - Directional Donut blocks
-3B0-3BC - Custom Question Blocks (hover for descriptions)
 3C0-3C8,3D8 - Ice/Frozen blocks
 3F2-3FF - Creating/eating block assistance tiles (hover for descriptions)

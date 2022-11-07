@@ -46,5 +46,4 @@ E0: 3 Platforms on Chains
 Custom Sprites inserted with PIXI
 ---------------------------------
 
-A0 : Companion sprite for the Donut Lift block
- - do NOT use this, insert the donut lift object from map16 into your levels instead
+Metadata is provided for all inserted sprites. See the "Custom Collection of Sprites" list in Lunar Magic's sprite insertion dialog.
