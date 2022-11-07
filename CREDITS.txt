@@ -81,6 +81,7 @@ Betterer Boss Bass - Sonikku - https://smwc.me/s/15484
 Big Steely / Bowser's Bowling Ball - imamelia - https://smwc.me/s/25867
 Blooper - Romi - https://smwc.me/s/23857
 Boo Ring - Akaginite - https://smwc.me/s/13807
+Ceiling Thwimp - Mandew - https://smwc.me/s/20777
 Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
@@ -106,7 +107,7 @@ Sprite Offsetter - Koopster - https://smwc.me/s/26541
 Stationary Magikoopa - yoshicookiezeus - https://smwc.me/s/9479
 Super Mario Maker Flying Spiny - RussianMan - https://smwc.me/s/22096
 Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
-Tricky Magikoopa - RussianMan - https://smwc.me/s/27365 
+Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 
 NOTE: All sprites have been modified to work with DSS

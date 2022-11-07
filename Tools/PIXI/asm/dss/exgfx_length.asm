@@ -25,7 +25,7 @@ exgfx_length:
     db $02              ;# 15 - Vertical growing pipe
     db $06              ;# 16 - Spike top
     db $03              ;# 17 - Swooper bat
-    db $08              ;# 18 - Blargg 
+    db $08              ;# 18 - Blargg
     db $02              ;# 19 - Floating skull
     db $01              ;# 1A - Piranha plant stem
     db $02              ;# 1B - Ninji
@@ -150,7 +150,7 @@ exgfx_length:
     db $03              ;# 92 - Custom Bro
     db $08              ;# 93 - Custom Sledge Bro
     db $01              ;# 94 - Snifit Projectile
-    db $0              ;# 95 - Unused
+    db $01              ;# 95 - Ceiling Thwimp
     db $0              ;# 96 - Unused
     db $0              ;# 97 - Unused
     db $0              ;# 98 - Unused
