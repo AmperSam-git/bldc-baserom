@@ -1,0 +1,28 @@
+----------------------------
+Multiple Midway Instructions
+----------------------------
+
+A feature of the included retry system is multiple midways. You can insert any number of multiple midways into your levels via a custom object command.
+
+To insert a custom object either use the "Edit > Insert manual..." menu action or press the "Insert" key while in Lunar Magic's Object editing mode to display the "Add Object Manual (in hex)" dialog.
+
+In this dialog, put "2D" as the "Command" value for every custom midway object you insert. The "Extension (00-FFx)" field is where you will configure the object for the various types of multiple midways. The following value ranges correspond to those different types of midways:
+
+
+0000-0FFF - Secondary Entrances
+-------------------------------
+This will save your midway but Mario will respawn at a Secondary Entrance value specified, e.g. 0106 will respawn Mario at secondary entrance 106 (in any level).
+
+NOTE: If the Secondary Entrance does not exist, this will fail.
+
+
+4000-4FFF - Main Entrances
+--------------------------
+The checkpoint will save your progress but Mario will respawn at the "Main Entrance" of a level as specified in Lunar Magic, e.g. "4106" will respawn Mario at the start of level 106.
+
+NOTE: You can't set the midway object to be the main level entrance of the level it is in. E.g. "4106" will not work in level 106.
+
+
+5000-5FFF - Midway Entrances
+----------------------------
+The checkpoint will save your progress but Mario will respawn at the "Midway Entrance" of a level as specified in Lunar Magic, e.g. "5106" will respawn Mario at the midway of level 106 is placed in Lunar Magic.

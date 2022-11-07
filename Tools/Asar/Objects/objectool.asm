@@ -35,11 +35,12 @@ endif
 !ObjScratch = $0910|!addr
 
 org $0DA106|!bank				; x6A306 (hijack extended object loading routine)
-	autoclean JML NewExObjects		; E2 30 A5 59       
+	autoclean JML NewExObjects		; E2 30 A5 59
 
-org $0DA415|!bank				; x6A615 (hijack normal object loading routine)
-	autoclean JML NewNormObjects	; E2 30 AD 31 19
-	NOP						;
+; commented out for Retry Compatibility
+;org $0DA415|!bank				; x6A615 (hijack normal object loading routine)
+;	autoclean JML NewNormObjects	; E2 30 AD 31 19
+;	NOP						;
 
 freecode
 
