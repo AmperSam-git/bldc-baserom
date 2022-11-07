@@ -10,7 +10,10 @@ SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938
 -- Patches --
 Chucks With Extra Bit Retain Type When Hurt - JamesD28 - https://smwc.me/s/28594
 Extended No Sprite Tile Limits v3.1 - DiscoTheBat, Kevin, Roy, imamelia, worldpeace - https://smwc.me/s/24642
+Free $7F0000 (OW Event Restore)* - Erik, Kaijyuu- https://smwc.me/s/19580
+Free 7F4000* - RPG Hacker - https://smwc.me/s/14237
 Monty Mole, Hammer Bro and Dry Bone Behavior on Extra Bit - Kevin - https://smwc.me/s/30450
+ObjecTool 0.5 - 0x400, imamelia - https://smwc.me/s/24217
 Placeable (Kicked) Throw Block - Kevin - https://smwc.me/s/22809
 Placeable Disco Shell - Alcaro - https://smwc.me/s/21597
 Placeable Kicked Shell v1.1 - Kevin - https://smwc.me/s/28994
@@ -20,6 +23,8 @@ Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/194
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Properties Depending on the Extra Bit v1.1 - Kevin - https://smwc.me/s/27942
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
+
+* combined into 1 patch, thanks dtothefourth
 
 -- Bug Fixes --
 $13FB Game Crash Fix (Fireberry) - p4plus2 - https://smwc.me/s/18319
@@ -130,13 +135,13 @@ No Jump - Darolac - https://smwc.me/s/21777
 One-way blocks 1.2 - HammerBrother - https://smwc.me/s/18158
 Outline Coin - MarioE - https://smwc.me/s/3819
 Passable Ledge with SFX  - Passable Ledge with SFX - https://smwc.me/s/21361
-Question Mark Blocks v1.3.0* - MarioFanGamer, lx5 - https://smwc.me/s/19775
 Quicksand Blocks - Roy, Sonikku - https://smwc.me/s/21197
 Screen Scrolling Pipes 4.0.2* - HammerBrother - https://smwc.me/s/27019
 Stacking Blocks - dtothefourth - https://www.patreon.com/posts/stacking-blocks-45080036
-Super Bounce Blocks - dogemaster - https://smwc.me/s/22934
+Super Bounce Blocks** - dogemaster - https://smwc.me/s/22934
 
 * simplified for use in the baserom
+** just the sprite bounce block
 
 -- Used Tools --
 AddmusicK 1.0.8 - Kipenal - https://smwc.me/s/24994
@@ -144,7 +149,7 @@ Asar v1.81 - Alcaro et al. - https://smwc.me/s/25953
 Flips v1.31 - Alcaro - https://smwc.me/s/11474
 GPS V1.4.3 - TheBiob, p4plus2 - https://smwc.me/s/29130
 Human Readable Map16 CLI - Underway - https://github.com/Underrout/human-readable-map16-cli
-Lunar Helper 1.5.0 - Underway, Maddy - https://github.com/Underrout/LunarHelper
+Lunar Helper 2.5.1 - Underway, Maddy - https://github.com/Underrout/LunarHelper
 Lunar Magic 3.31 - FuSoYa - https://smwc.me/s/26916
 Lunar Monitor 1.5.0 - Underway, Atari2.0 - https://github.com/Underrout/lunar-monitor
 PIXI v1.32 - Atari2.0, JackTheSpades, Tattletale - https://smwc.me/s/26026
