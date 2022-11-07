@@ -1,1 +1,75 @@
-Baserom Note: Do not Use. Use "list_pixi.txt" instead. 
+00 AngrySun.json
+01 BallAndChain.json
+02 banzai_bill_9F.json
+03 bowser_bowling_ball_A1.json
+04 BooRing.json
+05 PoisonMushroom.json
+06 BossBass.json
+07 customizable-scale-platform.json
+08 scale-platform-dis.json
+09 MovingHole.json
+0A thwomp_red.json
+0B FloorBoo.json
+0C Goombud.json
+
+10 MuncherBridge.json
+11 pot.json
+12 roto_disc.json
+13 thwomp_all.json
+
+15 blooper.json
+16 SMW_Hammer_Bro.json
+17 gray_castle_block.json
+18 SMMSpiny.json
+19 stationary_magikoopa.json
+1A TeleportingMagic.cfg
+1B TrickyMagikoopa.json
+1C FireBar.json
+1D FireBar_Shiftable.json
+
+20 piranha_venus_all.json
+
+36 punchy_gp.json
+
+40 Snifit.json
+
+50 Custom_Bro.json
+51 Ball.cfg
+52 Boomerang.cfg
+53 FireBall.cfg
+54 IceBall.cfg
+
+60 platform_megapack.json
+
+80 bettersnake.json
+81 snakespawner.json
+
+82 StackingBlock_Down.cfg
+83 StackingBlock_Up.cfg
+84 StackingBlock_Left.cfg
+85 StackingBlock_Right.cfg
+
+87 better_donut_left.cfg
+88 better_donut_right.cfg
+89 better_donut_up.cfg
+8A better_donut_down.cfg
+
+A1 EnemyStackV2.json
+A2 EnemyStackV2_reverse.json
+A3 Lineguided_AnySprite.json
+A4 XYFollowSprite.json
+A5 spriteoffsetter.json
+A6 PipeSpawner.json
+
+EXTENDED:
+00 boomerang.asm
+01 fireball.asm
+02 thwomp_fireball.asm
+03 hammer.asm
+04 iceball.asm
+05 Ball.asm
+06 Needle.asm
+07 ElecBall.asm
+
+CLUSTER:
+10 cluster_sparkle.asm

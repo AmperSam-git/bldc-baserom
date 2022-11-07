@@ -1,1 +1,193 @@
-Baserom Note: Do not Use. Use "list_gps.txt" instead. 
+; PAGE 02 OF MAP16 ----------------------------------------;
+; 200-20A 	; Available for Lunar magic's Tide Act As
+; 209-28F	; Occupied with vanilla Tiles
+
+; CUSTOM GLOBAL BLOCKS (DO NOT MODIFY) --------------------;
+290:0130 mario_passable.asm
+291:0130 sprite_passable.asm
+292:0025 one_way_up.asm
+293:0025 one_way_down.asm
+294:0025 one_way_left.asm
+295:0025 one_way_right.asm
+296:0130 onoff_block.asm
+297:0130 onoff_block_inv.asm
+298:0130 breakable_by_item.asm
+299:0025 silent_sprite_killer.asm
+29A:0130 hurt_death.asm
+29B:0025 hurt_death_sprite_passthrough.asm
+29C:0025 remove_powerup.asm
+29D:0025 sprite_bounce.asm
+29E:0130 endless_throwblock.asm
+29F:0006 ledge_vine.asm
+
+2A0:0130 key_lock/16x32_V_Keyblk_T.asm
+2A1:0100 PassableLedge.asm
+2A2:0025 set_to_off.asm
+2A3:0025 set_to_on.asm
+2A4:0025 QuicksandNorm.asm
+2A5:0025 QuicksandPit.asm
+2A6:0025 outline_coin.asm
+2A7:0002 mario_passable.asm
+2A8:0130 no_jump.asm
+2A9:0025 silver_pswitch_door_top.asm
+2AA:0025 silver_pswitch_door_small.asm
+2AB:0025 teleport.asm
+;2AC
+;2AD
+;2AE
+;2AF
+
+2B0:0130 key_lock/16x32_V_Keyblk_B.asm
+2B1:0130 key_lock/32x16_H_Keyblk_L.asm
+2B2:0130 key_lock/32x16_H_Keyblk_R.asm
+2B3:0025 key_teleport.asm
+2B4:0130 water_off.asm
+2B5:0130 water_on.asm
+;2B6
+;2B7
+;2B8
+;2B9
+;2BA
+;2BB
+;2BC
+;2BE
+;2BF
+
+; CONVEYOR BLOCKS -----------------------------------------;
+370-372	mm2_conv/conveyer move left fast.asm
+373-375	mm2_conv/conveyer move right fast.asm
+380-382	mm2_conv/conveyer move left normal.asm
+383-385	mm2_conv/conveyer move right normal.asm
+390-392	mm2_conv/conveyer move left slow.asm
+393-395	mm2_conv/conveyer move right slow.asm
+; On/Off
+376-378	mm2_conv/conveyer onoff move left fast.asm
+379-37B	mm2_conv/conveyer onoff move right fast.asm
+386-388	mm2_conv/conveyer onoff move left normal.asm
+389-38B	mm2_conv/conveyer onoff move right normal.asm
+396-398	mm2_conv/conveyer onoff move left slow.asm
+398-39B	mm2_conv/conveyer onoff move right slow.asm
+
+; STACK BLOCKS --------------------------------------------;
+3A0 stack/StackBlockSpawn_Down.asm
+3A1 stack/StackBlockSpawn_Up.asm
+3A2 stack/StackBlockSpawn_Left.asm
+3A3 stack/StackBlockSpawn_Right.asm
+
+; DONUT BLOCKS --------------------------------------------;
+3A4:0100 donut/donut_lift_left.asm
+3A5:0100 donut/donut_lift_right.asm
+3A6:0100 donut/donut_lift_up.asm
+3A7:0100 donut/donut_lift_down.asm
+
+; ICY BLOCKS ----------------------------------------------;
+3C0:0130 icy/ice_block.asm
+3C1:0130 icy/frozen_coin.asm
+3C2:0130 icy/frozen_door.asm
+3C3:0130 icy/frozen_muncher.asm
+3C4:0130 icy/frozen_noteblock.asm
+3C5:0130 icy/frozen_question_block.asm
+3C6:0130 icy/frozen_turnblock.asm
+3C7:0130 icy/frozen_onoffblock.asm
+3C8:0130 icy/frozen_yoshicoin_top.asm
+3D8:0130 icy/frozen_yoshicoin_bottom.asm
+
+; SCREEN SCROLLING PIPES (DO NOT MODIFY) ------------------;
+
+; Large Vertical Two-Way Pipe
+0300:0130	SSP_Tiles/top_vertical_pipe_cap_L.asm
+0301:0130	SSP_Tiles/top_vertical_pipe_cap_R.asm
+0310:0130	SSP_Tiles/pass_if_in_pipe.asm
+0311:0130	SSP_Tiles/pass_if_in_pipe.asm
+0320:0130	SSP_Tiles/bottom_vertical_pipe_cap_L.asm
+0321:0130	SSP_Tiles/bottom_vertical_pipe_cap_R.asm
+; Large Horizontal Two-Way Pipe
+0302:0130	SSP_Tiles/pass_if_in_pipe.asm
+0303:0130	SSP_Tiles/pass_if_in_pipe.asm
+0304:0130	SSP_Tiles/pass_if_in_pipe.asm
+0312:0130	SSP_Tiles/left_horizontal_pipe_cap_B.asm
+0313:0130	SSP_Tiles/pass_if_in_pipe.asm
+0314:0130	SSP_Tiles/right_horizontal_pipe_cap_B.asm
+; Small Vertical Two-Way Pipe
+0305:0130	SSP_Tiles/top_vertical_pipe_cap_small.asm
+0315:0130	SSP_Tiles/pass_if_in_pipe.asm
+0325:0130	SSP_Tiles/bottom_vertical_pipe_cap_small.asm
+; Small Horizontal Two-Way Pipe
+0322:0130	SSP_Tiles/left_horizontal_pipe_cap_small.asm
+0323:0130	SSP_Tiles/pass_if_in_pipe.asm
+0324:0130	SSP_Tiles/right_horizontal_pipe_cap_small.asm
+
+
+; Large Vertical One-Way Pipe (Downward)
+0306:0130	SSP_Tiles/top_vertical_pipe_cap_L.asm
+0307:0130	SSP_Tiles/top_vertical_pipe_cap_R.asm
+0316:0130	SSP_Tiles/pass_if_in_pipe.asm
+0317:0130	SSP_Tiles/pass_if_in_pipe.asm
+0326:0130	SSP_Tiles/bottom_vertical_pipe_cap_L_exit.asm
+0327:0130	SSP_Tiles/bottom_vertical_pipe_cap_R_exit.asm
+; Large Horizontal One-Way Pipe (Leftward)
+0308:0130	SSP_Tiles/pass_if_in_pipe.asm
+0309:0130	SSP_Tiles/pass_if_in_pipe.asm
+030A:0130	SSP_Tiles/pass_if_in_pipe.asm
+0318:0130	SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
+0319:0130	SSP_Tiles/pass_if_in_pipe.asm
+031A:0130	SSP_Tiles/right_horizontal_pipe_cap_B.asm
+; Small Vertical One-Way Pipe (Downward)
+030B:0130	SSP_Tiles/top_vertical_pipe_cap_small.asm
+031B:0130	SSP_Tiles/pass_if_in_pipe.asm
+032B:0130	SSP_Tiles/bottom_vertical_pipe_cap_small_exit.asm
+; Small Horizontal One-Way Pipe (Leftward)
+0328:0130	SSP_Tiles/left_horizontal_pipe_cap_small.asm
+0329:0130	SSP_Tiles/pass_if_in_pipe.asm
+032A:0130	SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
+
+
+; Large Vertical One-Way Pipe (Upward)
+0336:0130	SSP_Tiles/top_vertical_pipe_cap_L_exit.asm
+0337:0130	SSP_Tiles/top_vertical_pipe_cap_R_exit.asm
+0346:0130	SSP_Tiles/bottom_vertical_pipe_cap_L.asm
+0347:0130	SSP_Tiles/bottom_vertical_pipe_cap_R.asm
+; Large Horizontal One-Way Pipe (Rightward)
+0338:0130	SSP_Tiles/pass_if_in_pipe.asm
+0339:0130	SSP_Tiles/pass_if_in_pipe.asm
+0348:0130	SSP_Tiles/left_horizontal_pipe_cap_B.asm
+0349:0130	SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
+; Small Vertical One-Way Pipe (Upward)
+033B:0130	SSP_Tiles/top_vertical_pipe_cap_small_exit.asm
+034B:0130	SSP_Tiles/bottom_vertical_pipe_cap_small.asm
+; Small Horizontal One-Way Pipe (Rightward)
+033A:0130	SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
+034A:0130	SSP_Tiles/right_horizontal_pipe_cap_small.asm
+
+
+; Turn Block (Right-Up)
+030C:0130	SSP_Tiles/pass_if_in_pipe.asm
+030D:0130	SSP_Tiles/pass_if_in_pipe.asm
+031C:0130	SSP_Tiles/turn_up-right.asm
+031D:0130	SSP_Tiles/pass_if_in_pipe.asm
+; Turn Block (Right-Down)
+030E:0130	SSP_Tiles/pass_if_in_pipe.asm
+030F:0130	SSP_Tiles/pass_if_in_pipe.asm
+031E:0130	SSP_Tiles/pass_if_in_pipe.asm
+031F:0130	SSP_Tiles/turn_right-down.asm
+; Turn Block (Left-Up)
+032C:0130	SSP_Tiles/pass_if_in_pipe.asm
+032D:0130	SSP_Tiles/pass_if_in_pipe.asm
+033C:0130	SSP_Tiles/turn_left-up.asm
+033D:0130	SSP_Tiles/pass_if_in_pipe.asm
+; Turn Block (Left-Down)
+032E:0130	SSP_Tiles/pass_if_in_pipe.asm
+032F:0130	SSP_Tiles/pass_if_in_pipe.asm
+033E:0130	SSP_Tiles/pass_if_in_pipe.asm
+033F:0130	SSP_Tiles/turn_down-left.asm
+
+; Small Turn Blocks
+034C:0130	SSP_Tiles/turn_up-right_small.asm
+034D:0130	SSP_Tiles/turn_right-down_small.asm
+035C:0130	SSP_Tiles/turn_left-up_small.asm
+035D:0130	SSP_Tiles/turn_down-left_small.asm
+
+; Pass if In Pipe
+036F:0130	SSP_Tiles/pass_if_in_pipe.asm
+
+; PLACE YOUR CUSTOM BLOCKS BELOW --------------------------;
