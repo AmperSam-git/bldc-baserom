@@ -1329,6 +1329,9 @@ See .asm file for more details
 13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8A5
 
 
+14 30020 Ceiling Thwimp
+14 30022 0,0,884
+b
 15 0020 A Blooper from SMB1.
 15 0022 0,-16,890 0,0,8A0
 
