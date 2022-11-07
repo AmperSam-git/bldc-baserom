@@ -13,7 +13,7 @@ package = BLDC2.bps
 initial_patch = Other/initial_patch_sa1.bps
 
 -- tool paths
-addmusick_path = Tools/AddmusicK_1.0.8/AddMusicK.exe
+addmusick_path = AddmusicK_1.0.8/AddMusicK.exe
 asar_path = Tools/Asar/asar.exe
 flips_path = Tools/Flips/flips.exe
 gps_path = Tools/GPS/gps.exe
@@ -26,7 +26,7 @@ uberasm_path = Tools/UberASMTool/UberASMTool.exe
 -- tool CLI options
 addmusick_options = -v
 gps_options = -l list_gps.txt
-pixi_options = -l Tools/PIXI/list_pixi.txt -ssc "Tools\PIXI\append.ssc" -s16 "Tools\PIXI\append.s16" -mwt "Tools\PIXI\append.mwt" -mw2 "Tools\PIXI\append.mw2" 
+pixi_options = -l Tools/PIXI/list_pixi.txt -ssc "Tools\PIXI\append.ssc" -s16 "Tools\PIXI\append.s16" -mwt "Tools\PIXI\append.mwt" -mw2 "Tools\PIXI\append.mw2"
 uberasm_options = list_uberasm.txt
 lm_level_import_flags = 0
 
@@ -46,10 +46,10 @@ build_order
 
 --  TitleMoves              -- Uncomment this if you're inserting title moves
 
-    SharedPalettes          -- Insert Shared Palettes 
-    GlobalData              -- Insert Overworld, Title Screen and Credits 
+    SharedPalettes          -- Insert Shared Palettes
+    GlobalData              -- Insert Overworld, Title Screen and Credits
 
-    Patches                 -- Insert all remaining patches from the patches list that 
+    Patches                 -- Insert all remaining patches from the patches list that
                             -- are not explicitly mentioned in this build order
 
     PIXI                    -- Insert custom sprites
@@ -58,6 +58,6 @@ build_order
     UberASM                 -- Insert UberASM code
     GPS                     -- Insert custom blocks
     AddMusicK               -- Insert custom music
-    
+
     PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
 ]

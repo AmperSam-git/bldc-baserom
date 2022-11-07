@@ -27,7 +27,7 @@ set /p Action=Enter the number of your choice:
 if "!Action!"=="1" (
 
     :: AddMusicK
-    set AMK_DIR=!TOOLS_DIR!AddMusicK_1.0.8\
+    set AMK_DIR=!WORKING_DIR!AddMusicK_1.0.8\
     :: Check if AMK exists and download if not
     if not exist "!AMK_DIR!AddmusicK.exe" (
         echo AddmusicK not found, downloading...
