@@ -2,7 +2,7 @@
 Enhanced Normal Sprites
 -----------------------
 
-Pitchin', Puntin', Diggin' Chuck 
+Pitchin', Puntin', Diggin' Chuck
 - extra bit = 0: normal
 - extra bit = 1: keeps throwing sprites, doesn't chase Mario
 
@@ -50,3 +50,5 @@ Custom Sprites inserted with PIXI
 ---------------------------------
 
 Metadata is provided for all inserted sprites. See the "Custom Collection of Sprites" list in Lunar Magic's sprite insertion dialog.
+
+See 'Configureable Sprite Documentation.txt' for more information about particular sprites.

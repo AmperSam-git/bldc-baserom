@@ -1,0 +1,159 @@
+---------------------------------
+Configurable Sprite Documentation
+---------------------------------
+
+Notes on particular sprites, this can also be seen in the Lunar Magic sprite window if you hover with your mouse.
+
+
+Any Line-Guided Sprite
+----------------------
+
+Options are set using the extension box in LM using 8 bytes
+
+    SS XX YY CC SP E1 E2 E3 E4
+
+SS = Sprite number
+XX = X offset for position sprite ($80-$FF = negative offset)
+YY = Y offset for position sprite ($80-$FF = negative offset)
+CC = Custom settings. Format: epP-SSSS
+- SSSS: the state the sprite will be spawned in (using the $14C8 format).
+(0 acts as 1 because state 0 doesn't make sense here).
+State 1 (set with either 0 or 1) is init, which is what you usually want.
+State 9 is carryable, useful for sprites like shells or throwblocks.
+- e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.
+- p: to be used with platforms: if set (i.e. add 40 to the number) Mario will move with the platform instead of sliding on it. Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.
+- P: second platform option, which does the same thing as the p option but it's recommended for sprites that use custom solid sprite code (for example, MarioFanGamer's Numbered Platform sprite). Note: this option doesn't work for sprites that naturally move horizontally. Also, this option is overriden by the p option: don't use them together.
+SP = speed multiplier (+1)
+00 = normal speed, 01 = double speed, etc. (max 7F)
+FF (or any negative value) = stationary (the sprite won't move at all)
+E1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
+
+
+
+Sprite Offsetter
+----------------
+
+Options are set using the extension box in LM using 8 bytes
+
+ - extra byte 1: sprite number
+ - extra byte 2: sprite "extra bit":
+ - e  0 or 1: regular sprite
+ - e  2: custom sprite, extra bit clear
+ - e  3: custom sprite, extra bit set
+ - extra byte 3: x displacement
+ - extra byte 4: y displacement
+ - extra bytes 5-8: extra bytes 1-4 of the custom sprite to spawn (if applicable)
+
+if the extra bit is clear, the displacement will add to the positions (move further right/down).
+if the extra bit is set, the displacement will subtract from the positions (move further left/up).
+
+
+
+Sprite Stacks
+------------
+
+Uses 8 extra bytes which determine the sprites in the stack from bottom to top
+
+    - FF for an empty slot
+    - Use the Lunar Magic numbers for shells (DA-DE)
+
+The 9th extra byte marks each sprite in the stack as a custom sprite. The bits are in order from left to right with left being the bottom of the stack,
+e.g 80 (10000000, bitwise) would make just the bottom a custom sprite.
+
+The 10th extra byte is the same, but for the extra bit option of each sprite, e.g 80 (10000000, bitwise) would set the extra bit for the bottom sprite.
+
+
+
+X/Y Position Tracking Sprite
+----------------------------
+
+This sprite will spawn a new sprite and make it stay at the same X or Y position as Mario.
+
+Extra bit: if clear, the spawned sprite is vanilla. If set, it's custom.
+
+Extra byte 1: sprite number to spawn.
+
+Extra byte 2: offset from Mario's X/Y position to keep the sprite at.
+  - Positive values ($00-$7F): offset to the right (or none if $00).
+  - Negative values ($FF-$80): offset to the left.
+ Note: if using the Y tracking option, you may want to use $10 as the offset to make the
+   sprite stay at Mario's feet position rather than his head.
+
+Extra byte 3: additional settings. Format: e------p
+  e: if set, the extra bit in the spawned sprite will be set.
+  p: 0 = track Mario's X position, 1 = track Mario's Y position.
+  -: unused.
+
+Extra bytes 4-7:
+  These 4 values set the 4 extra bytes for the sprite spawned (only if it's custom).
+
+Note: when inserting the sprite from the custom sprite list, there'll probably be some random
+  values for the last 3 extra bytes. This is because the list doesn't actually support more
+  than 4, so you'll have to change them manually (although if you're not using extra bytes
+  for the spawned sprite you can leave random values there, as they won't be used).
+
+
+
+Configureable Ball 'n' Chain
+----------------------------
+
+Uses 4 Extra Bytes. Fill in the extension box in LM as follows: RR AA SS MD
+
+ - RR = radius (0-74)
+ - AA = angle divided by 32 (0-FF) Example: $0800 = right /32 -> $40 see below for more info
+ - SS = speed  0-7F counterclockwise 80-FF clockwise
+ - M  = momentum enabled - if not 0 spinning on ball changes speed
+ - D  = dynamic - see tables below for options
+
+
+
+Configureable Boo Ring
+----------------------
+
+Uses 4 Extra Bytes. Fill in the extension box in LM as follows:
+
+ - Extra Byte 1: Number of Boos ($0A: vanilla)
+ - Extra Byte 2: Space between each Boo ($28: vailla)
+ - Extra Byte 3: Radius ($50: vanilla)
+ - Extra Byte 4: Speed ($10: vanilla)
+
+Setting the extra bit will change the rotation direction (clockwise, counter-clockwise).
+
+
+
+Customizable Scale Platform
+---------------------------
+
+Extra Byte 1             - Width, how far apart the two platforms will be
+                        $40: vanilla's short width
+                        $80: vanilla's long width
+
+Extra Byte 2             - Speed, how quickly the platform falls when on it
+                        $08: vanilla's on platform speed
+                        Using negative speed will make the platform rise instead
+
+Extra Byte 3             - Return speed, how quickly the platform returns
+                        $02: vanilla's platform return speed
+                        Keep this speed positive, regardless of the other value
+
+
+
+Floor Boo
+---------
+
+Uses 4 extra bytes
+
+Extra Byte 1 - Hide Time
+  How long the boo stays hidden, in 4 frame increments
+
+Extra Byte 2 - Extend Time
+  How many frames the boo stays out in 4 frame increments
+
+Extra Byte 3 - Movement Speed
+  How quickly the boo moves around
+
+Extra Byte 4 - Wall Follow
+  If not 0, boo moves along floors while hidden
+
+
+
