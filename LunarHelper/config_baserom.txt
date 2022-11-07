@@ -13,7 +13,7 @@ package = BLDC2.bps
 initial_patch = Other/initial_patch_sa1.bps
 
 -- tool paths
-addmusick_path = AddmusicK_1.0.8/AddMusicK.exe
+addmusick_path = Tools/AddmusicK_1.0.8/AddMusicK.exe
 asar_path = Tools/Asar/asar.exe
 flips_path = Tools/Flips/flips.exe
 gps_path = Tools/GPS/gps.exe
