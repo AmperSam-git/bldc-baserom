@@ -57,7 +57,6 @@ patches
 	Tools/Asar/RAMToggledStatusbar.asm
 	Tools/Asar/SpikeTopCeilingCling.asm
 	Tools/Asar/SpriteItemBox.asm
-	Tools/Asar/SpritePropertiesExtraBit.asm
 	Tools/Asar/SpriteSubmapBehaviorAsExtraBit.asm
 	Tools/Asar/TripleBallNChain.asm
 	Tools/Asar/Tweaks.asm

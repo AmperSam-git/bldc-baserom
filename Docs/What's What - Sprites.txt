@@ -2,9 +2,9 @@
 Enhanced Normal Sprites
 -----------------------
 
-Pitchin', Puntin', Diggin' Chuck
+All Chucks
 - extra bit = 0: normal
-- extra bit = 1: keeps throwing sprites, doesn't chase Mario
+- extra bit = 1: keeps their behaviour, doesn't chase Mario
 
 Shells
 - extra bit = 0: normal
@@ -41,9 +41,6 @@ Amazing Flying Hammer Bro
 Dry Bones, stay on ledge
 - extra bit = 0: throws bones
 - extra bit = 1: doesn't throw bones
-
-
-Additionally, all sprites that use the starting X/Y position to set some property, will use the extra bit instead.
 
 ---------------------------------
 Custom Sprites inserted with PIXI

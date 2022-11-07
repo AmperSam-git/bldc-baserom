@@ -3,3 +3,5 @@ TODO:
 - update credits for everything
 - fix display for bitwise sprites
 - update exanimation docs
+
+- add ceiling thwimp
