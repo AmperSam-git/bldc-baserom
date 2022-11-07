@@ -1,7 +1,7 @@
 -- Baserom --
-AmperSam - Compilation
+AmperSam - Baserom Compilation and documentation
 Mario90 - DSS Sprite conversion
-Atari2.0 - Sprite configuration assistance
+MarioFanGamer - UberASM Objects
 
 -- Big Resources --
 Dynamic Spritesheet System v1.01 - lx5 - https://github.com/TheLX5/DynamicSpritesetSystem/releases/tag/v1.01
@@ -21,6 +21,7 @@ RAM Specific L/R Scroll Disable - Chdata - https://smwc.me/s/20355
 RAM Toggled Status Bar (& IRQ) - Kevin - https://smwc.me/s/28449
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
+Sprite Item Box - Kevin - https://smwc.me/s/26887
 Sprite Properties Depending on the Extra Bit v1.1 - Kevin - https://smwc.me/s/27942
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 

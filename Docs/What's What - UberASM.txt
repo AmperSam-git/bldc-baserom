@@ -1,0 +1,60 @@
+The baserom has several UberASM features that you can activate in your levels via a custom object.
+
+To insert a custom object either use the "Edit > Insert manual..." menu action or press the "Insert" key while in Lunar Magic's Object editing mode.
+
+Custom objects can be activated by putting their value in the "Size/Type/Ext (0-FF)" field and multiple objects can be active in one level. For example, the demo level (105) has objects 9A, A1, A2 and A4 active.
+
+Note: These custom objects will look garbled but they won't actually appear in game.
+
+
+98 - Lock Horizontal Scroll
+---------------------------
+Prevents the camera from scrolling left or right.
+
+
+99 - Free Vertical Scroll
+-------------------------
+Makes the camera follow Mario up and down.
+
+
+9A - Death on Powerup Loss
+--------------------------
+This will kill Mario instantly when he loses a powerup.
+
+
+9B - Horizontal Level Wrap
+--------------------------
+Makes Mario and sprites wrap the top and bottom sides of the screen.
+
+
+9C - Vertical Level Wrap
+-------------------------
+Makes Mario and sprites wrap the left and right sides of the screen.
+
+
+9D - Lock Scroll (Left)
+9E - Lock Scroll (Right)
+9F - Lock Scroll (Up)
+A0 - Lock Scroll (Down)
+------------------------
+These objects will prevent the screen from scrolling back their respective ways (Mega Man style).
+
+
+A1 - Toggle Statusbar
+---------------------
+This will completely hide the in game statusbar. Also enables a sprite item box.
+
+
+A2 - Toggle Screen Scroll
+-------------------------
+This will disable scrolling the screen with L or R.
+
+
+A3 - Prompt Retry
+-----------------
+This will set the retry system to use a prompt that says "Retry" in the middle of the screen.
+
+
+A4 - Instant Retry
+------------------
+This will make the retry skip using prompt and restart instantly.

@@ -46,16 +46,17 @@ patches
 	Tools/Asar/Fixes/WallJumpNoteBlockGlitchFix.asm
 	Tools/Asar/Fixes/YoshiPipeAnimationFix.asm
 	Tools/Asar/Fixes/SSP_Fixes.asm
-	Tools/Asar/Objects/objectool.asm
 	Tools/Asar/CharlesRemembers.asm
 	Tools/Asar/ExtendedNSTL.asm
 	Tools/Asar/FreeUpRAM.asm
+	Tools/Asar/Objects/objectool.asm
 	Tools/Asar/PlaceableDiscoShell.asm
 	Tools/Asar/PlaceableKickedShell.asm
 	Tools/Asar/PlaceableThrowBlock.asm
 	Tools/Asar/RAMToggledLR.asm
 	Tools/Asar/RAMToggledStatusbar.asm
 	Tools/Asar/SpikeTopCeilingCling.asm
+	Tools/Asar/SpriteItemBox.asm
 	Tools/Asar/SpritePropertiesExtraBit.asm
 	Tools/Asar/SpriteSubmapBehaviorAsExtraBit.asm
 	Tools/Asar/TripleBallNChain.asm
