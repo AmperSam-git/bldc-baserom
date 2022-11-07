@@ -26,7 +26,7 @@ Page 2
 2A6 - Outline coin that will turn into a coin after a moment
 2A7 - Block that is WATER to sprites, passable by Mario
 2A8 - No Jump block
-2A9 - Top of sliber pswitch door
+2A9 - Top of silver pswitch door
 2AA - Small silver pswitch door/bottom
 2AB - Teleport block
 2B3 - Teleport block, requires Key
