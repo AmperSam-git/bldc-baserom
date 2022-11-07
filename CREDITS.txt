@@ -22,7 +22,6 @@ RAM Toggled Status Bar (& IRQ) - Kevin - https://smwc.me/s/28449
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Item Box - Kevin - https://smwc.me/s/26887
-Sprite Properties Depending on the Extra Bit v1.1 - Kevin - https://smwc.me/s/27942
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 
 * combined into 1 patch, thanks dtothefourth
