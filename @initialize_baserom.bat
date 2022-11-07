@@ -28,12 +28,12 @@ set /p Action=Enter the number of your choice:
 if "!Action!"=="1" (
 
     :: AddMusicK
-    set AMK_DIR=%WORKING_DIR%AddMusicK_1.0.8\
+    set AMK_DIR=!TOOLS_DIR!AddMusicK_1.0.8\
     :: Check if AMK exists and download if not
     if not exist "!AMK_DIR!AddmusicK.exe" (
         echo AddmusicK not found, downloading...
         powershell Invoke-WebRequest !AMK_DL! -OutFile !AMK_ZIP! >NUL
-        powershell Expand-Archive !AMK_ZIP! -DestinationPath %WORKING_DIR% >NUL
+        powershell Expand-Archive !AMK_ZIP! -DestinationPath !TOOLS_DIR! >NUL
         :: Delete junk files
         for %%a in (!AMK_JUNK!) do (del !AMK_DIR!%%a)
         for %%a in (!AMK_JUNK_DIR!) do (rmdir /S /Q !AMK_DIR!%%a)
