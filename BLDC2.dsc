@@ -145,18 +145,6 @@
 3a5	0	A Donut Lift, which will fall right shortly after being stepped on.
 3a6	0	A Donut Lift, which will fall up shortly after being stepped on.
 3a7	0	A Donut Lift, which will fall down shortly after being stepped on.
-3b0	0	Question block that always spawns a Mushroom.
-3b1	0	Question block that always spawns a Fire Flower.
-3b2	0	Question block that always spawns a Cape Feather.
-3b3	0	Question block that always spawns a 1-Up.
-3b4	0	Question block that always spawns a Vine.
-3b5	0	Question block that always spawns a P-Balloon.
-3b6	0	Question block that always spawns a Key.
-3b8	0	Question block that always spawns a Galoomba.
-3b9	0	Question block that always spawns a Fish.
-3ba	0	Question block that always spawns a Blue P-Switch/POW.
-3bb	0	Question block that always spawns a Blue P-Switch/POW.
-3bc	0	Question block that always spawns a Spring.
 3c0	0	A frozen block that disappears when thawed.
 3c1	0	A frozen coin.
 3c2	0	A frozen door.

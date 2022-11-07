@@ -2,8 +2,7 @@
 ;Fixes wall run triangles so they work with layer 2/3 interaction enabled
 ;And also work when placed on Layer 2
 ;By dtothefourth
-
-!FreeRAM = $7FB540 ;Any FreeRAM, change if conflicting
+ 
 
 if read1($00FFD5) == $23	;sa-1 compatibility
   sa1rom
@@ -14,6 +13,7 @@ else
   !addr = $0000
 endif
 
+!FreeRAM = $14BE|!addr
 
 org $00F048|!BankB
 	autoclean JSL NoteLayer

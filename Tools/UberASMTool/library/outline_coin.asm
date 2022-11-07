@@ -1,4 +1,9 @@
-!FreeRAM = $7F8600|!addr
+if read1($00FFD5) == $23	;sa-1 compatibility
+  sa1rom
+  !FreeRAM = $418D00
+else
+  !FreeRAM = $7F8D00
+endif
 
 main:
 	LDX #$EB			; 48 coin slots

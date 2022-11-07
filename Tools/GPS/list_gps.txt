@@ -53,21 +53,6 @@
 ;2BE
 ;2BF
 
-; CUSTOM QUESTION BLOCKS (DO NOT MODIFY) ------------------;
-3B0 question_blocks/74_mushroom.asm
-3B1 question_blocks/75_fire_flower.asm
-3B2 question_blocks/77_feather.asm
-3B3 question_blocks/78_1up.asm
-3B4 question_blocks/79_vine.asm
-3B5 question_blocks/7D_p-balloon.asm
-3B6 question_blocks/80_key.asm
-
-3B8 question_blocks/0F_goomba.asm
-3B9 question_blocks/18_fish.asm
-3BA question_blocks/3E_blue_pswitch.asm
-3BB question_blocks/3E_silver_pswitch.asm
-3BC question_blocks/2F_spring.asm
-
 ; CONVEYOR BLOCKS -----------------------------------------;
 370-372	mm2_conv/conveyer move left fast.asm
 373-375	mm2_conv/conveyer move right fast.asm

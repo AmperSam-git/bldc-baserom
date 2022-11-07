@@ -12,7 +12,13 @@ JMP Return : JMP Return : JMP Return : JMP Return
 JMP Main : JMP Main : JMP Main
 
 !delay = $3F				; Coin delay
-!FreeRAM = $7F8600|!addr	; Free RAM
+
+if read1($00FFD5) == $23	;sa-1 compatibility
+  sa1rom
+  !FreeRAM = $418D00
+else
+  !FreeRAM = $7F8D00
+endif
 
 print "A coin outline that turns into a coin after an amount of time."
 

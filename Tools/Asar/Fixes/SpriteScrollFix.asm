@@ -1,4 +1,4 @@
-!Freeram_PrevPos	= $0DC3
+!Freeram_PrevPos = $0DC3|!Base2
 ;^[4 bytes], determines direction from its previous position. The first
 ;two bytes are for X position, and the last two are for the Y. When working
 ;with ASM to control the screen (by changing $7E1462 and $7E1464), DO NOT
@@ -10,7 +10,7 @@
 ;^Set this  to 1 if you wanted to use a number that is the amount of pixels
 ;the screen has been moved.
 
-!Freeram_ScrnDisplace = $7F8332
+!Freeram_ScrnDisplace = $1487|!Base2
 ;[4 bytes], this ram is used if !Displacement is set to 1. This ram address
 ;holds the amount of pixels the screen has moved. Format:
 ;-First 2 bytes = moved horizontally
