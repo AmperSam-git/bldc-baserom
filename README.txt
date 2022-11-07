@@ -5,7 +5,9 @@ Welcome to BLDC2!
 
 Getting Started
 ---------------
-Apply "BLDC2.bps" to clean (headered) copy of Super Mario World and save it in the main baserom folder as BLDC2.smc, this is important for all the metadata files to work appropriately.
+Apply "BLDC2.bps" to clean (headered) copy of Super Mario World and save it in the main baserom folder as BLDC2.smc.
+
+NOTE: it is important for all the metadata files have the same name as your rom file to work appropriately.
 
 
 Documentation
