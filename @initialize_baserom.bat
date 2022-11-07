@@ -19,6 +19,7 @@ call %WORKING_DIR%Tools\@tool_defines.bat
 echo Commands to Initialize Baserom
 echo.
 echo   1. Download and Setup all Baserom tools
+echo   2. Restore Baserom list files.
 echo   0. Exit
 echo.
 set /p Action=Enter the number of your choice:
@@ -27,12 +28,12 @@ set /p Action=Enter the number of your choice:
 if "!Action!"=="1" (
 
     :: AddMusicK
-    set AMK_DIR=!WORKING_DIR!AddMusicK_1.0.8\
+    set AMK_DIR=%WORKING_DIR%AddMusicK_1.0.8\
     :: Check if AMK exists and download if not
     if not exist "!AMK_DIR!AddmusicK.exe" (
         echo AddmusicK not found, downloading...
         powershell Invoke-WebRequest !AMK_DL! -OutFile !AMK_ZIP! >NUL
-        powershell Expand-Archive !AMK_ZIP! -DestinationPath !TOOLS_DIR! >NUL
+        powershell Expand-Archive !AMK_ZIP! -DestinationPath %WORKING_DIR% >NUL
         :: Delete junk files
         for %%a in (!AMK_JUNK!) do (del !AMK_DIR!%%a)
         for %%a in (!AMK_JUNK_DIR!) do (rmdir /S /Q !AMK_DIR!%%a)
@@ -140,6 +141,8 @@ if "!Action!"=="1" (
         :: Delete junk files
         for %%a in (!LUN_HLP_JUNK!) do (del !LUN_HLP_DIR!%%a)
         for %%a in (!LUN_HLP_JUNK_DIR!) do (rmdir /S /Q !LUN_HLP_DIR!%%a)
+         :: Create Lunar Helper shortcut
+        powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%WORKING_DIR%LunarHelper.exe.lnk');$s.TargetPath='!LUN_HLP_DIR!LunarHelper.exe';$s.Save()"
         :: Delete Zip
         del !LUN_HLP_ZIP!
         echo Done.
@@ -211,9 +214,25 @@ if "!Action!"=="1" (
     )
 )
 
+:: Restore Baserom list files
+if "!Action!"=="2" (
+    :: Copy in existing list file(s) to respective folders
+    for %%a in (!AMK_LISTS!) do (copy /y !LISTS_DIR!%%a !AMK_DIR!)
+    copy /y !LISTS_DIR!!GPS_LIST! !GPS_DIR!list.txt
+    copy /y !LISTS_DIR!!PIXI_LIST! !PIXI_DIR!list.txt
+    copy /y !LISTS_DIR!!UBER_LIST! !UBER_DIR!list.txt
+    echo Done.
+)
+
 if "!Action!"=="0" (
     echo Have a nice day ^^_^^
     exit /b
 )
 
 if '!Action!'=='' echo Nothing is not valid option, please try again.
+
+echo.
+echo All done. Have a nice day ^^_^^
+echo.
+pause
+exit /b
