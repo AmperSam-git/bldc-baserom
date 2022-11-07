@@ -4,7 +4,6 @@ GPS Inserted Blocks
 
 Page 2
 ------
-
 290 - Block that is solid to sprites, passable by Mario
 291 - Block that is solid to Mario, passable by sprites
 292-295 - One-way Blocks
@@ -36,7 +35,6 @@ Page 2
 
 Page 3
 ------
-
 300-36F - Screen Scrolling Pipe Tiles (hover for descriptions)
 370-375 - Conveyor tiles (Fast)
 380-385 - Conveyor tiles
