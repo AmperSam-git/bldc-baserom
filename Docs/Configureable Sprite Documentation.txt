@@ -14,7 +14,7 @@ Extra byte 2            XX = X offset for position sprite ($80-$FF = negative of
 
 Extra byte 3            YY = Y offset for position sprite ($80-$FF = negative offset)
 
-Extra byte 4            CC = Custom settings. Format: epP-SSSS
+Extra byte 4            CC = Custom settings (bitwise). Format: epP-SSSS
                         - SSSS: the state the sprite will be spawned in (using the $14C8 format).
                           (0 acts as 1 because state 0 doesn't make sense here).
                           State 1 (set with either 0 or 1) is init, which is what you usually want.
@@ -34,6 +34,18 @@ Extra byte 5            SP = speed multiplier (+1)
 
 Extra byte 7-8          E1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
 
+
+Developer Notes         - To spawn a Shell, don't use numbers DA-DF. Use instead 04-09,
+                          and set the state as carryable (extra byte 4 = 09).
+                        - To spawn a throw block, use sprite number 53 and spawn it in
+                          carryable state (or it won't appear).
+                        - To spawn a P-Switch, use 0 or 1 for extra byte 4, or its color will be wrong.
+                        - When inserting the sprite through the custom collection menu in LM, the last 4 bytes
+                          will have random values in them (because the list only supports up to 4).
+                          If the sprite you need is vanilla or it's custom but doesn't use the extra bytes, you
+                          can ignore them and leave them random. Otherwise, you'll have to change them manually
+                          (but in this case you'd have to change them anyway most of the time).
+                          NOTE: this problem is fixed in PIXI v1.3.
 
 
 Sprite Offsetter
@@ -106,8 +118,14 @@ Configureable Ball 'n' Chain
 ----------------------------
 Extra Byte 1            Radius of the rotation (0-74)
 
-Extra Byte 2            Angle divided by 32 (0-FF)
-                        Example: $0800 = right /32 -> $40
+Extra Byte 2            Starting angle $#### (in hex) divided by 32 (0-FF), examples:
+                        - $0000 = 00 degress, down
+                        - $0400 = 45 degrees, down/right
+                        - $0800 = 90 degrees, right
+                        - $0C00 = 135 degrees, up/right etc
+                        - $1000 = 180 degrees, up
+                        - $1800 = 270 degrees, left
+                        etc.
 
 Extra Byte 3            Speed
                          - 00-7F = counterclockwise
@@ -120,6 +138,8 @@ Extra Byte 4            First digit = momentum enabled - if not 0 spinning on ba
 
 Configureable Boo Ring
 ----------------------
+Extra bit               Setting the extra bit will change the rotation direction (clockwise, counter-clockwise).
+
 Extra Byte 1            Number of Boos ($0A: vanilla)
 
 Extra Byte 2            Space between each Boo ($28: vailla)
@@ -128,7 +148,6 @@ Extra Byte 3            Radius ($50: vanilla)
 
 Extra Byte 4            Speed ($10: vanilla)
 
-Setting the extra bit will change the rotation direction (clockwise, counter-clockwise).
 
 
 Customizable Scale Platform
@@ -160,3 +179,21 @@ Extra Byte 3            Movement Speed
 
 Extra Byte 4            Wall Follow
                          - If not 0, boo moves along floors while hidden
+
+
+
+Customizable Moving Hole
+------------------------
+
+Extra Byte 1            Speed
+
+Extra Byte 2            Turn Time
+                         - How many frames before changing direction
+
+Extra Byte 3            Width & Depth (XX)
+                         - First Digit = Width of hole in tiles (1-6 recommended, doesn't cound the end tiles, 1 is vanilla)
+                         - Second Digit - Depth of hole in tiles (1-6 recommended)
+
+Extra Byte 4            Direction
+                         - 00 = horizontal
+                         - 01 = vertical
