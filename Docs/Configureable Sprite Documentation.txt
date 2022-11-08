@@ -2,37 +2,40 @@
 Configurable Sprite Documentation
 ---------------------------------
 
-Notes on particular sprites, this can also be seen in the Lunar Magic sprite window if you hover with your mouse.
+Notes on particular sprites, this can also be seen in the Lunar Magic sprite window if you hover individual sprites in the list with with your pointer.
 
 
 Any Line-Guided Sprite
 ----------------------
-
-Options are set using the extension box in LM using 8 bytes
-
-    SS XX YY CC SP E1 E2 E3 E4
+Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4
 
 SS = Sprite number
+
 XX = X offset for position sprite ($80-$FF = negative offset)
+
 YY = Y offset for position sprite ($80-$FF = negative offset)
+
 CC = Custom settings. Format: epP-SSSS
-- SSSS: the state the sprite will be spawned in (using the $14C8 format).
-(0 acts as 1 because state 0 doesn't make sense here).
-State 1 (set with either 0 or 1) is init, which is what you usually want.
-State 9 is carryable, useful for sprites like shells or throwblocks.
-- e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.
-- p: to be used with platforms: if set (i.e. add 40 to the number) Mario will move with the platform instead of sliding on it. Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.
-- P: second platform option, which does the same thing as the p option but it's recommended for sprites that use custom solid sprite code (for example, MarioFanGamer's Numbered Platform sprite). Note: this option doesn't work for sprites that naturally move horizontally. Also, this option is overriden by the p option: don't use them together.
+  - SSSS: the state the sprite will be spawned in (using the $14C8 format).
+  (0 acts as 1 because state 0 doesn't make sense here).
+  State 1 (set with either 0 or 1) is init, which is what you usually want.
+  State 9 is carryable, useful for sprites like shells or throwblocks.
+  - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.
+  - p: to be used with platforms: if set (i.e. add 40 to the number) Mario will move with the platform instead of sliding on it. Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.
+  - P: second platform option, which does the same thing as the p option but it's recommended for sprites that use custom solid sprite code (for example, MarioFanGamer's Numbered Platform sprite). Note: this option doesn't work for sprites that naturally move horizontally. Also, this option is overriden by the p option: don't use them together.
+
 SP = speed multiplier (+1)
+
 00 = normal speed, 01 = double speed, etc. (max 7F)
+
 FF (or any negative value) = stationary (the sprite won't move at all)
+
 E1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
 
 
 
 Sprite Offsetter
 ----------------
-
 Options are set using the extension box in LM using 8 bytes
 
  - extra byte 1: sprite number
@@ -51,7 +54,6 @@ if the extra bit is set, the displacement will subtract from the positions (move
 
 Sprite Stacks
 ------------
-
 Uses 8 extra bytes which determine the sprites in the stack from bottom to top
 
     - FF for an empty slot
@@ -66,7 +68,6 @@ The 10th extra byte is the same, but for the extra bit option of each sprite, e.
 
 X/Y Position Tracking Sprite
 ----------------------------
-
 This sprite will spawn a new sprite and make it stay at the same X or Y position as Mario.
 
 Extra bit: if clear, the spawned sprite is vanilla. If set, it's custom.
@@ -96,7 +97,6 @@ Note: when inserting the sprite from the custom sprite list, there'll probably b
 
 Configureable Ball 'n' Chain
 ----------------------------
-
 Uses 4 Extra Bytes. Fill in the extension box in LM as follows: RR AA SS MD
 
  - RR = radius (0-74)
@@ -109,7 +109,6 @@ Uses 4 Extra Bytes. Fill in the extension box in LM as follows: RR AA SS MD
 
 Configureable Boo Ring
 ----------------------
-
 Uses 4 Extra Bytes. Fill in the extension box in LM as follows:
 
  - Extra Byte 1: Number of Boos ($0A: vanilla)
@@ -123,7 +122,6 @@ Setting the extra bit will change the rotation direction (clockwise, counter-clo
 
 Customizable Scale Platform
 ---------------------------
-
 Extra Byte 1             - Width, how far apart the two platforms will be
                         $40: vanilla's short width
                         $80: vanilla's long width
@@ -140,7 +138,6 @@ Extra Byte 3             - Return speed, how quickly the platform returns
 
 Floor Boo
 ---------
-
 Uses 4 extra bytes
 
 Extra Byte 1 - Hide Time
