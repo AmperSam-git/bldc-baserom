@@ -10,22 +10,26 @@ pushpc
 pullpc
 
     generator_load:
+        ldy $9D
+        bne .ret
         ldx $18B9|!addr
         lda.l .gfx1-1,x
         cmp.b #!dss_id_null
         beq .skip
-        jsl find_and_queue_gfx 
+        jsl find_and_queue_gfx
         lda.l .gfx2-1,x
         cmp.b #!dss_id_null
         beq .skip
-        jsl find_and_queue_gfx 
+        jsl find_and_queue_gfx
         lda.l .gfx3-1,x
         cmp.b #!dss_id_null
         beq .skip
-        jsl find_and_queue_gfx 
+        jsl find_and_queue_gfx
     .skip
         txa
         jml generator_load_end
+    .ret
+        jml generator_load_return
 
     .gfx1
         db !dss_id_eerie
@@ -43,7 +47,7 @@ pullpc
         db !dss_id_bullet_bill
         db !dss_id_bowser_statue_flame
         db !dss_id_null
-    
+
     .gfx2
         db !dss_id_null
         db !dss_id_paragoomba

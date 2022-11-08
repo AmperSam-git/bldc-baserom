@@ -2,4 +2,3 @@ TODO:
 - fix sample levels
 - update credits for everything
 - update exanimation docs
-- documentation advising people of the limits of DSS

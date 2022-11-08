@@ -13,23 +13,23 @@ pullpc
     boo_buddies_write:
         pha
         lda $02,s
-        tax 
+        tax
         lda $1892|!addr,x
         cmp #$08
         bne .boo
-        plx 
-        bra .return 
-    .boo 
+        plx
+        bra .return
+    .boo
         lda.b #!dss_id_boo
         jsl find_and_queue_gfx
         plx
         bcs .loaded
         lda #$F0
-        sta $0301|!addr,y
+        sta $0201|!addr,y
         bra .return
     .loaded
         lda.l !dss_tile_buffer,x
-        sta $0302|!addr,y
+        sta $0202|!addr,y
     .return
         plx
         jml boo_buddies_write_end

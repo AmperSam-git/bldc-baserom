@@ -26,6 +26,8 @@ if read1($00FFD5) == $23
 	!RAM_ExtOAMIndex #= !RAM_ExtOAMIndex|!base
 endif
 
+incsrc "../PIXI/asm/ExtraDefines/dynamic_spritesets_defines.asm"
+
 macro CheckSlot(offset)
 LDA.w $0201|!base+<offset>
 CMP.b #$F0
@@ -298,13 +300,22 @@ FixSumoFlame1:
 	JML $02F9D6|!base2
 
 FixSumoFlame2:
+	lda #$24
+    jsl find_and_queue_gfx
+    bcs .loaded
+    jmp .End
+.loaded
 	LDA $1E16|!base,x
 	SEC
 	SBC $1A
 	STA $00
 	LDA $1E3E|!base,x
 	SBC $1B
-	BNE .End
+	LDA $1E3E|!base,x
+    SBC $1B
+    BEQ +
+        JMP .End
++
 	LDA $1E02|!base,x
 	SEC
 	SBC $1C
@@ -343,13 +354,15 @@ FixSumoFlame2:
 	ADC $01
 	STA $0201|!base,y
 	LDA $02F904,x
+	tax
+	lda !dss_tile_buffer,x
 	STA $0202|!base,y
 	LDA $14
 	AND #$04
 	ASL #4
 	ORA $64
 	ORA #$05
-	STA $0203|!base,y 
+	STA $0203|!base,y
 	PHY
 	TYA
 	LSR #2
@@ -365,7 +378,19 @@ FixSumoFlame2:
 	PLX
 .End
 	PLX
+.End2
 	JML $02F93B|!base2
+
+find_and_queue_gfx:
+    pha
+    lda $01DF78+3+2
+    sta $00
+    lda $01DF78+3+2+1
+    sta $01
+    lda $01DF78+3+2+2
+    sta $02
+    pla
+    jml [$3000]
 
 FixContactGFX:
 	jsl GetExtOAMIndex

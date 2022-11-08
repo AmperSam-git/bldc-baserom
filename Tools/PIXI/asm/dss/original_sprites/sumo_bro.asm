@@ -18,7 +18,7 @@ pushpc
         warnpc $02DE83
     org $02DE83
         sumo_bro_write_end:
-            sec 
+            sec
 
     org $02DE0E
         sumo_bro_tilemap:
@@ -58,7 +58,7 @@ pullpc
         bcs .loaded
         jml flame_pillar_init_return
     .loaded
-        txa 
+        txa
         asl
         tay
         jml flame_pillar_init_end
@@ -68,7 +68,7 @@ pullpc
         lda.w flame_pillar_tilemap,x
         tax
         lda !dss_tile_buffer,x
-        sta $0302|!addr,y
+        sta $0202|!addr,y
         plx
         lda $14
         and #$04
@@ -76,7 +76,7 @@ pullpc
 
     sumo_bro_init:
         lda !157C,x
-        lsr 
+        lsr
         ror #2
         and #$40
         eor #$40
@@ -87,16 +87,16 @@ pullpc
     sumo_bro_write:
         phx
         lda.w sumo_bro_tilemap,x
-        pha 
+        pha
         and #$03
-        tax 
+        tax
         lda.l .offset,x
         sta $06
         pla
         lsr #2
-        tax 
+        tax
         lda.l !dss_tile_buffer,x
-        clc 
+        clc
         adc $06
         sta $0302|!addr,y
         plx
