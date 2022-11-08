@@ -1,0 +1,15 @@
+---------------------------------
+Notes on Dynamic Spriteset System
+---------------------------------
+
+The Dynamic Spriteset System (DSS) is applied to this baserom to allow you to place any sprite (including all custom sprites inserted) without thinking about it or messing with sprite sheets. It removes a lot of limitations on what you can place in levels and enables a lot of different sprites to co-exist. However, there are still some caveats:
+
+
+Don't Overload Entrances
+------------------------
+Placing too many sprites within the screens near an entrance (Main, Midway or Secondary) will overload the available VRAM and cause some sprites to appear garbled as all their graphics will be loaded at once on level load.
+
+
+Limits on Sprite Diversity
+--------------------------
+The DSS doesn't remove all limits on sprites you can place, there still needs to be some thought given to sprite placement as a similar problem to the above can occur if there are too many unique sprites in a given area.
