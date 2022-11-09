@@ -1,6 +1,6 @@
----------------------------------
-Configurable Sprite Documentation
----------------------------------
+--------------------------------
+Sprite Documentation
+--------------------------------
 
 Notes on particular sprites, some of this information can also be seen in the Lunar Magic sprite window
 if you hover individual sprites in the list with with your pointer.
