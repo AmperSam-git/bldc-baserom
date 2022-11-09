@@ -30,13 +30,13 @@ Extra byte 4            CC = Custom settings (bitwise). Format: epP-SSSS
                         move horizontally. Also, this option is overriden by the p option: don't use them together.
 
 Extra byte 5            SP = speed multiplier (+1)
-                         - 00 = normal speed, 01 = double speed, etc. (max 7F)
-                         - FF (or any negative value) = stationary (the sprite won't move at all)
+                        - 00 = normal speed, 01 = double speed, etc. (max 7F)
+                        - FF (or any negative value) = stationary (the sprite won't move at all)
 
 Extra byte 7-8          E1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
 
 
-Developer Notes         - To spawn a Shell, don't use numbers DA-DF. Use instead 04-09,
+Developer's Note        - To spawn a Shell, don't use numbers DA-DF. Use instead 04-09,
                           and set the state as carryable (extra byte 4 = 09).
                         - To spawn a throw block, use sprite number 53 and spawn it in
                           carryable state (or it won't appear).
@@ -46,7 +46,7 @@ Developer Notes         - To spawn a Shell, don't use numbers DA-DF. Use instead
                           If the sprite you need is vanilla or it's custom but doesn't use the extra bytes, you
                           can ignore them and leave them random. Otherwise, you'll have to change them manually
                           (but in this case you'd have to change them anyway most of the time).
-                          NOTE: this problem is fixed in PIXI v1.3.
+
 
 ----------------------------------------------------------------------------------------------------------------
 Sprite Offsetter
@@ -57,20 +57,19 @@ Extra Bit               If clear, the displacement will add to the positions (mo
 
 
 Extra byte 1            Sprite number
-                         - Normal or custom, if custom be sure the extra bit values in Extra Byte 2 are
+                        - Normal or custom, if custom be sure the extra bit values in Extra Byte 2 are
                         appropriate to the sprite.
 
 Extra byte 2            Sprite "extra bit":
-                         - 00 or 01 = normal sprite
-                         - 02 = custom sprite, extra bit clear
-                         - 03 = custom sprite, extra bit set
+                        - 00 or 01 = normal sprite
+                        - 02 = custom sprite, extra bit clear
+                        - 03 = custom sprite, extra bit set
 
 Extra byte 3            X displacement
 
 Extra byte 4            Y displacement
 
 Extra bytes 5-8         Extra bytes 1-4 of the custom sprite to spawn (if applicable)
-
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -81,7 +80,7 @@ Extra bytes 1-8         Sprite Number
                         - Use the Lunar Magic numbers for shells (DA-DE)
 
 Extra byte 9            Marks sprites in the stack as custom
-                         - the bits are in order from left to right with left being the bottom of
+                        - the bits are in order from left to right with left being the bottom of
                         the stack,  e.g 80 (10000000, bitwise) would make just the bottom a custom
                         sprite.
 
@@ -105,17 +104,17 @@ Extra byte 2            Offset from Mario's X/Y position to keep the sprite at.
                         Note: if using the Y tracking option, you may want to use $10 as the offset to
                         make the sprite stay at Mario's feet position rather than his head.
 
-Extra byte 3            Additional settings. Format: e......p
-                         - e: if set, the extra bit in the spawned sprite will be set.
-                         - p: 0 = track Mario's X position, 1 = track Mario's Y position.
-                         - .: unused.
+Extra byte 3            Additional settings. Format: e------p
+                        - e: if set, the extra bit in the spawned sprite will be set.
+                        - -: unused.
+                        - p: 0 = track Mario's X position, 1 = track Mario's Y position.
 
 Extra bytes 4-7         These 4 values set the 4 extra bytes for the sprite spawned (only if it's custom).
 
-Note: when inserting the sprite from the custom sprite list, there'll probably be some random
-  values for the last 3 extra bytes. This is because the list doesn't actually support more
-  than 4, so you'll have to change them manually (although if you're not using extra bytes
-  for the spawned sprite you can leave random values there, as they won't be used).
+Developer's Note        When inserting the sprite from the custom sprite list, there'll probably be some random
+                        values for the last 3 extra bytes. This is because the list doesn't actually support more
+                        than 4, so you'll have to change them manually (although if you're not using extra bytes
+                        for the spawned sprite you can leave random values there, as they won't be used).
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -125,20 +124,20 @@ Configureable Ball 'n' Chain
 Extra Byte 1            Radius of the rotation (0-74)
 
 Extra Byte 2            Starting angle $#### (in hex) divided by 32 (0-FF), examples:
-                        - $0000 = 00 degress, down
-                        - $0400 = 45 degrees, down/right
-                        - $0800 = 90 degrees, right
-                        - $0C00 = 135 degrees, up/right etc
-                        - $1000 = 180 degrees, up
-                        - $1800 = 270 degrees, left
+                       - $0000 = 00 degress, down
+                       - $0400 = 45 degrees, down/right
+                       - $0800 = 90 degrees, right
+                       - $0C00 = 135 degrees, up/right etc
+                       - $1000 = 180 degrees, up
+                       - $1800 = 270 degrees, left
                         etc.
 
 Extra Byte 3            Speed
-                         - 00-7F = counterclockwise
-                         - 80-FF = clockwise
+                        - 00-7F = counterclockwise
+                        - 80-FF = clockwise
 
-Extra Byte 4            First digit = momentum enabled - if not 0 spinning on ball changes speed
-                        Second digit  = dynamic - see tables below for options
+Extra Byte 4            First digit = momentum enabled, if not 0 spinning on ball changes speed
+                        Second digit  = is dynamic, uses some hardcoded values. Not recommended.
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -146,7 +145,6 @@ Configureable Boo Ring
 ----------------------------------------------------------------------------------------------------------------
 
 Extra bit               Setting the extra bit will change the rotation direction (clockwise, counter-clockwise).
-
 
 Extra Byte 1            Number of Boos ($0A: vanilla)
 
@@ -162,16 +160,16 @@ Customizable Scale Platform
 ----------------------------------------------------------------------------------------------------------------
 
 Extra Byte 1            Width, how far apart the two platforms will be
-                         - $40: vanilla's short width
-                         - $80: vanilla's long width
+                        - $40: vanilla's short width
+                        - $80: vanilla's long width
 
 Extra Byte 2            Speed, how quickly the platform falls when on it
-                         - $08: vanilla's on platform speed
-                         - Using negative speed will make the platform rise instead
+                        - $08: vanilla's on platform speed
+                        - Using negative speed will make the platform rise instead
 
 Extra Byte 3            Return speed, how quickly the platform returns
-                         - $02: vanilla's platform return speed
-                         - Keep this speed positive, regardless of the other value
+                        - $02: vanilla's platform return speed
+                        - Keep this speed positive, regardless of the other value
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -179,16 +177,16 @@ Floor Boo
 ----------------------------------------------------------------------------------------------------------------
 
 Extra Byte 1            Hide Time
-                         - How long the boo stays hidden, in 4 frame increments
+                        - How long the boo stays hidden, in 4 frame increments
 
 Extra Byte 2            Extend Time
-                         - How many frames the boo stays out in 4 frame increments
+                        - How many frames the boo stays out in 4 frame increments
 
 Extra Byte 3            Movement Speed
-                         - How quickly the boo moves around
+                        - How quickly the boo moves around
 
 Extra Byte 4            Wall Follow
-                         - If not 0, boo moves along floors while hidden
+                        - If not 0, boo moves along floors while hidden
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -199,16 +197,16 @@ Customizable Moving Hole
 Extra Byte 1            Speed
 
 Extra Byte 2            Turn Time
-                         - How many frames before changing direction
+                        - How many frames before changing direction
 
 Extra Byte 3            Width & Depth (XX)
-                         - First Digit = Width of hole in tiles (1-6 recommended, doesn't cound the end tiles,
+                        - First Digit = Width of hole in tiles (1-6 recommended, doesn't cound the end tiles,
                          1 is vanilla)
-                         - Second Digit - Depth of hole in tiles (1-6 recommended)
+                        - Second Digit- Depth of hole in tiles (1-6 recommended)
 
 Extra Byte 4            Direction
-                         - 00 = horizontal
-                         - 01 = vertical
+                        - 00 = horizontal
+                        - 01 = vertical
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -217,41 +215,41 @@ Configureable Pipe Spawner
 
 
 Extra Byte 1            Direction
-                         - 00 = down
-                         - 01 = left
-                         - 02 = up
-                         - 03 = right
+                        - 00 = down
+                        - 01 = left
+                        - 02 = up
+                        - 03 = right
 
 Extra Byte 2            Delay
-                         - How many frames between spawns
+                        - How many frames between spawns
 
 Extra Byte 3            Spawn Mode
-                         - 0 = Spawn sprite specified in extra bytes
-                         - 1 = Spawn sprites hardcoded list in .asm file (Disabled)
+                        - 0 = Spawn sprite specified in extra bytes
+                        - 1 = Spawn sprites hardcoded list in .asm file (Disabled)
 
 Extra Byte 4            Sprite #
-                         - Sprite to spawn if using mode 0
+                        - Sprite to spawn if using mode 0
 
 Extra Byte 5            Sprite extra bit
-                         - 00 or 01 = normal sprite
-                         - 02 = custom sprite, extra bit clear
-                         - 03 = custom sprite, extra bit set
+                        - 00 or 01 = normal sprite
+                        - 02 = custom sprite, extra bit clear
+                        - 03 = custom sprite, extra bit set
 
 Extra Byte 6            Max on # of onscreen Sprites
-                         - How many sprites can exist from the sprite at once, must be 00-08
-                         - 00 = no limit
+                        - How many sprites can exist from the sprite at once, must be 00-08
+                        - 00 = no limit
 
 Extra Byte 7            Total Spawn
-                         - How many sprites can come out of the pipe total
-                         - 00 = no limit
+                        - How many sprites can come out of the pipe total
+                        - 00 = no limit
 
 Extra Byte 8            Fire Mode
-                         - If 0 the sprite will just slowly push out of the pipe
-                         - Otherwise it will fire out of the pipe like a cannon
+                        - If 0 the sprite will just slowly push out of the pipe
+                        - Otherwise it will fire out of the pipe like a cannon
 
 Extra Byte 9            X Speed
-                         - Horizontal fire speed if using cannon mode
+                        - Horizontal fire speed if using cannon mode
 
 
 Extra Byte 10           Y Speed
-                         - Vertical fire speed if using cannon mode
+                        - Vertical fire speed if using cannon mode
