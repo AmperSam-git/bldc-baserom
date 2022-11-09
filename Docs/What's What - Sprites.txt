@@ -2,6 +2,15 @@
 Enhanced Normal Sprites
 -----------------------
 
+A number of vanilla sprites have been enhanced to have functionality enabled or their behaviour toggled by setting the extra bit.
+
+To insert a sprite with an extra bit setting either use the "Edit > Insert manual..." menu action or press the "Insert" key while in Lunar Magic's Sprite editing mode.
+
+Alternatively, you can place a sprite and Alt+Right-Click on the sprite to show the "Modify Sprite Manual (in hex)" window.
+
+Sprite Extra Bit Settings
+-------------------------
+
 All Chucks
 - extra bit = 0: normal
 - extra bit = 1: keeps their behaviour, doesn't chase Mario
