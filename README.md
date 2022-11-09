@@ -12,18 +12,12 @@ To start using the baserom you will first have to initialize the baserom folder 
 
 ## Building the Baserom
 
-To make life easier for you as a hacker, this baserom has a few build tools included that will automagically rebuild your hack everytime you make changes to it.
+This baserom was built with Lunar Helper and is your new best friend, run the `LunarHelper.exe` in the LunarHelper folder to get started. This tool will entirely rebuild the baserom (from scratch) to make sure it all assembles smoothly. It will also help you with quickly editing, testing and packaging.
 
-### Lunar Helper
-
-When working on your hack Lunar Helper is your new best friend, you can find it by running `Lunar Helper.exe` in the LunarHelper folder. This tool will entirely rebuild your rom (from scratch) each time you want to add (or remove) things to make sure it all builds smoothly. It will also help you with quickly editing, testing and packaging your hack for distribution. See the Lunar Helper readme in the Docs folder for more information.
-
-### Lunar Monitor
-
-In addition to Lunar Helper, a tool is bundled with Lunar Magic to monitor your hack and enable you to quickly export levels, map16, palettes and so forth for rebuilding instead of doing so manually. You'll find when you open Lunar Magic, there will be a new button between the Save and Undo buttons in the toolbar to enable this with one-click. See the Lunar Monitor readme in the Docs folder for more information.
+Lunar Helper is bundled with with Lunar Monitor which exports modified levels, map16, palettes and so forth for rebuilding instead of doing so manually. You'll find when you open Lunar Magic via the "Edit" action in Lunar Helper, there will be a toolbar button between the Save and Undo buttons to run a manual export.
 
 ## Resource Credits
 
-It is good practice to keep track of all resources used in your hacks if you can help it and credit their authors. See the included [CREDITS.txt](CREDITS.txt) file for a list of all resources included in the baserom.
+See [CREDITS.txt](CREDITS.txt) file for a list of all resources included in the baserom.
 
 Important: this project has no license nor do the authors or organizers claim any rights to the resources included in this project, those remain the rights of their respective authors.
