@@ -23,7 +23,7 @@
 ;					Max of 0 = no limit, must be 0-8
 ;
 ; Extra Byte 7 - Total Spawn - How many sprites can come out of the pipe total
-;					Total of 0 = no limit 
+;					Total of 0 = no limit
 ;
 ; Extra Byte 8 - Fire Mode - If 0 the sprite will just slowly push out of the pipe
 ;					Otherwise it will fire out of the pipe like a cannon
@@ -35,10 +35,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 SpriteList: ;Sprite numbers to spawn, will loop through them until hitting FF
-	db $00, $0F, $05, $80, $FF
+	db $FF, $00, $00, $00, $00
 
 SpriteCust:
-	db $00, $00, $00, $00, $00
+	db $FF, $00, $00, $00, $00
 
 
 
@@ -79,12 +79,12 @@ Print "INIT ",pc
 	STA !Sprite8
 	STA !Dropping
 	RTL
-	
-Print "MAIN ",pc			
+
+Print "MAIN ",pc
 	PHB
-	PHK				
-	PLB				
-	JSR main	
+	PHK
+	PLB
+	JSR main
 	PLB
 	RTL
 
@@ -144,8 +144,8 @@ Fire:
 	LDA !Phase
 	INC
 	STA !Phase
-	
-	TAY 
+
+	TAY
 	LDA SpriteList,Y
 	CMP #$FF
 	BNE +
@@ -193,7 +193,7 @@ Fire2:
 	STA !E4,y
 	LDA !14E0,x
 	ADC #$00
-	STA !14E0,y	
+	STA !14E0,y
 	BRA +++
 	++
 	LDA !D8,x
@@ -202,13 +202,13 @@ Fire2:
 	STA !D8,y
 	LDA !14D4,x
 	ADC #$00
-	STA !14D4,y	
+	STA !14D4,y
 	+++
 
 	LDA #$07
 	JSR GetExtraByte
 	BNE NoLock
-		
+
 	JSR LockDir
 
 NoLock:
@@ -230,9 +230,9 @@ NoLock:
 	BNE +++++
 	LDA #$00
 	STA !157C,y
-	
+
 	+++++
-		
+
 
 	LDA !Drop
 	CMP #$01
@@ -272,7 +272,7 @@ SpawnSprite:
 	PHA
 	LDA SpriteCust,Y
 	PHA
-	
+
 	JSL $02A9DE|!BankB
 	BMI EndSpawn
 
@@ -302,7 +302,7 @@ SpawnSprite:
 
 
 	JSR SpawnPos
-	
+
 	PHX
 	TYX
 	JSL $07F7D2|!BankB
@@ -335,7 +335,7 @@ SpawnFixed:
 	LDA #$04
 	JSR GetExtraByte
 	PHA
-	
+
 	JSL $02A9DE|!BankB
 	BMI EndSpawn2
 
@@ -388,7 +388,7 @@ SpawnFixed:
 	EndSpawn2:
 	PLA
 	PLA
-	RTS	
+	RTS
 
 SaveSlot:
 	LDA !Sprite1
@@ -507,7 +507,7 @@ GetCount:
 	INC $00
 	+
 	LDA $00
-	RTS	
+	RTS
 
 CheckStates:
 	LDA !Sprite1
@@ -634,7 +634,7 @@ CheckStates:
 	STA !Dropping
 
 
-	+	
+	+
 	RTS
 
 GetExtraByte:
@@ -649,7 +649,7 @@ GetExtraByte:
 	LDA [$0D],y
 	PLY
 	CMP #$00
-	RTS	
+	RTS
 
 
 LockDir:
@@ -675,13 +675,13 @@ LockDir:
 
 		STA !D8,y
 		XBA
-		STA !14D4,y		
+		STA !14D4,y
 		RTS
-	
+
 	+
 	DEC
 	BNE +
-	
+
 		LDA !14E0,x
 		XBA
 		LDA !E4,x
@@ -695,7 +695,7 @@ LockDir:
 
 		STA !E4,y
 		XBA
-		STA !14E0,y		
+		STA !14E0,y
 		RTS
 
 	+
@@ -714,7 +714,7 @@ LockDir:
 
 		STA !D8,y
 		XBA
-		STA !14D4,y		
+		STA !14D4,y
 		RTS
 	+
 		LDA !14E0,x
@@ -730,8 +730,8 @@ LockDir:
 
 		STA !E4,y
 		XBA
-		STA !14E0,y		
-	
+		STA !14E0,y
+
 
 	RTS
 
@@ -742,15 +742,15 @@ SpawnPos:
 
 	LDA !E4,x
 	STA !E4,y
-	LDA !14E0,x	
+	LDA !14E0,x
 	STA !14E0,y
 
 	LDA !D8,x
-	STA !D8,y	
+	STA !D8,y
 	LDA !14D4,x
-	STA !14D4,y	
+	STA !14D4,y
 	RTS
-	
+
 
 	+
 	LDA #$00
@@ -758,64 +758,63 @@ SpawnPos:
 	BNE +
 	LDA !E4,x
 	STA !E4,y
-	LDA !14E0,x	
+	LDA !14E0,x
 	STA !14E0,y
 
 	LDA !D8,x
 	CLC
-	ADC #$08	
-	STA !D8,y	
+	ADC #$08
+	STA !D8,y
 	LDA !14D4,x
-	ADC #$00	
-	STA !14D4,y	
+	ADC #$00
+	STA !14D4,y
 	RTS
 	+
-	
+
 	DEC
 	BNE +
 	LDA !E4,x
 	SEC
-	SBC #$08	
+	SBC #$08
 	STA !E4,y
 	LDA !14E0,x
-	SBC #$00		
+	SBC #$00
 	STA !14E0,y
 
 	LDA !D8,x
-	STA !D8,y	
+	STA !D8,y
 	LDA !14D4,x
-	STA !14D4,y	
+	STA !14D4,y
 	RTS
 	+
-	
+
 	DEC
 	BNE +
 	LDA !E4,x
 	STA !E4,y
-	LDA !14E0,x	
+	LDA !14E0,x
 	STA !14E0,y
 
 	LDA !D8,x
 	SEC
-	SBC #$08	
-	STA !D8,y	
+	SBC #$08
+	STA !D8,y
 	LDA !14D4,x
-	SBC #$00	
-	STA !14D4,y	
+	SBC #$00
+	STA !14D4,y
 	RTS
 	+
-	
+
 	LDA !E4,x
 	CLC
-	ADC #$08	
+	ADC #$08
 	STA !E4,y
 	LDA !14E0,x
-	ADC #$00	
+	ADC #$00
 	STA !14E0,y
 
 	LDA !D8,x
-	STA !D8,y	
+	STA !D8,y
 	LDA !14D4,x
-	STA !14D4,y	
+	STA !14D4,y
 	RTS
-				

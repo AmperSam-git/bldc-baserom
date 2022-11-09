@@ -58,9 +58,9 @@ Extra byte 1            Sprite number
                         appropriate to the sprite.
 
 Extra byte 2            Sprite "extra bit":
-                         - 00 or 01: normal sprite
-                         - 02: custom sprite, extra bit clear
-                         - 03: custom sprite, extra bit set
+                         - 00 or 01 = normal sprite
+                         - 02 = custom sprite, extra bit clear
+                         - 03 = custom sprite, extra bit set
 
 Extra byte 3            X displacement
 
@@ -197,3 +197,47 @@ Extra Byte 3            Width & Depth (XX)
 Extra Byte 4            Direction
                          - 00 = horizontal
                          - 01 = vertical
+
+
+
+Configureable Pipe Spawner
+--------------------------
+
+Extra Byte 1            Direction
+                         - 00 = down
+                         - 01 = left
+                         - 02 = up
+                         - 03 = right
+
+Extra Byte 2            Delay
+                         - How many frames between spawns
+
+Extra Byte 3            Spawn Mode
+                         - 0 = Spawn sprite specified in extra bytes
+                         - 1 = Spawn sprites hardcoded list in .asm file (Disabled)
+
+Extra Byte 4            Sprite #
+                         - Sprite to spawn if using mode 0
+
+Extra Byte 5            Sprite extra bit
+                         - 00 or 01 = normal sprite
+                         - 02 = custom sprite, extra bit clear
+                         - 03 = custom sprite, extra bit set
+
+Extra Byte 6            Max on # of onscreen Sprites
+                         - How many sprites can exist from the sprite at once, must be 00-08
+                         - 00 = no limit
+
+Extra Byte 7            Total Spawn
+                         - How many sprites can come out of the pipe total
+                         - 00 = no limit
+
+Extra Byte 8            Fire Mode
+                         - If 0 the sprite will just slowly push out of the pipe
+                         - Otherwise it will fire out of the pipe like a cannon
+
+Extra Byte 9            X Speed
+                         - Horizontal fire speed if using cannon mode
+
+Extra Byte 10           Y Speed
+                         - Vertical fire speed if using cannon mode
