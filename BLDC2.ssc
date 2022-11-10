@@ -1325,9 +1325,9 @@ See .asm file for more details
 
 11 0020 The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.
 11 0022 0,0,834
-12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0020 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0022 0,0,835
-12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0030 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0032 0,0,835
 
 ; Thwomps
@@ -1435,13 +1435,13 @@ See .asm file for more details
 20 30F30 A horizontal Red Piranha Plant moving right (short range).
 20 30F32 8,8,81C 24,8,818
 20 31020 A vertical Green Venus Plant moving up (long range, 1 fireball)
-20 31022 8,-16,803 8,-32,809 1,-22,820
+20 31022 8,-16,813 8,-32,809 1,-22,820
 20 31030 A vertical Green Venus Plant moving up (long range, 1 fireball)
-20 31032 8,-16,813 8,-32,809 1,-22,820
+20 31032 8,-16,803 8,-32,809 1,-22,820
 20 31120 A vertical Green Venus Plant moving down (long range, 1 fireball)
-20 31122 8,16,813 8,32,809 1,42,820
+20 31122 8,16,803 8,32,809 1,42,820
 20 31130 A vertical Green Venus Plant moving down (long range, 1 fireball)
-20 31132 8,16,803 8,32,809 1,42,820
+20 31132 8,16,813 8,32,809 1,42,820
 20 31220 A horizontal Green Venus Plant moving left (long range, 1 fireball)
 20 31222 -16,8,806 -32,8,809 -39,18,820
 20 31230 A horizontal Green Venus Plant moving left (long range, 1 fireball)
@@ -1499,13 +1499,13 @@ See .asm file for more details
 20 31F30 A horizontal Red Venus Plant moving right (short range, 1 fireball)
 20 31F32 8,8,81C 24,8,819 31,18,821
 20 33020 A vertical Green Venus Plant moving up (long range, 2 fireballs)
-20 33022 8,-16,803 8,-32,809 1,-22,820 -5,-16,820
+20 33022 8,-16,813 8,-32,809 1,-22,820 -5,-16,820
 20 33030 A vertical Green Venus Plant moving up (long range, 2 fireballs)
-20 33032 8,-16,813 8,-32,809 1,-22,820 -5,-16,820
+20 33032 8,-16,803 8,-32,809 1,-22,820 -5,-16,820
 20 33120 A vertical Green Venus Plant moving down (long range, 2 fireballs)
-20 33122 8,16,813 8,32,809 1,42,820 -5,48,820
+20 33122 8,16,803 8,32,809 1,42,820 -5,48,820
 20 33130 A vertical Green Venus Plant moving down (long range, 2 fireballs)
-20 33132 8,16,803 8,32,809 1,42,820 -5,48,820
+20 33132 8,16,813 8,32,809 1,42,820 -5,48,820
 20 33220 A horizontal Green Venus Plant moving left (long range, 2 fireballs)
 20 33222 -16,8,806 -32,8,809 -39,18,820 -45,24,820
 20 33230 A horizontal Green Venus Plant moving left (long range, 2 fireballs)
