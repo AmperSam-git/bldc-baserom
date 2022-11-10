@@ -14,7 +14,7 @@ GFX33 : Global Animation Tiles
 ----------
 ExGraphics
 ----------
-61 - Global Animation Graphics for P-Switch Doors, On/Off blocks, One-Way Blocks, and Coin Outlines
+61 - Global Animation Graphics
 80 - Cloud Layer 3 Graphics (use with 81 or 82)
 81 - Cloud 1 Layer 3 Tilemap
 82 - Cloud 2 Layer 3 Tilemap
@@ -49,11 +49,14 @@ ExGraphics
 9F - Castle 1 Layer 3 Tilemap
 A0 - Castle 2 Layer 3 Graphics and Animation
 A1 - Castle 2 Layer 3 Tilemap
-A8 - GFX14 for use with GHB's Screen Scrolling Pipes (FG1)
-A9 - GFX15 for use with GHB's Screen Scrolling Pipes (FG3)
-AA - Complementary GFX for use with GHB's Screen Scrolling Pipes (BG3)
-AB - SMAS SMB1 Castle BG (BG1)
-AC - SMAS SMB1 Mushroom BG (BG1)
+A2 - SMAS SMB3 Pipes BG (BG1)
+A3 - SMAS SMB3 Castle BG (BG1)
+A4 - SMAS SMB3 Castle FG (FG3)
+
+A6 - SMAS SMB3 Green Hills 2 BG (BG1)
+
+B1 - SMW Underwater Layer 3 Graphics (LG4)
+B2 - SMW Underwater Layer 3 Tilemap (LT3)
 B3 - SMW Big Bushes and Big Pipe (FG2)
 B4 - SMW Bushes Layer 3 Graphics (LG4)
 B5 - SMW Bushes Layer 3 Tilemap
@@ -64,8 +67,8 @@ B9 - SMW Starry Sky Layer 3 Animations (AN2)
 BA - SMW Starry Sky Layer 3 Graphics (LG4)
 BB - SMW Starry Sky Layer 3 Tilemap (LT3)
 BC - SMW Underwater Layer 3 Animations (AN2)
-BD - SMW Underwater Layer 3 Graphics (LG4)
-BE - SMW Underwater Layer 3 Tilemap (LT3)
+BD - SMAS SMB1 Castle BG (BG1)
+BE - SMAS SMB1 Mushroom BG (BG1)
 BF - SMAS SMB1 Grassland (FG2)
 C0 - SMAS SMB1 Grassland (FG3)
 C1 - SMAS SMB1 Night Sky BG (BG1)
@@ -105,10 +108,10 @@ E2 - SMAS SMB3 Athletic BG (BG1)
 E3 - SMAS SMB3 Athletic FG (FG3)
 E4 - SMAS SMB3 Battle BG (BG1)
 E5 - SMAS SMB3 Bowser Castle BG (BG1)
-E6 - SMAS SMB3 Bowser Castle FG (FG3)
-E7 - SMAS SMB3 Castle FG (FG2)
-E8 - SMAS SMB3 Castle FG (FG3)
-E9 - SMAS SMB3 Castle BG (BG1)
+E6 - SMAS SMB3 Underwater FG (FG3)
+E7 - SMAS SMB3 Underwater FG (AN2)
+E8 - SMAS SMB3 Underground/Cave BG (BG1)
+
 EA - SMAS SMB3 Castle Cage BG (BG1)
 EB - SMAS SMB3 Castle Walls BG (BG1)
 EC - SMAS SMB3 Forest Leaves BG (BG1)

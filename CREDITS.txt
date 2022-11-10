@@ -118,17 +118,19 @@ X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 NOTE: All custom sprites have been modified to work with DSS.
 
 -- Graphics --
-Super Mario Maker: Super Mario World - Conveyor Belt - Ralshi02 - https://smwc.me/s/19259
-Super Mario Maker: Super Mario World - Underwater - Dan - https://smwc.me/s/21074
-Super Mario Maker: Super Mario World - Grassland - Green Jerry - https://smwc.me/s/17832
-Super Mario All-Stars: Super Mario Bros. 3 - Quicksand - Batata Douce - https://smwc.me/s/24120
-Super Mario All-Stars: Super Mario Bros. 2 - Desert - Skewer - https://smwc.me/s/5985
-Super Mario All-Stars: Super Mario Bros. 3 - Castle - AmperSam, Black Sabbath - https://smwc.me/s/30076
+Super Mario All-Stars themed resources - Amomario123w, AmperSam, Batata Douce, Black Sabbath, cheeyev, DragonFire6780, MarioFanGamer, Dan, Green Jerry, Hinalyte, imamelia, Merio, Natsuz2, pieguy1372, RaindropDry, Skewer, Sonikku, Telinc1, Tornado, yno14jax
+Super Mario Maker 1 & 2 themed resources  - Ayami, bandicoot, Dan, Green Jerry, Kiatus, Ralshi02, Sammmoo
+Super Mario World Layer 3 conversions - Link13, Hayashi Neru, allowiscous, imamelia
+Miscellaneous graphics for blocks - AmperSam
+
+NOTE: search the Graphics section on SMW Central to find much of the graphics resources.
+
 
 -- UberASM --
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
 Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
+One-Way Scroll - Thomas - https://smwc.me/s/17094
 
 -- Custom Blocks --
 Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
