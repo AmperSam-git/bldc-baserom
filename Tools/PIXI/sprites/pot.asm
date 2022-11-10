@@ -20,14 +20,19 @@
 print "INIT ",pc
     LDA #$09            ;\ sprite status = stationary/carryable
     STA !14C8,x         ;/
-    STZ !1504,x
+
+    STZ !C2,x               ;\ if not clear everything
+    STZ !1510,x             ;|
+    STZ !1528,X             ;|
+    STZ !1504,x             ;|
+    STZ $15                 ;/
     RTL
 
 print "MAIN ",pc
     PHB : PHK : PLB
     JSR Random                  ;  Get a random number to use for later
     JSR SpriteCode              ;  Jump to sprite code
-    LDA !C2,x                   ; \ 
+    LDA !C2,x                   ; \
     BNE +                       ;  | Check if we are carying the sprite
         JSL $01B44F|!BankB      ;  | if so don't make it solid
 +   PLB                         ; /
@@ -42,15 +47,15 @@ SpriteCode:
     LDA !1510,x             ;\ Keep running the carried code if we have been picked up already
     BNE Carried             ;/
 
-    LDA !14C8,x             ;\ 
-    CMP #$0B                ; | If we are being carried go to the next part of the code
+    LDA !14C8,x             ;\
+    CMP #$0B                ;| If we are being carried go to the next part of the code
     BEQ Carried             ;/
 
     JSL $01A7DC|!BankB      ;\ Are we touching Mario?
     BCC Return              ;/ If not return
 
-    LDA $15                 ;\ 
-    AND.b #!GrabButton      ; | Are we pressing X/Y? If not, check if we are pushing it.
+    LDA $15                 ;\
+    AND.b #!GrabButton      ;| Are we pressing X/Y? If not, check if we are pushing it.
     BEQ Pushing             ;/
 
     LDA !14C8,x             ;\ If the sprite is dead, return
@@ -59,15 +64,15 @@ SpriteCode:
     LDA $187A|!Base2        ;\ If we're on Yoshi, return
     BNE Return              ;/
 
-    LDY.b #!SprSize-1       ;\ 
--   LDA !14C8,y             ; | loop to see if we're holding anything
-    CMP #$0B                ; | not my code
-    BEQ Return              ; |
-    DEY                     ; |
+    LDY.b #!SprSize-1       ;\
+-   LDA !14C8,y             ;| loop to see if we're holding anything
+    CMP #$0B                ;| not my code
+    BEQ Return              ;|
+    DEY                     ;|
     BPL -                   ;/
 
-    LDA #$0B                ;\ 
-    STA !14C8,x             ; | The sprite is now being carried! :D
+    LDA #$0B                ;\
+    STA !14C8,x             ;| The sprite is now being carried! :D
     STA !C2,x               ;/
 Return:
     LDA !1534,x
@@ -77,8 +82,8 @@ Return:
     LDA !1534,x             ;\  Break the sprite if we started in the air
     BNE JumpDown            ;/
 
-    LDA !1588,x             ;\ 
-    AND #$04                ; | If we are not on the ground branch
+    LDA !1588,x             ;\
+    AND #$04                ;| If we are not on the ground branch
     BEQ BreakAlready        ;/
 ThatsAll:
     RTS
@@ -126,15 +131,15 @@ Carried:
     STA !1510,x         ;/
     LDA !1504,x         ;\ If we are off the ground and going up branch
     BNE GoingUp         ;/
-    LDA !1588,x         ;\ 
-    AND #$04            ; | If we are not on the ground branch
+    LDA !1588,x         ;\
+    AND #$04            ;| If we are not on the ground branch
     BEQ BreakOrNot      ;/
     LDA #$FF
     STA !1534,x
 
 ToRTS:
-    LDA $15                 ;\ 
-    AND.b #!GrabButton      ; | check if we're still holding the sprite
+    LDA $15                 ;\
+    AND.b #!GrabButton      ;| check if we're still holding the sprite
     BEQ Check               ;/
     JSL $01A7DC|!BankB      ;\ Are we touching Mario
     BCC Check               ;/ If not return
@@ -143,26 +148,26 @@ Nothing:
     RTS
 
 Check:
-    LDA !AA,x               ;\ 
-    BNE Nothing             ; | Is the sprite moving?
-    LDA !B6,x               ; |
+    LDA !AA,x               ;\
+    BNE Nothing             ;| Is the sprite moving?
+    LDA !B6,x               ;|
     BNE Nothing             ;/
-    LDA #$09                ;\ 
-    STA !14C8,x             ; |
-    STZ !C2,x               ; | if not clear everything
-    STZ !1510,x             ; |
-    STZ !1528,X             ; |
-    STZ !1504,x             ; |
+    LDA #$09                ;\
+    STA !14C8,x             ;|
+    STZ !C2,x               ;| if not clear everything
+    STZ !1510,x             ;|
+    STZ !1528,X             ;|
+    STZ !1504,x             ;|
     STZ $15                 ;/
     RTS
 
 BreakOrNot:
-    LDA !1588,x             ;\ 
-    AND #$04                ; | If we are not on the ground branch
+    LDA !1588,x             ;\
+    AND #$04                ;| If we are not on the ground branch
     BNE Check               ;/
 
     LDA !AA,x               ;\ Are we moving up?
-    CMP #$FA                ; |
+    CMP #$FA                ;|
     BCC GoingUp             ;/ if so branch
 
     LDA !B6,x
@@ -170,8 +175,8 @@ BreakOrNot:
     BMI Left
 
 NowBack:
-    LDA !1588,x             ;\ 
-    AND #$03                ; | Are we touching a wall?
+    LDA !1588,x             ;\
+    AND #$03                ;| Are we touching a wall?
     BEQ Skip                ;/
     JMP SmashCode
 
@@ -190,12 +195,12 @@ Left:
 
 GoingUp:
     LDA !AA,x               ;\ Are we moving up?
-    CMP #$FA                ; |
+    CMP #$FA                ;|
     BCS ToRTS               ;/ if so branch
     LDA #$04                ;\ Set a flag
     STA !1504,x             ;/
-    LDA !1588,x             ;\ 
-    AND #$04                ; | If we are not on the ground branch
+    LDA !1588,x             ;\
+    AND #$04                ;| If we are not on the ground branch
     BEQ Skip                ;/
     BRA SmashCode
 
@@ -207,20 +212,20 @@ SmashCode:
     LDA.b #!SmashSFX            ;\ Sound effect to play
     STA.w !SmashBank|!Base2     ;/
 
-    LDA !E4,x                   ;\ 
-    STA $9A                     ; |
-    LDA !14E0,x                 ; |
-    STA $9B                     ; |
-    LDA !D8,x                   ; |
-    STA $98                     ; |
-    LDA !14D4,x                 ; |
-    STA $99                     ; | Shatter code
-    PHB                         ; |
-    LDA #$02                    ; |
-    PHA                         ; |
-    PLB                         ; |
-    LDA #$00                    ; |
-    JSL $028663|!BankB          ; |
+    LDA !E4,x                   ;\
+    STA $9A                     ;|
+    LDA !14E0,x                 ;|
+    STA $9B                     ;|
+    LDA !D8,x                   ;|
+    STA $98                     ;|
+    LDA !14D4,x                 ;|
+    STA $99                     ;| Shatter code
+    PHB                         ;|
+    LDA #$02                    ;|
+    PHA                         ;|
+    PLB                         ;|
+    LDA #$00                    ;|
+    JSL $028663|!BankB          ;|
     PLB                         ;/
 
     %BES(SpawnRandom)
@@ -293,7 +298,7 @@ Graphics:
 	lda #!GFX_FileNum        ; find or queue GFX
 	%FindAndQueueGFX()
 	bcs .gfx_loaded
-	rts                      ; don't draw gfx if ExGFX isn't ready	
+	rts                      ; don't draw gfx if ExGFX isn't ready
 .gfx_loaded
     %GetDrawInfo()
 
@@ -331,7 +336,7 @@ BorneDone:
     RTS
 
 BreakAirborne:
-    LDA !1588,x             ;\ 
-    AND #$04                ; | If we are not on the ground branch
+    LDA !1588,x             ;\
+    AND #$04                ;| If we are not on the ground branch
     BEQ BorneDone           ;/
     JMP SmashCode
