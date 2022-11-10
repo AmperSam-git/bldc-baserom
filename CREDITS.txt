@@ -4,12 +4,15 @@ lx5 - DSS Assistance
 Mario90 - DSS Sprite conversion
 MarioFanGamer - UberASM Objects
 
+
 -- Testing --
 Alex, TheJavaBrew, JonM, quietmason, Noivern
+
 
 -- Big Resources --
 Dynamic Spritesheet System  v1.01 - lx5 - https://github.com/TheLX5/DynamicSpritesetSystem/releases/tag/v1.01
 SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938
+
 
 -- Patches --
 Chucks With Extra Bit Retain Type When Hurt - JamesD28 - https://smwc.me/s/28594
@@ -32,6 +35,7 @@ Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 
 * modified to work with DSS
 ** combined into one patch, thanks dtothefourth
+
 
 -- Bug Fixes --
 $13FB Game Crash Fix (Fireberry) - p4plus2 - https://smwc.me/s/18319
@@ -117,6 +121,7 @@ X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 
 NOTE: All custom sprites have been modified to work with DSS.
 
+
 -- Graphics --
 Super Mario All-Stars themed resources - Amomario123w, AmperSam, Batata Douce, Black Sabbath, cheeyev, DragonFire6780, MarioFanGamer, Dan, Green Jerry, Hinalyte, imamelia, Merio, Natsuz2, pieguy1372, RaindropDry, Skewer, Sonikku, Telinc1, Tornado, yno14jax
 Super Mario Maker 1 & 2 themed resources  - Ayami, bandicoot, Dan, Green Jerry, Kiatus, Ralshi02, Sammmoo
@@ -132,6 +137,7 @@ Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
+
 
 -- Custom Blocks --
 Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
@@ -154,6 +160,7 @@ Super Bounce Blocks** - dogemaster - https://smwc.me/s/22934
 * simplified for use in the baserom
 ** just the sprite bounce block
 
+
 -- Used Tools --
 AddmusicK 1.0.8 - Kipenal - https://smwc.me/s/24994
 Asar v1.81 - Alcaro et al. - https://smwc.me/s/25953
@@ -165,3 +172,4 @@ Lunar Magic 3.31 - FuSoYa - https://smwc.me/s/26916
 Lunar Monitor 1.5.0 - Underway, Atari2.0 - https://github.com/Underrout/lunar-monitor
 PIXI v1.32 - Atari2.0, JackTheSpades, Tattletale - https://smwc.me/s/26026
 UberASM Tool 1.4 - Vitor Vilela - https://smwc.me/s/19982
+
