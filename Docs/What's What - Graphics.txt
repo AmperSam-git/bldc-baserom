@@ -1,3 +1,14 @@
+Backgrounds & Foregrounds
+-------------------------
+
+All ExGraphics for the FG and BG resources are already inserted and their Map16 tiles are already saved to the baserom. Sample levels are provided for many of the resources but others (like the layer 3 conversions of vanilla BGs) will require manual setup.
+
+Custom Blocks
+-------------
+
+Many of the custom blocks in the baserom require ExGraphics, some of them use global tiles in ExGFXE17 (FG2) and that can be changed in the Super GFX Bypass dialog. Other custom blocks, like the ice blocks use ExGFX200 (BG3). The Demo Level (105) has them all on display.
+
+
 --------
 Graphics
 --------
@@ -10,6 +21,7 @@ GFX29 : Layer 3
 
 GFX33 : Global Animation Tiles
  - midway animation frames have been corrected
+
 
 ----------
 ExGraphics
