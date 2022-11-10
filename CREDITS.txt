@@ -127,10 +127,11 @@ NOTE: search the Graphics section on SMW Central to find much of the graphics re
 
 
 -- UberASM --
-ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
-Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
 Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
+Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
+ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
+Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
 
 -- Custom Blocks --
 Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
