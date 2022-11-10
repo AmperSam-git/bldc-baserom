@@ -75,6 +75,7 @@ Extra bytes 5-8         Extra bytes 1-4 of the custom sprite to spawn (if applic
 ----------------------------------------------------------------------------------------------------------------
 Sprite Stacks
 ----------------------------------------------------------------------------------------------------------------
+
 Extra bytes 1-8         Sprite Number
                         - Use "FF" for an empty slot
                         - Use the Lunar Magic numbers for shells (DA-DE)
@@ -193,7 +194,6 @@ Extra Byte 4            Wall Follow
 Customizable Moving Hole
 ----------------------------------------------------------------------------------------------------------------
 
-
 Extra Byte 1            Speed
 
 Extra Byte 2            Turn Time
@@ -213,14 +213,13 @@ Extra Byte 4            Direction
 Configureable Pipe Spawner
 ----------------------------------------------------------------------------------------------------------------
 
-
-Extra Byte 1            Direction
+Extra Byte 1            Direction to Spawn
                         - 00 = down
                         - 01 = left
                         - 02 = up
                         - 03 = right
 
-Extra Byte 2            Delay
+Extra Byte 2            Spawn Delay
                         - How many frames between spawns
 
 Extra Byte 3            Spawn Mode
@@ -253,3 +252,47 @@ Extra Byte 9            X Speed
 
 Extra Byte 10           Y Speed
                         - Vertical fire speed if using cannon mode
+
+
+----------------------------------------------------------------------------------------------------------------
+Configureable Roto Disc
+----------------------------------------------------------------------------------------------------------------
+
+Extra bit               Setting the extra bit will change the rotation direction (clockwise, counter-clockwise).
+
+
+Extra Byte 1            X Radius
+                        - How many frames between spawns
+
+Extra Byte 2            Y Radius
+                        - How many frames between spawns
+
+Extra Byte 3            Speed
+                        - Non-Ridiculous range would be 00-0F
+
+Extra Byte 4            Starting position
+                        - Bit Clear (00) = Starts in bottom half of circle
+                        - Bit Set (08) = Starts in top half of circle
+                        - Values here will start the sprite a different degrees around the semi circle
+                        respective to Bit3(08)
+
+Example:                If you want the sprite to rotate clockwise, starting at 12'o'clock in 2 tile radius
+                        in a perfect circle, but at a slowish speed you would set "Extra Bits" to 3 in the sprite
+                        insertion dialog for clockwise rotation.
+
+                        Then the Extension field values would be 38 for X radius and the next 38 for Y Radius
+                        (equal values here make it a circle) then 03 for a slow speed and 88 for position
+                        (80 for the mid point of the semicircle plus 08 to indicate the top half).
+
+
+----------------------------------------------------------------------------------------------------------------
+Pot
+----------------------------------------------------------------------------------------------------------------
+
+Extra Byte 1            Sprite Number
+                         - the number of either a custom or normal sprite to spawn.
+
+Extra Byte 2            Sprite Status
+                        - First digit = sprite status ($14C8) the sprite should spawn in (if unsure, use 1).
+                        - Second digit = sprite extra bit status. 0 and 1 spawn a normal sprite with its extra
+                        bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.

@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Line-Guided Any Sprite",
+      "Description": "Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\\nSS = Sprite number\\nXX = X offset for position sprite ($80-$FF = negative offset)\\nYY = Y offset for position sprite ($80-$FF = negative offset)\\nCC = Custom settings. Format: epP-SSSS\\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\\n   (0 acts as 1 because state 0 doesn't make sense here).\\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\\n   State 9 is carryable, useful for sprites like shells or throwblocks.\\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\\n - p: to be used with platforms: if set (i.e. add 40 to the number)\\n   Mario will move with the platform instead of sliding on it.\\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\\n - P: second platform option, which does the same thing as the p option\\n   but it's recommended for sprites that use custom solid sprite code\\n   (for example, MarioFanGamer's Numbered Platform sprite).\\n   Note: this option doesn't work for sprites that naturally move horizontally.\\n   Also, this option is overriden by the p option: don't use them together.\\nSP = speed multiplier (+1)\\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\\n - FF (or any negative value) = stationary (the sprite won't move at all)\\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).\\n",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -86,7 +86,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Vanilla, Extra Bit set))",
@@ -99,7 +102,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Vanilla, Carryable)",
@@ -112,7 +118,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Custom)",
@@ -125,7 +134,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Custom, Extra Bit set)",
@@ -138,7 +150,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Custom, Carryable)",
@@ -151,7 +166,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Line-Guided Any Sprite (Custom, Extra Bit set, Carryable)",
@@ -164,7 +182,10 @@
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     }
   ]
 }

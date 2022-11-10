@@ -64,9 +64,9 @@ See .asm file for more details
 10 0032 -32,0,830 -16,0,830 0,0,17 16,0,830 32,0,830
 11 0020 The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.
 11 0022 0,0,834
-12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0020 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0022 0,0,835
-12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0030 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0032 0,0,835
 
 ; Thwomps
@@ -429,7 +429,7 @@ A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom 
 A1 0022 0,0,0
 A2 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
 A2 0022 0,0,0
-A3 0020 Line-Guided Any Sprite
+A3 0020 Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\nSS = Sprite number\nXX = X offset for position sprite ($80-$FF = negative offset)\nYY = Y offset for position sprite ($80-$FF = negative offset)\nCC = Custom settings. Format: epP-SSSS\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\n   (0 acts as 1 because state 0 doesn't make sense here).\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\n   State 9 is carryable, useful for sprites like shells or throwblocks.\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\n - p: to be used with platforms: if set (i.e. add 40 to the number)\n   Mario will move with the platform instead of sliding on it.\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\n - P: second platform option, which does the same thing as the p option\n   but it's recommended for sprites that use custom solid sprite code\n   (for example, MarioFanGamer's Numbered Platform sprite).\n   Note: this option doesn't work for sprites that naturally move horizontally.\n   Also, this option is overriden by the p option: don't use them together.\nSP = speed multiplier (+1)\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\n - FF (or any negative value) = stationary (the sprite won't move at all)\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).\n
 A3 0022 0,0,0
 A4 0020 A sprite which spawns another sprite and makes it stay on the same X or Y position as Mario.
 A4 0022 0,0,0
