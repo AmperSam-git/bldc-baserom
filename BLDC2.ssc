@@ -1343,7 +1343,6 @@ See .asm file for more details
 
 14 30020 Ceiling Thwimp
 14 30022 0,0,884
-b
 15 0020 A Blooper from SMB1.
 15 0022 0,-16,890 0,0,8A0
 
@@ -1572,7 +1571,7 @@ b
 30 31122 0,1,574 16,1,575 32,1,576
 30 31222 0,1,574 16,1,575 32,1,575 48,1,576
 
-36 30020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.
+36 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\n- Red: Default (High fling speed, both horizontally and vertically)\n- Blue: Weaker fling.\n- Green: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect)\n- Yellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
 36 30022 -16,0,840
 36 30122 -16,0,841
 36 30222 -16,0,842

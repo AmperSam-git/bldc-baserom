@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.",
+      "Description": "Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\\n- Red: Default (High fling speed, both horizontally and vertically)\\n- Blue: Weaker fling.\\n- Green: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect)\\n- Yellow: Flings Mario and Sprites higher up, but with less horizontal oomph.",
       "ExtraBit": false,
       "Tiles": [
         {
