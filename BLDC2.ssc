@@ -1234,6 +1234,16 @@ DF 0010 A Disco Shell.
 4E 0000 A ledge dwelling monty mole that will have different digging speed depending on its extra bit. It's currently set to dig quickly.
 4E 0010 A ledge dwelling monty mole that will have different digging speed depending on its extra bit. It's currently set to dig slowly.
 
+; Growing pipe
+49 0000 A pipe end that will rise up 4 tiles and then sink, will be exit-enabled if it's extra bit is set. It's currently a normal pipe.
+49 0012 0,0,552 16,0,553 0,-8,10A
+49 0010 A pipe end that will rise up 4 tiles and then sink, will be exit-enabled if it's extra bit is set. It's currently an exit-enabled pipe.
+
+; Rex
+AB 0000 A rex. It will be squished if it's extra bit is set.
+AB 0010 A squished rex. It will be a normal rex if it's extra bit is clear.
+AB 0012 0,1,83B
+
 ; Hammer Bro
 9B 0012 0,-15,5BC 16,-15,5BD 8,-23,5AE -16,-15,5BB 0,0,10A
 9B 0002 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to infrequently.

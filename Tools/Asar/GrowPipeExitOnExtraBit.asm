@@ -35,9 +35,9 @@ endif
 
 ; --------------------
 
-if read1($02FFE2) == $FF
-error "You must run PIXI on the ROM at least once for this patch to work!"
-endif
+;if read1($02FFE2) == $FF
+;error "You must run PIXI on the ROM at least once for this patch to work!"
+;endif
 
 ORG $02E845|!bank
 autoclean JML PipeExit		; Make the growing/shrinking pipe act as an exit pipe when the extra bit is set.
