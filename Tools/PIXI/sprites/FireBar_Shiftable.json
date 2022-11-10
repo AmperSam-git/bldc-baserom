@@ -151,7 +151,7 @@
   ],
   "Collection": [
     {
-      "Name": "Fire-Bar Clockwise",
+      "Name": "Fire-Bar (Shiftable) Clockwise",
       "ExtraBit": false,
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 40,
@@ -159,7 +159,7 @@
       "Extra Property Byte 4": 0
     },
     {
-      "Name": "Fire-Bar Counter",
+      "Name": "Fire-Bar (Shiftable) Counter",
       "ExtraBit": true,
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 40,
@@ -167,7 +167,7 @@
       "Extra Property Byte 4": 0
     },
     {
-      "Name": "Long Fire-Bar Clockwise",
+      "Name": "Long Fire-Bar (Shiftable) Clockwise",
       "ExtraBit": false,
       "Extra Property Byte 1": 11,
       "Extra Property Byte 2": 40,
@@ -175,7 +175,7 @@
       "Extra Property Byte 4": 0
     },
     {
-      "Name": "Long Fire-Bar Counter",
+      "Name": "Long Fire-Bar (Shiftable) Counter",
       "ExtraBit": true,
       "Extra Property Byte 1": 11,
       "Extra Property Byte 2": 40,
@@ -183,7 +183,7 @@
       "Extra Property Byte 4": 0
     },
     {
-      "Name": "Fast Fire-Bar Clockwise",
+      "Name": "Fast Fire-Bar (Shiftable) Clockwise",
       "ExtraBit": false,
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 56,
@@ -191,7 +191,7 @@
       "Extra Property Byte 4": 0
     },
     {
-      "Name": "Fast Fire-Bar Counter",
+      "Name": "Fast Fire-Bar (Shiftable) Counter",
       "ExtraBit": true,
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 56,
