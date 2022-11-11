@@ -15,9 +15,11 @@ Baserom Notes
 The baserom was built with Lunar Magic 3.31, to avoid possible problems related to Lunar Magic version it's recommended to make your level with that same version (3.31).
 
 
-Documentation
+Help & Documentation
 -------------
 The "Docs" folder in the main baserom directory has files with information about all the things included in the baserom. Please consult those before seeking assistance, they may already have answers.
+
+However, if you have need assistance, reach out on the SMW Central Discord channels for this event or in the event subforum on the website.
 
 
 Using AddMusicK
