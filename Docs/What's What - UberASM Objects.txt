@@ -42,19 +42,24 @@ These objects will prevent the screen from scrolling back their respective ways 
 
 A1 - Toggle Statusbar
 ---------------------
-This will completely hide the in game statusbar. Also enables a sprite item box.
+Completely hide the in game statusbar. Also enables a sprite item box.
 
 
 A2 - Toggle Screen Scroll
 -------------------------
-This will disable scrolling the screen with L or R.
+Disable scrolling the screen with L or R.
 
 
 A3 - Prompt Retry
 -----------------
-This will set the retry system to use a prompt that says "Retry" in the middle of the screen.
+Set the retry system to use a prompt that says "Retry" in the middle of the screen.
 
 
 A4 - Instant Retry
 ------------------
-This will make the retry skip using prompt and restart instantly.
+Make the retry skip using prompt and restart instantly after dying.
+
+
+A5 - Bottom Left Retry Prompt
+-----------------------------
+Move the retry prompt to the bottom left (by default it's in the middle) if Prompt retry is active.

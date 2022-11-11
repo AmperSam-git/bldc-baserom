@@ -48,7 +48,7 @@ CustExObj9C:
  ++ SEP #$20
 	STZ $1411|!addr
 	SEC : ROR $1B96|!addr
-	
+
 	LDA #$08
 	TSB !level_flags
 RTS
@@ -88,19 +88,28 @@ CustExObjA2:
 RTS
 
 ; Retry
-!retry_prompt_override_ram = $40A411
+!retry_freeram     = $7FB400
+!retry_freeram_sa1 = $40A400
+if read1($00FFD5) == $23
+    !retry_freeram = !retry_freeram_sa1
+endif
 
 CustExObjA3:
 	; Prompt Retry
-	LDA #$02 : sta !retry_prompt_override_ram
+	LDA #$02 : sta !retry_freeram+$11
 RTS
 
 CustExObjA4:
 	; Instant Retry
-	LDA #$03 : sta !retry_prompt_override_ram
+	LDA #$03 : sta !retry_freeram+$11
 RTS
 
 CustExObjA5:
+	; Bottom left retry prompt
+	lda #$09 : sta !retry_freeram+$15
+	lda #$D0 : sta !retry_freeram+$16
+RTS
+
 CustExObjA6:
 CustExObjA7:
 CustExObjA8:

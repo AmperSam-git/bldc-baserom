@@ -25,3 +25,15 @@ However, if you have need assistance, reach out on the SMW Central Discord chann
 Using AddMusicK
 ---------------
 Adding custom music is permitted for this contest but in order for the retry system's death SFX to work, some files are included for AddMusicK (in "AMK Files" folder) ought to be included in your project. If you forget to include these it will be alright.
+
+
+Retry System
+------------
+This baserom has a Retry System applied and by default is set to play the vanilla death sequence, but this can be changed with some custom objects (see "What's What - UberASM Objects" in the Docs folder for more details).
+
+Some other settings that are on by default are:
+
+ - Checkpoint Saving, all checkpoints will be saved to SRAM
+ - Saving after Game Over
+ - START+SELECT to exit is on for every level, this is enabled as an anti-softlock measure
+ - RNG is reset for all levels
