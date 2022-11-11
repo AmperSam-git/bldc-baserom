@@ -63,3 +63,8 @@ Make the retry skip using prompt and restart instantly after dying.
 A5 - Bottom Left Retry Prompt
 -----------------------------
 Move the retry prompt to the bottom left (by default it's in the middle) if Prompt retry is active.
+
+
+A6 - Start in OFF State
+-----------------------
+Starts the level with the ON/OFF state in the OFF state at the start of the level (duh)

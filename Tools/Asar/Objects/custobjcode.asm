@@ -79,19 +79,19 @@ RTS
 
 ; Toggle status bar
 CustExObjA1:
-	LDA #$01 : STA $79
+	LDA #$01 : STA $79 ; matches RAMToggledStatusbar
 RTS
 
 ; Toggle L/R scroll
 CustExObjA2:
-	LDA #$01 : STA $7C
+	LDA #$01 : STA $7C ; matches RAMToggledLR
 RTS
 
 ; Retry
-!retry_freeram     = $7FB400
-!retry_freeram_sa1 = $40A400
 if read1($00FFD5) == $23
-    !retry_freeram = !retry_freeram_sa1
+    !retry_freeram =  $40A400
+else
+	!retry_freeram = $7FB400
 endif
 
 CustExObjA3:
@@ -111,6 +111,10 @@ CustExObjA5:
 RTS
 
 CustExObjA6:
+	; Set on/off to OFF
+	lda #$01 : sta $14AF|!addr
+RTS
+
 CustExObjA7:
 CustExObjA8:
 CustExObjA9:
