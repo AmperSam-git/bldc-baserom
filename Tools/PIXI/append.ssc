@@ -1209,11 +1209,11 @@ F5 F032 0,0,*  Layer 2  \nMAY GLITCH!*
 53 0010 A throwblock sprite that spawns kicked towards the player.
 
 ; Disco shell
-DA 0012 0,0,430 0,0,114
-DB 0012 0,0,431 0,0,114
-DC 0012 0,0,432 0,0,114
-DD 0012 0,0,433 0,0,114
-DF 0012 0,0,430 0,0,114
+DA 0012 0,0,440 0,0,114
+DB 0012 0,0,441 0,0,114
+DC 0012 0,0,442 0,0,114
+DD 0012 0,0,443 0,0,114
+DF 0012 0,0,440 0,0,114
 
 DA 0010 A Disco Shell.
 DB 0010 A Disco Shell.

@@ -19,7 +19,7 @@ Shells
 - extra bit = 0: normal
 - extra bit = 1: disco shell
 
-Koopas
+Big Koopas
 - extra bit = 0: normal
 - extra bit = 1: kicked shell of same color
 
