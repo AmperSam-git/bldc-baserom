@@ -110,6 +110,14 @@ null_pointer:
     RTL
 
 handle_init_codes:
+    LDA $71
+    CMP #$0A
+    BNE +
+    JMP .Return
++
+    print "Level init codes: $",pc
+    %RunCode(8, enable_sfx_echo)
+.Return
 RTS
 
 handle_main_codes:
@@ -118,7 +126,7 @@ handle_main_codes:
     BNE +
     JMP .Return
 +
-    print "Level codes: $",pc
+    print "Level main codes: $",pc
     %RunCode(0, free_vertical_scroll)
     %RunCode(1, insta_death)
     %RunCode(2, horz_level_wrap)
@@ -127,7 +135,6 @@ handle_main_codes:
     %RunCode(5, block_right)
     %RunCode(6, block_up)
     %RunCode(7, block_down)
-    %RunCode(8, enable_sfx_echo)
 .Return
 RTS
 
