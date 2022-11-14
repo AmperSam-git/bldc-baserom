@@ -81,6 +81,7 @@ Victory Pose Fix v1.1 - TheBiob - https://smwc.me/s/22372
 Walljump/Note Block Glitch Fix v1.6 - lolcats439 - https://smwc.me/s/19932
 Yoshi Pipe Animation Fix - Kevin https://smwc.me/s/30127
 
+
 -- Sprites --
 Angry Sun/Happy Moon (v1.3) - Sonikku - https://smwc.me/s/22630
 Banzai Bill v1.12 - imamelia - https://smwc.me/s/23480
