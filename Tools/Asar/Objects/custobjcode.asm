@@ -15,20 +15,23 @@ RTS
 
 ; Free vertical scroll
 CustExObj99:
-	LDA #$01
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0001 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Hurt = insta death
 CustExObj9A:
-	LDA #$02
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0002 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Horizontal level wrap
 CustExObj9B:
-	LDA #$04
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0004 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Vertical level wrap
@@ -49,32 +52,37 @@ CustExObj9C:
 	STZ $1411|!addr
 	SEC : ROR $1B96|!addr
 
-	LDA #$08
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0008 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Lock screen left
 CustExObj9D:
-	LDA #$10
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0010 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Lock screen right
 CustExObj9E:
-	LDA #$20
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0020 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Lock screen up
 CustExObj9F:
-	LDA #$40
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0040 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Lock screen down
 CustExObjA0:
-	LDA #$80
-	TSB !level_flags
+	REP #$20
+	LDA.w #$0080 : TSB !level_flags
+	SEP #$20
 RTS
 
 ; Toggle status bar
@@ -110,12 +118,18 @@ CustExObjA5:
 	lda #$D0 : sta !retry_freeram+$16
 RTS
 
+; Set on/off to OFF
 CustExObjA6:
-	; Set on/off to OFF
 	lda #$01 : sta $14AF|!addr
 RTS
 
+; Enable SFX Echo
 CustExObjA7:
+	REP #$20
+	LDA.w #$0100 : TSB !level_flags
+	SEP #$20
+RTS
+
 CustExObjA8:
 CustExObjA9:
 CustExObjAA:

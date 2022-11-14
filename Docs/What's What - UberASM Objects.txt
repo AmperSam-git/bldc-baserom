@@ -67,4 +67,9 @@ Move the retry prompt to the bottom left (by default it's in the middle) if Prom
 
 A6 - Start in OFF State
 -----------------------
-Starts the level with the ON/OFF state in the OFF state at the start of the level (duh)
+Starts the level with the ON/OFF state in the OFF state at the start of the level.
+
+
+A7 - Enable SFX Echo
+-----------------------
+Enabled the echo for sound effects, provided your level has custom music with echo enabled.

@@ -1,12 +1,11 @@
 -- Baserom --
 AmperSam - Compilation and documentation
-lx5 - DSS Assistance
 Mario90 - DSS Sprite conversion
 MarioFanGamer - UberASM Objects
 
 
--- Testing --
-Alex, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
+-- Help & Testing --
+Alex, Atari2.0, lx5, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
 
 
 -- Big Resources --
