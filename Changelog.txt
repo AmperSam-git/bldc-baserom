@@ -1,2 +1,7 @@
+v1.01
+- fix issue with the Configurable Ball n' Chain where Mario would bounce on it
+- fix map16 errors with stacking blocks
+- update missing sprite descriptions
+
 v1.0
 - The initial release version

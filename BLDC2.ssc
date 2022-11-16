@@ -1318,6 +1318,8 @@ See .asm file for more details
 
 10 30020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
+10 30020 Muncher bridge
+10 30030 Muncher bridge
 10 30022 -32,1,830 -16,1,830 0,1,830 16,1,830 32,1,830
 10 30122 0,-31,830 0,-15,830 0,1,830 0,17,830 0,33,830
 10 30032 -32,1,830 -16,1,830 0,1,830 16,1,830 32,1,830
@@ -1331,13 +1333,21 @@ See .asm file for more details
 12 0032 0,0,835
 
 ; Thwomps
+13 30020 A up-facing thwomp
 13 30022 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1
+13 30030 A up-facing mad thwomp
 13 30032 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 8,8,894
+13 30120 A down-facing thwomp
 13 30122 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3
+13 30130 A down-facing mad thwomp
 13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 8,8,8A4
+13 30220 A right-facing thwomp
 13 30222 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5
+13 30230 A right-facing madthwomp
 13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 8,8,895
+13 30320 A left-facing thwomp
 13 30322 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7
+13 30330 A left-facing mad thwomp
 13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8A5
 
 14 30020 Ceiling Thwimp
@@ -1370,13 +1380,13 @@ See .asm file for more details
 
 ; Piranha/Venus Plants
 20 30020 A vertical Green Piranha Plant moving up (long range).
-20 30022 8,-16,803 8,-32,817
+20 30022 8,-16,813 8,-32,817
 20 30030 A vertical Green Piranha Plant moving up (long range).
-20 30032 8,-16,813 8,-32,817
+20 30032 8,-16,803 8,-32,817
 20 30120 A vertical Green Piranha Plant moving down (long range).
-20 30122 8,16,813 8,32,807
+20 30122 8,16,803 8,32,807
 20 30130 A vertical Green Piranha Plant moving down (long range).
-20 30132 8,16,803 8,32,807
+20 30132 8,16,813 8,32,807
 20 30220 A horizontal Green Piranha Plant moving left (long range).
 20 30222 -16,8,806 -32,8,808
 20 30230 A horizontal Green Piranha Plant moving left (long range).
