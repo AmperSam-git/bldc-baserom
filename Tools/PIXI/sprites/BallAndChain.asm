@@ -9,7 +9,7 @@
 ; Fill in the extension box in LM as follows:
 ; RR AA SS MD
 ; RR = radius (0-74)
-; AA = angle divided by 32 (0-FF) Example: $0800 = right /32 -> $40 see below for more info 
+; AA = angle divided by 32 (0-FF) Example: $0800 = right /32 -> $40 see below for more info
 ; SS = speed  0-7F counterclockwise 80-FF clockwise
 ; M  = momentum enabled - if not 0 spinning on ball changes speed
 ; D  = dynamic - see tables below for options
@@ -41,7 +41,7 @@
 ;turnaround points to act like a pendulum, not recommended along with Dynamic mode
 ;first number is angle to turn around at counter clockwise, second  is clockwise
 ;0000-01FFF like angle above
-TurnAround: 
+TurnAround:
 ;dw $0400,$1BF0
 dw $FFFF,$FFFF
 ;ball gfx
@@ -59,10 +59,10 @@ Properties:		db $33,$73,$B3,$F3
 ; Allows the angle and length to be animated in phases
 	;AnimFrames: ;how many frames each phase lasts, end with $00
 	;db $08,$20,$20,$20,$20,$20,$20,$20,$08,$20,$20,$20,$20,$20,$20,$20,$00
-	
+
 	;AnimSpeed:  ;how much to change angle each frame
 	;db $00,$08,$10,$18,$20,$18,$10,$08,$00,$F8,$F0,$E8,$E0,$E8,$F0,$F8
-	
+
 	;AnimLen:    ;how much to change length
 	;db $00,$01,$01,$01,$01,$01,$01,$01,$00,$FF,$FF,$FF,$FF,$FF,$FF,$FF
 
@@ -72,16 +72,15 @@ Properties:		db $33,$73,$B3,$F3
 
 	AnimFrames: ;how many frames each phase lasts, end with $00
 	db $A0,$30,$A0,$30,$00
-	
+
 	AnimSpeed:  ;how much to change angle each frame
 	db $78,$00,$88,$00
-	
+
 	AnimLen:    ;how much to change length
 	db $01,$00,$FF,$00
 
 	AnimRate:	;how often to change length, ANDed with frame counter so use 1,3,7,F,1F,3F,etc
 	db $01,$01,$01,$01
-
 
 
 			!RAM_FrameCounter	= $13
@@ -163,7 +162,7 @@ Properties:		db $33,$73,$B3,$F3
 ; main
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-BallnChainMain:		
+BallnChainMain:
 			if !Despawn
 			LDA #$04
 			%SubOffScreen()
@@ -177,7 +176,7 @@ BallnChainMain:
 			BEQ +
 			JMP CODE_02D653			;/ branch
 			+
-			
+
 			LDA !extra_byte_4,x
 			AND #$0F
 			BNE +
@@ -355,7 +354,7 @@ BallnChainMain:
 			SEP #$20
 
 
-			
+
 CODE_02D653:		LDA !151C,x			; |
 			STA $01				; | $00-$01 = ball n' chain angle
 			LDA !1602,x			; |
@@ -416,12 +415,12 @@ CODE_02D653:		LDA !151C,x			; |
 			ASL $4216			; Product/Remainder Result (Low Byte)
 			LDA $4217			; Product/Remainder Result (High Byte)
             endif
-			ADC #$00			
-CODE_02D6A3:		LSR $01				
-			BCC CODE_02D6AA			
-			EOR #$FF			
-			INC A				
-CODE_02D6AA:		STA $04				
+			ADC #$00
+CODE_02D6A3:		LSR $01
+			BCC CODE_02D6AA
+			EOR #$FF
+			INC A
+CODE_02D6AA:		STA $04
             if !SA1
             STZ $2250
 			LDA $06				;\ multiply $06...
@@ -447,12 +446,12 @@ CODE_02D6AA:		STA $04
 			ASL $4216			; Product/Remainder Result (Low Byte)
 			LDA $4217			; Product/Remainder Result (High Byte)
             endif
-			ADC #$00			
-CODE_02D6C6:		LSR $03				
-			BCC CODE_02D6CD			
-			EOR #$FF			
-			INC A				
-CODE_02D6CD:		STA $06				
+			ADC #$00
+CODE_02D6C6:		LSR $03
+			BCC CODE_02D6CD
+			EOR #$FF
+			INC A
+CODE_02D6CD:		STA $06
 
 			LDA !RAM_SpriteXLo,x		;\ preserve current sprite position (center of rotation)
 			PHA				; |
@@ -498,8 +497,8 @@ CODE_02D70B:		CLC				; |
 			STA !RAM_SpriteYHi,x		;/  = sprite y position high byte
 
 
-			
-			JSL $01A7DC			; interact with Mario
+
+			JSL $01A7DC|!BankB			; interact with Mario
 			BCS +
 			JMP NoContact
 			+
@@ -517,8 +516,8 @@ CODE_02D70B:		CLC				; |
 			BMI ++
 
 			+++
-		
-			LDA $140D
+
+			LDA $140D|!Base2
 			BNE +
 			++
 			JSL $00F5B7|!BankB      ; hurt Mario
@@ -536,11 +535,11 @@ CODE_02D70B:		CLC				; |
 			BRA Sound	;Go to Sound.
 		BounceLow:
 			LDA #$C0	;
-			STA $7D		;Make Mario bounce low. 
+			STA $7D		;Make Mario bounce low.
 		Sound:
 			LDA #$02	;Set sound (Spin jumping off enemy)
-			STA $1DF9	;I/O Port
-			JSL $01AB99	;Spin Jumping off spiked enemy effect.
+			STA $1DF9|!addr	;I/O Port
+			JSL $01AB99|!BankB	;Spin Jumping off spiked enemy effect.
 
 
 			LDA !extra_byte_4,x
@@ -564,7 +563,7 @@ CODE_02D70B:		CLC				; |
 
 
 		Top:
-			SEP #$20			
+			SEP #$20
 			LDA !E4,x
 			STA $04
 			LDA !14E0,x
@@ -582,7 +581,7 @@ CODE_02D70B:		CLC				; |
 		Bottom:
 			SEP #$20
 
-			
+
 			LDA !E4,x
 			STA $04
 			LDA !14E0,x
@@ -613,7 +612,7 @@ CODE_02D70B:		CLC				; |
 			REP #$20
 			CMP $00
 			BPL +
-			
+
 			STA $00
 
 			+
@@ -629,7 +628,7 @@ CODE_02D70B:		CLC				; |
 
 			BRA NoContact
 
-		Neg:	
+		Neg:
 
 			LDA !1504,x
 			SEC
@@ -648,7 +647,7 @@ CODE_02D70B:		CLC				; |
 			REP #$20
 			CMP $00
 			BMI +
-			
+
 			STA $00
 
 			+
@@ -664,13 +663,13 @@ NoContact:
 			JSR BallnChainGFX
 
 
-			
+
 			LDA !15C4,x			;\ if sprite is off-screen,
 			BEQ +
 			JMP ReverseGFX
 			+
 			JMP GFX
-			
+
 GFX:
 			PHX				; preserve sprite index
 
@@ -741,7 +740,7 @@ GFX:
 			LDA !E4,x
 
 			LDX $0E
-			
+
 			REP #$20
 			CLC
 			ADC $07
@@ -811,8 +810,8 @@ GFX:
 			STA !RAM_SpriteXHi,x		; |
 			PLA				; |
 			STA !RAM_SpriteXLo,x		;/
-			
-			
+
+
 			LDY #$02			; the tiles drawn were 16x16
 			LDA $0F
 			JSL $01B7B3			; finish OAM write
@@ -881,7 +880,7 @@ ReverseGFX:
 			LDA !14E0,x
 			XBA
 			LDA !E4,x
-			
+
 			REP #$20
 			CLC
 			ADC $07
@@ -926,7 +925,7 @@ ReverseGFX:
 			CMP !187B,x
 			BMI -
 			+++
-			
+
 			endif
 
 			PLX				; retrieve sprite index
@@ -948,11 +947,11 @@ CODE_02D800:		NOP				;\ this routine exists for the sole purpose of wasting cycl
 			NOP				;/
 Return02D806:		RTS				; return
 
-BallnChainGFX:		
+BallnChainGFX:
 			lda #$2E                ; find or queue GFX
 			%FindAndQueueGFX()
 			bcs .gfx_loaded
-			rts                      ; don't draw gfx if ExGFX isn't ready		
+			rts                      ; don't draw gfx if ExGFX isn't ready
 .gfx_loaded
 			%GetDrawInfo()
 			PHX				; preserve sprite index
@@ -967,7 +966,7 @@ CODE_02D819:		LDA $00				;\ set tile x position
 			CLC				; |
 			ADC YOffset,x			; |
 			STA !OAM_DispY,y		;/
-	
+
 			PHX
 			LDA Tilemap,x			;\ set tile number
 			TAX
@@ -999,7 +998,7 @@ CODE_02D876:
 			STZ $2251			; high byte of dividend is zero
             LDA #$01
             STA $2250
-			LDA !187B,x			;\ divisor is half the radius of the circle 
+			LDA !187B,x			;\ divisor is half the radius of the circle
 			LSR				; |
 			STA $2253
             STZ $2254			;/
@@ -1011,7 +1010,7 @@ CODE_02D876:
             else
             STA $4205			; low byte of dividend is whatever was in the accumulator when the routine was called
 			STZ $4204			; high byte of dividend is zero
-			LDA !187B,x			;\ divisor is half the radius of the circle 
+			LDA !187B,x			;\ divisor is half the radius of the circle
 			LSR				; |
 			STA $4206			;/
 			JSR CODE_02D800			; wait
@@ -1019,7 +1018,7 @@ CODE_02D876:
 			STA $0E				;/
 			LDA $4215			; noone cares about the high byte, so why is it even loaded?
             endif
-            
+
 			ASL $0E				;\ what
 			ROL				; |
 			ASL $0E				; |

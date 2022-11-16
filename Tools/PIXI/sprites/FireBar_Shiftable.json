@@ -12,7 +12,7 @@
     "Fall straight down when killed": false
   },
   "$166E": {
-    "Use second graphics page": true,
+    "Use second graphics page": false,
     "Palette": 4,
     "Disable fireball killing": true,
     "Disable cape killing": true,
@@ -156,7 +156,15 @@
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 40,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Fire-Bar (Shiftable) Counter",
@@ -164,7 +172,15 @@
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 40,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Long Fire-Bar (Shiftable) Clockwise",
@@ -172,7 +188,15 @@
       "Extra Property Byte 1": 11,
       "Extra Property Byte 2": 40,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Long Fire-Bar (Shiftable) Counter",
@@ -180,7 +204,15 @@
       "Extra Property Byte 1": 11,
       "Extra Property Byte 2": 40,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Fast Fire-Bar (Shiftable) Clockwise",
@@ -188,7 +220,15 @@
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 56,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     },
     {
       "Name": "Fast Fire-Bar (Shiftable) Counter",
@@ -196,7 +236,15 @@
       "Extra Property Byte 1": 5,
       "Extra Property Byte 2": 56,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     }
   ]
 }
