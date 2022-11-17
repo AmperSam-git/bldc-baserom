@@ -303,14 +303,21 @@ See .asm file for more details
 20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
 20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
 
-36 30030 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\n- Red: Default (High fling speed, both horizontally and vertically)\n- Blue: Weaker fling.\n- Green: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect)\n- Yellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
+36 30020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\nRed: Default (High fling speed, both horizontally and vertically)
 36 30022 -16,0,840
-36 30122 -16,0,841
-36 30222 -16,0,842
-36 30322 -16,0,843
+36 30030 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\nRed: Default (High fling speed, both horizontally and vertically)
 36 30032 16,0,850
+36 30120 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nBlue: Weaker fling.
+36 30122 -16,0,841
+36 30130 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nBlue: Weaker fling.
 36 30132 16,0,851
+36 30220 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nGreen: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect).
+36 30222 -16,0,842
+36 30230 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nGreen: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect).
 36 30232 16,0,852
+36 30320 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nYellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
+36 30322 -16,0,843
+36 30330 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nYellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
 36 30332 16,0,853
 
 40 30020 Red Snifit, falls from ledges

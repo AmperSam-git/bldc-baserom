@@ -20,12 +20,7 @@
 print "INIT ",pc
     LDA #$09            ;\ sprite status = stationary/carryable
     STA !14C8,x         ;/
-
-    STZ !C2,x               ;\ if not clear everything
-    STZ !1510,x             ;|
-    STZ !1528,X             ;|
-    STZ !1504,x             ;|
-    STZ $15                 ;/
+    STZ !1510,x         ; reset carried
     RTL
 
 print "MAIN ",pc

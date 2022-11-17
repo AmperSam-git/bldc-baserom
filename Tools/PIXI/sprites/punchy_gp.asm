@@ -242,7 +242,7 @@ Punchy_Start:
 
 MarioSkip:	; Entry point if Mario didn't make contact.
 
-		LDX.b #!SprSize-1
+		LDX.b #!SprSize
 --
 		DEX
 		BMI ++
