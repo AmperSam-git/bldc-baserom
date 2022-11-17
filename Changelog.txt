@@ -1,3 +1,6 @@
+v1.02
+- removed Climbing Net Door on Subscreen Boundary Fix as it causes a crash in some emulators
+
 v1.01
 - fix issue with the Configurable Ball n' Chain where Mario would bounce on it
 - fix map16 errors with stacking blocks

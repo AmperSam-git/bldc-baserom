@@ -43,7 +43,6 @@ Block Duplication Fix v1.5 - Tattletale, lolcats439 - https://smwc.me/s/18413
 Bob-omb Kicked Palette Fix - Koopster - https://smwc.me/s/24684
 Bounce Blocks Death Fix - Kevin - https://smwc.me/s/25647
 Cape Layer 2 Position Fix - HammerBrother - https://smwc.me/s/12328
-Climbing Net Door on Subscreen Boundary Fix - Kevin - https://smwc.me/s/29100
 Cluster Boo Ducking Fix - Alcaro - https://smwc.me/s/11618
 Dark Room Background Fix - Roy - https://smwc.me/s/19456
 Dead Spring Fix - Kevin - https://smwc.me/s/29595
