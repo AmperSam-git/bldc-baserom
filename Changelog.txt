@@ -1,6 +1,7 @@
 v1.01
 - fix issue with the Configurable Ball n' Chain where Mario would bounce on it
 - fix map16 errors with stacking blocks
+- fix bug in Punchy where it doesn't interact with the sprite in the highest slot
 - update missing sprite descriptions
 
 v1.0
