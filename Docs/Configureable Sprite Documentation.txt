@@ -80,7 +80,8 @@ Extra bytes 1-8         Sprite Number
                         - Use "FF" for an empty slot
                         - Use the Lunar Magic numbers for shells (DA-DE)
 
-Extra byte 9            Marks sprites in the stack as custom
+Extra byte 9            Mark Custom sprites
+                        - bit values will mark individual sprites in the stack as custom
                         - the bits are in order from left to right with left being the bottom of
                         the stack,  e.g 80 (10000000, bitwise) would make just the bottom a custom
                         sprite.
@@ -88,6 +89,8 @@ Extra byte 9            Marks sprites in the stack as custom
 
 Extra byte 10           Set the extra bit option of each sprite, e.g 80 (10000000, bitwise) would
                         set the extra bit for the bottom sprite.
+
+Note                    Sprites that require configuration via extra byte cannot be used in the stack.
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -252,6 +255,8 @@ Extra Byte 9            X Speed
 
 Extra Byte 10           Y Speed
                         - Vertical fire speed if using cannon mode
+
+Note                    This can't be used with sprites that require configuration via extra byte.
 
 
 ----------------------------------------------------------------------------------------------------------------
