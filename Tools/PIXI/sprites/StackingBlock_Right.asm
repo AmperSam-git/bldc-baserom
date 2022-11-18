@@ -24,7 +24,7 @@ BounceY:
 !Dir    = 3		;Direction to fall - 0 = down, 1 = left, 2 = up, 3 = right
 !Speed  = #$D0	;Initial speed if falling
 !Accel  = #$03  ;Fall acceleration
-!Max	= #$40  ;Fall max speed
+!Max	= #$30  ;Fall max speed
 !Pass	= 1		;If 1, act like clouds instead of fully solid while falling
 !LandTile = #$0132 ;Tile to turn into on landing
 

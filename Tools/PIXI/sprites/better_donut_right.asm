@@ -8,7 +8,7 @@
     !sprite_tile = $C2          ; graphic tile to use for donut sprite
     !direction = 1              ; 0 = vertical, 1 = horizontal
     !speed_value = $28          ;\ positive (00-7F) values = down/right,
-    !max_speed = $38            ;/ negative (80-FF) values = up/left
+    !max_speed = $30            ;/ negative (80-FF) values = up/left
 
 ;-----------------------------------------------------------------------------------------
 ; definitions
@@ -154,7 +154,7 @@ donut_gfx:
     sta $0301|!Base2,y
     lda !dss_tile_buffer+$00 ; load the first tile in the buffer
     sta $0302|!Base2,y
-    lda #$15                 ; remember to use the second page!
+    lda #$25                 ; remember to use the second page!
     sta $0303|!Base2,y
     lda #$00
     ldy #$02
