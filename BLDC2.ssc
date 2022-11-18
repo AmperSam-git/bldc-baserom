@@ -1246,8 +1246,8 @@ AB 0012 0,1,83B
 
 ; Hammer Bro
 9B 0012 0,-15,5BC 16,-15,5BD 8,-23,5AE -16,-15,5BB 0,0,10A
-9B 0002 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to infrequently.
-9B 0012 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to frequently.
+9B 0000 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to infrequently.
+9B 0010 A hammer brother that flies around (requires sprite 9C) throwing hammers that will change its throw frequency when the extra bit is set. It's currently set to frequently.
 
 ; Dry Bones, stay on ledge
 32 0012 0,1,467 -8,-15,466 0,0,10A

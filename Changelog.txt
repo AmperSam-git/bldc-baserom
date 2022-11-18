@@ -1,3 +1,6 @@
+v1.03
+- fix missing cape interaction in custom extended hammer
+
 v1.02
 - removed Climbing Net Door on Subscreen Boundary Fix as it causes a crash in some emulators
 
