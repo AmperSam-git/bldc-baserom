@@ -1,5 +1,7 @@
 v1.03
 - fix missing cape interaction in custom extended hammer
+- fix bug with dry bones throwing fireballs caused by DSS vs ExNMSTL
+- adjust speed of donuts and stack blocks
 
 v1.02
 - removed Climbing Net Door on Subscreen Boundary Fix as it causes a crash in some emulators
