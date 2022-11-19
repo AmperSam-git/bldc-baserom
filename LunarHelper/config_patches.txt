@@ -46,7 +46,6 @@ patches
 	Tools/Asar/Fixes/YoshiPipeAnimationFix.asm
 	Tools/Asar/Fixes/SSP_Fixes.asm
 	Tools/Asar/CharlesRemembers.asm
-	Tools/Asar/ExtendedNSTL.asm
 	Tools/Asar/FreeUpRAM.asm
 	Tools/Asar/Objects/objectool.asm
 	Tools/Asar/PlaceableDiscoShell.asm

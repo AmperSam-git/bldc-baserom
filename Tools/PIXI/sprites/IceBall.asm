@@ -7,6 +7,28 @@
 					LDA #$01 : STA !C2,x
 					RTL
 
+					;cape interaction
+					Print "CAPE",pc
+					LDA #$04
+					STA $00			;x-clipping offset
+					STA $02			;y-clipping offset
+
+					LDA #$08
+					STA $01			;width
+					STA $03			;height
+
+					%ExtendedCapeClipping()
+					BCC CAPE_RETURN		;no interaction? BEGONE
+
+					LDA #$07			;puff of smoke timer
+					STA $176F|!addr,X
+
+					LDA #$01			;Change the sprite into a puff of smoke.
+					STA $170B|!addr,x
+
+					CAPE_RETURN:
+					RTL
+
 					print "MAIN ",pc
 					PHB : PHK : PLB
 					JSR START_SPRITE_CODE

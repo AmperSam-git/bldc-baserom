@@ -15,9 +15,8 @@ SA-1 Pack v1.40 - Arujus, Vitor Vilela - https://smwc.me/s/25938
 
 -- Patches --
 Chucks With Extra Bit Retain Type When Hurt - JamesD28 - https://smwc.me/s/28594
-Extended No Sprite Tile Limits v3.1* - DiscoTheBat, Kevin, Roy, imamelia, worldpeace - https://smwc.me/s/24642
-Free $7F0000 (OW Event Restore)** - Erik, Kaijyuu- https://smwc.me/s/19580
-Free 7F4000** - RPG Hacker - https://smwc.me/s/14237
+Free $7F0000 (OW Event Restore)* - Erik, Kaijyuu- https://smwc.me/s/19580
+Free 7F4000* - RPG Hacker - https://smwc.me/s/14237
 Growing/Shrinking Pipe Exit on Extra Bit - JamesD28 - https://smwc.me/s/24160
 Monty Mole, Hammer Bro and Dry Bone Behavior on Extra Bit - Kevin - https://smwc.me/s/30450
 ObjecTool 0.5 - 0x400, imamelia - https://smwc.me/s/24217
@@ -32,8 +31,7 @@ Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Item Box - Kevin - https://smwc.me/s/26887
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 
-* modified to work with DSS
-** combined into one patch, thanks dtothefourth
+* combined into one patch, thanks dtothefourth
 
 
 -- Bug Fixes --

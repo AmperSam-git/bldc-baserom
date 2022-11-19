@@ -68,7 +68,7 @@ pullpc
         lda.w flame_pillar_tilemap,x
         tax
         lda !dss_tile_buffer,x
-        sta $0202|!addr,y
+        sta $0302|!addr,y
         plx
         lda $14
         and #$04

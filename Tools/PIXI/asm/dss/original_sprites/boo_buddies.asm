@@ -25,11 +25,11 @@ pullpc
         plx
         bcs .loaded
         lda #$F0
-        sta $0201|!addr,y
+        sta $0301|!addr,y
         bra .return
     .loaded
         lda.l !dss_tile_buffer,x
-        sta $0202|!addr,y
+        sta $0302|!addr,y
     .return
         plx
         jml boo_buddies_write_end
