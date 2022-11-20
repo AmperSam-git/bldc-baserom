@@ -1,3 +1,7 @@
+v1.05
+- dropped the Extended No More Sprite Tiles patch, causing too many issues with DSS
+- fixed missing cape interactions in custom bro projectiles
+
 v1.04
 - hot fix for ExNMSTL but for hammers this time
 
