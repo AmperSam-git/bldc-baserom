@@ -2,6 +2,7 @@ v1.05
 - dropped the Extended No More Sprite Tiles patch, causing too many issues with DSS
 - fixed missing cape interactions in custom bro projectiles
 - fix shells crashing the game when spawned from pipe spawner
+- change snifit act as to change its cape squish properties
 
 v1.04
 - hot fix for ExNMSTL but for hammers this time
