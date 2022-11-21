@@ -5,7 +5,7 @@ MarioFanGamer - UberASM Objects
 
 
 -- Help & Testing --
-Alex, Atari2.0, lx5, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
+Alex, Atari2.0, Cartesius, lx5, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
 
 
 -- Big Resources --

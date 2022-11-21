@@ -328,26 +328,29 @@ SpawnSprite:
 	RTS
 
 SpawnFixed:
-
-	LDA #$03
-	JSR GetExtraByte
-	PHA
-	LDA #$04
-	JSR GetExtraByte
-	PHA
-
-	JSL $02A9DE|!BankB
+    WDM
+    JSL $02A9DE|!BankB
 	BMI EndSpawn2
 
 	TYA
 	STA !Dropping
 
 	JSR SaveSlot
-
-	LDA #$01
+    
+    LDA #$09
 	STA !14C8,y
 
-	PLA
+	LDA #$03
+	JSR GetExtraByte   
+    CMP #$DA		
+	BCS ShellCase
+    PHA
+    LDA #$01
+    STA !14C8,y
+ReturnFromShellCase: 
+	LDA #$04
+	JSR GetExtraByte   
+ 
 	STA $03
 	BNE +
 
@@ -389,6 +392,16 @@ SpawnFixed:
 	PLA
 	PLA
 	RTS
+
+ShellCase:
+    CMP #$E0
+	BCS ReturnFromShellCase
+	SEC			
+	SBC #$D6
+    PHA
+    LDA #$09
+    STA !14C8,y
+	BRA ReturnFromShellCase
 
 SaveSlot:
 	LDA !Sprite1
@@ -818,3 +831,4 @@ SpawnPos:
 	LDA !14D4,x
 	STA !14D4,y
 	RTS
+
