@@ -88,6 +88,10 @@ Print "MAIN ",pc
 main:
 	JSR GFX
 
+
+	LDA #$00
+    %SubOffScreen()
+
 	LDA $9D
 	BEQ +
 	RTS

@@ -116,7 +116,6 @@ handle_init_codes:
     JMP .Return
 +
     print "Level init codes: $",pc
-    %RunCode(8, enable_sfx_echo)
 .Return
 RTS
 
@@ -135,6 +134,7 @@ handle_main_codes:
     %RunCode(5, block_right)
     %RunCode(6, block_up)
     %RunCode(7, block_down)
+    %RunCode(8, enable_sfx_echo)
 .Return
 RTS
 
