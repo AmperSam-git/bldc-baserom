@@ -77,8 +77,8 @@ endif
 							;00100000 (no flip, 10 priority, palette 000 (8), tile page 1 (SP1/2))
 							;increase priority to 11 if the sprite goes behind any tiles (that'd be $30)
 
-!SFX = $04       			;the sfx to repeatedly play while the sprite is running, grinder sound by default
-!SFXBank = $1DFA|!Base2 	;the sfx bank
+!SFX = $1A       			;the sfx to repeatedly play while the sprite is running, grinder sound by default
+!SFXBank = $1DF9|!Base2 	;the sfx bank
 							;note that most sfx sound dumb when repeated, so only change this if you know
 							;what you're doing
 							;values can be found at http://smwc.me/t/6665

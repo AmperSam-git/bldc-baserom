@@ -5,7 +5,7 @@
 ; from the default in SMW.  Normally nothing but the definitions at the start
 ; here need to be changed, and even then that's only necessary if you've
 ; changed list.txt (see instructions below).
-; 
+;
 ; This also removes various routines that play with the music mirrors in SMW.
 ; The engine has changed, so there's no longer any need for most of the code.
 ; It all has been NOP'd out and branched over.
@@ -15,7 +15,7 @@
 
 
 !JumpSFXOn1DFC = !true			; Change this to !false to move the jump sound effect to 1DFA.
-				
+
 !Miss		= #$01			; If you've changed list.txt and plan on using the original SMW songs
 !GameOver	= #$02			; change these constants to whatever they are in list.txt
 !BossClear	= #$03			; For example, if you changed the "Stage Clear" music to be number 9,
@@ -70,7 +70,7 @@ org $009737
 ;;; org $009E18		;;; except this one needs nuking
 	;;; db $FF
 org $0CD5D4 ; Change castle destruction sequence song 2
-    db !Welcome	
+    db !Welcome
 org $00C526
 	db !BonusEnd
 org $00C9BD
@@ -126,13 +126,13 @@ org $0491E1
 
 
 
-if read1($04DBC8) == $02 && read1($04DBC9) == $03 && read1($04DBCA) == $04 && read1($04DBCB) == $06 && read1($04DBCC) == $07 && read1($04DBCD) == $09 && read1($04DBCE) == $05 
+if read1($04DBC8) == $02 && read1($04DBC9) == $03 && read1($04DBCA) == $04 && read1($04DBCB) == $06 && read1($04DBCC) == $07 && read1($04DBCD) == $09 && read1($04DBCE) == $05
 org $048D8A
 	db !Overworld, !YoshisIsland, !VanillaDome, !ForestOfIllusion, !ValleyOfBowser, !SpecialWorld, !StarRoad
 org $04DBC8
 	db !Overworld, !YoshisIsland, !VanillaDome, !ForestOfIllusion, !ValleyOfBowser, !SpecialWorld, !StarRoad
 endif
-	
+
 org $0584DB
 	db !HereWeGo, !Cave, !Piano, !Castle, !GhostHouse, !Water, !Boss, !SwitchPalace
 org $0C9447
@@ -141,30 +141,30 @@ org $0CA40C
 	db !YoshisAreHome
 org $0CA5C2
 	db !CastList
-	
 
-	
-	
+
+
+
 org $009723
 	LDA.b !Welcome
 	STA.w $1DFB|!SA1Addr2
-	
-	
-	
+
+
+
 org $009734			; Skip over Bowser fight music stuff.
 	BNE $05
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 org $008134			; Don't upload the overworld music bank.
         RTS
 
 if read1($008176) == $5c
-	
+
 	org $00817C			; For LevelNMI.  Three fewer bytes placed three bytes later.
 		BRA Skip : NOP
 		NOP : NOP
@@ -228,7 +228,7 @@ endif
 org $0094A0				; Don't upload music bank 1
 	BRA Skip1Point25 : NOP
 Skip1Point25:
-	
+
 org $0096C3				; Don't upload music bank 1
 	BRA Skip1Point5 : NOP
 Skip1Point5:
@@ -240,19 +240,19 @@ org $00A0B3				;;; ditto
 org $009702				; Don't upload music bank 2...or something.
 	NOP #3
 
-org $009728					
-	LDA.w $0DDA|!SA1Addr2	; 
-	NOP : NOP		; 
-	NOP : NOP		; 
-	LDY.w $0D9B|!SA1Addr2	; 
-	CPY.b #$C1		; 
-	BNE CODE_009738		; 
-	LDA.b !Bowser		; 
+org $009728
+	LDA.w $0DDA|!SA1Addr2	;
+	NOP : NOP		;
+	NOP : NOP		;
+	LDY.w $0D9B|!SA1Addr2	;
+	CPY.b #$C1		;
+	BNE CODE_009738		;
+	LDA.b !Bowser		;
 CODE_009738:			;
-	STA.w $1DFB|!SA1Addr2	; 
+	STA.w $1DFB|!SA1Addr2	;
 CODE_00973B:			;
-BRA +				; 
-	NOP : NOP : NOP		; 
+BRA +				;
+	NOP : NOP : NOP		;
 +
 
 
@@ -292,26 +292,26 @@ org $00C53E
 	NOP	: NOP
 
 ;org $00C53E
-	
-	;BRA Skip3 : NOP 
-	;NOP : NOP 
+
+	;BRA Skip3 : NOP
+	;NOP : NOP
 	;Skip3:
-	
+
 ;org $00C54C
 ;	BRA Skip4 : NOP
 ;	Skip4:
-	
+
 org $02E277		;;; fix for the directional coins (more like code restore)
 	LDA $14AD|!SA1Addr2
-	
+
 org $02E27F		;;; ditto
 	LDA !MusicBackup
 	NOP : NOP
-	
+
 org $03A842
 	db $2E,$2F,$30,$31,$32,$33,$34,!Bowser2,!Bowser3
-	
-	
+
+
 org $03A88B		; Was NOPs before.  Restore that.
 	LDA $A842,y
 	STA $1DFB|!SA1Addr2
@@ -320,20 +320,20 @@ org $03A88B		; Was NOPs before.  Restore that.
 	LSR
 	LSR
 	TAY
-	LDA $A437,y   
+	LDA $A437,y
 if !UsingSA1 == !true
 	STA $331E,x
 else
-	STA $1570,x             
+	STA $1570,x
 endif
 	RTS
-	
+
 org $00973B
 	NOP : NOP		;BRA Skip6
 	STA.w $0DDA|!SA1Addr2	;NOP : NOP : NOP
 Skip6:
 
-; KevinM's edit: this is already skipped by the hex edit at $00A635	
+; KevinM's edit: this is already skipped by the hex edit at $00A635
 ;org $00A645			; Related to restoring the music upon level load.
 ;	BRA Skip7 : NOP
 ;	NOP : NOP
@@ -371,17 +371,17 @@ org $01C585	; 13 bytes
 	LDA !Starman
 	STA $1DFB|!SA1Addr2
 	RTL
-	
+
 ;org $01C58A
 ;	RTL
-	
+
 org $058555
 	LDX $0100|!SA1Addr2
 	CPX #$07
 	BCC Skip11
 
 	STA $0DDA|!SA1Addr2
-	BRA Skip11 
+	BRA Skip11
 
 	NOP : NOP
 	NOP : NOP : NOP
@@ -390,7 +390,7 @@ Skip11:
 
 org $00805E			; Don't upload the standard sample bank.
 	NOP : NOP : NOP
-	
+
 org $0093C0
 LDA.b !NintPresents
 STA $1DFB|!SA1Addr2
@@ -407,7 +407,7 @@ org $04FFB1			; 5 free bytes in bank 4 required.
 OWMusicHijack:
 	SEP #$30		; Restore hijacked code (if it weren't for this, we could just JMP directly there...
 	JMP $DBD7		; Jump to normal music changing code, which perform the RTS that we overwrote.
-	
+
 
 
 
@@ -453,11 +453,11 @@ org $04DBDD
 	BRA +
 	NOP #20
 	+
-	
-	
+
+
 ;;; prevent game overs from fading overworld songs out
 org $009E17
 	BRA +
 	NOP #3
 	+
-	
+
