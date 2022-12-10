@@ -1,3 +1,8 @@
+v1.07
+- fixed issue with spin jump SFX and the custom eating block
+- fixed issue with the stacking block bounce sprites crashing game with line guide sprites
+- fixed issue with retry type change persisting between levels
+
 v1.06
 - fixed issue with music not playing after the goal tape
 - fixed SFX echo object not always running
