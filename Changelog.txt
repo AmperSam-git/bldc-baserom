@@ -4,6 +4,7 @@ v1.08
 - fixed sa1 conversion oversight in key lock blocks
 - fixed graphical issues in the pirahna plants
 - removed screenshake from custom thwomps
+- repatch fixed Net Door on Subscreen Boundary patch
 - updated retry to version 0.4.4
 
 v1.07
