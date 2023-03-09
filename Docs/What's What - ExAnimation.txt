@@ -16,14 +16,24 @@ Frames: 743,753,763,773
 Destination: 1D (FG1)
 
 
-
+Sprite Only Water, corners (4)
 Outline Coin (4)
+Sprite Bounce Block (4)
 ----------------
+Uses alternate ExGraphics: 61
+Slot: 01
+Type: 0C 8x8s: line
+Frames: 1004,1014,1024,1034
+Destination: 2C0 (BG3)
+
+
+One-Ways (5)
+------------
 Uses alternate ExGraphics: 61
 Slot: 02
 Type: 4 8x8s: line
-Frames: 10D0,10D4,10D8,10DC
-Destination: 2D0 (BG3)
+Frames: 1000,1010,1020,1030,1040
+Destination: 2C8
 
 
 P-Switch Door (2)
@@ -55,47 +65,10 @@ Trigger: Silver POW
 Destination: 2DC (BG3)
 
 
-Sprite Only Water, corners (3)
-------------------------------
-Uses alternate ExGraphics: 61
-Slot: 06
-Type: 4 8x8s: line
-Frames: 10C0,10C4,10C8
-Destination: 2C0 (BG3)
-
-
-Sprite Only Water, edge (1)
----------------------------
-Uses alternate ExGraphics: 61
-Slot: 07
-Type: 4 8x8s: line
-Frames: 10CC
-Destination: 2C4 (BG3)
-
-
-One-Ways (5)
-------------
-Uses alternate ExGraphics: 61
-Slot: 08
-Type: 4 8x8s: line
-Frames: 1000,1010,1020,1030,1040
-Destination: 2C8
-
-
-Sprite Bounce Block (4)
------------------------
-Uses alternate ExGraphics: 61
-Slot: 09
-Type: 4 8x8s: line
-Frames: 100C,101C,102C,103C
-Destination: 2CC (BG3)
- - overrides some big pipe tiles
-
-
 Stacked Block Animation (4)
 ---------------------------
 Uses alternate ExGraphics: 61
-Slot: 0B
+Slot: 06
 Type: 8 8x8s: line
 Frames: 1070,1080,1090,10A0
 Destination: 2E0 (BG3)
@@ -104,10 +77,11 @@ Destination: 2E0 (BG3)
 Spike Block Animations (4)
 --------------------------
 Uses alternate ExGraphics: 61
-Slot: 0D
+Slot: 07
 Type: 4 8x8s: line
 Frames: 1044,1044,1048,1048
 Destination: 2D4 (BG3)
+
 
 
 -----------------
@@ -185,7 +159,7 @@ Infinite throwblock (4)
 Uses alternate ExGraphics: 61
 Slot: 07
 Type: 4 8x8s: line
-Frames: 1008,1018,1028,1038
+Frames: 10C0,10C4,10C8,10CC
 Destination: 06 (FG1)
 
 
