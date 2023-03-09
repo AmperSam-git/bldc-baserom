@@ -14,19 +14,14 @@ if !save_on_checkpoint
     jsr shared_save_game
 endif
 
-if !amk
     ; Always reload the samples, just to be safe.
     lda #$FF : sta !ram_music_backup
-endif
-
     bra .return
 
 .set:
     ; Save individual dcsave buffers.
     ; Needed because we skip over $00F2DD, where the routine is called.
-if !dcsave
     jsr shared_dcsave_midpoint
-endif
     
     ; Set midway flag, just to be safe.
     lda #$01 : sta $13CE|!addr
@@ -51,9 +46,7 @@ endif
 ...sub_midway:
     jsr calc_entrance_2
 +
-if !amk
     lda $0DDA|!addr : sta !ram_music_backup
-endif
     bra .return2
 
 ..custom_destination:
@@ -62,10 +55,13 @@ endif
     lda !ram_set_checkpoint : sta !ram_respawn
     sep #$20
 
-if !amk
+    ; If we're in the Yoshi Wings level, set the flag if applicable.
+    ldy $1B95|!addr : beq +
+    xba : bit #$0A : bne +
+    ora #$80 : sta !ram_respawn+1
++
     ; Always reload the samples, just to be safe.
     lda #$FF : sta !ram_music_backup
-endif
     
 .return2:
     ; Save the midway entrance as a checkpoint.
@@ -81,11 +77,11 @@ endif
 ;=====================================
 calc_entrance:
     ; If it's not the intro level, skip.
-    lda $13BF|!addr : bne .no_intro
+    %lda_13BF() : tax : bne .no_intro
 
     ; Set intro sublevel number as respawn point.
-    rep #$20
-    lda.w #!intro_sublevel : sta !ram_respawn
+    jsr shared_get_intro_sublevel
+    sta !ram_respawn
     sep #$20
     bra .check_midway
 
@@ -100,7 +96,6 @@ calc_entrance:
 
 .check_midway:
     ; If the midway flag is not set, return.
-    ldx $13BF|!addr
     lda $1EA2|!addr,x : and #$40 : bne ..midway
     lda $13CE|!addr : beq .return
 
@@ -112,6 +107,9 @@ calc_entrance:
     rts
 
 .2:
+    ; Get $13BF value in X.
+    %lda_13BF() : tax
+
     ; Set current sublevel number as the respawn point.
     lda $010B|!addr : sta !ram_respawn
     lda $010C|!addr : bra .no_intro_store_entrance_high

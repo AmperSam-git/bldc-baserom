@@ -18,6 +18,7 @@ handle_menu:
 
     ; Check if we have to retry or exit.
     cpy #$00 : beq .retry
+
 .exit:
     ; Call the custom exit routine.
     phy : php : phb : phk : plb
@@ -29,23 +30,38 @@ handle_menu:
 
     ;lda !ram_hurry_up : bne ..return
     
-    ; Play the correct death song.
-if !amk
-if !death_jingle_alt != $FF
+    ; Play the correct death song and set Exit animation time.
+if !exit_animation == 2
     lda.b #!death_time : sta $1496|!addr
-    lda.b #!death_jingle_alt : sta $1DFB|!addr
-    rts
 endif
-else
+    
+    ; Handle exit music differently if AMK is inserted or not.
+    lda.l !rom_amk_byte : cmp #$5C : beq ..amk
+
+..no_amk:
     lda #$FF : sta $0DDA|!addr
+    bra ..common
+
+..amk:
+if !death_jingle_alt != $FF
+if !exit_animation == 0
+    lda !ram_hurry_up : beq +
+endif
+    lda.b #!death_jingle_alt : sta $1DFB|!addr
++   rts
 endif
 
-    lda.b #!death_time+$1E : sta $1496|!addr
-    lda.b #!death_song : sta $1DFB|!addr
+..common:
+if !exit_animation == 0
+    lda !ram_hurry_up : beq .skip
+endif
+    lda.l !rom_death_song : sta $1DFB|!addr
     rts
+
 .retry:
     ; Set prompt phase to "shrinking with retry selected".
     lda !ram_prompt_phase : inc : sta !ram_prompt_phase
+
 .skip:
     rts
 
@@ -138,8 +154,10 @@ endif
 ;=====================================
 handle_box:
     ; Check if the box has finished expanding/shrinking.
-    ldx $1B88|!addr
-
+    ldx #$00
+    lda !ram_prompt_phase : cmp #$01 : beq +
+    inx
++
     ; If we shouldn't show the box, then just go to the next phase immediately.
     lda !ram_disable_box : bne +
     lda $1B89|!addr : cmp.l .size,x : bne .not_finished
@@ -151,9 +169,6 @@ handle_box:
     txa : beq .finished_expanding
 
 .finished_shrinking:
-    ; Reset shrinking flag.
-    stz $1B88|!addr
-
     ; If the box is enabled, reset the screen settings and disable windowing.
     lda !ram_disable_box : bne +
     stz $41
@@ -165,9 +180,6 @@ handle_box:
     rts
 
 .finished_expanding:
-    ; Go to the next box phase.
-    inc $1B88|!addr
-
     ; Reset cursor counters.
     stz $1B91|!addr
     stz $1B92|!addr

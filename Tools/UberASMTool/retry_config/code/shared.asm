@@ -3,6 +3,62 @@
 ;================================================
 
 ;================================================
+; Macro to push the current code's DB to the stack
+; and set the DBR to label's bank.
+; Note: remember to PLB when finished!
+;================================================
+macro set_dbr(label)
+?-  pea.w (<label>>>16)|((?-)>>16<<8)
+    plb
+endmacro
+
+;================================================
+; Macro to JSL to a routine that ends in RTS.
+;================================================
+macro jsl_to_rts(routine, rtl)
+    phk : pea.w (?+)-1 : pea.w <rtl>-1
+    jml <routine>|!bank
+?+
+endmacro
+
+;================================================
+; Macro to JSL to a routine that ends in RTS.
+; Also sets up the DBR to the routine's bank.
+;================================================
+macro jsl_to_rts_db(routine, rtl)
+    %set_dbr(<routine>)
+    %jsl_to_rts(<routine>,<rtl>)
+    plb
+endmacro
+
+;================================================
+; Macro to load the current level number ($13BF).
+; Calls the appropriate routine if dynamic OW levels are used.
+;================================================
+macro lda_13BF()
+if !dynamic_ow_levels
+    jsr shared_get_new_13BF
+else
+    lda $13BF|!addr
+endif
+endmacro
+
+;================================================
+; Functions for (H)DMA address conversion
+;================================================
+function dma(addr,ch)     = ((addr)+((ch)*$10))
+function window_dma(addr) = dma(addr,!window_channel)
+
+;================================================
+; Utility functions for tilemap and stripe image management.
+;================================================
+function xb(x)                = (((x)&$FF)<<8)|(((x)>>8)&$FF)
+function l3_prop(pal,page)    = ($20|(((pal)&7)<<2)|((page)&1))
+function l3_tile(tile,pal)    = ((tile)|((pal)<<8))
+function str_header1(x,y)     = xb($5000|((y)<<5)|(x))
+function str_header2(len,rle) = xb((((rle)&1)<<14)|(len))
+
+;================================================
 ; Routine to get the prompt type for the current level.
 ;================================================
 get_prompt_type:
@@ -23,10 +79,15 @@ get_prompt_type:
 ; Get translevel number the player is standing on the overworld.
 ;================================================
 get_translevel:
+    lda $0109|!addr : beq .no_intro
+    lda #$00 : sta $13BF|!addr
+    rts
+.no_intro:
     ldy $0DD6|!addr
     lda $1F17|!addr,y : lsr #4 : sta $00
     lda $1F19|!addr,y : and #$F0 : ora $00 : sta $00
-    lda $1F1A|!addr,y : asl : ora $1F18|!addr,y
+    lda $1F1A|!addr,y : asl : sta $01
+    lda $1F18|!addr,y : and #$01 : ora $01
     ldy $0DB3|!addr
     ldx $1F11|!addr,y : beq +
     clc : adc #$04
@@ -35,7 +96,32 @@ get_translevel:
     ldx $00
     lda !7ED000,x : sta $13BF|!addr
     sep #$10
+if !dynamic_ow_levels
+    jmp get_new_13BF_no_intro
+else
     rts
+endif
+
+;================================================
+; Get correct $13BF value for current level
+; (for patches that change level number dynamically).
+;================================================
+if !dynamic_ow_levels
+get_new_13BF:
+    lda $0109|!addr : beq .no_intro
+    lda #$00
+    rts
+.no_intro:
+    phb
+    lda #$05 : pha : plb
+    tya
+    jsl $05DCDC|!bank
+    plb
+    lda $0E
+    cpy #$00 : beq +
+    clc : adc #$24
++   rts
+endif
 
 ;================================================
 ; Routine to save the current level's custom checkpoint value and set the midway flag.
@@ -43,21 +129,21 @@ get_translevel:
 hard_save:
     ; Filter title screen, etc.
     lda $0109|!addr : beq .no_intro
-    cmp.b #!intro_level+$24 : beq .no_intro ; bne?
+    cmp.b #!intro_level+$24 : beq .no_intro
     rts
 
 .no_intro:
     phx
 
     ; We won't rely on $13CE anymore, so set the midway flag in $1EA2.
-    ldx $13BF|!addr
+    %lda_13BF() : tax
     lda $1EA2|!addr,x : ora #$40 : sta $1EA2|!addr,x
 
     ; Set the level's custom checkpoint.
-    txa : asl : tax
-    rep #$20
+    rep #$30
+    txa : and #$00FF : asl : tax
     lda !ram_respawn : sta !ram_checkpoint,x
-    sep #$20
+    sep #$30
 
     plx
 if !save_on_checkpoint
@@ -68,10 +154,12 @@ endif
 
 ;================================================
 ; Routine to remove the current level's checkpoint.
+; Note: $13CE isn't cleared because it's also used in the OW loading routine.
 ;================================================
 reset_checkpoint:
     phx
-    lda $13BF|!addr
+    phy
+    %lda_13BF() : tay
     rep #$30
     and #$00FF : asl : tax
     lsr : cmp #$0025 : bcc +
@@ -79,8 +167,8 @@ reset_checkpoint:
 +   sta !ram_checkpoint,x
     sta !ram_respawn
     sep #$30
-    ldx $13BF|!addr
-    lda $1EA2|!addr,x : and #~$40 : sta $1EA2|!addr,x
+    lda $1EA2|!addr,y : and #~$40 : sta $1EA2|!addr,y
+    ply
     plx
     rts
 
@@ -111,14 +199,16 @@ save_game:
 ;================================================
 ; Routines to reset and save the dcsave buffers.
 ;================================================
-if !dcsave
 dcsave:
 .init:
+    ; Return if dcsave isn't installed.
+    lda.l !rom_dcsave_byte : cmp #$5C : bne .return
+
     ; Load the address to the dcsave init wrapper routine.
     rep #$20
-    lda.l $05D7AC|!bank : clc : adc #$0011 : sta $0D
+    lda.l !rom_dcsave_init_address : clc : adc #$0011 : sta $0D
     sep #$20
-    lda.l $05D7AE|!bank : sta $0F
+    lda.l !rom_dcsave_init_address+2 : sta $0F
 
     ; Call the dcsave routine.
 if !sa1
@@ -126,28 +216,29 @@ if !sa1
 else
     jsl .jml
 endif
-
     rts
 
 .midpoint:
-    ; Only save if !Midpoint = 1
-    lda.l $00CA2B|!bank : cmp #$22 : bne ..return
+    ; Return if dcsave isn't installed.
+    lda.l !rom_dcsave_byte : cmp #$5C : bne .return
+
+    ; Only save if !Midpoint = 1.
+    lda.l !rom_dcsave_midpoint_byte : cmp #$22 : bne .return
 
     ; Load the address to the dcsave save buffer routine.
     rep #$20
-    lda.l $00CA2C|!bank : sta $0D
+    lda.l !rom_dcsave_midpoint_address : sta $0D
     sep #$20
-    lda.l $00CA2E|!bank : sta $0F
+    lda.l !rom_dcsave_midpoint_address+2 : sta $0F
 
     ; Call the dcsave routine.
     jsl .jml
 
-..return:
+.return:
     rts
 
 .jml:
     jml [$000D|!dp]
-endif
 
 ;================================================
 ; Routine to get the checkpoint value for the current sublevel.
@@ -206,57 +297,29 @@ get_bitwise_mask:
 ; If Lunar Magic 3.0+ is used, it may overwrite Y.
 ;================================================
 get_screen_number:
-if !lm3
-    lda.l $03BCDC|!bank : cmp #$FF : beq +
-    jsl $03BCDC|!bank
+    lda.l !rom_lm_version : cmp #$33 : bcc .no_lm3
+    lda.l !rom_lm_get_screen_routine : cmp #$FF : beq .no_lm3
+.lm3:
+    jsl !rom_lm_get_screen_routine
     rts
-+
-endif
+.no_lm3:
     ldx $95
-    lda $5B : lsr : bcc +
+    lda $5B : lsr : bcc .return
     ldx $97
-+   rts
+.return:
+    rts
 
 ;================================================
-; Macro to push the current code's DB to the stack
-; and set the DBR to label's bank.
-; Note: remember to PLB when finished!
+; Routine that returns the intro sublevel in A.
+; Output: A 16 bit, intro sublevel in A.
 ;================================================
-macro set_dbr(label)
-?-  pea.w (<label>>>16)|((?-)>>16<<8)
-    plb
-endmacro
-
-;================================================
-; Macro to JSL to a routine that ends in RTS.
-;================================================
-macro jsl_to_rts(routine, rtl)
-    phk : pea.w (?+)-1 : pea.w <rtl>-1
-    jml <routine>|!bank
-?+
-endmacro
-
-;================================================
-; Macro to JSL to a routine that ends in RTS.
-; Also sets up the DBR to the routine's bank.
-;================================================
-macro jsl_to_rts_db(routine, rtl)
-    %set_dbr(<routine>)
-    %jsl_to_rts(<routine>,<rtl>)
-    plb
-endmacro
-
-;================================================
-; Functions for (H)DMA address conversion
-;================================================
-function dma(addr,ch)     = ((addr)+((ch)*$10))
-function window_dma(addr) = dma(addr,!window_channel)
-
-;================================================
-; Utility functions for tilemap and stripe image management.
-;================================================
-function xb(x)                = (((x)&$FF)<<8)|(((x)>>8)&$FF)
-function l3_prop(pal,page)    = ($20|(((pal)&7)<<2)|((page)&1))
-function l3_tile(tile,pal)    = ((tile)|((pal)<<8))
-function str_header1(x,y)     = xb($5000|((y)<<5)|(x))
-function str_header2(len,rle) = xb((((rle)&1)<<14)|(len))
+get_intro_sublevel:
+    rep #$20
+    lda.l !rom_initial_submap : and #$00FF : beq .normal
+    lda.l !rom_sprite_19_fix_byte : cmp #$EAEA : bne .normal
+.modified:
+    lda.w #!intro_level|$0100
+    rts
+.normal:
+    lda.w #!intro_level
+    rts

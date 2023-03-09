@@ -37,21 +37,6 @@ death:
 
 
 
-    ; Code to reset some stuff related to lx5's Custom Powerups.
-    ; You shouldn't need to edit this.
-if !custom_powerups == 1
-    stz.w ($170B|!addr)+$08
-    stz.w ($170B|!addr)+$09
-    lda #$00 : sta !projectile_do_dma
-
-    ldx #$07
--   lda $170B|!addr,x : cmp #$12 : bne +
-    stz $170B|!addr,x
-+   dex : bpl -
-    
-    lda !item_box_disable : ora #$02 : sta !item_box_disable
-endif
-
     rts
 
 ;=====================================
@@ -131,6 +116,21 @@ load_new_file:
 ; NOTE: on SA-1 roms, this runs on the SNES cpu.
 ;=====================================
 game_over:
+    ; Feel free to put your code here.
+
+
+    
+    rts
+
+;=====================================
+; This routine will be called when Mario enters a door, every frame during the fade out.
+; This could be useful since the door animation is the only one that can't be intercepted
+; with level ASM or sprite ASM (since it immediately goes to the fading gamemode).
+; If you need some level-specific action here, you can check the sublevel number in $010B (16 bit).
+; If you need to only run the code for 1 frame, you can check for $0DB0 equal to 0.
+; NOTE: on SA-1 roms, this runs on the SNES cpu.
+;=====================================
+door_animation:
     ; Feel free to put your code here.
 
 

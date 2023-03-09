@@ -1,5 +1,6 @@
 math pri on
 math round off
+namespace nested off
 
 ; Macros to load files easily.
 macro incsrc(folder,file)
@@ -13,21 +14,25 @@ macro incbin(folder,file)
 endmacro
 
 ;=====================================
-; Check incompatibilities.
-;=====================================
-    %incsrc(code,check_incompatibilities)
-
-;=====================================
 ; Load shared settings and defines.
 ;=====================================
     %incsrc("",misc)
     %incsrc("",settings)
     %incsrc("",ram)
+    %incsrc("",rom)
 
 ;=====================================
-; Load the retry stables.
+; Check incompatibilities.
+;=====================================
+    %incsrc(code,check_incompatibilities)
+
+;=====================================
+; Load the Retry tables.
 ;=====================================
     %incsrc("",tables)
+if !sram_feature
+    %incsrc("",sram_tables)
+endif
 
 ;=====================================
 ; Load the letters gfx.
@@ -56,6 +61,7 @@ retry_gfx:
     %incsrc(code,load_overworld)
     %incsrc(code,fade_to_overworld)
     %incsrc(code,game_over)
+    %incsrc(code,time_up)
 
 ;=====================================
 ; Load the hijacks.
@@ -70,3 +76,4 @@ retry_gfx:
     %incsrc(code/hijacks,death_counter)
     %incsrc(code/hijacks,lose_lives)
     %incsrc(code/hijacks,initial_facing_fix)
+    %incsrc(code/hijacks,item_box_fix)

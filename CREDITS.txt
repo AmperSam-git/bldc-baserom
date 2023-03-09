@@ -90,7 +90,6 @@ Blooper - Romi - https://smwc.me/s/23857
 Boo Ring - Akaginite - https://smwc.me/s/13807
 Ceiling Thwimp - Mandew - https://smwc.me/s/20777
 Custom Bro - Isikoro - https://smwc.me/s/25577
-Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
 Customizable Firebar - Isikoro - https://smwc.me/s/24411
 Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
@@ -134,7 +133,7 @@ Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
 Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
-Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
+Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.4.4
 Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 
 

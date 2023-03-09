@@ -4,6 +4,12 @@ init:
     ; Better safe than sorry.
     stz $13 : stz $14
 
+    ; Reset layer 1 and 2 X positions.
+    rep #$20
+    stz $1A
+    stz $1E
+    sep #$20
+
     ; Reset the custom midway object counter.
     lda #$00 : sta !ram_cust_obj_num
 
@@ -15,11 +21,13 @@ init:
     lda $141A|!addr : bne .skip
 
     ; The game sets $13BF a bit later so we need to do it ourselves
-    ; Don't do it if in the intro level, or right after a "No Yoshi" cutscene.
-    lda $0109|!addr : bne +
-    lda $71 : cmp #$0A : beq +
-    jsr shared_get_translevel
-+
+    ; (unless it's right after a "No Yoshi" cutscene).
+    lda $71 : cmp #$0A : bne +
+    %lda_13BF()
+    bra ++
++   jsr shared_get_translevel
+++  asl : tax
+
     ; Don't trigger Yoshi init.
     lda #$00 : sta !ram_is_respawning
 
@@ -27,19 +35,22 @@ init:
     sta !ram_hurry_up
 
     ; Call the custom reset routine.
-    php : phb : phk : plb
+    phx : php
+    phb : phk : plb
     jsr extra_reset
-    plb : plp
+    plb
+    plp : plx
 
     ; Set the destination from the level's checkpoint value.
-    lda $13BF|!addr : asl : tax
     rep #$20
     lda !ram_checkpoint,x : sta !ram_respawn
     sep #$20
 
 .skip:
-    ; Reset Yoshi, but only if respawning and not parked outside of a Castle/Ghost House.
+    ; Reset Yoshi, but only if respawning, not during the Yoshi Wings entrance
+    ; and not parked outside of a Castle/Ghost House.
     lda !ram_is_respawning : beq +
+    lda $1B95|!addr : bne +
 if not(!counterbreak_yoshi)
     lda $1B9B|!addr : bne +
 endif
