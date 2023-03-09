@@ -136,7 +136,6 @@ Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.4.4
-Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 
 
 -- Custom Blocks --
