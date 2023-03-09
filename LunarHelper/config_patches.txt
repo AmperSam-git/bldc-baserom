@@ -47,6 +47,7 @@ patches
 	Tools/Asar/Fixes/SSP_Fixes.asm
 	Tools/Asar/CharlesRemembers.asm
 	Tools/Asar/FreeUpRAM.asm
+	Tools/Asar/OptimizeStatusBarNmi.asm
 	Tools/Asar/Objects/objectool.asm
 	Tools/Asar/PlaceableDiscoShell.asm
 	Tools/Asar/PlaceableKickedShell.asm

@@ -5,7 +5,7 @@
     !dss_exgfx = $0D00
 
 ;# How many tiles from the queue will be uploaded per frame
-    !dss_queue_tiles = 5
+    !dss_queue_tiles = 4
 
 ;# How many frames are needed to mark a GFX as unused
     !dss_time_to_unmark_gfx = 16

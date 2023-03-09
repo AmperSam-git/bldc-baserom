@@ -29,6 +29,7 @@ Rexes With Extra Bit Set Are Squished - Supermario1313 - https://smwc.me/s/27788
 Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/19459
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Item Box - Kevin - https://smwc.me/s/26887
+Status Bar NMI Optimizer - Kevin - https://smwc.me/s/32604
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 
 * combined into one patch, thanks dtothefourth
@@ -134,6 +135,7 @@ Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.3.3
+Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 
 
 -- Custom Blocks --
