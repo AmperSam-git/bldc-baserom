@@ -46,7 +46,7 @@
 !InvertEyeConfig = 1
 
 ; turns off ground shake
-!TurnOffScreenShake = 0
+!TurnOffScreenShake = 1
 ; timer for it, ignore this if the above flag is set to 1
 !ShakeScreenTimer = $18
 

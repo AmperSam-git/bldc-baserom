@@ -1,6 +1,9 @@
 v1.08
 - added patches from Kevin and spoonsss to optimized NMI and reduce flickering
 - adjusted the global exanimations to use fewer slots
+- fixed sa1 conversion oversight in key lock blocks
+- fixed graphical issues in the pirahna plants
+- removed screenshake from custom thwomps
 - updated retry to version 0.4.4
 
 v1.07

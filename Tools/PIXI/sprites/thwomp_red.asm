@@ -37,7 +37,7 @@ db $00,$40,$00,$40,$00
 
 !Acceleration = $04		;how fast it gets speed
 
-!ShakeTime = $18		;how long screen shakes
+!ShakeTime = $00		;how long screen shakes 
 
 Print "INIT ",pc
 LDA !D8,x			;store it's original position
