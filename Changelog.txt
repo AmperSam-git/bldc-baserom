@@ -1,3 +1,6 @@
+v1.09
+- patch DMA Queue and Block Change Optimize to fix growing pipe problems
+
 v1.08
 - added patches from Kevin and spoonsss to optimized NMI and reduce flickering
 - adjusted the global exanimations to use fewer slots
