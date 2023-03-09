@@ -42,8 +42,8 @@ SideDone:
 ;-------------------------------------------------
 Unlock:
 if !custom_type == 0 || !custom_type == 1
-	LDA $1470		;\Return if carrying nothing.
-	ORA $148F		;|
+	LDA $1470|!addr		;\Return if carrying nothing.
+	ORA $148F|!addr		;|
 	BEQ -		;/
 	PHX
 	LDX.b #!NumbOfSa1Slots-1
@@ -89,7 +89,7 @@ endif
 Erase:
 	LDY #$00		;\Right when it disappears, shouldn't stop the player's
 	LDA #$25		;|movement.
-	STA $1693		;/
+	STA $1693|!addr		;/
 
 	%create_smoke()			;>smoke
 	%erase_block()			;>Delete self.
