@@ -41,7 +41,7 @@ org $008F55 : NOP #6
 org $008CC1 : dw $3826,$3887,$3888 ; uses "x" and "*96" tiles
 
 ; hide number of lives on the overworld
-org $00A15A : BRA $02
+org $05DBF2 : rtl
 
 ; don't show the X next to lives on overworld
 org $04A530 : db $FE
