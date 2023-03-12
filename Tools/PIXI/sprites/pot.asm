@@ -20,6 +20,7 @@
 print "INIT ",pc
     LDA #$09            ;\ sprite status = stationary/carryable
     STA !14C8,x         ;/
+    STZ !1504,x
     STZ !1510,x         ; reset carried
     RTL
 
