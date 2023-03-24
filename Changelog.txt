@@ -1,3 +1,10 @@
+v1.10
+- update piranha and venus plant graphics to vanilla
+- fix issue with big firebar not having graphics
+- fix issues with the custom bros not having unique colors
+- fix issue with the boomerang not being spin-jumpable
+- fix cutoff in SMAS hills background
+
 v1.09
 - patch DMA Queue and Block Change Optimize to fix growing pipe problems
 
