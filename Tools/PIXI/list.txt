@@ -11,6 +11,8 @@
 0A thwomp_red.json
 0B FloorBoo.json
 0C Goombud.json
+0D punchy_gp.json
+0E Snifit.json
 
 10 MuncherBridge.json
 11 pot.json
@@ -29,11 +31,24 @@
 
 20 piranha_venus_all.json
 
-36 punchy_gp.json
+40 C_Hammer_Bro.json
+41 C_Bomb_Bro.json
+42 C_Boomerang_Bro.json
+43 C_Bullet_Bro.json
+44 C_Elec_Bro.json
+45 C_Fire_Bro.json
+46 C_Flame_Bro.json
+47 C_Ball_Bro.json
+48 C_Ice_Bro.json
+49 C_Mix_Bro.json
+4A C_Shell_Bro.json
 
-40 Snifit.json
+4B C_Sledge_Bro.json
+4C C_Curve_Bro.json
+4D C_Braze_Bro.json
+4E C_Frost_Bro.json
 
-50 Custom_Bro.json
+
 51 Ball.cfg
 52 Boomerang.cfg
 53 FireBall.cfg

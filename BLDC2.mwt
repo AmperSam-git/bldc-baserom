@@ -25,6 +25,26 @@
 	Para-Goombud, flies up/down
 	Para-Goombud, oscillates up/down
 	Goombud, sliding
+0D	Punchy Left
+	Punchy Left Blue
+	Punchy Left Green
+	Punchy Left Yellow
+	Punchy Right
+	Punchy Right Blue
+	Punchy Right Green
+	Punchy Right Yellow
+0E	Red Snifit, falls from ledges
+	Blue Snifit, stays on ledges
+	Green Snifit, hops in place
+	Fire-spitting red Snifit, falls from ledges
+	Fire-spitting blue Snifit, stays on ledges
+	Fire-spitting green Snifit, hops in place
+	Big red Snifit, falls from ledges
+	Big blue Snifit, stays on ledges
+	Big green Snifit, hops in place
+	Big fire-spitting red Snifit, falls from ledges
+	Big fire-spitting blue Snifit, stays on ledges
+	Big fire-spitting green Snifit, hops in place
 10	Muncher Bridge
 	Muncher Bridge (Vertical)
 	Muncher Bridge, horizontal and vertical
@@ -123,61 +143,42 @@
 	Venus Vertical Short Spit Two Down
 	Venus Vertical Spit Two Up
 	Venus Vertical Spit Two Down
-36	Punchy Left
-	Punchy Left Blue
-	Punchy Left Green
-	Punchy Left Yellow
-	Punchy Right
-	Punchy Right Blue
-	Punchy Right Green
-	Punchy Right Yellow
-40	Red Snifit, falls from ledges
-	Blue Snifit, stays on ledges
-	Green Snifit, hops in place
-	Fire-spitting red Snifit, falls from ledges
-	Fire-spitting blue Snifit, stays on ledges
-	Fire-spitting green Snifit, hops in place
-	Big red Snifit, falls from ledges
-	Big blue Snifit, stays on ledges
-	Big green Snifit, hops in place
-	Big fire-spitting red Snifit, falls from ledges
-	Big fire-spitting blue Snifit, stays on ledges
-	Big fire-spitting green Snifit, hops in place
-50	Hammer Bro
-	Boomerang Bro
-	Fire Bro
-	Ice Bro
-	Bomb Bro
-	Shell Bro
-	Bullet Bro
-	Flame Bro
-	Flame Bro (Short Interval)
-	Ball Bro
-	Elec Bro
-	Hammer Bro (Continuous)
-	Sledge Bro
-	Sledge Bro (Continuous)
-	Curve Bro
-	Braze Bro
-	Frost Bro
+40	Hammer Bro
 	Hammer Bro, small jump only
-	Boomerang Bro, small jump only
-	Fire Bro, small jump only
-	Ice Bro, small jump only
+	Hammer Bro Continuous
+	Hammer Bro Continuous, small jump only
+41	Bomb Bro
 	Bomb Bro, small jump only
-	Shell Bro, small jump only
+42	Boomerang Bro
+	Boomerang Bro, small jump only
+43	Bullet Bro
 	Bullet Bro, small jump only
-	Flame Bro, small jump only
-	Flame Bro, small jump only (Short Interval)
-	Ball Bro, small jump only
+44	Elec Bro
 	Elec Bro, small jump only
-	Hammer Bro, small jump only (Continuous)
+45	Fire Bro
+	Fire Bro, small jump only
+46	Flame Bro
+	Flame Bro, small jump only
+	Flame Bro Short interval
+	Flame Bro Short interval, small jump only
+47	Ball Bro
+	Ball Bro, small jump only
+48	Ice Bro
+	Ice Bro, small jump only
+49	Mix Bro
+	Mix Bro, small jump only
+4A	Shell Bro
+	Shell Bro, small jump only
+4B	Sledge Bro
+	Sledge Bro Continuous
 	Sledge Bro, small jump only
-	Sledge Bro, small jump only (Continuous)
+	Sledge Bro Continuous, small jump only
+4C	Curve Bro
 	Curve Bro, small jump only
+4D	Braze Bro
 	Braze Bro, small jump only
+4E	Frost Bro
 	Frost Bro, small jump only
-	Miracle Bro, small jump only
 60	Boost platform
 	Boost platform, infinite
 	Grey falling platform, 2-tiles, falling down
