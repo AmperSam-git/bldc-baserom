@@ -6,6 +6,7 @@ v1.10
 - fix issues with the custom bros not having unique colors
 - fix issue with the boomerang not being spin-jumpable
 - fix cutoff in SMAS hills background
+- retry is no longer configured to save midways to SRAM
 - patch titlescreen garbage cleaner
 
 v1.09
