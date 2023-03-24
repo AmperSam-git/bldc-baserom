@@ -4,8 +4,8 @@ Mario90 - DSS Sprite conversion
 MarioFanGamer - UberASM Objects
 
 
--- Help & Testing --
-Alex, Atari2.0, Cartesius, lx5, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
+-- Help, Testing & Issue Reporting --
+Alex, Atari2.0, Cartesius, GbreezeSunset, lx5, Mario90, Nitrogen, Noivern, quietmason, TheJavaBrew
 
 
 -- Big Resources --
@@ -30,6 +30,7 @@ Slow Horizontal Layer 2 (BG) Scrolling Rate - lolcats439 - https://smwc.me/s/194
 Spike Top Ceiling Cling - imamelia - https://smwc.me/s/18949
 Sprite Item Box - Kevin - https://smwc.me/s/26887
 Status Bar NMI Optimizer - Kevin - https://smwc.me/s/32604
+Title Window Cleaner - Alcaro - https://smwc.me/s/8975
 Triple Ball 'n' Chain - imamelia - https://smwc.me/s/19256
 
 * combined into one patch, thanks dtothefourth
