@@ -126,7 +126,7 @@
 
 ; If 1, the game will automatically save everytime a new checkpoint is obtained (when touching a midway or getting a cp on a room transition).
 ; If using this, make sure there's no softlocks (for example, a level is unbeatable from one of the checkpoints).
-    !save_on_checkpoint = 1
+    !save_on_checkpoint = 0
 
 ; If 1, the game will automatically save after getting a game over.
 ; This can be useful when paired with the option of not reloading some data from SRAM after a game over (see "tables.asm"),

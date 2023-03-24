@@ -2,6 +2,13 @@
 
 !level_flags = $140B|!addr; FreeRAM to activate certain UberASM code (cleared at level load)
 
+; Retry
+if read1($00FFD5) == $23
+    !retry_freeram =  $40A400
+else
+	!retry_freeram = $7FB400
+endif
+
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;
 ; code for extended objects 98-FF
@@ -11,28 +18,28 @@
 ; Lock horizontal scroll
 CustExObj98:
 	stz $1411|!addr
-RTS
+	RTS
 
 ; Free vertical scroll
 CustExObj99:
 	REP #$20
 	LDA.w #$0001 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Hurt = insta death
 CustExObj9A:
 	REP #$20
 	LDA.w #$0002 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Horizontal level wrap
 CustExObj9B:
 	REP #$20
 	LDA.w #$0004 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Vertical level wrap
 !levelShift = $0020		; how far to shift the level rightwards
@@ -55,81 +62,73 @@ CustExObj9C:
 	REP #$20
 	LDA.w #$0008 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Lock screen left
 CustExObj9D:
 	REP #$20
 	LDA.w #$0010 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Lock screen right
 CustExObj9E:
 	REP #$20
 	LDA.w #$0020 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Lock screen up
 CustExObj9F:
 	REP #$20
 	LDA.w #$0040 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Lock screen down
 CustExObjA0:
 	REP #$20
 	LDA.w #$0080 : TSB !level_flags
 	SEP #$20
-RTS
+	RTS
 
 ; Toggle status bar
 CustExObjA1:
 	LDA #$01 : STA $79 ; matches RAMToggledStatusbar
-RTS
+	RTS
 
 ; Toggle L/R scroll
 CustExObjA2:
 	LDA #$01 : STA $7C ; matches RAMToggledLR
-RTS
+	RTS
 
-; Retry
-if read1($00FFD5) == $23
-    !retry_freeram =  $40A400
-else
-	!retry_freeram = $7FB400
-endif
-
+; Enable SFX Echo
 CustExObjA3:
-	; Prompt Retry
-	LDA #$02 : sta !retry_freeram+$11
-RTS
+	REP #$20
+	LDA.w #$0100 : TSB !level_flags
+	SEP #$20
+	RTS
 
+; No Powerups
 CustExObjA4:
-	; Instant Retry
-	LDA #$03 : sta !retry_freeram+$11
-RTS
+	REP #$20
+	LDA.w #$0200 : TSB !level_flags
+	SEP #$20
+	RTS
 
+; Counterbreak
 CustExObjA5:
-	; Bottom left retry prompt
-	lda #$09 : sta !retry_freeram+$15
-	lda #$D0 : sta !retry_freeram+$16
-RTS
+	REP #$20
+	LDA.w #$0400 : TSB !level_flags
+	SEP #$20
+	RTS
 
 ; Set on/off to OFF
 CustExObjA6:
 	lda #$01 : sta $14AF|!addr
-RTS
+	RTS
 
-; Enable SFX Echo
 CustExObjA7:
-	REP #$20
-	LDA.w #$0100 : TSB !level_flags
-	SEP #$20
-RTS
-
 CustExObjA8:
 CustExObjA9:
 CustExObjAA:
@@ -138,10 +137,29 @@ CustExObjAC:
 CustExObjAD:
 CustExObjAE:
 CustExObjAF:
+	RTS
+
 CustExObjB0:
+	; Instant Retry
+	LDA #$03 : sta !retry_freeram+$11
+	RTS
+
 CustExObjB1:
+	; Prompt Retry
+	LDA #$02 : sta !retry_freeram+$11
+	RTS
+
 CustExObjB2:
+	; Bottom left retry prompt
+	lda #$09 : sta !retry_freeram+$15
+	lda #$D0 : sta !retry_freeram+$16
+	RTS
+
 CustExObjB3:
+	; No powerup from Midway
+	lda #$00 : sta !retry_freeram+$10
+	RTS
+
 CustExObjB4:
 CustExObjB5:
 CustExObjB6:

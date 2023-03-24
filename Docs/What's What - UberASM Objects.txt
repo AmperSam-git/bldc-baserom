@@ -50,19 +50,19 @@ A2 - Toggle Screen Scroll
 Disable scrolling the screen with L or R.
 
 
-A3 - Prompt Retry
------------------
-Set the retry system to use a prompt that says "Retry" in the middle of the screen.
+A3 - Enable SFX Echo
+-----------------------
+Enabled the echo for sound effects, provided your level has custom music with echo enabled.
 
 
-A4 - Instant Retry
-------------------
-Make the retry skip using prompt and restart instantly after dying.
+A4 - No Powerups
+-------------------------
+Disable bringing powerups into the level
 
 
-A5 - Bottom Left Retry Prompt
------------------------------
-Move the retry prompt to the bottom left (by default it's in the middle) if Prompt retry is active.
+A5 - Counterbreak
+-------------------------
+Reset coin, score and bonus star counters
 
 
 A6 - Start in OFF State
@@ -70,6 +70,21 @@ A6 - Start in OFF State
 Starts the level with the ON/OFF state in the OFF state at the start of the level.
 
 
-A7 - Enable SFX Echo
------------------------
-Enabled the echo for sound effects, provided your level has custom music with echo enabled.
+B0 - Prompt Retry
+-----------------
+Set the retry system to use a prompt that says "Retry" in the middle of the screen.
+
+
+B1 - Instant Retry
+------------------
+Make the retry skip using prompt and restart instantly after dying.
+
+
+B2 - Bottom Left Retry Prompt
+-----------------------------
+Move the retry prompt to the bottom left (by default it's in the middle) if Prompt retry is active.
+
+
+B3 - No Power Ups from Midways
+-----------------------------
+Disable gaining a power-up (mushroom) from a midway point.

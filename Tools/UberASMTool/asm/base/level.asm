@@ -116,8 +116,10 @@ handle_init_codes:
     JMP .Return
 +
     print "Level init codes: $",pc
+    %RunCode(9, counter_break)
+    %RunCode(10, no_powerups)
 .Return
-RTS
+    RTS
 
 handle_main_codes:
     LDA $71
@@ -136,15 +138,15 @@ handle_main_codes:
     %RunCode(7, block_down)
     %RunCode(8, enable_sfx_echo)
 .Return
-RTS
+    RTS
 
 free_vertical_scroll:
     lda #$01 : sta $1404|!addr
-RTS
+    RTS
 
 enable_sfx_echo:
     LDA #$06 : STA $1DFA|!addr
-RTS
+    RTS
 
 insta_death:
     LDA $71
@@ -155,7 +157,28 @@ insta_death:
     STA $1DFC|!addr
     JSL $00F606|!bank
 +
-RTS
+    RTS
+
+no_powerups:
+    ; Reset powerup.
+    stz $19
+    ; Reset item box.
+    stz $0DC2|!addr
+    RTS
+
+counter_break:
+    ; Reset coin counter.
+    stz $0DBF|!addr
+    ; Reset bonus stars counter.
+    stz $0F48|!addr
+    stz $0F49|!addr
+    ; Reset score counter.
+    rep #$20
+    stz $0F34|!addr
+    stz $0F36|!addr
+    stz $0F38|!addr
+    sep #$20
+    RTS
 
 horz_level_wrap:
     LDA $9D
@@ -163,7 +186,7 @@ horz_level_wrap:
     JSR HorzWrapMario
     JSR HorzWrapSprites
   .noWrap
-RTS
+    RTS
 
 vert_level_wrap:
     LDA $9D
@@ -171,7 +194,7 @@ vert_level_wrap:
     JSR VertWrapMario
     JSR VertWrapSprites
     .noWrap
-RTS
+    RTS
 
 !wrap_topEdge = $00A0   ; where the "top" wrap point is
 !wrap_botEdge = $01A0   ; where the "bottom" wrap point is
@@ -300,7 +323,7 @@ block_left:
     INY
 +
     STY $1411|!addr
-RTS
+    RTS
 
 block_right:
     LDY #$00
@@ -313,7 +336,7 @@ block_right:
     INY
 +
     STY $1411|!addr
-RTS
+    RTS
 
 block_up:
     LDY #$00
@@ -325,7 +348,7 @@ block_up:
     INY
 +
     STY $1412|!addr
-RTS
+    RTS
 
 block_down:
     LDY #$00
@@ -336,4 +359,4 @@ block_down:
     BPL +
     INY
 +   STY $1412|!addr
-RTS
+    RTS
