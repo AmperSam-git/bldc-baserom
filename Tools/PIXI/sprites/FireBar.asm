@@ -4,7 +4,7 @@
 Fireball_Tile:	db $2C,$2D,$2C,$2D	;Small
 				db $84,$86,$84,$86	;Big
 Fireball_Prop:	db $04,$04,$C4,$C4	;Small
-				db $05,$05,$C5,$C5	;Big
+				db $04,$04,$C4,$C4	;Big
 
 Clip_Size:		db $06,$00,$0C
 Clip_Disp:		dw $0001,$0002
