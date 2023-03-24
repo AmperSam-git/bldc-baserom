@@ -7,7 +7,7 @@
     !map16_block = $03A5        ; map16 value of the donut block in hex
     !sprite_tile = $C2          ; graphic tile to use for donut sprite
     !direction = 1              ; 0 = vertical, 1 = horizontal
-    !speed_value = $28          ;\ positive (00-7F) values = down/right,
+    !speed_value = $38          ;\ positive (00-7F) values = down/right,
     !max_speed = $30            ;/ negative (80-FF) values = up/left
 
 ;-----------------------------------------------------------------------------------------
