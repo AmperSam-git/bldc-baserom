@@ -102,7 +102,7 @@ db $09,$09,$0B,$09
 ; Note: The default value WILL NOT completely hide the tiles unless you have changed its graphics!
 ; But the only completely square tile in a vanilla GFX00/01 is the message box tile, which is set to be overwritten by default.
 
-!CoverUpTile = $84			; the invisible tile used to cover up the sprite when it is in a pipe
+!CoverUpTile = $0E			; the invisible tile used to cover up the sprite when it is in a pipe
 
 ; these two tables are indexed by the direction and orientation
 

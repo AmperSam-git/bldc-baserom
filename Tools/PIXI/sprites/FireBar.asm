@@ -2,7 +2,7 @@
 ;by Isikoro
 
 Fireball_Tile:	db $2C,$2D,$2C,$2D	;Small
-				db $0E,$40,$0E,$40	;Big
+				db $84,$86,$84,$86	;Big
 Fireball_Prop:	db $04,$04,$C4,$C4	;Small
 				db $05,$05,$C5,$C5	;Big
 
