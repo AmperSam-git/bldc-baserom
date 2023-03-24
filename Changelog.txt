@@ -1,5 +1,7 @@
 v1.10
 - update piranha and venus plant graphics to vanilla
+- add more uberasm objects, mainly for counter break and power up filtering
+- fix speed issue in donut blocks
 - fix issue with big firebar not having graphics
 - fix issues with the custom bros not having unique colors
 - fix issue with the boomerang not being spin-jumpable
