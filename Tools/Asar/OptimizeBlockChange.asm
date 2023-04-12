@@ -117,8 +117,12 @@ Return:
 ;      $1FA64D STA $4322     [004322] A:820b
 ;      $1FA655 STY $420B
 
-org $0086C1
+org $008650
+; Controller is read in global_code.asm instead
+ControllerUpdate:
 	autoclean JML NMIHijack
+.rts
+	RTS
 
 freecode
 
@@ -153,7 +157,6 @@ SetLayer2Addr:
 	BRA StoreAddress
 
 NMIHijack:
-	PHX : PHP
 	REP #$10
 	LDX !VRAMUploadTblSmallIndex
 	BEQ .SkipUploadSmallTable
@@ -163,11 +166,8 @@ NMIHijack:
 	BEQ .SkipUploadLargeTable
 	JSR RunVRAMUploadLarge
 .SkipUploadLargeTable
-	PLP : PLX
-	; restore code:
-	LDA.w $0DA8|!base2,X				;$0086C1	|\ Set up $18.
-	STA $18						;$0086C4	|/
-	JML $0086C6|!bank
+	SEP #$10
+	JML ControllerUpdate_rts|!bank
 
 RunVRAMUploadSmall:
 	LDA #$80
