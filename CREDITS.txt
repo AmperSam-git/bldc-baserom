@@ -80,7 +80,7 @@ Vertical Level Bowser Statue Fireball Fix - Medic, Telinc1 - https://smwc.me/s/1
 Vertical Spawn/Despawn Fix - HammerBrother - https://smwc.me/s/22833
 Victory Pose Fix v1.1 - TheBiob - https://smwc.me/s/22372
 Walljump/Note Block Glitch Fix v1.6 - lolcats439 - https://smwc.me/s/19932
-Yoshi Pipe Animation Fix - Kevin https://smwc.me/s/30127
+Yoshi Pipe Animation Fix - Kevin - https://smwc.me/s/30127
 
 
 -- Sprites --
@@ -137,6 +137,7 @@ Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.4.4
+Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 
 
 -- Custom Blocks --
