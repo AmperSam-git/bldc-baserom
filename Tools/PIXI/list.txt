@@ -29,6 +29,7 @@
 1C FireBar.json
 1D FireBar_Shiftable.json
 1E Ptooie.json
+1F Nipper.json
 
 20 piranha_venus_all.json
 
