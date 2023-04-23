@@ -91,6 +91,7 @@ Betterer Boss Bass - Sonikku - https://smwc.me/s/15484
 Big Steely / Bowser's Bowling Ball - imamelia - https://smwc.me/s/25867
 Blooper - Romi - https://smwc.me/s/23857
 Boo Ring - Akaginite - https://smwc.me/s/13807
+Bumpty - Romi - https://smwc.me/s/27639
 Ceiling Thwimp - Mandew - https://smwc.me/s/20777
 Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
@@ -102,6 +103,9 @@ Galoomba/Goombud v0.2 - Sonikku - https://smwc.me/s/21391
 Line-Guided Any Sprite v1.2 - Kevin, dtothefourth - https://smwc.me/s/24672
 Moving Castle Block - imamelia - https://smwc.me/s/3609
 Muncher Bridge - Abdu - https://smwc.me/s/28620
+Panser - imamelia - https://smwc.me/s/17030
+Para-beetle - MarkAlarm, Romi, imamelia - https://smwc.me/s/27631
+Phanto - yoshicookiezeus - https://smwc.me/s/3738
 Pipe Spawner - dtothefourth - https://www.patreon.com/posts/pipe-spawner-48840077
 Piranha Plants and Venus Fire Traps v1.1 - imamelia - https://smwc.me/s/24223
 Platform Megapack v1.0 - Mandew - https://smwc.me/s/16281
@@ -111,6 +115,8 @@ Programmable Ball & Chain - dtothefourth - https://www.patreon.com/posts/program
 Punchy - Mandew - https://smwc.me/s/20780
 Roto Disc V1.1 - DigitalSine, JackTheSpades, mikeyk - https://smwc.me/s/20573
 SMB2 Snifit + Giant Snifit - 1524, Sonikku, mikeyk https://smwc.me/s/16801
+SMB3 Nipper- imamelia - https://smwc.me/s/16210
+SMB3 Ptooie - Romi - https://smwc.me/s/16134
 SMW Hammer Bro (Stationary) - Sonikku - https://smwc.me/s/3406
 Sprite Offsetter - Koopster - https://smwc.me/s/26541
 Stationary Magikoopa - yoshicookiezeus - https://smwc.me/s/9479
