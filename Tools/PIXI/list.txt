@@ -14,6 +14,7 @@
 0D punchy_gp.json
 0E Snifit.json
 0F Bumpty.json
+
 10 MuncherBridge.json
 11 pot.json
 12 roto_disc.json
@@ -33,6 +34,8 @@
 
 20 piranha_venus_all.json
 
+21 phanto.json
+
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
 42 C_Boomerang_Bro.json
@@ -44,7 +47,6 @@
 48 C_Ice_Bro.json
 49 C_Mix_Bro.json
 4A C_Shell_Bro.json
-
 4B C_Sledge_Bro.json
 4C C_Curve_Bro.json
 4D C_Braze_Bro.json
