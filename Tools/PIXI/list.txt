@@ -37,6 +37,7 @@
 21 phanto.json
 22 SMB2Panser.json
 23 panser_fire.json
+24 para_beetle.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json

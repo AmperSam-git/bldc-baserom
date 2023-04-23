@@ -156,7 +156,7 @@ exgfx_length:
     db $04              ;# 98 - SMB3 Nipper
     db $01              ;# 99 - Phanto
     db $04              ;# 9A - Panser
-    db $0              ;# 9B - Unused
+    db $0A              ;# 9B - Para-beetle
     db $0              ;# 9C - Unused
     db $0              ;# 9D - Unused
     db $0              ;# 9E - Unused
