@@ -13,7 +13,7 @@
 0C Goombud.json
 0D punchy_gp.json
 0E Snifit.json
-
+0F Bumpty.json
 10 MuncherBridge.json
 11 pot.json
 12 roto_disc.json

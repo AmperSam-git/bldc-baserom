@@ -151,7 +151,7 @@ exgfx_length:
     db $08              ;# 93 - Custom Sledge Bro
     db $01              ;# 94 - Snifit Projectile
     db $01              ;# 95 - Ceiling Thwimp
-    db $0              ;# 96 - Unused
+    db $07              ;# 96 - Bumpty
     db $0              ;# 97 - Unused
     db $0              ;# 98 - Unused
     db $0              ;# 99 - Unused
