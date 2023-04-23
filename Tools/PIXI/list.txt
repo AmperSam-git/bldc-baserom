@@ -35,6 +35,8 @@
 20 piranha_venus_all.json
 
 21 phanto.json
+22 SMB2Panser.json
+23 panser_fire.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json

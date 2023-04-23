@@ -1,0 +1,222 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": false,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": false
+  },
+  "$1662": {
+    "Sprite Clipping": 0,
+    "Use shell as death frame": false,
+    "Fall straight down when killed": true
+  },
+  "$166E": {
+    "Use second graphics page": true,
+    "Palette": 0,
+    "Disable fireball killing": false,
+    "Disable cape killing": false,
+    "Disable water splash": false,
+    "Don't interact with Layer 2": false
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": true,
+    "Invincible to star/cape/fire/bounce blk.": false,
+    "Process when off screen": false,
+    "Don't change into shell when stunned": false,
+    "Can't be kicked like shell": false,
+    "Process interaction with Mario every frame": false,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": false
+  },
+  "$1686": {
+    "Inedible": false,
+    "Stay in Yoshi's mouth": false,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": false,
+    "Don't change direction if touched": true,
+    "Don't turn into coin when goal passed": false,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": false
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": false,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": false,
+    "Don't turn into a coin with silver POW": false,
+    "Don't get stuck in walls (carryable sprites)": false
+  },
+  "AsmFile": "SMB2Panser.asm",
+  "ActLike": 54,
+  "Type": 1,
+  "Extra Property Byte 1": 9,
+  "Extra Property Byte 2": 11,
+  "Additional Byte Count (extra bit clear)": 1,
+  "Additional Byte Count (extra bit set)": 1,
+  "Map16": "5hX2FecV9xU=",
+  "Displays": [
+    {
+      "Description": "A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 0
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    },
+    {
+      "Description": "A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).",
+      "ExtraBit": true,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 1
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "SMB2 Panser (palette 8).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette 9).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 1,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette A).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 2,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette B).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 3,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette C).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 4,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette D).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette E).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 6,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "SMB2 Panser (palette F).",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 7,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    }
+  ]
+}
