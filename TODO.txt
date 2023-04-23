@@ -1,0 +1,2 @@
+- fix bumpty feet and hands in dss
+- fix ptooie spike ball in dss
