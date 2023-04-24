@@ -1,7 +1,5 @@
-- fix bumpty feet and hands in dss
-- fix ptooie spike ball in dss
-- parabeetle json
 - update the external Graphics will all the new sprite additions
-- fix regen pokey dead frame
+- fix bumpty feet and hands in dss
+- parabeetle json
 - wooden spike json
 - check tilemap for homing bullet
