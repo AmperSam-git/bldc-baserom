@@ -18,6 +18,9 @@ PIRANHA_TILE:		db $00,$02,$01,$02	;piranha head, piranha stem (static)
 PIRANHA_PROP:		db $09,$0B,$09,$0B	;piranha head pal/prop, piranha stem (static) pal/prop, piranha head pal/prop, piranha stem (walking) pal/prop
 
 TILE_AND_PROP:		db $04,$03		;spiky ball tile, spiky ball YXPPCCCT properties
+!SpikeTile = $04
+!SpikeProp = $03
+
 
 X_SPEED:		db $0C,$F4
 
@@ -350,16 +353,15 @@ SPIKE_GFX01:
 			STA $0300|!Base2,y
 			;LDA TILE_AND_PROP
 			;ORA $02
-
-			; dss modification
-			PHX
-			LDA TILE_AND_PROP
-			TAX
-			lda !dss_tile_buffer,x
-			PLX
-
-			STA $0302|!Base2,y
+			;STA $0302|!Base2,y
 			SEP #$20
+
+			LDA.l !SpikeTile+!dss_tile_buffer
+			STA $0302|!Base2,y
+
+			LDA #!SpikeProp
+			STA $0303|!Base2,y
+
 			LDA #$00
 			LDY #$02
 			JSL $01B7B3|!BankB
