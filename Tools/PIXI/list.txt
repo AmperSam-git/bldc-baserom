@@ -43,6 +43,10 @@
 27 chainchomp.json
 28 chomp_shark_mini.json
 
+2C spike_green.json
+2D spike_red.json
+2E spike_blue.json
+2F spike_yellow.json
 
 30 regen_pokey.json
 31 ThrowAwayPokey.json
@@ -50,6 +54,8 @@
 
 
 35 SidewayWoodSpike.json
+
+
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
@@ -75,6 +81,7 @@
 55 panser_fire.cfg
 56 Pokey_ThrownSegment.cfg
 57 RealHomingBill.cfg
+58 spikes_ball.cfg
 
 60 platform_megapack.json
 
