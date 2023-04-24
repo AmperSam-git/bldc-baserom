@@ -167,7 +167,7 @@ exgfx_length:
     db $10              ;# A3 - Albatoss
     db $01              ;# A4 - Torpedo
     db $02              ;# A5 - Icicle
-    db $0              ;# A6 - Unused
+    db $10              ;# A6 - Giant Thwomp
     db $0              ;# A7 - Unused
     db $0              ;# A8 - Unused
     db $0              ;# A9 - Unused
