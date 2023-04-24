@@ -1,8 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Regenerating Pokey
-;; This pokey slowly regenerates its segments.
-;; It'll remember it's initial number of segments, so it won't generate more (if it was 3 segments long, it won't grow past 3)
+;; Throwaway Pokey
+;;
+;; This pokey will throw it's own segments at a player in an attempt to hurt them.
+;; By RussianMan.
 ;;
 ;; Uses first extra bit: YES
 ;;
@@ -19,31 +20,32 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 ;easier segment setting. replace 0 with 1 for more segments from the very right (e.g. 00000001 will start with 1 segment, 00011111 will start with 5)
 ;You can't add more than 5 segments, because there's no code support for more (vanilla pokey would vanish if there were more than 5 segments)
 !Segments1 = %00000111		; number of segments the Pokey will have if the extra bit is clear and the player is not on Yoshi
 !Segments2 = %00011111		; number of segments the Pokey will have if the extra bit is clear and the player is on Yoshi
-!Segments3 = %00001111		; number of segments the Pokey will have if the extra bit is set and the player is not on Yoshi
+!Segments3 = %00000001		; number of segments the Pokey will have if the extra bit is set and the player is not on Yoshi
 !Segments4 = %00001111		; number of segments the Pokey will have if the extra bit is set and the player is on Yoshi
 
-!HeadTile = $00			;
-!BodyTile = $01			;
+!ThrowTime = $C0
+!ThrowTimer = !15AC,x
+
+ThrownSegmentXSpd:
+db $28,-$28
+
+!SegmentSpr = $56			;
+
+!ThrownSegmentYSpd = -$30
+
+!HeadTile = $00			;\only for dead segments (when hit with a shell)
+!BodyTile = $01			;/
+
+!PokeyFix = 1			;fix pokey dupe when trying to hit the top segment from above (it erroneously destroys non-existant segment)
 
 Clipping:			; the sprite clipping value indexed by the number of sections Pokey has
 db $1B,$1B,$1A,$19,$18,$17	; 0, 1, 2, 3, 4, 5
 
-;how long it takes to regen a segment after one gets destroyed (set to this time each time it's hit, meaning it can't regen right after it's hit if timing is right)
-;do note however that it isn't set if a segment is eaten by yoshi due to it being a hardcoded interaction in yoshi's code (so the segment CAN regen right after it's eaten if timed correctly).
-
-!RegenTime = $80
-!RegenTimer = !160E,x		;doesn't decrement on its own
-
-!RegenSound = $10
-!RegenSndBnk = $1DF9
-
 PokeyPresentSegment:
-BitTable1:
 db $01,$02,$04,$08		;from top to bottom, highest to lowest
 
 BitTable2:
@@ -72,8 +74,6 @@ db $02,$FE			; holy fecal matter, this sprite is slow
 Data1:
 db $00,$05,$09,$0C,$0E,$0F,$10,$10,$10,$10,$10,$10,$10
 
-!MaxSegments = !1510,x
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; init routine
@@ -100,17 +100,17 @@ LDA #!Segments3			; if the player is not on Yoshi, then the Pokey...still has 4 
 StoreSegments:			;
 STA !C2,x			;
 
-JSR GetSegments
-TYA
-STA !MaxSegments
-
 %SubHorzPos()
 TYA				; face the player initially
 STA !157C,x			;
 
-LDA #!RegenTime
-STA !RegenTimer
+JSR SetThrowTime
 RTL
+
+SetThrowTime:
+LDA #!ThrowTime
+STA !ThrowTimer
+RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -144,7 +144,6 @@ CMP #$08			; if the sprite is in normal status...
 BEQ NormalRt			; run that code
 JMP PokeyGFX			; else, just run the GFX routine
 
-;isn't actually used weirdly enough
 DeadSegment:
 lda #!dss_id_pokey
 %FindAndQueueGFX()    ; find or queue GFX
@@ -152,22 +151,20 @@ bcs .gfx_loaded
 rts                     ; don't draw gfx if ExGFX isn't ready
 .gfx_loaded
 JSL $0190B2|!bank		; generic single 16x16 sprite GFX routine
+
 LDY !15EA,x			; load the sprite OAM index back into Y
 LDA !C2,x			;
 CMP #$01			; if the sprite state is not 00...
-LDA.l !dss_tile_buffer+!HeadTile			; use the head tile
-BCC StoreDeadTile		;
+LDA.l !dss_tile_buffer+!HeadTile      ; use the head tile
+BCC StoreDeadTile   ;
 
-LDA.l !dss_tile_buffer+!BodyTile			; if the sprite state is 00, use the body tile
+LDA.l !dss_tile_buffer+!BodyTile      ; if the sprite state is 00, use the body tile
 
-StoreDeadTile:			;
-STA $0302|!addr,y		;
+StoreDeadTile:      ;
+STA $0302|!addr,y   ;
 
-;LDA #$00
-;%SubOffScreen()
-
-Return00:			;
-RTS				;
+Return00:     ;
+RTS   ;
 
 NormalRt:
 LDA !C2,x			; if there are still sections left...
@@ -187,7 +184,7 @@ BNE SkipToGFX			; skip ahead to the GFX routine
 
 JSL $01A7DC|!bank		; interact with the player
 
-JSR AddSegment			;regenerate if hurt
+JSR SpawnSegment_CanHurt	; throw a segment at a player (or don;t...)
 
 INC !1570,x			; increment the sprite frame counter
 LDA !1570,x			;
@@ -336,10 +333,12 @@ BMI ClearBit			; keep the current Y-index
 INY				; if the result was 39 or greater, increment the index
 
 ClearBit:			;
-LDA !C2,x			; sprite state (section counter)
-AND PokeySetBit,y
-BNE .NotLower
-INY
+if !PokeyFix
+  LDA !C2,x			; sprite state (section counter)
+  AND PokeySetBit,y		; check if the segmet is actually there
+  BNE .NotLower			;
+  INY				;
+endif
 
 .NotLower
 LDA !C2,x
@@ -355,71 +354,15 @@ STA !1540,x			; set...a timer
 ASL				;
 STA !1558,x			;
 
-LDA #!RegenTime
-STA !RegenTimer
-
 Return02:			;
 RTS				;
-
-;opposite of above
-AddSegment:
-JSR GetSegments
-TYA
-CMP !MaxSegments
-BEQ .NoSegment
-
-LDA !RegenTimer
-BNE .NoRegen
-
-DEY
-
-;LDA !C2,x
-;ASL
-;BCS .NoSegment
-
-;LDY #$04
-
-.Loop
-LDA !C2,x
-AND PokeySetBit,y
-BEQ .Add
-
-.Next
-DEY
-BPL .Loop			;dont check very top segment
-
-.NoSegment
-RTS
-
-.NoRegen
-DEC !RegenTimer
-RTS
-
-;There must be one
-
-.Add
-LDA !C2,x
-ORA PokeySetBit,y
-STA !C2,x
-
-LDA #!RegenTime
-STA !RegenTimer
-
-Pokey_SpawnSmoke:
-LDA #!RegenSound
-STA !RegenSndBnk|!addr
-
-STZ $00
-LDA #$40
-STA $01
-LDA #$1B : STA $02
-LDA #$01
-%SpawnSmoke()
-RTS
 
 SpawnSegment:
 JSL $02A9E4|!bank		; find a free sprite slot for the dead Pokey head
 BMI Return02			; return if none are free
+
+LDA #$02			; set the sprite status as dead
+STA !14C8,y			; (seriously, how many other spawning routines have you seen that do this?)
 
 PHX				;
 LDA !7FAB9E,x			; same sprite number
@@ -436,16 +379,9 @@ PHX				;
 TYX				;
 JSL $07F7D2|!bank		; initialize sprite tables
 JSL $0187A7|!bank		;
-TYX
 
-LDA #$08
-STA !7FAB10,x
-
-LDA #$01			; set the "dead" flag
-STA !1534,y			;
-
-LDA #$02			; set the sprite status as dead
-STA !14C8,y			; (seriously, how many other spawning routines have you seen that do this?)
+LDA #$08			;actually turn into a custom sprite
+STA !7FAB10,x			;
 
 LDX $1695|!addr			; load the index of the kicked sprite into X
 LDA !D8,x			;
@@ -459,7 +395,6 @@ ASL				;
 ROR $00				;
 LDA $00				;
 STA !B6,y			; set the dead sprite X speed
-
 LDA #$E0			;
 STA !AA,y			; set its Y speed
 
@@ -468,8 +403,48 @@ LDA !C2,x			; sprite state of the old sprite
 AND $0D				; the bits that we set earlier
 STA !C2,y			;
 
+LDA #$01			; set the "dead" flag
+STA !1534,y			;
+
 LDA #$01			; give 200 points
 JSL $02ACE1|!bank		;
+RTS
+
+SpawnSegment_CanHurt:
+LDA !ThrowTimer
+BNE .Re
+
+;use macro (no macro, a subroutine)
+JSR GetSegments			;if only a head remains, dont throw anything
+DEY				;
+BEQ .Re				;
+
+%SubHorzPos()
+TYA
+LDA ThrownSegmentXSpd,y
+STA $02
+
+LDA #!ThrownSegmentYSpd
+STA $03
+
+STZ $00
+
+LDA #$40			;the lowest segment position
+STA $01
+
+LDA #!SegmentSpr
+SEC
+%SpawnSprite()
+BCS .Re
+
+LDA #$08
+STA !14C8,y
+
+LDA #$39			;remove the lowest segment!
+JSR RemoveSegment
+JMP SetThrowTime
+
+.Re
 RTS
 
 GetSegments:
@@ -489,6 +464,7 @@ BPL PokeyLoopStart		;
 LDX $15E9|!addr			;
 RTS				;
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; graphics routine
@@ -497,94 +473,101 @@ RTS				;
 
 PokeyGFX:
 lda #!dss_id_pokey
-%FindAndQueueGFX()		; find or queue GFX
+%FindAndQueueGFX()    ; find or queue GFX
 bcs .gfx_loaded
 rts                     ; don't draw gfx if ExGFX isn't ready
 .gfx_loaded
 
 %GetDrawInfo()
 
-LDA $01		;
-CLC		;
-ADC #$40	; offset the sprite Y position by 40 pixels
-STA $01		;
+LDA $01				;
+CLC				;
+ADC #$40			; offset the sprite Y position by 40 pixels
+STA $01				;
 
-LDA !C2,x	; sprite state
-STA $02		; into *two* bytes of scratch RAM?
-STA $07		;
+LDA !C2,x			; sprite state
+STA $02				; into *two* bytes of scratch RAM?
+STA $07				;
 
-LDA !151C,x	;
-STA $04		;
+LDA !151C,x			; you thought this table is unused? boy you were very wrong.
+STA $04				;
 
-LDY !1540,x	;
-LDA Data1,y	;
-STA $03		;
-STZ $05		;
-LDY !15EA,x	;
+LDY !1540,x			;
+LDA Data1,y			;
+STA $03				;
+STZ $05				;
 
-PHX		;
-LDX #$04		; 5 tiles to draw
+LDA !15F6,x			;
+ORA $64
+STA $08				;
+
+LDY !15EA,x			; get OAM slot
+PHX				;
+LDX #$04			; 5 tiles to draw
 
 GFXLoop:
 
-STX $06		;
-LDA $14		;
-LSR #3		;
-CLC		;
-ADC $06		;
-AND #$03	;
-TAX		;
-LDA $07		;
-CMP #$01		; if the sprite has only 1 segment left, or we're drawing the bottom segment
-BNE Not1Segment	;
-LDX #$00		; the X displacement index is 00
-Not1Segment:	;
+STX $06				;
+LDA $14				;
+LSR #3				;
+CLC				;
+ADC $06				;
+AND #$03			;
+TAX				;
+LDA $07				;
+CMP #$01			; if the sprite has only 1 segment left, or we're drawing the bottom segment
+BNE Not1Segment			;
+LDX #$00			; the X displacement index is 00
 
-LDA $00		;
-CLC		;
-ADC XDisp,x	; set the tile X displacement
-STA $0300|!addr,y	;
+Not1Segment:			;
+LDA $00				;
+CLC				;
+ADC XDisp,x			; set the tile X displacement
+STA $0300|!addr,y		;
 
-LDX $06		;
-LDA $01		;
-LSR $02		;
-BCC Label00	;
-LSR $04		; ...what?
-BCS Label01	;
-PHA		;
-LDA $03		;
-STA $05		;
-PLA		;
-Label01:		;
-SEC		;
-SBC $05		;
-STA $0301|!addr,y	;
+LDX $06				;
+LDA $01				;
+LSR $02				;
+BCC Label00			;
+LSR $04				; ...what?
+BCS Label01			;
+PHA				;
+LDA $03				;
+STA $05				;
+PLA				;
 
-Label00:		;
-LDA $01		;
-SEC		;
-SBC #$10		;
-STA $01		;
+Label01:			;
+SEC				;
+SBC $05				;
+STA $0301|!addr,y		;
 
-LDA $02		;
-LSR		;
-LDA.l !dss_tile_buffer+!BodyTile	;
-BCS StoreTile	;
-LDA.l !dss_tile_buffer+!HeadTile	;
+Label00:			;
+LDA $01				;
+SEC				;
+SBC #$10			;
+STA $01				;
 
-StoreTile:		;
-STA $0302|!addr,y	;
+LDA $02				;
+LSR				;
+LDA.l !dss_tile_buffer+!BodyTile			;
+BCS StoreTile			;
 
-LDA #$05		;
-ORA $64		;
-STA $0303|!addr,y	;
+LDA.l !dss_tile_buffer+!HeadTile			;
 
-INY #4		;
-DEX		;
-BPL GFXLoop	;
+StoreTile:			;
+STA $0302|!addr,y		;
 
-PLX			;
-LDA #$04		;
-LDY #$02		;
-%FinishOAMWrite()
-RTS			;
+;LDA #$05			;uses hardcoded props. but no more!
+LDA $08
+;ORA $64			;small optimization, don't need to run every time
+STA $0303|!addr,y		;
+
+INY #4				;
+DEX				;
+BPL GFXLoop			;
+
+PLX				;
+LDA #$04			;
+LDY #$02			;
+JSL $01B7B3|!bank		;
+RTS				;

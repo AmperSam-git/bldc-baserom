@@ -45,6 +45,7 @@
 
 
 30 regen_pokey.json
+31 ThrowAwayPokey.json
 
 35 SidewayWoodSpike.json
 
@@ -70,6 +71,7 @@
 53 FireBall.cfg
 54 IceBall.cfg
 55 panser_fire.cfg
+56 Pokey_ThrownSegment.cfg
 
 60 platform_megapack.json
 
