@@ -157,7 +157,7 @@ exgfx_length:
     db $01              ;# 99 - Phanto
     db $04              ;# 9A - Panser
     db $0A              ;# 9B - Para-beetle
-    db $0              ;# 9C - Unused
+    db $0C              ;# 9C - Cloud drop
     db $0              ;# 9D - Unused
     db $0              ;# 9E - Unused
     db $0              ;# 9F - Unused

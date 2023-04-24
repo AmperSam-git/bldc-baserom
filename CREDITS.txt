@@ -125,6 +125,8 @@ Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 
+Cloud Drop - Erik, smkdan - https://smwc.me/s/20047
+
 NOTE: All custom sprites have been modified to work with DSS.
 
 

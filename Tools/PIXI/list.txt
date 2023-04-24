@@ -34,10 +34,13 @@
 
 20 piranha_venus_all.json
 
-21 phanto.json
-22 SMB2Panser.json
-23 panser_fire.json
-24 para_beetle.json
+21 SMB2Panser.json
+22 pipe_panser_dwell.json
+23 pipe_panser_periodic.json
+24 panser_fire.json
+25 para_beetle.json
+26 cloud_drop.json
+27 phanto.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
