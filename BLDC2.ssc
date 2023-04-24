@@ -1268,154 +1268,86 @@ E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the ex
 
 ; Custom Sprites Below
 00 0020 Angry Sun
-00 0022 0,0,870 16,0,871 0,16,880 16,16,881
+00 0022 0,0,0
 00 0030 Happy Moon
-00 0032 16,0,873 0,16,882 16,16,883
-
-01 0020 Customizable Ball n Chain, uses the Extension bytes (RR AA SS MD):\n-- RR = Radius (0-74)\n-- AA = Angle\n-- SS = Speed\n-- M = momentum enabled\n-- D = dynamic
+00 0032 0,0,0
+01 0020 Customizable Ball n Chain, uses the Extension bytes: RR AA SS MD
+-- RR = Radius (0-74)
+-- AA = Angle
+-- SS = Speed
+-- M = momentum enabled
+-- D = dynamic
 See .asm file for more details
-01 0022 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA
+01 0022 0,0,0
 02 0020 A SMW Banzai Bill that faces left.
-02 0022 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF
+02 0022 0,0,0
 02 0030 A SMW Banzai Bill that faces right.
-02 0032 0,0,82C 16,0,82D 32,0,82E 48,0,82F 0,16,83C 16,16,83D 32,16,83E 48,16,83F 0,32,84C 16,32,84D 32,32,84E 48,32,84F 0,48,85C 16,48,85D 32,48,85E 48,48,85F
+02 0032 0,0,0 0,0,10A
 03 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it.
-03 0022 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
+03 0022 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-20,173 16,-4,163
 03 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also.
-03 0032 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
+03 0032 0,0,171 -16,0,170 16,0,172 16,-16,162 0,-16,161 -16,-16,160 -16,-32,150 0,-32,151 16,-32,152 -8,-24,153 16,-8,173 4,0,163
 04 0020 Customizable Boo Ring, clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
-04 0022 -29,75,68F 9,80,68A 45,67,68A 71,38,68D 81,0,68F 70,-37,68A 43,-66,68A 7,-79,68D -30,-72,68F -62,-49,68A -29,0,114
+04 0022 0,0,0
 04 0030 Customizable Boo Ring, counter-clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
-04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
-05 0020 A poison mushroom which hurts the player.
-05 0022 0,0,839
-05 0030 A poison mushroom which kills the player.
-05 0032 0,0,839  0,0,10A
+04 0032 0,0,0 0,0,114
+05 0020 A poison shroom that hurts Mario.
+05 0022 0,0,81E
+05 0030 A poison shroom that kills Mario.
+05 0032 0,0,81E
 06 0020 Boss Bass
-06 0022 0,0,876 16,0,877 0,16,886 16,16,887
+06 0022 0,0,0
 06 0030 Boss Bass, small
-06 0032 0,0,833
+06 0032 0,0,0
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
-07 0022 -8,0,587 8,0,588 4,-16,114
+07 0022 -8,0,E9 8,0,EA 4,-16,114
 08 0020 A disassembly of the scale platform.
-08 0022 -8,0,587 8,0,588
+08 0022 -8,0,E9 8,0,EA
 09 0020 Customizable Moving hole, uses 4 extra bytes: SP TT WD DD:\nSP - Speed\nTT - Turn Time - How many frames before changing direction\nW - Width of hole in tiles (1-6 recommended, doesn't cound the end tiles, 1 is vanilla)\nD - Depth of hole in tiles (1-6 recommended)\nDD - Direction 0=horizontal, 1=vertical
-09 0022 -4,0,549 12,0,54A 28,0,54B
+09 0022 0,0,0
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
-0A 0022 -4,0,896 12,0,897 -4,16,8A6 12,16,8A7 -8,16,820 24,16,821
+0A 0022 0,0,0
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
-0B 0022 0,0,832
+0B 0022 0,0,0
+0C 0020 Goombrat/Goombud
+0C 0022 0,0,0
+0D 0020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\n- Red: Default (High fling speed, both horizontally and vertically)\n- Blue: Weaker fling.\n- Green: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect)\n- Yellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
+0D 0022 0,0,0
+0E 0020 Small snifit
+0E 0022 0,0,0
+0F 0020 Bumpty
+0F 0022 0,0,0
+10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
-; Goombud
-0C 30020 Goombrat/Goombud
-0C 30022 0,0,831
-0C 30122 -12,-8,415 0,0,831 12,-8,414
-0C 30222 -12,-8,415 0,0,831 12,-8,414
-0C 30322 -12,-8,415 0,0,831 12,-8,414
-0C 30422 -12,-8,415 0,0,831 12,-8,414
-0C 30522 -12,-8,415 0,0,831 12,-8,414
-0C 30622 -12,-8,415 0,0,831 12,-8,414
-0C 30722 0,0,83A
-
-; Punchy
-0D 30020 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\nRed: Default (High fling speed, both horizontally and vertically)
-0D 30022 -16,0,840
-0D 30030 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites.\nRed: Default (High fling speed, both horizontally and vertically)
-0D 30032 16,0,850
-0D 30120 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nBlue: Weaker fling.
-0D 30122 -16,0,841
-0D 30130 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nBlue: Weaker fling.
-0D 30132 16,0,851
-0D 30220 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nGreen: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect).
-0D 30222 -16,0,842
-0D 30230 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nGreen: Flings Mario and Sprites towards itself as lower speeds (for a ledge-grabbing effect).
-0D 30232 16,0,852
-0D 30320 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nYellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
-0D 30322 -16,0,843
-0D 30330 Punchy will fling Mario upwards and into the direction he is facing. It will also fling most sprites. \nYellow: Flings Mario and Sprites higher up, but with less horizontal oomph.
-0D 30332 16,0,853
-
-; Snifits
-0E 30020 Red Snifit, falls from ledges
-0E 30022 0,0,8A8
-0E 30320 Fire-spitting red Snifit, falls from ledges
-0E 30322 0,0,8A8 -16,0,822
-0E 30030 Big red Snifit, falls from ledges
-0E 30032 0,-16,8B8 16,-16,8B9 0,0,8C8 16,0,8C9
-0E 30330 Big fire-spitting red Snifit, falls from ledges
-0E 30332 0,-16,8B8 16,-16,8B9 0,0,8C8 16,0,8C9 -16,0,822
-
-0E 30120 Blue Snifit, stays on ledges
-0E 30122 0,0,8AA
-0E 30420 Fire-spitting blue Snifit, stays on ledges
-0E 30422 0,0,8AA -16,0,822
-0E 30130 Big blue Snifit, stays on ledges
-0E 30132 0,-16,8BA 16,-16,8BB 0,0,8CA 16,0,8CB
-0E 30430 Big fire-spitting blue Snifit, stays on ledges
-0E 30432 0,-16,8BA 16,-16,8BB 0,0,8CA 16,0,8CB -16,0,822
-
-0E 30220 Green Snifit, hops in place
-0E 30222 0,0,8AC
-0E 30520 Fire-spitting green Snifit, hops in place
-0E 30522 0,0,8AC -16,0,822
-0E 30230 Big green Snifit, hops in place
-0E 30232 0,-16,8BC 16,-16,8BD 0,0,8CC 16,0,8CD
-0E 30530 Big fire-spitting green Snifit, hops in place
-0E 30532 0,-16,8BC 16,-16,8BD 0,0,8CC 16,0,8CD -16,0,822
-
-10 30020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
-
-10 30020 Muncher bridge
-10 30030 Muncher bridge
-10 30022 -32,1,830 -16,1,830 0,1,830 16,1,830 32,1,830
-10 30122 0,-31,830 0,-15,830 0,1,830 0,17,830 0,33,830
-10 30032 -32,1,830 -16,1,830 0,1,830 16,1,830 32,1,830
-10 30132 0,-31,830 0,-15,830 0,1,830 0,17,830 0,33,830
-
+10 0022 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
+10 0030 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
+10 0032 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
 11 0020 The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.
-11 0022 0,0,834
-12 0020 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0022 0,0,835
-12 0030 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
-12 0032 0,0,835
-
-; Thwomps
-13 30020 A up-facing thwomp
-13 30022 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1
-13 30030 A up-facing mad thwomp
-13 30032 -4,0,8B0 12,0,8B1 -4,16,8C0 12,16,8C1 8,8,894
-13 30120 A down-facing thwomp
-13 30122 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3
-13 30130 A down-facing mad thwomp
-13 30132 -4,0,8B2 12,0,8B3 -4,16,8C2 12,16,8C3 8,8,8A4
-13 30220 A right-facing thwomp
-13 30222 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5
-13 30230 A right-facing madthwomp
-13 30232 -4,0,8B4 12,0,8B5 -4,16,8C4 12,16,8C5 8,8,895
-13 30320 A left-facing thwomp
-13 30322 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7
-13 30330 A left-facing mad thwomp
-13 30332 -4,0,8B6 12,0,8B7 -4,16,8C6 12,16,8C7 8,8,8A5
-
-14 30020 Ceiling Thwimp
-14 30022 0,0,884
+11 0022 0,0,0
+12 0020 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0022 0,0,0
+12 0030 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
+12 0032 0,0,0
+13 0020 A thwomp
+13 0022 0,0,0
+13 0030 A mad thwomp
+13 0032 0,0,0
+14 0020 Ceiling Thwimp
+14 0022 0,0,0
 15 0020 A Blooper from SMB1.
-15 0022 0,-16,890 0,0,8A0
-
+15 0022 0,0,0
 16 0020 Stationary Hammer Bro, doesn't require platform.
-16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
+16 0022 0,0,0
 17 0020 Gray Castle Block, horizontal
-17 0022 0,1,498 16,1,499 0,17,4A8 16,17,4A9 0,9,825
+17 0022 0,0,0
 17 0030 Gray Castle Block, vertical
-17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 8,8,823
+17 0032 0,0,0 0,0,10A
 18 0020 Flying Spiny
-18 0022 0,0,429 12,-8,414
+18 0022 0,0,0
 19 0020 Magikoopa sits in one place repeatedly firing magic.
-19 0022 0,1,454 0,-15,444
-1B 30020 This magikoopa casts magic that teleports player to a different level/entrance.
-1B 30022 0,1,454 0,-15,444
-1B 30030 Same as above but stationary.
-1B 30032 0,1,454 0,-15,444 0,-16,10A
+19 0022 0,0,0
+1B 0020 This magikoopa casts magic that teleports player to a different level/entrance.
+1B 0022 0,0,0
 1C 0020 Firebar Clockwise
 1C 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1C 0030 Firebar Counter
@@ -1424,336 +1356,97 @@ See .asm file for more details
 1D 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1D 0030 Firebar Counter
 1D 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
-
-; Piranha/Venus Plants
-20 30020 A vertical Green Piranha Plant moving up (long range).
-20 30022 8,-16,813 8,-32,817
-20 30030 A vertical Green Piranha Plant moving up (long range).
-20 30032 8,-16,803 8,-32,817
-20 30120 A vertical Green Piranha Plant moving down (long range).
-20 30122 8,16,803 8,32,807
-20 30130 A vertical Green Piranha Plant moving down (long range).
-20 30132 8,16,813 8,32,807
-20 30220 A horizontal Green Piranha Plant moving left (long range).
-20 30222 -16,8,806 -32,8,808
-20 30230 A horizontal Green Piranha Plant moving left (long range).
-20 30232 -16,8,806 -32,8,808
-20 30320 A horizontal Green Piranha Plant moving right (long range).
-20 30322 16,8,805 32,8,818
-20 30330 A horizontal Green Piranha Plant moving right (long range).
-20 30332 16,8,805 32,8,818
-20 30420 A vertical Green Piranha Plant moving up (short range).
-20 30422 8,-8,814 8,-24,817
-20 30430 A vertical Green Piranha Plant moving up (short range).
-20 30432 8,-8,814 8,-24,817
-20 30520 A vertical Green Piranha Plant moving down (short range).
-20 30522 8,8,804 8,24,807
-20 30530 A vertical Green Piranha Plant moving down (short range).
-20 30532 8,8,804 8,24,807
-20 30620 A horizontal Green Piranha Plant moving left (short range).
-20 30622 -8,8,816 -24,8,808
-20 30630 A horizontal Green Piranha Plant moving left (short range).
-20 30632 -8,8,816 -24,8,808
-20 30720 A horizontal Green Piranha Plant moving right (short range).
-20 30722 8,8,815 24,8,818
-20 30730 A horizontal Green Piranha Plant moving right (short range).
-20 30732 8,8,815 24,8,818
-20 30820 A vertical Red Piranha Plant moving up (long range).
-20 30822 8,-16,81A 8,-32,817
-20 30830 A vertical Red Piranha Plant moving up (long range).
-20 30832 8,-16,81A 8,-32,817
-20 30920 A vertical Red Piranha Plant moving down (long range).
-20 30922 8,16,80A 8,32,807
-20 30930 A vertical Red Piranha Plant moving down (long range).
-20 30932 8,16,80A 8,32,807
-20 30A20 A horizontal Red Piranha Plant moving left (long range).
-20 30A22 -16,8,80D -32,8,808
-20 30A30 A horizontal Red Piranha Plant moving left (long range).
-20 30A32 -16,8,80D -32,8,808
-20 30B20 A horizontal Red Piranha Plant moving right (long range).
-20 30B22 16,8,80C 32,8,818
-20 30B30 A horizontal Red Piranha Plant moving right (long range).
-20 30B32 16,8,80C 32,8,818
-20 30C20 A vertical Red Piranha Plant moving up (short range).
-20 30C22 8,-8,81B 8,-24,817
-20 30C30 A vertical Red Piranha Plant moving up (short range).
-20 30C32 8,-8,80B 8,-24,817
-20 30D20 A vertical Red Piranha Plant moving down (short range).
-20 30D22 8,8,80B 8,24,807
-20 30D30 A vertical Red Piranha Plant moving down (short range).
-20 30D32 8,8,81B 8,24,807
-20 30E20 A horizontal Red Piranha Plant moving left (short range).
-20 30E22 -8,8,81D -24,8,808
-20 30E30 A horizontal Red Piranha Plant moving left (short range).
-20 30E32 -8,8,81D -24,8,808
-20 30F20 A horizontal Red Piranha Plant moving right (short range).
-20 30F22 8,8,81C 24,8,818
-20 30F30 A horizontal Red Piranha Plant moving right (short range).
-20 30F32 8,8,81C 24,8,818
-20 31020 A vertical Green Venus Plant moving up (long range, 1 fireball)
-20 31022 8,-16,813 8,-32,809 1,-22,820
-20 31030 A vertical Green Venus Plant moving up (long range, 1 fireball)
-20 31032 8,-16,803 8,-32,809 1,-22,820
-20 31120 A vertical Green Venus Plant moving down (long range, 1 fireball)
-20 31122 8,16,803 8,32,809 1,42,820
-20 31130 A vertical Green Venus Plant moving down (long range, 1 fireball)
-20 31132 8,16,813 8,32,809 1,42,820
-20 31220 A horizontal Green Venus Plant moving left (long range, 1 fireball)
-20 31222 -16,8,806 -32,8,809 -39,18,820
-20 31230 A horizontal Green Venus Plant moving left (long range, 1 fireball)
-20 31232 -16,8,806 -32,8,809 -39,18,820
-20 31320 A horizontal Green Venus Plant moving right (long range, 1 fireball)
-20 31322 16,8,805 32,8,819 39,18,821
-20 31330 A horizontal Green Venus Plant moving right (long range, 1 fireball)
-20 31332 16,8,805 32,8,819 39,18,821
-20 31420 A vertical Green Venus Plant moving up (short range, 1 fireball)
-20 31422 8,-8,814 8,-24,809 1,-14,820
-20 31430 A vertical Green Venus Plant moving up (short range, 1 fireball)
-20 31432 8,-8,814 8,-24,809 1,-14,820
-20 31520 A vertical Green Venus Plant moving down (short range, 1 fireball)
-20 31522 8,8,804 8,24,809 1,34,820
-20 31530 A vertical Green Venus Plant moving down (short range, 1 fireball)
-20 31532 8,8,804 8,24,809 1,34,820
-20 31620 A horizontal Green Venus Plant moving left (short range, 1 fireball)
-20 31622 -8,8,816 -24,8,809 -31,18,820
-20 31630 A horizontal Green Venus Plant moving left (short range, 1 fireball)
-20 31632 -8,8,816 -24,8,809 -31,18,820
-20 31720 A horizontal Green Venus Plant moving right (short range, 1 fireball)
-20 31722 8,8,815 24,8,819 31,18,821
-20 31730 A horizontal Green Venus Plant moving right (short range, 1 fireball)
-20 31732 8,8,815 24,8,819 31,18,821
-20 31820 A vertical Red Venus Plant moving up (long range, 1 fireball)
-20 31822 8,-16,81A 8,-32,809 1,-22,820
-20 31830 A vertical Red Venus Plant moving up (long range, 1 fireball)
-20 31832 8,-16,81A 8,-32,809 1,-22,820
-20 31920 A vertical Red Venus Plant moving down (long range, 1 fireball)
-20 31922 8,16,80A 8,32,809 1,42,820
-20 31930 A vertical Red Venus Plant moving down (long range, 1 fireball)
-20 31932 8,16,80A 8,32,809 1,42,820
-20 31A20 A horizontal Red Venus Plant moving left (long range, 1 fireball)
-20 31A22 -16,8,80D -32,8,809 -39,18,820
-20 31A30 A horizontal Red Venus Plant moving left (long range, 1 fireball)
-20 31A32 -16,8,80D -32,8,809 -39,18,820
-20 31B20 A horizontal Red Venus Plant moving right (long range, 1 fireball)
-20 31B22 16,8,80C 32,8,819 39,18,821
-20 31B30 A horizontal Red Venus Plant moving right (long range, 1 fireball)
-20 31B32 16,8,80C 32,8,819 39,18,821
-20 31C20 A vertical Red Venus Plant moving up (short range, 1 fireball)
-20 31C22 8,-8,81B 8,-24,809 1,-14,820
-20 31C30 A vertical Red Venus Plant moving up (short range, 1 fireball)
-20 31C32 8,-8,81B 8,-24,809 1,-14,820
-20 31D20 A vertical Red Venus Plant moving down (short range, 1 fireball)
-20 31D22 8,8,80B 8,24,809 1,34,820
-20 31D30 A vertical Red Venus Plant moving down (short range, 1 fireball)
-20 31D32 8,8,80B 8,24,809 1,34,820
-20 31E20 A horizontal Red Venus Plant moving left (short range, 1 fireball)
-20 31E22 -8,8,81D -24,8,809 -31,18,820
-20 31E30 A horizontal Red Venus Plant moving left (short range, 1 fireball)
-20 31E32 -8,8,81D -24,8,809 -31,18,820
-20 31F20 A horizontal Red Venus Plant moving right (short range, 1 fireball)
-20 31F22 8,8,81C 24,8,819 31,18,821
-20 31F30 A horizontal Red Venus Plant moving right (short range, 1 fireball)
-20 31F32 8,8,81C 24,8,819 31,18,821
-20 33020 A vertical Green Venus Plant moving up (long range, 2 fireballs)
-20 33022 8,-16,813 8,-32,809 1,-22,820 -5,-16,820
-20 33030 A vertical Green Venus Plant moving up (long range, 2 fireballs)
-20 33032 8,-16,803 8,-32,809 1,-22,820 -5,-16,820
-20 33120 A vertical Green Venus Plant moving down (long range, 2 fireballs)
-20 33122 8,16,803 8,32,809 1,42,820 -5,48,820
-20 33130 A vertical Green Venus Plant moving down (long range, 2 fireballs)
-20 33132 8,16,813 8,32,809 1,42,820 -5,48,820
-20 33220 A horizontal Green Venus Plant moving left (long range, 2 fireballs)
-20 33222 -16,8,806 -32,8,809 -39,18,820 -45,24,820
-20 33230 A horizontal Green Venus Plant moving left (long range, 2 fireballs)
-20 33232 -16,8,806 -32,8,809 -39,18,820 -45,24,820
-20 33320 A horizontal Green Venus Plant moving right (long range, 2 fireballs)
-20 33322 16,8,805 32,8,819 39,18,821 45,24,821
-20 33330 A horizontal Green Venus Plant moving right (long range, 2 fireballs)
-20 33332 16,8,805 32,8,819 39,18,821 45,24,821
-20 33420 A vertical Green Venus Plant moving up (short range, 2 fireballs)
-20 33422 8,-8,814 8,-24,809 1,-14,820 -5,-8,820
-20 33430 A vertical Green Venus Plant moving up (short range, 2 fireballs)
-20 33432 8,-8,814 8,-24,809 1,-14,820 -5,-8,820
-20 33520 A vertical Green Venus Plant moving down (short range, 2 fireballs)
-20 33522 8,8,804 8,24,809 1,34,820 -5,40,820
-20 33530 A vertical Green Venus Plant moving down (short range, 2 fireballs)
-20 33532 8,8,804 8,24,809 1,34,820 -5,40,820
-20 33620 A horizontal Green Venus Plant moving left (short range, 2 fireballs)
-20 33622 -8,8,816 -24,8,809 -31,18,820 -37,24,820
-20 33630 A horizontal Green Venus Plant moving left (short range, 2 fireballs)
-20 33632 -8,8,816 -24,8,809 -31,18,820 -37,24,820
-20 33720 A horizontal Green Venus Plant moving right (short range, 2 fireballs)
-20 33722 8,8,815 24,8,819 31,18,821 37,24,821
-20 33730 A horizontal Green Venus Plant moving right (short range, 2 fireballs)
-20 33732 8,8,815 24,8,819 31,18,821 37,24,821
-20 33820 A vertical Red Venus Plant moving up (long range, 2 fireballs)
-20 33822 8,-16,81A 8,-32,809 1,-22,820 -5,-16,820
-20 33830 A vertical Red Venus Plant moving up (long range, 2 fireballs)
-20 33832 8,-16,81A 8,-32,809 1,-22,820 -5,-16,820
-20 33920 A vertical Red Venus Plant moving down (long range, 2 fireballs)
-20 33922 8,16,80A 8,32,809 1,42,820 -5,48,820
-20 33930 A vertical Red Venus Plant moving down (long range, 2 fireballs)
-20 33932 8,16,80A 8,32,809 1,42,820 -5,48,820
-20 33A20 A horizontal Red Venus Plant moving left (long range, 2 fireballs)
-20 33A22 -16,8,80D -32,8,809 -39,18,820 -45,24,820
-20 33A30 A horizontal Red Venus Plant moving left (long range, 2 fireballs)
-20 33A32 -16,8,80D -32,8,809 -39,18,820 -45,24,820
-20 33B20 A horizontal Red Venus Plant moving right (long range, 2 fireballs)
-20 33B22 16,8,80C 32,8,819 39,18,821 45,24,821
-20 33B30 A horizontal Red Venus Plant moving right (long range, 2 fireballs)
-20 33B32 16,8,80C 32,8,819 39,18,821 45,24,821
-20 33C20 A vertical Red Venus Plant moving up (short range, 2 fireballs)
-20 33C22 8,-8,81B 8,-24,809 1,-14,820 -5,-8,820
-20 33C30 A vertical Red Venus Plant moving up (short range, 2 fireballs)
-20 33C32 8,-8,81B 8,-24,809 1,-14,820 -5,-8,820
-20 33D20 A vertical Red Venus Plant moving down (short range, 2 fireballs)
-20 33D22 8,8,80B 8,24,809 1,34,820 -5,40,820
-20 33D30 A vertical Red Venus Plant moving down (short range, 2 fireballs)
-20 33D32 8,8,80B 8,24,809 1,34,820 -5,40,820
-20 33E20 A horizontal Red Venus Plant moving left (short range, 2 fireballs)
-20 33E22 -8,8,81D -24,8,809 -31,18,820 -37,24,820
-20 33E30 A horizontal Red Venus Plant moving left (short range, 2 fireballs)
-20 33E32 -8,8,81D -24,8,809 -31,18,820 -37,24,820
-20 33F20 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
-20 33F22 8,8,81C 24,8,819 31,18,821 37,24,821
-20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
-20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
-
-; Hammer Bros
-40 30020 Hammer Bro
-40 30022 0,-16,8D5 0,0,8E5 8,-16,5BB
-40 30030 Hammer Bro, small jump only
-40 30032 0,-16,8D5 0,0,8E5 8,-16,5BB 0,-16,10A
-40 30B20 Hammer Bro (Continuous)
-40 30B22 0,-16,8D5 0,0,8E5 8,-16,5BB
-40 30B30 Hammer Bro, small jump only (Continuous)
-40 30B32 0,-16,8D5 0,0,8E5 8,-16,5BB 0,-16,10A
-
-41 30420 Bomb Bro
-41 30422 0,-16,8D2 0,0,8E2 8,-16,427
-41 30430 Bomb Bro, small jump only
-41 30432 0,-16,8D2 0,0,8E2 8,-16,427 0,-16,10A
-
-42 30120 Boomerang Bro
-42 30122 0,-16,8D3 0,0,8E3 8,-16,838
-42 30130 Boomerang Bro, small jump only
-42 30132 0,-16,8D3 0,0,8E3 8,-16,838 0,-16,10A
-
-43 30620 Bullet Bro
-43 30622 0,-16,8D1 0,0,8E1 8,-16,41E
-43 30630 Bullet Bro, small jump only
-43 30632 0,-16,8D1 0,0,8E1 8,-16,41E 0,-16,10A
-
-44 30A20 Elec Bro
-44 30A22 0,-16,8D2 0,0,8E2 8,-16,837
-44 30A30 Elec Bro, small jump only
-44 30A32 0,-16,8D2 0,0,8E2 8,-16,837 0,-16,10A
-
-45 30220 Fire Bro
-45 30222 0,-16,8D4 0,0,8E4 8,-16,4AE
-45 30230 Fire Bro, small jump only
-45 30232 0,-16,8D4 0,0,8E4 8,-16,4AE 0,-16,10A
-
-46 30720 Flame Bro
-46 30722 0,-16,8D4 0,0,8E4 8,-16,688
-46 30730 Flame Bro, small jump only
-46 30732 0,-16,8D4 0,0,8E4 8,-16,688 0,-16,10A
-46 30820 Flame Bro (Short Interval)
-46 30822 0,-16,8D4 0,0,8E4 8,-16,688
-46 30830 Flame Bro, small jump only (Short Interval)
-46 30832 0,-16,8D4 0,0,8E4 8,-16,688 0,-16,10A
-
-47 30920 Ball Bro
-47 30922 0,-16,8D0 0,0,8E0 8,-16,6AE
-47 30930 Ball Bro, small jump only
-47 30932 0,-16,8D0 0,0,8E0 8,-16,6AE 0,-16,10A
-
-48 30320 Ice Bro
-48 30322 0,-16,8D6 0,0,8E6 8,-16,836
-48 30330 Ice Bro, small jump only
-48 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
-
-49 30320 Mix Bro
-49 30322 0,-16,8D6 0,0,8E6 8,-16,836
-49 30330 Mix Bro, small jump only
-49 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
-
-4A 30520 Shell Bro
-4A 30522 0,-16,8D3 0,0,8E3 8,-16,440
-4A 30530 Shell Bro, small jump only
-4A 30532 0,-16,8D3 0,0,8E3 8,-16,440 0,-16,10A
-
-4B 30C20 Sledge Bro
-4B 30C22 0,-16,8DC 0,0,8EC 16,-16,8DD 16,0,8ED 16,-16,5BB
-4B 30C30 Sledge Bro, small jump only
-4B 30C32 0,-16,8DC 0,0,8EC 16,-16,8DD 16,0,8ED 16,-16,5BB 0,-16,10A
-4B 30D20 Sledge Bro (Continuous)
-4B 30D22 0,-16,8DC 0,0,8EC 16,-16,8DD 16,0,8ED 16,-16,5BB
-4B 30D30 Sledge Bro, small jump only (Continuous)
-4B 30D32 0,-16,8DC 0,0,8EC 16,-16,8DD 16,0,8ED 16,-16,5BB 0,-16,10A
-
-4C 30E20 Curve Bro
-4C 30E22 0,-16,8DA 0,0,8EA 16,-16,8DB 16,0,8EB 16,-16,838
-4C 30E30 Curve Bro, small jump only
-4C 30E32 0,-16,8DA 0,0,8EA 16,-16,8DB 16,0,8EB 16,-16,838 0,-16,10A
-
-4D 30F20 Braze Bro
-4D 30F22 0,-16,8D8 0,0,8E8 16,-16,8D9 16,0,8E9 16,-16,4AE
-4D 30F30 Braze Bro, small jump only
-4D 30F32 0,-16,8D8 0,0,8E8 16,-16,8D9 16,0,8E9 16,-16,4AE 0,-16,10A
-
-4E 31020 Frost Bro
-4E 31022 0,-16,8DE 0,0,8EE 16,-16,8DF 16,0,8EF 16,-16,836
-4E 31030 Frost Bro, small jump only
-4E 31032 0,-16,8DE 0,0,8EE 16,-16,8DF 16,0,8EF 16,-16,836 0,-16,10A
-
-;Platform Megapack, extension values:
-60 30020 Boost platform
-60 30022 0,1,584 16,1,586
-60 30120 Boost platform, infinite
-60 30122 0,1,584 16,1,586 0,-8,10A
-60 30220 Grey falling platform, 2-tiles, falling down
-60 30222 0,1,574 16,1,576 0,16,824
-60 30320 Grey falling platform, 4-tiles, falling down
-60 30322 0,1,574 16,1,575 32,1,575 48,1,576 0,16,824
-60 30420 Grey falling platform, 2-tiles, falling up
-60 30422 0,1,574 16,1,576 0,-16,823
-60 30520 Grey falling platform, 4-tiles, falling up
-60 30522 0,1,574 16,1,575 32,1,575 48,1,576 0,-16,823
-60 30620 Grey falling platform, 2-tiles, falling right
-60 30622 0,1,574 16,1,576 32,0,826
-60 30720 Grey falling platform, 4-tiles, falling right
-60 30722 0,1,574 16,1,575 32,1,575 48,1,576 64,0,826
-60 30820 Grey falling platform, 2-tiles, falling left
-60 30822 0,1,574 16,1,576 -16,0,825
-60 30920 Grey falling platform, 4-tiles, falling left
-60 30922 0,1,574 16,1,575 32,1,575 48,1,576 -16,0,825
-60 30A20 Grey left-drifting platform, 3-tiles, falling down
-60 30A22 0,1,574 16,1,575 32,1,576 16,-16,827
-60 30B20 Grey right-drifting platform, 3-tiles, falling down
-60 30B22 0,1,574 16,1,575 32,1,576 16,-16,828
-60 30C20 Vertical Wrapping Platform, 2-tiles, going down
-60 30C22 0,1,584 16,1,586 0,16,824 0,-8,824
-60 30D20 Vertical Wrapping Platform, 4-tiles, going down
-60 30D22 0,1,584 16,1,585 32,1,585 48,1,586 0,16,824 0,-8,824
-60 30E20 Vertical Wrapping Platform, 2-tiles, going up
-60 30E22 0,1,584 16,1,586 0,8,823 0,-16,823
-60 30F20 Vertical Wrapping Platform, 4-tiles, going up
-60 30F22 0,1,584 16,1,585 32,1,585 48,1,586 0,8,823 0,-16,823
-
+1E 0020 Ptooie from SMB3
+1E 0022 0,0,0
+1F 0020 This is the Nipper from SMB3
+1F 0022 0,0,0
+20 0020 All pirahna plants and venus variations. Red plants ignore Mario's proximity.
+20 0022 0,0,0
+21 0020 A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).
+21 0022 0,0,0
+21 0030 A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).
+21 0032 0,0,1
+22 0020 A Panser which periodically comes out of a pipe.
+22 0022 0,0,0
+23 0020 A Panser which periodically comes out of a pipe.
+23 0022 0,0,0
+24 0020 Parabeetle
+24 0022 0,0,0
+25 0020 Undefined Sprite
+25 0022 0,0,0
+26 0020 The sprite will only hurt Mario when he's carrying a key.
+26 0022 0,0,0
+27 0020 Undefined Sprite
+27 0022 0,0,0
+28 0020 Undefined Sprite
+28 0022 0,0,0
+2C 0020 Green Spike, does nothing special.
+2C 0022 0,0,0
+2D 0020 Red Spike, stays on ledges.
+2D 0022 0,0,0
+2E 0020 Blue Spike, walks fast will stay on ledges.
+2E 0022 0,0,0
+2F 0020 Yellow Spike, turns to face Mario will jump over sprites
+2F 0022 0,0,0
+30 0020 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+30 0022 0,0,C7 0,16,D7 0,32,D7 0,48,D7 0,64,D7 0,64,27
+30 0030 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+30 0032 0,16,C7 0,32,D7 0,48,D7 0,64,D7 0,64,27
+31 0020 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+31 0022 0,0,C7 0,16,D7 0,32,D7 0,48,D7 0,64,D7 -24,48,D7 16,0,10A
+31 0030 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+31 0032 0,16,C7 0,32,D7 0,48,D7 0,64,D7 16,16,10A -24,48,D7
+32 0020 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+32 0022 0,0,C7 0,16,D7 0,32,D7 0,48,D7 0,64,D7
+32 0030 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+32 0032 0,16,C7 0,32,D7 0,48,D7 0,64,D7
+35 0020 Undefined Sprite
+35 0022 0,0,0
+40 0020 Hammer Bro
+40 0022 -5,-14,829 0,0,82A -2,1,82B 4,-20,1DB 5,-6,82C
+41 0030 Bomb Bro
+41 0032 -5,-14,844 0,0,845 -2,1,846 0,-20,3F 5,-6,847
+42 0030 Boomerang Bro
+42 0032 -5,-14,849 0,0,84A -2,1,84B 4,-17,84D 5,-6,84C
+43 0020 Bullet Bro
+43 0022 -5,-14,854 0,0,855 -2,1,856 0,-20,25 5,-6,857
+44 0020 Elec Bro
+44 0022 -5,-14,859 0,0,85A -2,1,85B 5,-6,85C
+45 0030 Fire Bro
+45 0032 -5,-14,860 0,0,861 -2,1,862 5,-6,863
+46 0020 Flame Bro
+46 0022 5,-3,868 0,0,866 0,1,867 -5,-14,865
+47 0030 Ball Bro
+47 0032 -5,-14,8F0 0,0,8F1 -2,1,8F2 0,-20,8F4 5,-6,8F3
+48 0030 Fire Bro
+48 0032 -5,-14,8F5 0,0,8F6 -2,1,8F7 5,-6,8F8
+49 0020 Mix Bro
+49 0022 -5,-14,8FA 0,0,8FB -2,1,8FC 5,-6,8FD 6,-17,10A
+4A 0030 Shell Bro
+4A 0032 -5,-14,8FF 0,0,900 -2,1,901 0,-20,30 5,-6,902
+4B 0020 Sledge Bro
+4B 0022 -6,-16,917 2,-16,918 -6,0,919 2,0,91A 10,-22,91C 9,-8,91B
+4C 0020 Curve Bro
+4C 0022 -6,-16,91D 2,-16,91E -6,0,91F 10,-19,922 2,0,920 9,-8,921
+4D 0020 braze Bro
+4D 0022 -6,-16,923 2,-16,924 -6,0,925 2,0,926 9,-8,927
+4E 0020 Frost Bro
+4E 0022 -6,-16,929 2,-16,92A -6,0,92B 2,0,92C 9,-8,92D
+60 0020 Platform Megapack
+60 0022 0,0,0
 80 0020 Creating Block Snake
-80 0022 0,0,40A
+80 0022 0,0,B8
 80 0030 Eating Block Snake
-80 0032 0,0,40A 0,0,10A
+80 0032 0,0,B8 0,0,10A
 81 0020 Continuously spawns Snakes
-81 0022 0,0,40A 0,0,114
+81 0022 0,0,B8 0,0,114
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
-81 0032 0,0,40A 0,0,114
+81 0032 0,0,B8 0,0,114
 A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
 A1 0022 0,0,0
 A2 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
 A2 0022 0,0,0
-A3 0020 Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\nSS = Sprite number\nXX = X offset for position sprite ($80-$FF = negative offset)\nYY = Y offset for position sprite ($80-$FF = negative offset)\nCC = Custom settings. Format: epP-SSSS\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\n   (0 acts as 1 because state 0 doesn't make sense here).\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\n   State 9 is carryable, useful for sprites like shells or throwblocks.\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\n - p: to be used with platforms: if set (i.e. add 40 to the number)\n   Mario will move with the platform instead of sliding on it.\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\n - P: second platform option, which does the same thing as the p option\n   but it's recommended for sprites that use custom solid sprite code\n   (for example, MarioFanGamer's Numbered Platform sprite).\n   Note: this option doesn't work for sprites that naturally move horizontally.\n   Also, this option is overriden by the p option: don't use them together.\nSP = speed multiplier (+1)\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\n - FF (or any negative value) = stationary (the sprite won't move at all)\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
+A3 0020 Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\nSS = Sprite number\nXX = X offset for position sprite ($80-$FF = negative offset)\nYY = Y offset for position sprite ($80-$FF = negative offset)\nCC = Custom settings. Format: epP-SSSS\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\n   (0 acts as 1 because state 0 doesn't make sense here).\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\n   State 9 is carryable, useful for sprites like shells or throwblocks.\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\n - p: to be used with platforms: if set (i.e. add 40 to the number)\n   Mario will move with the platform instead of sliding on it.\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\n - P: second platform option, which does the same thing as the p option\n   but it's recommended for sprites that use custom solid sprite code\n   (for example, MarioFanGamer's Numbered Platform sprite).\n   Note: this option doesn't work for sprites that naturally move horizontally.\n   Also, this option is overriden by the p option: don't use them together.\nSP = speed multiplier (+1)\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\n - FF (or any negative value) = stationary (the sprite won't move at all)\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).\n
 A3 0022 0,0,0
 A4 0020 A sprite which spawns another sprite and makes it stay on the same X or Y position as Mario.
 A4 0022 0,0,0
@@ -1761,3 +1454,5 @@ A5 0020 A sprite that spawns another sprite in an offset position. For regular s
 A5 0022 0,0,0
 A6 0020 Pipe Spawner Uses 10 Extra Bytes\n- Extra Byte 1 - Direction - 0 - down, 1 - left, 2 - up, 3 - right\n- Extra Byte 2 - Delay - How many frames between spawns\n- Extra Byte 3 - Spawn Mode - 0 = Spawn sprite specified in extra bytes, 1 = Spawn sprites using list below\n- Extra Byte 4 - Sprite # - Sprite to spawn if using mode 0\n- Extra Byte 5 - Sprite Extra Bits - Extra bits for spawned sprite if using mode 0, same as in LM 2 = custom, 3 = custom with extra bit, 0 = normal\n- Extra Byte 6 - Max on screen - How many sprites can exist from the sprite at once, max of 0 = no limit, must be 0-8\n- Extra Byte 7 - Total Spawn - How many sprites can come out of the pipe total, Total of 0 = no limit \n- Extra Byte 8 - Fire Mode - If 0 the sprite will just slowly push out of the pipe, otherwise it will fire out of the pipe like a cannon\n- Extra Byte 9  - X Speed - Horizontal fire speed if using cannon mode\n- Extra Byte 10 - Y Speed - Vertical fire speed if using cannon mode
 A6 0022 0,0,0
+C0 0020 Undefined Sprite
+C0 0022 0,0,0

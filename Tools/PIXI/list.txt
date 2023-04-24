@@ -74,36 +74,36 @@
 4E C_Frost_Bro.json
 
 
-51 Ball.cfg
-52 Boomerang.cfg
-53 FireBall.cfg
-54 IceBall.cfg
-55 panser_fire.cfg
-56 Pokey_ThrownSegment.cfg
-57 RealHomingBill.cfg
-58 spikes_ball.cfg
+51 projectiles/Ball.cfg
+52 projectiles/Boomerang.cfg
+53 projectiles/FireBall.cfg
+54 projectiles/IceBall.cfg
+55 projectiles/panser_fire.cfg
+56 projectiles/Pokey_ThrownSegment.cfg
+57 projectiles/RealHomingBill.cfg
+58 projectiles/spikes_ball.cfg
 
 60 platform_megapack.json
 
 80 bettersnake.json
 81 snakespawner.json
 
-82 StackingBlock_Down.cfg
-83 StackingBlock_Up.cfg
-84 StackingBlock_Left.cfg
-85 StackingBlock_Right.cfg
+82 block_sprites/StackingBlock_Down.cfg
+83 block_sprites/StackingBlock_Up.cfg
+84 block_sprites/StackingBlock_Left.cfg
+85 block_sprites/StackingBlock_Right.cfg
 
-87 better_donut_left.cfg
-88 better_donut_right.cfg
-89 better_donut_up.cfg
-8A better_donut_down.cfg
+87 block_sprites/better_donut_left.cfg
+88 block_sprites/better_donut_right.cfg
+89 block_sprites/better_donut_up.cfg
+8A block_sprites/better_donut_down.cfg
 
-A1 EnemyStackV2.json
-A2 EnemyStackV2_reverse.json
-A3 Lineguided_AnySprite.json
-A4 XYFollowSprite.json
-A5 spriteoffsetter.json
-A6 PipeSpawner.json
+A1 utility/EnemyStackV2.json
+A2 utility/EnemyStackV2_reverse.json
+A3 utility/Lineguided_AnySprite.json
+A4 utility/XYFollowSprite.json
+A5 utility/spriteoffsetter.json
+A6 utility/PipeSpawner.json
 
 # SHOOTER:
 C0 RealHomingShooter.json
