@@ -13,14 +13,14 @@
   },
   "$166E": {
     "Use second graphics page": true,
-    "Palette": 2,
-    "Disable fireball killing": true,
+    "Palette": 5,
+    "Disable fireball killing": false,
     "Disable cape killing": false,
     "Disable water splash": false,
-    "Don't interact with Layer 2": false
+    "Don't interact with Layer 2": true
   },
   "$167A": {
-    "Don't disable cliping when starkilled": true,
+    "Don't disable cliping when starkilled": false,
     "Invincible to star/cape/fire/bounce blk.": false,
     "Process when off screen": false,
     "Don't change into shell when stunned": false,
@@ -30,11 +30,11 @@
     "Don't use default interaction with Mario": false
   },
   "$1686": {
-    "Inedible": true,
+    "Inedible": false,
     "Stay in Yoshi's mouth": false,
     "Weird ground behaviour": false,
-    "Don't interact with other sprites": true,
-    "Don't change direction if touched": true,
+    "Don't interact with other sprites": false,
+    "Don't change direction if touched": false,
     "Don't turn into coin when goal passed": false,
     "Spawn a new sprite": false,
     "Don't interact with objects": true
@@ -49,28 +49,25 @@
     "Don't turn into a coin with silver POW": false,
     "Don't get stuck in walls (carryable sprites)": false
   },
-  "AsmFile": "panser_fire.asm",
+  "AsmFile": "pipe_panser.asm",
   "ActLike": 54,
   "Type": 1,
-  "Extra Property Byte 1": 0,
+  "Extra Property Byte 1": 1,
   "Extra Property Byte 2": 0,
-  "Additional Byte Count (extra bit clear)": 0,
-  "Additional Byte Count (extra bit set)": 0,
-  "Map16": "oAmwCaEJsQk=",
+  "Additional Byte Count (extra bit clear)": 2,
+  "Additional Byte Count (extra bit set)": 2,
+  "Map16": "",
   "Displays": [
     {
-      "Description": "Panser's Fireball. If inserted directly, it will simply fall down.",
+      "Description": "A Panser which periodically comes out of a pipe.",
       "ExtraBit": false,
-      "Tiles": [],
-      "X": 0,
-      "Y": 0,
-      "DisplayText": "",
-      "UseText": false
-    },
-    {
-      "Description": "Panser's Fireball. If inserted directly, it will simply fall down.",
-      "ExtraBit": true,
-      "Tiles": [],
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 0
+        }
+      ],
       "X": 0,
       "Y": 0,
       "DisplayText": "",
@@ -79,12 +76,20 @@
   ],
   "Collection": [
     {
-      "Name": "Panser's Fireball.",
+      "Name": "Pipe Panser (Dwelling)",
       "ExtraBit": false,
-      "Extra Property Byte 1": 0,
-      "Extra Property Byte 2": 0,
+      "Extra Property Byte 1": 20,
+      "Extra Property Byte 2": 96,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
     }
   ]
 }

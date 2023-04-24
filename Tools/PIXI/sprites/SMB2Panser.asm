@@ -31,7 +31,7 @@
 Tilemap:
 db $00,$01		; normal frame 1, normal frame 2/fireball-spitting frame
 
-!Fireball = $23		; set this to the sprite number of the fireball
+!Fireball = $55		; set this to the sprite number of the fireball
 
 !InitialWaitTime = $60	; the time the sprite should wait before spitting the first fireball
 !FireballYSpeed = $B8	; set this to the initial Y speed the fireball should have

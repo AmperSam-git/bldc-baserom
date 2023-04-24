@@ -93,6 +93,7 @@ Blooper - Romi - https://smwc.me/s/23857
 Boo Ring - Akaginite - https://smwc.me/s/13807
 Bumpty - Romi - https://smwc.me/s/27639
 Ceiling Thwimp - Mandew - https://smwc.me/s/20777
+Cloud Drop - Erik, smkdan - https://smwc.me/s/20047
 Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
 Customizable Firebar - Isikoro - https://smwc.me/s/24411
@@ -106,6 +107,7 @@ Muncher Bridge - Abdu - https://smwc.me/s/28620
 Panser - imamelia - https://smwc.me/s/17030
 Para-beetle - MarkAlarm, Romi, imamelia - https://smwc.me/s/27631
 Phanto - yoshicookiezeus - https://smwc.me/s/3738
+Pipe Panser - MarioFanGamer - https://smwc.me/s/31352
 Pipe Spawner - dtothefourth - https://www.patreon.com/posts/pipe-spawner-48840077
 Piranha Plants and Venus Fire Traps v1.1 - imamelia - https://smwc.me/s/24223
 Platform Megapack v1.0 - Mandew - https://smwc.me/s/16281
@@ -125,10 +127,7 @@ Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 
-Cloud Drop - Erik, smkdan - https://smwc.me/s/20047
-
-NOTE: All custom sprites have been modified to work with DSS.
-
+~~ NOTE: All custom sprites have been modified to work with DSS.
 
 -- Graphics --
 Super Mario All-Stars themed resources - Amomario123w, AmperSam, Batata Douce, Black Sabbath, cheeyev, DragonFire6780, MarioFanGamer, Dan, Green Jerry, Hinalyte, imamelia, Merio, Natsuz2, pieguy1372, RaindropDry, Skewer, Sonikku, Telinc1, Tornado, yno14jax
