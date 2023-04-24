@@ -2,3 +2,4 @@
 - fix ptooie spike ball in dss
 - parabeetle json
 - update the external Graphics will all the new sprite additions
+- fix regen pokey dead frame
