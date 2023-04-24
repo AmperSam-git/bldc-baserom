@@ -1414,6 +1414,12 @@ See .asm file for more details
 36 0022 0,0,0
 37 0020 A Mega Mole with wings. Emulates the red flying parakoopas.
 37 0022 0,0,0
+38 0020 Undefined Sprite
+38 0022 0,0,0
+39 0020 Undefined Sprite
+39 0022 0,0,0
+3A 0020 Undefined Sprite
+3A 0022 0,0,0
 40 0020 Hammer Bro
 40 0022 -5,-14,82A 0,0,82B -2,1,82C 4,-20,1DB 5,-6,82D
 41 0030 Bomb Bro

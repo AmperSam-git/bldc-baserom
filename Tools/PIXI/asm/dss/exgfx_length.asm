@@ -163,7 +163,7 @@ exgfx_length:
     db $08              ;# 9F - Homing bullet
     db $07              ;# A0 - YI Spike
     db $01              ;# A1 - Bumper
-    db $0              ;# A2 - Unused
+    db $05              ;# A2 - SMB3 Directional Platform
     db $0              ;# A3 - Unused
     db $0              ;# A4 - Unused
     db $0              ;# A5 - Unused

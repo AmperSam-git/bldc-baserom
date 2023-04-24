@@ -3,3 +3,4 @@
 - parabeetle json
 - wooden spike json
 - check tilemap for homing bullet
+- fix arrow in smb3 directional platform and json

@@ -138,6 +138,7 @@ Trampoline - Donut - https://smwc.me/s/32476
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 YI/SMB3 Spike (non-dynamic) - mikeyk - https://smwc.me/s/3570
+SMB3 Directional Platform v1.1 - Ice Man, Kevin - https://smwc.me/s/28481
 
 ~~ NOTE: All custom sprites have been modified to work with DSS.
 

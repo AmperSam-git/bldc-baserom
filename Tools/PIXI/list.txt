@@ -57,6 +57,10 @@
 35 SidewayWoodSpike.json
 36 FlyinMegaMole1.json
 37 FlyinMegaMole2.json
+38 directional_platform_2.json
+39 directional_platform_3.json
+3A directional_platform_4.json
+
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
