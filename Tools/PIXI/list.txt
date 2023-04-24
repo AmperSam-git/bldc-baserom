@@ -54,10 +54,9 @@
 31 ThrowAwayPokey.json
 32 pokey_football.json
 
-
 35 SidewayWoodSpike.json
-
-
+36 FlyinMegaMole1.json
+37 FlyinMegaMole2.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
