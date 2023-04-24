@@ -33,7 +33,7 @@
 ThrownSegmentXSpd:
 db $28,-$28
 
-!SegmentSpr = $56			;
+!SegmentSpr = $B6			;
 
 !ThrownSegmentYSpd = -$30
 

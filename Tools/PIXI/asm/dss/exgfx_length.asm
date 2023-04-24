@@ -164,8 +164,8 @@ exgfx_length:
     db $07              ;# A0 - YI Spike
     db $01              ;# A1 - Bumper
     db $05              ;# A2 - SMB3 Directional Platform
-    db $0              ;# A3 - Unused
-    db $0              ;# A4 - Unused
+    db $10              ;# A3 - Albatoss
+    db $01              ;# A4 - Torpedo
     db $0              ;# A5 - Unused
     db $0              ;# A6 - Unused
     db $0              ;# A7 - Unused

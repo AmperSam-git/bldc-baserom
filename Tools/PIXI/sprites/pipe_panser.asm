@@ -43,7 +43,7 @@
 !ShootSound = $27			; The sound to play when the Panser throws a fireball.
 !ShootBank = $1DFC|!addr	;
 
-!FireballSprite = $55		; The sprite number of the fireball.
+!FireballSprite = $B5		; The sprite number of the fireball.
 
 !FireballXSpeed = $10		; How fast the fireball is moving horizontally.
 !FireballYSpeed = $A8		; How fast the fireball is moving vertically.

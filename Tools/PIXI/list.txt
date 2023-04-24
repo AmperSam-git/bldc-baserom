@@ -54,6 +54,7 @@
 31 ThrowAwayPokey.json
 32 pokey_football.json
 
+34 albatoss.json
 35 SidewayWoodSpike.json
 36 FlyinMegaMole1.json
 37 FlyinMegaMole2.json
@@ -79,14 +80,7 @@
 4E C_Frost_Bro.json
 
 
-51 projectiles/Ball.cfg
-52 projectiles/Boomerang.cfg
-53 projectiles/FireBall.cfg
-54 projectiles/IceBall.cfg
-55 projectiles/panser_fire.cfg
-56 projectiles/Pokey_ThrownSegment.cfg
-57 projectiles/RealHomingBill.cfg
-58 projectiles/spikes_ball.cfg
+
 
 60 platform_megapack.json
 
@@ -109,6 +103,16 @@ A3 utility/Lineguided_AnySprite.json
 A4 utility/XYFollowSprite.json
 A5 utility/spriteoffsetter.json
 A6 utility/PipeSpawner.json
+
+B1 projectiles/Ball.cfg
+B2 projectiles/Boomerang.cfg
+B3 projectiles/FireBall.cfg
+B4 projectiles/IceBall.cfg
+B5 projectiles/panser_fire.cfg
+B6 projectiles/Pokey_ThrownSegment.cfg
+B7 projectiles/RealHomingBill.cfg
+B8 projectiles/spikes_ball.cfg
+B9 projectiles/torpedo.cfg
 
 C0 RealHomingShooter.json
 

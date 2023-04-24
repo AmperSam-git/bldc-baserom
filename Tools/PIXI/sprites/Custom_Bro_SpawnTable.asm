@@ -3,10 +3,10 @@
 			!ElecBall_SpNum		= $07+$13	;ElecBall.asm
 			!SledgeHammer_SpNum	= $03+$13	;SledgeHammer.asm
 
-			!BoundBall_SpNum	= $51		;Ball.cfg
-			!Boomerang_SpNum	= $52		;Boomerang.cfg
-			!FireBall_SpNum		= $53		;FireBall.cfg
-			!IceBall_SpNum		= $54		;IceBall.cfg
+			!BoundBall_SpNum	= $B1		;Ball.cfg
+			!Boomerang_SpNum	= $B2		;Boomerang.cfg
+			!FireBall_SpNum		= $B3		;FireBall.cfg
+			!IceBall_SpNum		= $B4		;IceBall.cfg
 
 
 Throw_Sprite_Num:		db !Hammer_SpNum		;Number of sprite to spawn

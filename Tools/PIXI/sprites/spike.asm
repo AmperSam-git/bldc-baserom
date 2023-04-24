@@ -16,7 +16,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 	!GFX_FileNum = $A0      ; DSS ExGraphic file number
-	!BallSpriteNum = $58		;change this to the same sprite number you inserted Spike's ball at!
+	!BallSpriteNum = $B8		;change this to the same sprite number you inserted Spike's ball at!
 
 Tiles:
 	db $00,$01,$02,$01		;walking frames

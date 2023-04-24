@@ -1,5 +1,4 @@
 - update the external Graphics will all the new sprite additions
-- parabeetle json
-- wooden spike json
+- better json for all sprites
 - check tilemap for homing bullet
 - fix arrow in smb3 directional platform and json

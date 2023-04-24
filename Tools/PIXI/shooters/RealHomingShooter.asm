@@ -6,7 +6,7 @@
 ; Generated sprite's extra bit will be set to the same value as this shooter's extra bit.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-!CustSprite = $57           ; Set to the homing bill's sprite number from list.txt
+!CustSprite = $B7           ; Set to the homing bill's sprite number from list.txt
 !GenTimer = $60             ; Set interval for shooting
 
 !ShootSFX = $09             ; Sound effect to play when firing a bullet

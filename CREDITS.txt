@@ -84,6 +84,7 @@ Yoshi Pipe Animation Fix - Kevin - https://smwc.me/s/30127
 
 
 -- Sprites --
+Albatoss + Albatoss Bomber - mikeyk - https://smwc.me/s/23009
 Angry Sun/Happy Moon (v1.3) - Sonikku - https://smwc.me/s/22630
 Banzai Bill v1.12 - imamelia - https://smwc.me/s/23480
 Better Creating/Eating Block Snakes v1.1 - leod - https://smwc.me/s/18725
@@ -126,6 +127,7 @@ Roto Disc V1.1 - DigitalSine, JackTheSpades, mikeyk - https://smwc.me/s/20573
 Sideways Wooden Spike - RussianMan - https://smwc.me/s/31138
 SMB2 Snifit + Giant Snifit - 1524, Sonikku, mikeyk https://smwc.me/s/16801
 SMB3 Chain Chomp (v1.2) - edit1754 - https://smwc.me/s/6675
+SMB3 Directional Platform v1.1 - Ice Man, Kevin - https://smwc.me/s/28481
 SMB3 Nipper- imamelia - https://smwc.me/s/16210
 SMB3 Ptooie - Romi - https://smwc.me/s/16134
 SMW Hammer Bro (Stationary) - Sonikku - https://smwc.me/s/3406
@@ -138,7 +140,6 @@ Trampoline - Donut - https://smwc.me/s/32476
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 YI/SMB3 Spike (non-dynamic) - mikeyk - https://smwc.me/s/3570
-SMB3 Directional Platform v1.1 - Ice Man, Kevin - https://smwc.me/s/28481
 
 ~~ NOTE: All custom sprites have been modified to work with DSS.
 
