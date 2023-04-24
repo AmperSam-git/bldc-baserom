@@ -44,7 +44,7 @@
 28 chomp_shark_mini.json
 29 Ptooie.json
 2A Nipper.json
-
+2B Bumper.json
 2C spike_green.json
 2D spike_red.json
 2E spike_blue.json
