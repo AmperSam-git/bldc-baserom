@@ -1,4 +1,4 @@
 - update the external Graphics will all the new sprite additions
 - better json for all sprites
 - check tilemap for homing bullet
-- fix arrow in smb3 directional platform and json
+- fix arrow in smb3 directional platform

@@ -166,7 +166,7 @@ exgfx_length:
     db $05              ;# A2 - SMB3 Directional Platform
     db $10              ;# A3 - Albatoss
     db $01              ;# A4 - Torpedo
-    db $0              ;# A5 - Unused
+    db $02              ;# A5 - Icicle
     db $0              ;# A6 - Unused
     db $0              ;# A7 - Unused
     db $0              ;# A8 - Unused
