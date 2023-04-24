@@ -29,8 +29,8 @@
 1B TrickyMagikoopa.json
 1C FireBar.json
 1D FireBar_Shiftable.json
-1E Ptooie.json
-1F Nipper.json
+1E diagonal_green_beans.json
+1F trampoline.json
 
 20 piranha_venus_all.json
 
@@ -42,6 +42,8 @@
 26 phanto.json
 27 chainchomp.json
 28 chomp_shark_mini.json
+29 Ptooie.json
+2A Nipper.json
 
 2C spike_green.json
 2D spike_red.json
@@ -105,7 +107,6 @@ A4 utility/XYFollowSprite.json
 A5 utility/spriteoffsetter.json
 A6 utility/PipeSpawner.json
 
-# SHOOTER:
 C0 RealHomingShooter.json
 
 EXTENDED:

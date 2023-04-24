@@ -1356,10 +1356,12 @@ See .asm file for more details
 1D 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1D 0030 Firebar Counter
 1D 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
-1E 0020 Ptooie from SMB3
-1E 0022 0,0,0
-1F 0020 This is the Nipper from SMB3
-1F 0022 0,0,0
+1E 0020 Left Wall Springboards\n\nExtra byte 1 :\n00 - Up-diagonal\n01 - Down-diagonal
+1E 0022 0,-8,81F 4,-12,81F 8,-16,81F 0,0,820 4,4,820 8,8,820
+1E 0030 Right Wall Springboards\n\nExtra byte 1 :\n00 - Up-diagonal\n01 - Down-diagonal
+1E 0032 -16,-8,820 -20,-12,820 -24,-16,820 -16,0,81F -20,4,81F -24,8,81F
+1F 0020 Trampoline
+1F 0022 0,1,B7 16,1,B7 32,1,B7 48,1,B7
 20 0020 All pirahna plants and venus variations. Red plants ignore Mario's proximity.
 20 0022 0,0,0
 21 0020 A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).
@@ -1380,6 +1382,10 @@ See .asm file for more details
 27 0022 0,0,0
 28 0020 Undefined Sprite
 28 0022 0,0,0
+29 0020 Ptooie from SMB3
+29 0022 0,0,0
+2A 0020 This is the Nipper from SMB3
+2A 0022 0,0,0
 2C 0020 Green Spike, does nothing special.
 2C 0022 0,0,0
 2D 0020 Red Spike, stays on ledges.
@@ -1403,7 +1409,7 @@ See .asm file for more details
 35 0020 Undefined Sprite
 35 0022 0,0,0
 40 0020 Hammer Bro
-40 0022 -5,-14,829 0,0,82A -2,1,82B 4,-20,1DB 5,-6,82C
+40 0022 -5,-14,82A 0,0,82B -2,1,82C 4,-20,1DB 5,-6,82D
 41 0030 Bomb Bro
 41 0032 -5,-14,844 0,0,845 -2,1,846 0,-20,3F 5,-6,847
 42 0030 Boomerang Bro

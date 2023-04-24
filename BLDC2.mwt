@@ -96,11 +96,9 @@
 	Long Fire-Bar (Shiftable) Counter
 	Fast Fire-Bar (Shiftable) Clockwise
 	Fast Fire-Bar (Shiftable) Counter
-1E	Ptooie
-1F	Nipper, jumping stationary
-	Nipper, stationary and chasing
-	Nipper, move back and forth
-	Nipper, spits fire
+1E	Left Wall Diagonal Springboards
+	Right Wall Springboards
+1F	Trampoline
 20	Piranha Horizontal Left
 	Piranha Horizontal Right
 	Piranha Horizontal Short Left
@@ -165,6 +163,11 @@
 26	Phanto
 27	Chain Chomp
 28	Chomp Shark Mini
+29	Ptooie
+2A	Nipper, jumping stationary
+	Nipper, stationary and chasing
+	Nipper, move back and forth
+	Nipper, spits fire
 2C	Green Spike
 2D	Red Spike
 2E	Blue Spike

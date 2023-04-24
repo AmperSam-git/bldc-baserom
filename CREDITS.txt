@@ -97,6 +97,7 @@ Cloud Drop - Erik, smkdan - https://smwc.me/s/20047
 Custom Bro - Isikoro - https://smwc.me/s/25577
 Custom Scale Platform + Disassembly - MarkAlarm - https://smwc.me/s/25239
 Customizable Firebar - Isikoro - https://smwc.me/s/24411
+Diagonal Springboard/Beans v1.1 - Djief - https://smwc.me/s/24914
 Enemy Stack V2 (and Upside-down Stack) - dtothefourth - https://www.patreon.com/posts/enemy-stacks-v2-42604892
 Fire Thwomp - RussianMan - https://smwc.me/s/25417
 Floor Boo - dtothefourth - https://www.patreon.com/posts/floor-boo-52666747
@@ -131,6 +132,7 @@ Stationary Magikoopa - yoshicookiezeus - https://smwc.me/s/9479
 Super Mario Maker Flying Spiny - RussianMan - https://smwc.me/s/22096
 Throwaway Pokey - RussianMan - https://smwc.me/s/30194
 Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
+Trampoline - Donut - https://smwc.me/s/32476
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 YI/SMB3 Spike (non-dynamic) - mikeyk - https://smwc.me/s/3570
