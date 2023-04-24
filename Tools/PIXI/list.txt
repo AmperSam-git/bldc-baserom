@@ -74,6 +74,7 @@
 54 IceBall.cfg
 55 panser_fire.cfg
 56 Pokey_ThrownSegment.cfg
+57 RealHomingBill.cfg
 
 60 platform_megapack.json
 
@@ -96,6 +97,9 @@ A3 Lineguided_AnySprite.json
 A4 XYFollowSprite.json
 A5 spriteoffsetter.json
 A6 PipeSpawner.json
+
+# SHOOTER:
+C0 RealHomingShooter.json
 
 EXTENDED:
 00 boomerang.asm

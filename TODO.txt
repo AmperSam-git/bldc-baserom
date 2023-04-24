@@ -4,3 +4,4 @@
 - update the external Graphics will all the new sprite additions
 - fix regen pokey dead frame
 - wooden spike json
+- check tilemap for homing bullet

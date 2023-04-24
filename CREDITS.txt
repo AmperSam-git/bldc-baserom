@@ -113,9 +113,11 @@ Pipe Spawner - dtothefourth - https://www.patreon.com/posts/pipe-spawner-4884007
 Piranha Plants and Venus Fire Traps v1.1 - imamelia - https://smwc.me/s/24223
 Platform Megapack v1.0 - Mandew - https://smwc.me/s/16281
 Poison Mushroom - Thomas, imamelia - https://smwc.me/s/25835
+Pokey, Football Movement - RussianMan - https://smwc.me/s/28349
 Pot - wiiqwertyuiop - https://smwc.me/s/3748
 Programmable Ball & Chain - dtothefourth - https://www.patreon.com/posts/programmable-30781169
 Punchy - Mandew - https://smwc.me/s/20780
+Real Homing Bill - Akaginite - https://smwc.me/s/14098
 Regenerating Pokey - RussianMan - https://smwc.me/s/30197
 Roto Disc V1.1 - DigitalSine, JackTheSpades, mikeyk - https://smwc.me/s/20573
 Sideways Wooden Spike - RussianMan - https://smwc.me/s/31138
@@ -131,7 +133,6 @@ Throwaway Pokey - RussianMan - https://smwc.me/s/30194
 Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
-Pokey, Football Movement - RussianMan - https://smwc.me/s/28349
 
 ~~ NOTE: All custom sprites have been modified to work with DSS.
 
