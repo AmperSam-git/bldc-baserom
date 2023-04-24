@@ -40,6 +40,8 @@
 24 para_beetle.json
 25 cloud_drop.json
 26 phanto.json
+27 chainchomp.json
+28 chomp_shark_mini.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json

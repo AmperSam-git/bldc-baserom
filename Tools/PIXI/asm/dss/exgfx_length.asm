@@ -155,10 +155,10 @@ exgfx_length:
     db $05              ;# 97 - SMB3 Ptooie
     db $04              ;# 98 - SMB3 Nipper
     db $01              ;# 99 - Phanto
-    db $04              ;# 9A - Panser
+    db $04              ;# 9A - Panser & Panser Fire
     db $0A              ;# 9B - Para-beetle
     db $0C              ;# 9C - Cloud drop
-    db $0              ;# 9D - Unused
+    db $03              ;# 9D - Chain Chomp & Chomp Shark
     db $0              ;# 9E - Unused
     db $0              ;# 9F - Unused
     db $0              ;# A0 - Unused
