@@ -251,9 +251,10 @@ OAM_Loop:
  	TXA			;same process as seen above
  	CLC
  	ADC $08
+
  	PHX
  	TAX
- 	LDA TILEMAP,x
+ 	LDA.w TILEMAP,x
  	TAX
  	lda.l !dss_tile_buffer,x
  	STA $0302|!Base2,y	;CHR
@@ -381,9 +382,10 @@ Vert:
 	TXA			;same process as seen above
 	CLC
 	ADC $08
+
 	PHX
 	TAX
-	LDA VTILEMAP,x
+	LDA.w VTILEMAP,x
  	TAX
  	lda.l !dss_tile_buffer,x
 	STA $0302|!Base2,y	;CHR
