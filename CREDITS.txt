@@ -127,6 +127,7 @@ Super Mario Maker Flying Spiny - RussianMan - https://smwc.me/s/22096
 Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
+SMB3 Chain Chomp (v1.2) - edit1754 - https://smwc.me/s/6675
 
 ~~ NOTE: All custom sprites have been modified to work with DSS.
 
