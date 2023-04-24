@@ -49,8 +49,8 @@ FlyingMaxYspeed:	db $F4,$0C
 !Leg1			= $8B
 !Leg2			= $9A
 !Leg3			= $9B
-!LegProp0		= $17
-!LegProp1		= $57
+!LegProp0		= $16
+!LegProp1		= $56
 
 !Hand0			= $88
 !Hand1			= $98

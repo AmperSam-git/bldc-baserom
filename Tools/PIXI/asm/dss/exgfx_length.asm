@@ -151,7 +151,7 @@ exgfx_length:
     db $08              ;# 93 - Custom Sledge Bro
     db $01              ;# 94 - Snifit Projectile
     db $01              ;# 95 - Ceiling Thwimp
-    db $07              ;# 96 - Bumpty
+    db $05              ;# 96 - Bumpty
     db $05              ;# 97 - SMB3 Ptooie
     db $04              ;# 98 - SMB3 Nipper
     db $01              ;# 99 - Phanto
