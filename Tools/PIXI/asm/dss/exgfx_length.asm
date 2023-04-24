@@ -159,7 +159,7 @@ exgfx_length:
     db $0A              ;# 9B - Para-beetle
     db $0C              ;# 9C - Cloud drop
     db $03              ;# 9D - Chain Chomp & Chomp Shark
-    db $0              ;# 9E - Unused
+    db $02              ;# 9E - Sideways wooden spike
     db $0              ;# 9F - Unused
     db $0              ;# A0 - Unused
     db $0              ;# A1 - Unused
