@@ -45,6 +45,7 @@
 	Big fire-spitting red Snifit, falls from ledges
 	Big fire-spitting blue Snifit, stays on ledges
 	Big fire-spitting green Snifit, hops in place
+0F	Bumpty
 10	Muncher Bridge
 	Muncher Bridge (Vertical)
 	Muncher Bridge, horizontal and vertical
@@ -95,6 +96,11 @@
 	Long Fire-Bar (Shiftable) Counter
 	Fast Fire-Bar (Shiftable) Clockwise
 	Fast Fire-Bar (Shiftable) Counter
+1E	Ptooie
+1F	Nipper, jumping stationary
+	Nipper, stationary and chasing
+	Nipper, move back and forth
+	Nipper, spits fire
 20	Piranha Horizontal Left
 	Piranha Horizontal Right
 	Piranha Horizontal Short Left
@@ -143,6 +149,22 @@
 	Venus Vertical Short Spit Two Down
 	Venus Vertical Spit Two Up
 	Venus Vertical Spit Two Down
+21	SMB2 Panser (palette 8).
+	SMB2 Panser (palette 9).
+	SMB2 Panser (palette A).
+	SMB2 Panser (palette B).
+	SMB2 Panser (palette C).
+	SMB2 Panser (palette D).
+	SMB2 Panser (palette E).
+	SMB2 Panser (palette F).
+22	Pipe Panser (Dwelling)
+23	Pipe Panser (Periodic)
+24	Para Beetle
+25	Cloud Drop, horizontal
+	Cloud Drop, vertical
+26	Phanto
+27	Chain Chomp
+28	Chomp Shark Mini
 40	Hammer Bro
 	Hammer Bro, small jump only
 	Hammer Bro Continuous
