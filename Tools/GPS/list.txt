@@ -9,8 +9,8 @@
 293:0025 one_way_down.asm
 294:0025 one_way_left.asm
 295:0025 one_way_right.asm
-296:0130 onoff_block.asm
-297:0130 onoff_block_inv.asm
+296:0130 solid_when_off.asm
+297:0130 solid_when_on.asm
 298:0130 breakable_by_item.asm
 299:0025 silent_sprite_killer.asm
 29A:0130 hurt_death.asm

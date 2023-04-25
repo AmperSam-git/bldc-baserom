@@ -4,20 +4,20 @@
 293	0	Solid if anything goes up
 294	0	Solid if anything goes right
 295	0	Solid if anything goes left
-296	0	ON/OFF Switch block.
-297	0	Inverted ON/OFF Switch block.
+296	0	Block that is solid when ON/OFF switch is OFF.
+297	0	Block that is solid when ON/OFF switch is ON.
 298	0	A block that shatters when a sprite is thrown at it.
 299	0	Block that silently kills any sprite.
 29a	0	Block that kills the player (even on yoshi), is solid for sprites and kills on wall running.
 29b	0	Block that kills the player (even on yoshi), is passable for sprites and kills on wall running.
-29c	0	Block that removes any powerup or item from Mario as well as flight state
+29c	0	Block that makes Mario small, clears item box and removes balloon, flight, and slide state
 29d	0	A block that bounces sprites! But is passable by Mario.
 29e	0	Block with an endless supply of throwblocks.
 29f	0	A ledge vine that the player automatically hops above.
 2a0	0	The top of the 1x2 key block.
 2a1	0	A ledge that can be passed through by tapping down
-2a2	0	A button that sets the on/off status to off.
-2a3	0	A button that sets the on/off status to on.
+2a2	0	Sets the ON/OFF status to OFF when anything (incl. dead sprites) passes through it.
+2a3	0	Sets the ON/OFF status to ON when anything (incl. dead sprites) passes through it.
 2a4	0	A quicksand block that makes Mario and sprites slowly sink but still lets Mario walk at full speed.
 2a5	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 2a6	0	A coin outline that turns into a coin after an amount of time.

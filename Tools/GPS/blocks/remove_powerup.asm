@@ -1,19 +1,23 @@
+; act as 25
 db $42
-JMP + : JMP + : JMP + : JMP ++ : JMP ++ : JMP ++ : JMP ++
-JMP + : JMP + : JMP +
+JMP Mario : JMP Mario : JMP Mario : JMP Return : JMP Return : JMP Return : JMP Return
+JMP Mario : JMP Mario : JMP Mario
 
-+:
-	STZ $19				;> remove player's powerup
-	STZ $0DC2|!addr 	;> remove player's item
-	STZ $1407|!addr		;> remove cape flight
-	STZ $13E0|!addr		;> reset pose
-	LDA $13ED|!addr		;\
-	AND #%01111111		;| remove slide state
-	STA $13ED|!addr		;/
-	lda #$01 			;\ give i-frames
-    sta $1497|!addr     ;/
+Mario:
+    STZ $19                     ;> remove player's powerup
+    STZ $0DC2|!addr             ;> clear player's itembox
+    STZ $1407|!addr             ;> remove cape flight
 
-++:
-	RTL
+    LDA $13ED|!addr             ;\
+    AND #%01111111              ;| remove slide state
+    STA $13ED|!addr             ;/
 
-print "Block that removes any powerup or item from Mario as well as flight state"
+    LDA $13F3|!addr             ;\ check if in balloon
+    BEQ Return                  ;/ otherwise skip
+    LDA #$01 : STA $1891|!addr  ;> set p-balloon timer to 1 frame (can't do zero here)
+    STZ $13F3|!addr             ;> make sure not in balloon
+
+Return:
+    RTL
+
+print "Block that makes Mario small, clears item box and removes balloon, flight, and slide state"
