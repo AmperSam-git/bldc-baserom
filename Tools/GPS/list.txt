@@ -32,7 +32,7 @@
 2A9:0025 silver_pswitch_door_top.asm
 2AA:0025 silver_pswitch_door_small.asm
 2AB:0025 teleport.asm
-;2AC
+2AC:0130 single_use_bounce_block.asm
 ;2AD
 ;2AE
 ;2AF

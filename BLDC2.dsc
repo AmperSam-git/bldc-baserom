@@ -26,6 +26,7 @@
 2a9	0	The top part of a Silver P-switch door.
 2aa	0	A small Silver P-switch door.
 2ab	0	A block that will teleport Mario to the current screen exit.
+2ac	0	A single-use bounce block.
 2b0	0	The bottom of the 1x2 key block.
 2b1	0	The left of the 2x1 key block.
 2b2	0	The right of the 2x1 key block.

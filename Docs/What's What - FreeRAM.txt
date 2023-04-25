@@ -13,9 +13,9 @@ $140B - FreeRAM to activate certain UberASM code (cleared at level load) - 2 byt
 $146C - Used by Lunar Magic - 1 byte
 $1487 - SpriteScrollFix.asm - 4 bytes (if an option is set)
 $14BE - Layer2+3Triangles.asm - 1 byte
+$18C5 - Screen Scrolling Pipes - 5 bytes
 $1929 - BlockDuplicationFix.asm - 1 byte
 $1DFD - double_hit_fix.asm - 1 bytes
-$18C5 - Screen Scrolling Pipes - 5 bytes
 
 ------------
 Large Blocks
