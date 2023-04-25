@@ -13,33 +13,7 @@
 ; Bit 3: size, 0 -> normal, 1 -> giant
 ; Bits 4-5: initial direction, 00 -> face toward player, 01 -> face left, 02 -> face right, 03 -> face away from player
 ; Bits 6-7: toxicity, 00 -> do nothing while standing on, 01 -> hurt while standing on, 02/03 -> kill while standing on
-
-; Yellow
-; 0000 0010 - Yellow para-beetle, face player
-; 0001 0010 - Yellow para-beetle, face left
-; 0010 0010 - Yellow para-beetle, face right
-; 0011 0010 - Yellow para-beetle, move away
-
-; 0000 1010 - Big yellow para-beetle, face player
-; 0001 1010 - Big yellow para-beetle, face left
-; 0010 1010 - Big yellow para-beetle, face right
-; 0011 1010 - Big yellow para-beetle, move away
-
-; Blue
-; 0000 0011 - Blue para-beetle, face player
-; 0001 0011 - Blue para-beetle, face left
-; 0010 0011 - Blue para-beetle, face right
-; 0011 0011 - Blue para-beetle, move away
-
-; 0000 1011 - Big blue para-beetle, face player
-; 0001 1011 - Big blue para-beetle, face left
-; 0010 1011 - Big blue para-beetle, face right
-; 0011 1011 - Big blue para-beetle, move away
-
-; etc.
-
-
-
+;
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;!GFXFile1 = $008B
@@ -57,7 +31,7 @@
 
 Tilemap:
 ;	db $00,$02
-	db $08,$09
+	db $00,$01
 
 TileXDisp2:
 	db $10,$00,$10,$00
@@ -80,10 +54,10 @@ Tilemap2:
 ;	db $08,$0A,$0C,$0E
 ;	db $00,$02,$04,$06
 ;	db $08,$0A,$0C,$0E
-	db $00,$01,$02,$03
-	db $04,$05,$06,$07
-	db $00,$01,$02,$03
-	db $04,$05,$06,$07
+	db $02,$04,$03,$05
+	db $02,$06,$03,$07
+	db $02,$04,$03,$05
+	db $02,$06,$03,$07
 
 TileProps2:
 	db $40,$40,$40,$40

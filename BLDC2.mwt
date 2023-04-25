@@ -157,7 +157,38 @@
 	SMB2 Panser (palette F).
 22	Pipe Panser (Dwelling)
 23	Pipe Panser (Periodic)
-24	Para Beetle
+24	Yellow para-beetle, face player
+	Yellow para-beetle, face left
+	Yellow para-beetle, face right
+	Yellow para-beetle, move away
+	Big yellow para-beetle, face player
+	Big yellow para-beetle, face left
+	Big yellow para-beetle, face right
+	Big yellow para-beetle, move away
+	Blue para-beetle, face player
+	Blue para-beetle, face left
+	Blue para-beetle, face right
+	Blue para-beetle, move away
+	Big blue para-beetle, face player
+	Big blue para-beetle, face left
+	Big blue para-beetle, face right
+	Big blue para-beetle, move away
+	Red para-beetle, face player
+	Red para-beetle, face left
+	Red para-beetle, face right
+	Red para-beetle, move away
+	Big red para-beetle, face player
+	Big red para-beetle, face left
+	Big red para-beetle, face right
+	Big red para-beetle, move away
+	Green para-beetle, face player
+	Green para-beetle, face left
+	Green para-beetle, face right
+	Green para-beetle, move away
+	Big Green para-beetle, face player
+	Big Green para-beetle, face left
+	Big Green para-beetle, face right
+	Big Green para-beetle, move away
 25	Cloud Drop, horizontal
 	Cloud Drop, vertical
 26	Phanto

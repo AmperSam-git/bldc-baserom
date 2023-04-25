@@ -361,6 +361,83 @@ See .asm file for more details
 20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
 20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
 
+
+; Para-beetles
+24 30020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
+24 30022 0,0,0
+
+24 30220 Yellow para-beetle, face player
+24 30222 0,0,940
+24 31220 Yellow para-beetle, face left
+24 31222 0,0,940
+24 32220 Yellow para-beetle, face right
+24 32222 0,0,941
+24 33220 Yellow para-beetle, move away
+24 33222 0,0,941
+
+24 30A22 Big yellow para-beetle, face player
+24 30A22 0,0,950 16,0,951 0,16,960 16,16,961
+24 31A22 Big yellow para-beetle, face left
+24 31A22 0,0,950 16,0,951 0,16,960 16,16,961
+24 32A22 Big yellow para-beetle, face right
+24 32A22 0,0,970 16,0,971 0,16,980 16,16,981
+24 33A22 Big yellow para-beetle, move away
+24 33A22 0,0,970 16,0,971 0,16,980 16,16,981
+
+24 30322 Blue para-beetle, face player
+24 30322 0,0,942
+24 31322 Blue para-beetle, face left
+24 31322 0,0,942
+24 32322 Blue para-beetle, face right
+24 32322 0,0,943
+24 33322 Blue para-beetle, move away
+24 33322 0,0,943
+
+24 30B22 Big blue para-beetle, face player
+24 30B22 0,0,952 16,0,953 0,16,962 16,16,963
+24 31B22 Big blue para-beetle, face left
+24 31B22 0,0,952 16,0,953 0,16,962 16,16,963
+24 32B22 Big blue para-beetle, face right
+24 32B22 0,0,972 16,0,973 0,16,982 16,16,983
+24 33B22 Big blue para-beetle, move away
+24 33B22 0,0,972 16,0,973 0,16,982 16,16,983
+
+24 30422 Red para-beetle, face player
+24 30422 0,0,944
+24 31422 Red para-beetle, face left
+24 31422 0,0,944
+24 32422 Red para-beetle, face right
+24 32422 0,0,945
+24 33422 Red para-beetle, move away
+24 33422 0,0,945
+
+24 30C22 Big red para-beetle, face player
+24 30C22 0,0,954 16,0,955 0,16,964 16,16,965
+24 31C22 Big red para-beetle, face left
+24 31C22 0,0,954 16,0,955 0,16,964 16,16,965
+24 32C22 Big red para-beetle, face right
+24 32C22 0,0,954 16,0,955 0,16,964 16,16,965
+24 33C22 Big red para-beetle, move away
+24 33C22 0,0,954 16,0,955 0,16,964 16,16,965
+
+24 30522 Green para-beetle, face player
+24 30522 0,0,946
+24 31522 Green para-beetle, face left
+24 31522 0,0,946
+24 32522 Green para-beetle, face right
+24 32522 0,0,947
+24 33522 Green para-beetle, move away
+24 33522 0,0,947
+
+24 30D22 Big Green para-beetle, face player
+24 30D22 0,0,956 16,0,957 0,16,966 16,16,967
+24 31D22 Big Green para-beetle, face left
+24 31D22 0,0,956 16,0,957 0,16,966 16,16,967
+24 32D22 Big Green para-beetle, face right
+24 32D22 0,0,956 16,0,957 0,16,966 16,16,967
+24 33D22 Big Green para-beetle, move away
+24 33D22 0,0,956 16,0,957 0,16,966 16,16,967
+
 ; Giant Thwomp
 3C 0020 A giant Twhomp that attemps to stun and crush the player. It goes downwards.
 3C 0022 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,48,824
