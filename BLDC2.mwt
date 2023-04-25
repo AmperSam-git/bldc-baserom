@@ -195,7 +195,8 @@
 27	Chain Chomp
 28	Chomp Shark, disappears
 	Chomp Shark, omnomnomnomnom
-29	Ptooie
+29	Ptooie, stationary
+	Ptooie, walks back and forth
 2A	Nipper, jumping stationary
 	Nipper, stationary and chasing
 	Nipper, move back and forth

@@ -1760,8 +1760,10 @@ See .asm file for more details
 28 0032 0,0,885
 
 ; Ptooie
-29 0020 Ptooie from SMB3
-29 0022 0,0,0
+29 0020 SMB3 Ptooie, stationary
+29 0022 0,0,817 0,16,813, 0,-16,80F
+29 0030 SMB3 Ptooie, walks back and forth
+29 0032 0,8,81E 0,-16,80F 0,-8,817
 
 ; Nipper
 2A 0020 This is the Nipper from SMB3
