@@ -13,9 +13,6 @@
 
 !GFX_FileNum = $9F          ; DSS ExGFX number for this sprite
 
-!Use16Frames = 1            ; Set to 0 if you want the sprite to only use 8 frames
-                            ; If set, requires the SP4 graphics, too.
-
 !TickSFX = $23              ;\ Sound effect to play when the sprite ticks
 !TickBank = $1DFC           ;/
 
@@ -27,22 +24,12 @@
 
 !TickCount = $03
 
-if !Use16Frames == 0
-    Tilemap:
-        ;db $A6,$A8,$A4,$A8,$A6,$A6,$A4,$A6
-        db $00,$03,$01,$03,$00,$02,$01,$02
-    Properties:
-        db $41,$41,$81,$01,$01,$41,$01,$01
-else
-    Tilemap:
-        ;db $A6,$67,$A8,$69,$A4,$69,$A8,$67
-        ;db $A6,$42,$A6,$44,$A4,$44,$A6,$42
-        db $00,$06,$03,$07,$01,$07,$03,$06
-        db $02,$04,$02,$05,$01,$05,$02,$04
-    Properties:
-        db $41,$41,$41,$41,$81,$01,$01,$01
-        db $01,$41,$41,$41,$01,$01,$01,$01
-endif
+Tilemap:
+    ;;  L=Left R=Right, U=Up, D=Down, V=Vertical, H=Horizontal
+    ;;  RH, LD, LV, RD, LH, LU, RV, RU
+    db $00,$03,$01,$03,$00,$02,$01,$02
+Properties:
+    db $01,$41,$81,$01,$41,$41,$01,$01
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -419,25 +406,19 @@ Graphics:
     LDA !sprite_angle_low,x
     REP #$21
 
-    if !Use16Frames == 0
-        ADC.w #$0020
-        ASL #2
-        XBA
-        SEP #$20
-        AND #$07
-    else
-        ADC.w #$0010
-        ASL #3
-        XBA
-        SEP #$20
-        AND #$0F
-    endif
+    ADC.w #$0020
+    ASL #2
+    XBA
+    SEP #$20
+    AND #$07
 
     LDY !15EA,x
     TAX
+    PHX
     LDA.w Tilemap,x
     TAX
     lda.l !dss_tile_buffer,x
+    PLX
     STA $0302|!Base2,y
     LDA.w Properties,x
     EOR $02

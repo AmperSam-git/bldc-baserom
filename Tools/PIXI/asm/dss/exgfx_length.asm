@@ -160,7 +160,7 @@ exgfx_length:
     db $0C              ;# 9C - Cloud drop
     db $03              ;# 9D - Chain Chomp & Chomp Shark
     db $02              ;# 9E - Sideways wooden spike
-    db $08              ;# 9F - Homing bullet
+    db $04              ;# 9F - Homing bullet
     db $07              ;# A0 - YI Spike
     db $01              ;# A1 - Bumper
     db $05              ;# A2 - SMB3 Directional Platform
