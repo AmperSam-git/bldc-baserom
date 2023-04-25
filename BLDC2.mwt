@@ -147,14 +147,14 @@
 	Venus Vertical Short Spit Two Down
 	Venus Vertical Spit Two Up
 	Venus Vertical Spit Two Down
-21	SMB2 Panser (palette 8).
-	SMB2 Panser (palette 9).
-	SMB2 Panser (palette A).
-	SMB2 Panser (palette B).
-	SMB2 Panser (palette C).
-	SMB2 Panser (palette D).
-	SMB2 Panser (palette E).
-	SMB2 Panser (palette F).
+21	Panser (palette 8), walks towards Mario, shoots fire randomly.
+	Panser (palette 9), stationary, shoots fire randomly.
+	Yellow Panser, walks towards Mario shoots fire a short distance behind it.
+	Blue Panser, walks towards Mario shoots fire a long distance behind it.
+	Red Panser, stationary shoots fire towards Mario.
+	Green Panser, stationary shoots fireballs straight up.
+	Panser (palette E), follows Mario and shoots fireballs at Mario.
+	Panser (palette F), stationary, hops and shoots fireballs at Mario.
 22	Pipe Panser (Dwelling)
 23	Pipe Panser (Periodic)
 24	Yellow para-beetle, face player

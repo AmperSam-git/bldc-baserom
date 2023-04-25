@@ -1266,7 +1266,8 @@ E0 0112 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA 12,-10,5FA 24,-2
 E0 0000 3 platforms on chains that move will be a triple ball n' chain if the extra bit is set. Changes direction based on it's X position.
 E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the extra bit is clear. Changes direction based on it's X position.
 
-;;;; CUSTOM SPRITES ;;;;
+;;;; CUSTOM SPRITES
+
 00 0020 Angry Sun
 00 0022 0,0,870 16,0,871 0,16,880 16,16,881
 00 0030 Happy Moon
@@ -1275,34 +1276,43 @@ E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the ex
 01 0020 Customizable Ball n Chain, uses the Extension bytes (RR AA SS MD):\n-- RR = Radius (0-74)\n-- AA = Angle\n-- SS = Speed\n-- M = momentum enabled\n-- D = dynamic
 See .asm file for more details
 01 0022 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA
+
 02 0020 A SMW Banzai Bill that faces left.
 02 0022 0,0,5CC 16,0,5CD 32,0,5CE 48,0,5CF 0,16,5DC 16,16,5DD 32,16,5DE 48,16,5DF 0,32,5EC 16,32,5ED 32,32,5EE 48,32,5EF 0,48,5FC 16,48,5FD 32,48,5FE 48,48,5FF
 02 0030 A SMW Banzai Bill that faces right.
 02 0032 0,0,82C 16,0,82D 32,0,82E 48,0,82F 0,16,83C 16,16,83D 32,16,83E 48,16,83F 0,32,84C 16,32,84D 32,32,84E 48,32,84F 0,48,85C 16,48,85D 32,48,85E 48,48,85F
+
 03 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it.
 03 0022 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
 03 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also.
 03 0032 -16,-32,6C0 0,-32,6C1 16,-32,6C2 -16,-16,6D0 0,-16,6D1 16,-16,6D2 -16,0,6E0 0,0,6E1 16,0,6E2   4,0,6C3 16,-12,6D3   -8,-24,6E3
+
 04 0020 Customizable Boo Ring, clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
 04 0022 -29,75,68F 9,80,68A 45,67,68A 71,38,68D 81,0,68F 70,-37,68A 43,-66,68A 7,-79,68D -30,-72,68F -62,-49,68A -29,0,114
 04 0030 Customizable Boo Ring, counter-clockwise\n Extra Byte 1: Number of Boos\n Extra Byte 2: Space between each Boo\n Extra Byte 3: Radius\n Extra Byte 4: Speed
 04 0032 3,81,68F 40,70,68A 68,43,68A 80,6,68D 73,-32,68F 48,-62,68A 13,-78,68A -26,-75,68D -58,-53,68F -77,-19,68A -29,0,114
+
 05 0020 A poison mushroom which hurts the player.
 05 0022 0,0,839
 05 0030 A poison mushroom which kills the player.
 05 0032 0,0,839  0,0,10A
+
 06 0020 Boss Bass
 06 0022 0,0,876 16,0,877 0,16,886 16,16,887
 06 0030 Boss Bass, small
 06 0032 0,0,833
+
 07 0020 A modified version of the scale platform with a few customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Byte 1: Distance between platforms.\nExtra Byte 2: Platform falling speed.\nExtra Byte 3: Platform returning speed.
 07 0022 -8,0,587 8,0,588 4,-16,114
 08 0020 A disassembly of the scale platform.
 08 0022 -8,0,587 8,0,588
+
 09 0020 Customizable Moving hole, uses 4 extra bytes: SP TT WD DD:\nSP - Speed\nTT - Turn Time - How many frames before changing direction\nW - Width of hole in tiles (1-6 recommended, doesn't cound the end tiles, 1 is vanilla)\nD - Depth of hole in tiles (1-6 recommended)\nDD - Direction 0=horizontal, 1=vertical
 09 0022 -4,0,549 12,0,54A 28,0,54B
+
 0A 0020 Angry red Thwomp, shoots fireballs when it lands
 0A 0022 -4,0,896 12,0,897 -4,16,8A6 12,16,8A7 -8,16,820 24,16,821
+
 0B 0020 Customizable Floor boo, uses 4 extra bytes\n- Extra Byte 1 - Hide Time\n- Extra Byte 2 - Extend Time\n- Extra Byte 3 - Movement Speed\n- Extra Byte 4 - Wall Follow
 0B 0022 0,0,832
 
@@ -1642,6 +1652,17 @@ See .asm file for more details
 20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
 20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
 
+; Panser
+21 30020 A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).
+21 30022 0,0,8F0
+21 30122 0,0,8F1
+21 30222 0,0,8F2
+21 30322 0,0,8F3
+21 30422 0,0,8F4
+21 30522 0,0,8F5
+21 30622 0,0,8F6
+21 30722 0,0,8F7
+
 ; Para-beetles
 24 0020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
 24 0022 0,0,0
@@ -1894,7 +1915,7 @@ See .asm file for more details
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
 81 0032 0,0,40A 0,0,114
 
-;;;; UTILITY SPRITES ;;;;
+;;;; UTILITY SPRITES
 
 ; Sprite Stacks
 A1 0022 0,0,* Sprite \n  Stack *
@@ -1923,7 +1944,7 @@ A6 30122 0,0, * Pipe Spawn Left *
 A6 30222 0,0, * Pipe Spawn Up *
 A6 30322 0,0, * Pipe Spawn Right *
 
-;;;; SHOOTERS ;;;;
+;;;; SHOOTERS
 
 ; Homing bullet
 C0 0020 Homing bullet shooter
