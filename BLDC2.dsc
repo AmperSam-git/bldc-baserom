@@ -155,6 +155,12 @@
 3c7	0	A frozen ON-OFF block.
 3c8	0	The top of a frozen Yoshi coin.
 3d8	0	The bottom of a frozen Yoshi coin.
+3ea	0	Scroll camera left.
+3eb	0	Scroll camera right.
+3ec	0	Enable horizontal camera scroll.
+3ed	0	Disable horizontal camera scroll.
+3ee	0	Enable vertical camera scroll.
+3ef	0	Disable vertical camera scroll.
 ; Eating Block Tiles
 3F2 0 A brown used block that will make the Better Block Snake (Eating) turn left upon eating it.
 3F3 0 A brown used block that will make the Better Block Snake (Eating) turn right upon eating it.

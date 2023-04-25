@@ -53,6 +53,7 @@
 ;2BE
 ;2BF
 
+
 ; CONVEYOR BLOCKS -----------------------------------------;
 370-372	mm2_conv/conveyer move left fast.asm
 373-375	mm2_conv/conveyer move right fast.asm
@@ -91,6 +92,15 @@
 3C7:0130 icy/frozen_onoffblock.asm
 3C8:0130 icy/frozen_yoshicoin_top.asm
 3D8:0130 icy/frozen_yoshicoin_bottom.asm
+
+
+; CAMERA BLOCKS -------------------------------------------;
+3EA:0025 camera/scroll_left.asm
+3EB:0025 camera/scroll_right.asm
+3EC:0025 camera/horz_start.asm
+3ED:0025 camera/horz_stop.asm
+3EE:0025 camera/vert_start.asm
+3EF:0025 camera/vert_stop.asm
 
 ; SCREEN SCROLLING PIPES (DO NOT MODIFY) ------------------;
 
