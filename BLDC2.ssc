@@ -1876,10 +1876,10 @@ See .asm file for more details
 48 30330 Ice Bro, small jump only
 48 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
 
-49 30320 Mix Bro
-49 30322 0,-16,8D6 0,0,8E6 8,-16,836
-49 30330 Mix Bro, small jump only
-49 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
+49 31120 Mix Bro
+49 31122 0,-16,8D6 0,0,8E6
+49 31130 Mix Bro, small jump only
+49 31132 0,-16,8D6 0,0,8E6 0,-16,10A
 
 4A 30520 Shell Bro
 4A 30522 0,-16,8D3 0,0,8E3 8,-16,440
