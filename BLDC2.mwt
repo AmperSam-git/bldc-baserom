@@ -332,6 +332,10 @@ A6	Pipe Spawner (Down)
 	Pipe Cannon Spawner (Left)
 	Pipe Cannon Spawner (Up)
 	Pipe Cannon Spawner (Right)
+A7	Cluster Fish Spawner
+	Cluster Flower Spawner
+	Cluster Rain Spawner
+	Cluster Sandstorm Spawner
 C0	Homing Bill Shooter
 C1	Cooligan shooter, shoots right.
 	Cooligan shooter, shoots left.

@@ -65,6 +65,7 @@
 3C GiantThwomp.json
 3D Bumpty.json
 
+
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json
 42 C_Boomerang_Bro.json
@@ -105,7 +106,7 @@ A3 utility/Lineguided_AnySprite.json
 A4 utility/XYFollowSprite.json
 A5 utility/spriteoffsetter.json
 A6 utility/PipeSpawner.json
-
+A7 utility/clusterspawn.json
 
 B1 projectiles/Ball.cfg
 B2 projectiles/Boomerang.cfg
@@ -133,4 +134,8 @@ EXTENDED:
 08 sunglasses.asm
 
 CLUSTER:
+01 fish.asm
+02 flowers.asm
+03 rain.asm
+04 sandstorm.asm
 10 cluster_sparkle.asm
