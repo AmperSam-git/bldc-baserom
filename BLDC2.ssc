@@ -1663,6 +1663,12 @@ See .asm file for more details
 21 30622 0,0,8F6
 21 30722 0,0,8F7
 
+; Pipe Pansers
+22 30020 A Panser which emerges and stays out of pipe and shoots fire.
+22 30022 8,-16,8F5 0,-16,10A
+23 30020 A Panser which periodically peeks out of a pipe to shoot fire.
+23 30022 8,-16,8F4 0,-16,10A
+
 ; Para-beetles
 24 0020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
 24 0022 0,0,0
@@ -1804,7 +1810,6 @@ See .asm file for more details
 32 0030 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses alternative segment 
 32 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C
 
-
 ; Albatoss
 33 30020 Albatoss
 33 30022 0,0,898 16,0,899
@@ -1832,6 +1837,35 @@ See .asm file for more details
 37 0022 0,-15,5F3 16,-15,5F4 0,1,5F5 16,1,5F6 24,-16,414 0,-32,827 16,12,828
 37 0030 Flying Mega Mole, flies up-down
 37 0032 0,-15,5F3 16,-15,5F4 0,1,5F5 16,1,5F6 24,-16,414 0,-32,823 16,20,824
+
+
+; SMB3 Directional Platforms
+38 30122 0,0,903 16,0,904
+38 30222 0,0,913 16,0,914
+38 30322 0,0,923 16,0,924
+38 30422 0,0,933 16,0,934
+38 30132 0,0,903 16,0,904 -4,-4,10A
+38 30232 0,0,913 16,0,914 -4,-4,10A
+38 30332 0,0,923 16,0,924 -4,-4,10A
+38 30432 0,0,933 16,0,934 -4,-4,10A
+
+39 30122 0,0,905 16,0,906 32,0,907
+39 30222 0,0,915 16,0,916 32,0,917
+39 30322 0,0,925 16,0,926 32,0,927
+39 30422 0,0,935 16,0,936 32,0,937
+39 30132 0,0,905 16,0,906 32,0,907 -4,-4,10A
+39 30232 0,0,915 16,0,916 32,0,917 -4,-4,10A
+39 30332 0,0,925 16,0,926 32,0,927 -4,-4,10A
+39 30432 0,0,935 16,0,936 32,0,937 -4,-4,10A
+
+3A 30122 0,0,908 16,0,909 32,0,90A 48,0,90B
+3A 30222 0,0,918 16,0,919 32,0,91A 48,0,91B
+3A 30322 0,0,928 16,0,929 32,0,92A 48,0,92B
+3A 30422 0,0,938 16,0,939 32,0,93A 48,0,93B
+3A 30132 0,0,908 16,0,909 32,0,90A 48,0,90B -4,-4,10A
+3A 30232 0,0,918 16,0,919 32,0,91A 48,0,91B -4,-4,10A
+3A 30332 0,0,928 16,0,929 32,0,92A 48,0,92B -4,-4,10A
+3A 30432 0,0,938 16,0,939 32,0,93A 48,0,93B -4,-4,10A
 
 ; Falling Icicle
 3B 0020 Icicle, it falls when Mario is near.
@@ -1984,7 +2018,7 @@ See .asm file for more details
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
 81 0032 0,0,40A 0,0,114
 
-;;;; UTILITY SPRITES
+; UTILITY SPRITES
 
 ; Sprite Stacks
 A1 0022 0,0,* Sprite \n  Stack *
@@ -2013,7 +2047,7 @@ A6 30122 0,0, * Pipe Spawn Left *
 A6 30222 0,0, * Pipe Spawn Up *
 A6 30322 0,0, * Pipe Spawn Right *
 
-;;;; SHOOTERS
+; SHOOTERS
 
 ; Homing bullet
 C0 0020 Homing bullet shooter

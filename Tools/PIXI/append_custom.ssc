@@ -394,6 +394,12 @@ See .asm file for more details
 21 30622 0,0,8F6
 21 30722 0,0,8F7
 
+; Pipe Pansers
+22 30020 A Panser which emerges and stays out of pipe and shoots fire.
+22 30022 8,-16,8F5 0,-16,10A
+23 30020 A Panser which periodically peeks out of a pipe to shoot fire.
+23 30022 8,-16,8F4 0,-16,10A
+
 ; Para-beetles
 24 0020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
 24 0022 0,0,0
@@ -491,8 +497,10 @@ See .asm file for more details
 28 0032 0,0,885
 
 ; Ptooie
-29 0020 Ptooie from SMB3
-29 0022 0,0,0
+29 0020 SMB3 Ptooie, stationary
+29 0022 0,0,817 0,16,813, 0,-16,80F
+29 0030 SMB3 Ptooie, walks back and forth
+29 0032 0,8,81E 0,-16,80F 0,-8,817
 
 ; Nipper
 2A 0020 This is the Nipper from SMB3
@@ -519,11 +527,96 @@ See .asm file for more details
 2F 0030 Yellow Spike, turns to face Mario will jump over sprites
 2F 0032 0,0,863
 
+; Pokeys
+30 0020 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+30 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C 0,64,27
+30 0030 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+30 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C 0,64,27
+31 0020 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+31 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C -24,48,56C 16,0,10A
+31 0030 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+31 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C 16,16,10A -24,48,56C
+32 0020 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+32 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C
+32 0030 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses alternative segment 
+32 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C
+
+; Albatoss
+33 30020 Albatoss
+33 30022 0,0,898 16,0,899
+33 30032 0,0,898 16,0,899, 8,16,846
+33 30432 0,0,898 16,0,899, 8,16,846 -4,-4,10A
+33 38032 0,0,898 16,0,899, 8,16,893
+33 38432 0,0,898 16,0,899, 8,16,893 -4,-4,10A
+34 30020 Rideable Albatoss
+34 30022 0,0,89A 16,0,89B
+34 30032 0,0,89A 16,0,89B, 8,16,846
+34 30432 0,0,89A 16,0,89B, 8,16,846 -4,-4,10A
+34 38032 0,0,89A 16,0,89B, 8,16,893
+34 38432 0,0,89A 16,0,89B, 8,16,893 -4,-4,10A
+
+; Sideway Wood Spike
+35 0020 Sideway Wood Spike, facing-right
+35 0022 0,0,8F8 16,0,8F8 32,0,8F8 48,0,8F8 64,0,8F9
+35 0030 Sideway Wood Spike, facing-left
+35 0032 0,0,8FA 16,0,8FB 32,0,8FB 48,0,8FB 64,0,8FB
+
+; Flying Mega Moles
+36 0020 Flying Mega Mole, flies forwards
+36 0022 0,-15,5F3 16,-15,5F4 0,1,5F5 16,1,5F6 24,-16,414 0,-32,827
+37 0020 Flying Mega Mole, flies left-right
+37 0022 0,-15,5F3 16,-15,5F4 0,1,5F5 16,1,5F6 24,-16,414 0,-32,827 16,12,828
+37 0030 Flying Mega Mole, flies up-down
+37 0032 0,-15,5F3 16,-15,5F4 0,1,5F5 16,1,5F6 24,-16,414 0,-32,823 16,20,824
+
+
+; SMB3 Directional Platforms
+38 30122 0,0,903 16,0,904
+38 30222 0,0,913 16,0,914
+38 30322 0,0,923 16,0,924
+38 30422 0,0,933 16,0,934
+38 30132 0,0,903 16,0,904 -4,-4,10A
+38 30232 0,0,913 16,0,914 -4,-4,10A
+38 30332 0,0,923 16,0,924 -4,-4,10A
+38 30432 0,0,933 16,0,934 -4,-4,10A
+
+39 30122 0,0,905 16,0,906 32,0,907
+39 30222 0,0,915 16,0,916 32,0,917
+39 30322 0,0,925 16,0,926 32,0,927
+39 30422 0,0,935 16,0,936 32,0,937
+39 30132 0,0,905 16,0,906 32,0,907 -4,-4,10A
+39 30232 0,0,915 16,0,916 32,0,917 -4,-4,10A
+39 30332 0,0,925 16,0,926 32,0,927 -4,-4,10A
+39 30432 0,0,935 16,0,936 32,0,937 -4,-4,10A
+
+3A 30122 0,0,908 16,0,909 32,0,90A 48,0,90B
+3A 30222 0,0,918 16,0,919 32,0,91A 48,0,91B
+3A 30322 0,0,928 16,0,929 32,0,92A 48,0,92B
+3A 30422 0,0,938 16,0,939 32,0,93A 48,0,93B
+3A 30132 0,0,908 16,0,909 32,0,90A 48,0,90B -4,-4,10A
+3A 30232 0,0,918 16,0,919 32,0,91A 48,0,91B -4,-4,10A
+3A 30332 0,0,928 16,0,929 32,0,92A 48,0,92B -4,-4,10A
+3A 30432 0,0,938 16,0,939 32,0,93A 48,0,93B -4,-4,10A
+
+; Falling Icicle
+3B 0020 Icicle, it falls when Mario is near.
+3B 0022 0,0,844 0,16,854
+
 ; Giant Thwomp
 3C 0020 A giant Twhomp that attemps to stun and crush the player. It goes downwards.
 3C 0022 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,48,824
 3C 0030 A giant Twhomp that attemps to stun and crush the player. It goes upwards.
 3C 0032 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,-48,823
+
+; Bumpty
+3D 0020 Bumpty, walks back and forth
+3D 0022 0,0,84A -3,8,84B,
+3D 0120 Bumpty, slides and tackles Mario
+3D 0122 0,0,84A -3,8,84B -8,-8,114
+3D 0030 Flying bumpty, goes back and forth
+3D 0032 0,0,84A 10,0,85A 0,13,85B
+3D 0130 Flying Bumpty, won't change direction
+3D 0132 0,0,84A 10,0,85A 0,13,85B -8,-8,114
 
 ; Hammer Bros
 40 30020 Hammer Bro
@@ -579,10 +672,10 @@ See .asm file for more details
 48 30330 Ice Bro, small jump only
 48 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
 
-49 30320 Mix Bro
-49 30322 0,-16,8D6 0,0,8E6 8,-16,836
-49 30330 Mix Bro, small jump only
-49 30332 0,-16,8D6 0,0,8E6 8,-16,836 0,-16,10A
+49 31120 Mix Bro
+49 31122 0,-16,8D6 0,0,8E6
+49 31130 Mix Bro, small jump only
+49 31132 0,-16,8D6 0,0,8E6 0,-16,10A
 
 4A 30520 Shell Bro
 4A 30522 0,-16,8D3 0,0,8E3 8,-16,440
@@ -656,7 +749,7 @@ See .asm file for more details
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
 81 0032 0,0,40A 0,0,114
 
-;;;; UTILITY SPRITES
+; UTILITY SPRITES
 
 ; Sprite Stacks
 A1 0022 0,0,* Sprite \n  Stack *
@@ -685,7 +778,7 @@ A6 30122 0,0, * Pipe Spawn Left *
 A6 30222 0,0, * Pipe Spawn Up *
 A6 30322 0,0, * Pipe Spawn Right *
 
-;;;; SHOOTERS
+; SHOOTERS
 
 ; Homing bullet
 C0 0020 Homing bullet shooter

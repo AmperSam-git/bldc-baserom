@@ -48,8 +48,8 @@
 ;==============================;
 
 ;Tilemaps
-    !arrow_tile_vertical    = $03
-    !arrow_tile_horizontal  = $04
+    !arrow_tile_vertical    = $8C
+    !arrow_tile_horizontal  = $8E
 
     !platform_tile_left     = $00
     !platform_tile_middle   = $01
@@ -250,7 +250,7 @@ XDisp:
     db $00,$10,$20,$30
 
 ArrowProps:
-    db $63,$23,$A3,$63          ; right,left,down,up (also contains palette date for the arrows)
+    db $62,$22,$A2,$62          ; right,left,down,up (also contains palette date for the arrows)
 
 ArrowXDisp:
     db $08,$10,$18

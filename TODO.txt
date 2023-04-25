@@ -1,3 +1,2 @@
-- update the external Graphics will all the new sprite additions
-- better json for all sprites
 - fix arrow in smb3 directional platform
+- update customizable sprite documentation

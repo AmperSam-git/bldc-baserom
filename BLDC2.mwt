@@ -227,9 +227,30 @@
 36	Flyin Mega Mole, flies forward
 37	Flyin Mega Mole, flies left-right
 	Flyin Mega Mole, flies up-down
-38	Directional Platform 2
-39	Directional Platform 3
-3A	Directional Platform 4
+38	2-Tile Directional Platform, timer ticks continuously (Right)
+	2-Tile Directional Platform, timer ticks continuously (Left)
+	2-Tile Directional Platform, timer ticks continuously (Down)
+	2-Tile Directional Platform, timer ticks continuously (Up)
+	2-Tile Directional Platform, timer ticks when mario stands on it (Right)
+	2-Tile Directional Platform, timer ticks when mario stands on it (Left)
+	2-Tile Directional Platform, timer ticks when mario stands on it (Down)
+	2-Tile Directional Platform, timer ticks when mario stands on it (Up)
+39	3-Tile Directional Platform, timer ticks continuously (Right)
+	3-Tile Directional Platform, timer ticks continuously (Left)
+	3-Tile Directional Platform, timer ticks continuously (Down)
+	3-Tile Directional Platform, timer ticks continuously (Up)
+	3-Tile Directional Platform, timer ticks when mario stands on it (Right)
+	3-Tile Directional Platform, timer ticks when mario stands on it (Left)
+	3-Tile Directional Platform, timer ticks when mario stands on it (Down)
+	3-Tile Directional Platform, timer ticks when mario stands on it (Up)
+3A	4-Tile Directional Platform, timer ticks continuously (Right)
+	4-Tile Directional Platform, timer ticks continuously (Left)
+	4-Tile Directional Platform, timer ticks continuously (Down)
+	4-Tile Directional Platform, timer ticks continuously (Up)
+	4-Tile Directional Platform, timer ticks when mario stands on it (Right)
+	4-Tile Directional Platform, timer ticks when mario stands on it (Left)
+	4-Tile Directional Platform, timer ticks when mario stands on it (Down)
+	4-Tile Directional Platform, timer ticks when mario stands on it (Up)
 3B	Falling Icicle
 3C	Giant Thwomp, Down.
 	Giant Thwomp, Up.
