@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Undefined Sprite",
+      "Description": "Sideways wooden spike, its speed and timing is configureable by extra bytes.",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -78,11 +78,11 @@
     {
       "Name": "Sideway Wood Spike, facing right",
       "ExtraBit": false,
-      "Extra Property Byte 1": 0,
-      "Extra Property Byte 2": 0,
-      "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0,
-      "Extra Property Byte 5": 0,
+      "Extra Property Byte 1": 240,
+      "Extra Property Byte 2": 16,
+      "Extra Property Byte 3": 48,
+      "Extra Property Byte 4": 24,
+      "Extra Property Byte 5": 47,
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,
@@ -94,11 +94,11 @@
     {
       "Name": "Sideway Wood Spike, facing-left",
       "ExtraBit": true,
-      "Extra Property Byte 1": 0,
-      "Extra Property Byte 2": 0,
-      "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0,
-      "Extra Property Byte 5": 0,
+      "Extra Property Byte 1": 240,
+      "Extra Property Byte 2": 16,
+      "Extra Property Byte 3": 48,
+      "Extra Property Byte 4": 24,
+      "Extra Property Byte 5": 47,
       "Extra Property Byte 6": 0,
       "Extra Property Byte 7": 0,
       "Extra Property Byte 8": 0,

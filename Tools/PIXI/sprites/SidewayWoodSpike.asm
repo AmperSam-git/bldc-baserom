@@ -6,6 +6,13 @@
 ;extra byte 4 - stay in place time before moving
 ;extra byte 5 - stay in place time after moving
 
+;vanilla movement
+; moving out: $F0
+; moving in: $F0
+; moving timer: $30
+; resting before: $18
+; resting after: $2F
+
 !GFX_FileNum = $9E		;DSS ExGFX number for this sprite
 
 !BodyTile = $01
