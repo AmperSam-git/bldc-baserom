@@ -29,6 +29,7 @@ Page 2
 2A9 - Top of silver pswitch door
 2AA - Small silver pswitch door/bottom
 2AB - Teleport block
+2AC - Solid single-use Bounce Block
 2B3 - Teleport block, requires Key
 2B4 - Turn off water
 2B5 - Turn on water
@@ -42,4 +43,10 @@ Page 3
 3A0-3A3 - Stack blocks
 3A3-3A7 - Directional Donut blocks
 3C0-3C8,3D8 - Ice/Frozen blocks
+3EA - Scroll camera left
+3EB - Scroll camera right
+3EC - Enable horizontal camera scroll
+3ED - Disable horizontal camera scroll
+3EE - Enable vertical camera scroll
+3EF - Disable vertical camera scroll
 3F2-3FF - Creating/eating block assistance tiles (hover for descriptions)
