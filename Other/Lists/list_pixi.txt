@@ -11,6 +11,9 @@
 0A thwomp_red.json
 0B FloorBoo.json
 0C Goombud.json
+0D punchy_gp.json
+0E Snifit.json
+0F cooligan.json
 
 10 MuncherBridge.json
 11 pot.json
@@ -26,40 +29,98 @@
 1B TrickyMagikoopa.json
 1C FireBar.json
 1D FireBar_Shiftable.json
+1E diagonal_green_beans.json
+1F trampoline.json
 
 20 piranha_venus_all.json
+21 SMB2Panser.json
+22 pipe_panser_dwell.json
+23 pipe_panser_periodic.json
+24 para_beetle.json
+25 cloud_drop.json
+26 phanto.json
+27 chainchomp.json
+28 chomp_shark_mini.json
+29 Ptooie.json
+2A Nipper.json
+2B Bumper.json
+2C spike_green.json
+2D spike_red.json
+2E spike_blue.json
+2F spike_yellow.json
 
-36 punchy_gp.json
+30 regen_pokey.json
+31 ThrowAwayPokey.json
+32 pokey_football.json
 
-40 Snifit.json
+33 albatoss.json
+34 albatoss_rideable.json
+35 SidewayWoodSpike.json
+36 FlyinMegaMole1.json
+37 FlyinMegaMole2.json
+38 directional_platform_2.json
+39 directional_platform_3.json
+3A directional_platform_4.json
+3B FallingIcicle.json
+3C GiantThwomp.json
+3D Bumpty.json
 
-50 Custom_Bro.json
-51 Ball.cfg
-52 Boomerang.cfg
-53 FireBall.cfg
-54 IceBall.cfg
+
+40 C_Hammer_Bro.json
+41 C_Bomb_Bro.json
+42 C_Boomerang_Bro.json
+43 C_Bullet_Bro.json
+44 C_Elec_Bro.json
+45 C_Fire_Bro.json
+46 C_Flame_Bro.json
+47 C_Ball_Bro.json
+48 C_Ice_Bro.json
+49 C_Mix_Bro.json
+4A C_Shell_Bro.json
+4B C_Sledge_Bro.json
+4C C_Curve_Bro.json
+4D C_Braze_Bro.json
+4E C_Frost_Bro.json
+
+
+
 
 60 platform_megapack.json
 
 80 bettersnake.json
 81 snakespawner.json
 
-82 StackingBlock_Down.cfg
-83 StackingBlock_Up.cfg
-84 StackingBlock_Left.cfg
-85 StackingBlock_Right.cfg
+82 block_sprites/StackingBlock_Down.cfg
+83 block_sprites/StackingBlock_Up.cfg
+84 block_sprites/StackingBlock_Left.cfg
+85 block_sprites/StackingBlock_Right.cfg
 
-87 better_donut_left.cfg
-88 better_donut_right.cfg
-89 better_donut_up.cfg
-8A better_donut_down.cfg
+87 block_sprites/better_donut_left.cfg
+88 block_sprites/better_donut_right.cfg
+89 block_sprites/better_donut_up.cfg
+8A block_sprites/better_donut_down.cfg
 
-A1 EnemyStackV2.json
-A2 EnemyStackV2_reverse.json
-A3 Lineguided_AnySprite.json
-A4 XYFollowSprite.json
-A5 spriteoffsetter.json
-A6 PipeSpawner.json
+A1 utility/EnemyStackV2.json
+A2 utility/EnemyStackV2_reverse.json
+A3 utility/Lineguided_AnySprite.json
+A4 utility/XYFollowSprite.json
+A5 utility/spriteoffsetter.json
+A6 utility/PipeSpawner.json
+A7 utility/clusterspawn.json
+
+B1 projectiles/Ball.cfg
+B2 projectiles/Boomerang.cfg
+B3 projectiles/FireBall.cfg
+B4 projectiles/IceBall.cfg
+B5 projectiles/panser_fire.cfg
+B6 projectiles/Pokey_ThrownSegment.cfg
+B7 projectiles/RealHomingBill.cfg
+B8 projectiles/spikes_ball.cfg
+B9 projectiles/torpedo.cfg
+
+; SHOOTERS
+C0 RealHomingShooter.json
+C1 cooliganshooter.json
 
 EXTENDED:
 00 boomerang.asm
@@ -70,6 +131,11 @@ EXTENDED:
 05 Ball.asm
 06 Needle.asm
 07 ElecBall.asm
+08 sunglasses.asm
 
 CLUSTER:
+01 fish.asm
+02 flowers.asm
+03 rain.asm
+04 sandstorm.asm
 10 cluster_sparkle.asm

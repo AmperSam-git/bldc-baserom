@@ -41,7 +41,7 @@ gamemode:
     16 GM16.asm
     19 GM19.asm
 
-global:		other/global_code.asm	; global code.
-statusbar:	other/status_code.asm	; status bar code.
-macrolib:	other/macro_library.asm	; macro library.
-sprite:		$7FAC80 ; 38 (SNES) or 68 (SA-1) bytes of free RAM.
+global:     other/global_code.asm   ; global code.
+statusbar:  other/status_code.asm   ; status bar code.
+macrolib:   other/macro_library.asm ; macro library.
+sprite:     $7FAC80 ; 38 (SNES) or 68 (SA-1) bytes of free RAM.

@@ -9,8 +9,8 @@
 293:0025 one_way_down.asm
 294:0025 one_way_left.asm
 295:0025 one_way_right.asm
-296:0130 onoff_block.asm
-297:0130 onoff_block_inv.asm
+296:0130 solid_when_off.asm
+297:0130 solid_when_on.asm
 298:0130 breakable_by_item.asm
 299:0025 silent_sprite_killer.asm
 29A:0130 hurt_death.asm
@@ -32,7 +32,7 @@
 2A9:0025 silver_pswitch_door_top.asm
 2AA:0025 silver_pswitch_door_small.asm
 2AB:0025 teleport.asm
-;2AC
+2AC:0130 single_use_bounce_block.asm
 ;2AD
 ;2AE
 ;2AF
@@ -53,6 +53,7 @@
 ;2BE
 ;2BF
 
+
 ; CONVEYOR BLOCKS -----------------------------------------;
 370-372	mm2_conv/conveyer move left fast.asm
 373-375	mm2_conv/conveyer move right fast.asm
@@ -60,13 +61,6 @@
 383-385	mm2_conv/conveyer move right normal.asm
 390-392	mm2_conv/conveyer move left slow.asm
 393-395	mm2_conv/conveyer move right slow.asm
-; On/Off
-376-378	mm2_conv/conveyer onoff move left fast.asm
-379-37B	mm2_conv/conveyer onoff move right fast.asm
-386-388	mm2_conv/conveyer onoff move left normal.asm
-389-38B	mm2_conv/conveyer onoff move right normal.asm
-396-398	mm2_conv/conveyer onoff move left slow.asm
-398-39B	mm2_conv/conveyer onoff move right slow.asm
 
 ; STACK BLOCKS --------------------------------------------;
 3A0 stack/StackBlockSpawn_Down.asm
@@ -92,102 +86,131 @@
 3C8:0130 icy/frozen_yoshicoin_top.asm
 3D8:0130 icy/frozen_yoshicoin_bottom.asm
 
+
+; CAMERA BLOCKS -------------------------------------------;
+3EA:0025 camera/scroll_left.asm
+3EB:0025 camera/scroll_right.asm
+3EC:0025 camera/horz_start.asm
+3ED:0025 camera/horz_stop.asm
+3EE:0025 camera/vert_start.asm
+3EF:0025 camera/vert_stop.asm
+
 ; SCREEN SCROLLING PIPES (DO NOT MODIFY) ------------------;
 
 ; Large Vertical Two-Way Pipe
-0300:0130	SSP_Tiles/top_vertical_pipe_cap_L.asm
-0301:0130	SSP_Tiles/top_vertical_pipe_cap_R.asm
-0310:0130	SSP_Tiles/pass_if_in_pipe.asm
-0311:0130	SSP_Tiles/pass_if_in_pipe.asm
-0320:0130	SSP_Tiles/bottom_vertical_pipe_cap_L.asm
-0321:0130	SSP_Tiles/bottom_vertical_pipe_cap_R.asm
+0300:0130 SSP_Tiles/top_vertical_pipe_cap_L.asm
+0301:0130 SSP_Tiles/top_vertical_pipe_cap_R.asm
+0310:0130 SSP_Tiles/pass_if_in_pipe.asm
+0311:0130 SSP_Tiles/pass_if_in_pipe.asm
+0320:0130 SSP_Tiles/bottom_vertical_pipe_cap_L.asm
+0321:0130 SSP_Tiles/bottom_vertical_pipe_cap_R.asm
 ; Large Horizontal Two-Way Pipe
-0302:0130	SSP_Tiles/pass_if_in_pipe.asm
-0303:0130	SSP_Tiles/pass_if_in_pipe.asm
-0304:0130	SSP_Tiles/pass_if_in_pipe.asm
-0312:0130	SSP_Tiles/left_horizontal_pipe_cap_B.asm
-0313:0130	SSP_Tiles/pass_if_in_pipe.asm
-0314:0130	SSP_Tiles/right_horizontal_pipe_cap_B.asm
+0302:0130 SSP_Tiles/pass_if_in_pipe.asm
+0303:0130 SSP_Tiles/pass_if_in_pipe.asm
+0304:0130 SSP_Tiles/pass_if_in_pipe.asm
+0312:0130 SSP_Tiles/left_horizontal_pipe_cap_B.asm
+0313:0130 SSP_Tiles/pass_if_in_pipe.asm
+0314:0130 SSP_Tiles/right_horizontal_pipe_cap_B.asm
 ; Small Vertical Two-Way Pipe
-0305:0130	SSP_Tiles/top_vertical_pipe_cap_small.asm
-0315:0130	SSP_Tiles/pass_if_in_pipe.asm
-0325:0130	SSP_Tiles/bottom_vertical_pipe_cap_small.asm
+0305:0130 SSP_Tiles/top_vertical_pipe_cap_small.asm
+0315:0130 SSP_Tiles/pass_if_in_pipe.asm
+0325:0130 SSP_Tiles/bottom_vertical_pipe_cap_small.asm
 ; Small Horizontal Two-Way Pipe
-0322:0130	SSP_Tiles/left_horizontal_pipe_cap_small.asm
-0323:0130	SSP_Tiles/pass_if_in_pipe.asm
-0324:0130	SSP_Tiles/right_horizontal_pipe_cap_small.asm
+0322:0130 SSP_Tiles/left_horizontal_pipe_cap_small.asm
+0323:0130 SSP_Tiles/pass_if_in_pipe.asm
+0324:0130 SSP_Tiles/right_horizontal_pipe_cap_small.asm
 
 
 ; Large Vertical One-Way Pipe (Downward)
-0306:0130	SSP_Tiles/top_vertical_pipe_cap_L.asm
-0307:0130	SSP_Tiles/top_vertical_pipe_cap_R.asm
-0316:0130	SSP_Tiles/pass_if_in_pipe.asm
-0317:0130	SSP_Tiles/pass_if_in_pipe.asm
-0326:0130	SSP_Tiles/bottom_vertical_pipe_cap_L_exit.asm
-0327:0130	SSP_Tiles/bottom_vertical_pipe_cap_R_exit.asm
+0306:0130 SSP_Tiles/top_vertical_pipe_cap_L.asm
+0307:0130 SSP_Tiles/top_vertical_pipe_cap_R.asm
+0316:0130 SSP_Tiles/pass_if_in_pipe.asm
+0317:0130 SSP_Tiles/pass_if_in_pipe.asm
+0326:0130 SSP_Tiles/bottom_vertical_pipe_cap_L_exit.asm
+0327:0130 SSP_Tiles/bottom_vertical_pipe_cap_R_exit.asm
 ; Large Horizontal One-Way Pipe (Leftward)
-0308:0130	SSP_Tiles/pass_if_in_pipe.asm
-0309:0130	SSP_Tiles/pass_if_in_pipe.asm
-030A:0130	SSP_Tiles/pass_if_in_pipe.asm
-0318:0130	SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
-0319:0130	SSP_Tiles/pass_if_in_pipe.asm
-031A:0130	SSP_Tiles/right_horizontal_pipe_cap_B.asm
+0308:0130 SSP_Tiles/pass_if_in_pipe.asm
+0309:0130 SSP_Tiles/pass_if_in_pipe.asm
+030A:0130 SSP_Tiles/pass_if_in_pipe.asm
+0318:0130 SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
+0319:0130 SSP_Tiles/pass_if_in_pipe.asm
+031A:0130 SSP_Tiles/right_horizontal_pipe_cap_B.asm
 ; Small Vertical One-Way Pipe (Downward)
-030B:0130	SSP_Tiles/top_vertical_pipe_cap_small.asm
-031B:0130	SSP_Tiles/pass_if_in_pipe.asm
-032B:0130	SSP_Tiles/bottom_vertical_pipe_cap_small_exit.asm
+030B:0130 SSP_Tiles/top_vertical_pipe_cap_small.asm
+031B:0130 SSP_Tiles/pass_if_in_pipe.asm
+032B:0130 SSP_Tiles/bottom_vertical_pipe_cap_small_exit.asm
 ; Small Horizontal One-Way Pipe (Leftward)
-0328:0130	SSP_Tiles/left_horizontal_pipe_cap_small.asm
-0329:0130	SSP_Tiles/pass_if_in_pipe.asm
-032A:0130	SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
+0328:0130 SSP_Tiles/left_horizontal_pipe_cap_small.asm
+0329:0130 SSP_Tiles/pass_if_in_pipe.asm
+032A:0130 SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
 
 
 ; Large Vertical One-Way Pipe (Upward)
-0336:0130	SSP_Tiles/top_vertical_pipe_cap_L_exit.asm
-0337:0130	SSP_Tiles/top_vertical_pipe_cap_R_exit.asm
-0346:0130	SSP_Tiles/bottom_vertical_pipe_cap_L.asm
-0347:0130	SSP_Tiles/bottom_vertical_pipe_cap_R.asm
+0336:0130 SSP_Tiles/top_vertical_pipe_cap_L_exit.asm
+0337:0130 SSP_Tiles/top_vertical_pipe_cap_R_exit.asm
+0346:0130 SSP_Tiles/bottom_vertical_pipe_cap_L.asm
+0347:0130 SSP_Tiles/bottom_vertical_pipe_cap_R.asm
 ; Large Horizontal One-Way Pipe (Rightward)
-0338:0130	SSP_Tiles/pass_if_in_pipe.asm
-0339:0130	SSP_Tiles/pass_if_in_pipe.asm
-0348:0130	SSP_Tiles/left_horizontal_pipe_cap_B.asm
-0349:0130	SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
+0338:0130 SSP_Tiles/pass_if_in_pipe.asm
+0339:0130 SSP_Tiles/pass_if_in_pipe.asm
+0348:0130 SSP_Tiles/left_horizontal_pipe_cap_B.asm
+0349:0130 SSP_Tiles/right_horizontal_pipe_cap_B_exit.asm
 ; Small Vertical One-Way Pipe (Upward)
-033B:0130	SSP_Tiles/top_vertical_pipe_cap_small_exit.asm
-034B:0130	SSP_Tiles/bottom_vertical_pipe_cap_small.asm
+033B:0130 SSP_Tiles/top_vertical_pipe_cap_small_exit.asm
+034B:0130 SSP_Tiles/bottom_vertical_pipe_cap_small.asm
 ; Small Horizontal One-Way Pipe (Rightward)
-033A:0130	SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
-034A:0130	SSP_Tiles/right_horizontal_pipe_cap_small.asm
+033A:0130 SSP_Tiles/left_horizontal_pipe_cap_B_exit.asm
+034A:0130 SSP_Tiles/right_horizontal_pipe_cap_small.asm
 
 
 ; Turn Block (Right-Up)
-030C:0130	SSP_Tiles/pass_if_in_pipe.asm
-030D:0130	SSP_Tiles/pass_if_in_pipe.asm
-031C:0130	SSP_Tiles/turn_up-right.asm
-031D:0130	SSP_Tiles/pass_if_in_pipe.asm
+030C:0130 SSP_Tiles/pass_if_in_pipe.asm
+030D:0130 SSP_Tiles/pass_if_in_pipe.asm
+031C:0130 SSP_Tiles/turn_up-right.asm
+031D:0130 SSP_Tiles/pass_if_in_pipe.asm
 ; Turn Block (Right-Down)
-030E:0130	SSP_Tiles/pass_if_in_pipe.asm
-030F:0130	SSP_Tiles/pass_if_in_pipe.asm
-031E:0130	SSP_Tiles/pass_if_in_pipe.asm
-031F:0130	SSP_Tiles/turn_right-down.asm
+030E:0130 SSP_Tiles/pass_if_in_pipe.asm
+030F:0130 SSP_Tiles/pass_if_in_pipe.asm
+031E:0130 SSP_Tiles/pass_if_in_pipe.asm
+031F:0130 SSP_Tiles/turn_right-down.asm
 ; Turn Block (Left-Up)
-032C:0130	SSP_Tiles/pass_if_in_pipe.asm
-032D:0130	SSP_Tiles/pass_if_in_pipe.asm
-033C:0130	SSP_Tiles/turn_left-up.asm
-033D:0130	SSP_Tiles/pass_if_in_pipe.asm
+032C:0130 SSP_Tiles/pass_if_in_pipe.asm
+032D:0130 SSP_Tiles/pass_if_in_pipe.asm
+033C:0130 SSP_Tiles/turn_left-up.asm
+033D:0130 SSP_Tiles/pass_if_in_pipe.asm
 ; Turn Block (Left-Down)
-032E:0130	SSP_Tiles/pass_if_in_pipe.asm
-032F:0130	SSP_Tiles/pass_if_in_pipe.asm
-033E:0130	SSP_Tiles/pass_if_in_pipe.asm
-033F:0130	SSP_Tiles/turn_down-left.asm
+032E:0130 SSP_Tiles/pass_if_in_pipe.asm
+032F:0130 SSP_Tiles/pass_if_in_pipe.asm
+033E:0130 SSP_Tiles/pass_if_in_pipe.asm
+033F:0130 SSP_Tiles/turn_down-left.asm
 
 ; Small Turn Blocks
-034C:0130	SSP_Tiles/turn_up-right_small.asm
-034D:0130	SSP_Tiles/turn_right-down_small.asm
-035C:0130	SSP_Tiles/turn_left-up_small.asm
-035D:0130	SSP_Tiles/turn_down-left_small.asm
+034C:0130 SSP_Tiles/turn_up-right_small.asm
+034D:0130 SSP_Tiles/turn_right-down_small.asm
+035C:0130 SSP_Tiles/turn_left-up_small.asm
+035D:0130 SSP_Tiles/turn_down-left_small.asm
 
 ; Pass if In Pipe
-036F:0130	SSP_Tiles/pass_if_in_pipe.asm
+036F:0130 SSP_Tiles/pass_if_in_pipe.asm
 
-; PLACE YOUR CUSTOM BLOCKS BELOW --------------------------;
+; Filter Pipe
+0332-0335:0130 SSP_Tiles/pass_if_in_pipe_and_filter.asm
+0342-0345:0130 SSP_Tiles/pass_if_in_pipe_and_filter.asm
+
+
+@dsc
+; Eating Block Tiles
+3F2 0 A brown used block that will make the Better Block Snake (Eating) turn left upon eating it.
+3F3 0 A brown used block that will make the Better Block Snake (Eating) turn right upon eating it.
+3F4 0 A brown used block that will make the Better Block Snake (Eating) turn left when the ON/OFF switch is ON or right when the ON/OFF switch is OFF upon eating it.
+3F5 0 A brown used block that will make the Better Block Snake (Eating) turn left when the ON/OFF switch is OFF or right when the ON/OFF switch is ON upon eating it.
+3F6 0 A brown used block that will make the Better Block Snake (Eating) move faster upon eating it.
+3F7 0 A brown used block that will make the Better Block Snake (Eating) move slower upon eating it.
+3F8 0 A brown used block that will make the Better Block Snake (Eating) stop upon eating it.
+3F9 0 An empty air block that will make the Better Block Snake (Creating) turn left upon eating it.
+3FA 0 An empty air block that will make the Better Block Snake (Creating) turn right upon eating it.
+3FB 0 An empty air block that will make the Better Block Snake (Creating) turn left when the ON/OFF switch is ON or right when the ON/OFF switch is OFF upon eating it.
+3FC 0 An empty air block that will make the Better Block Snake (Creating) turn left when the ON/OFF switch is OFF or right when the ON/OFF switch is ON upon eating it.
+3FD 0 An empty air block that will make the Better Block Snake (Creating) move faster upon eating it.
+3FE 0 An empty air block that will make the Better Block Snake (Creating) move slower upon eating it.
+3FF 0 An empty air block that will make the Better Block Snake (Creating) stop upon eating it.
