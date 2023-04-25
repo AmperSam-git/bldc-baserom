@@ -1266,4 +1266,4 @@ E0 0112 1,16,5FA 3,32,5FA 0,48,5D9 16,48,5DA 0,64,5E9 16,64,5EA 12,-10,5FA 24,-2
 E0 0000 3 platforms on chains that move will be a triple ball n' chain if the extra bit is set. Changes direction based on it's X position.
 E0 0010 A triple ball n' chain on chains will be 3 platforms on chains if the extra bit is clear. Changes direction based on it's X position.
 
-; Append Custom Sprites Below
+;;;; CUSTOM SPRITES ;;;;

@@ -193,7 +193,8 @@
 	Cloud Drop, vertical
 26	Phanto
 27	Chain Chomp
-28	Chomp Shark Mini
+28	Chomp Shark, disappears
+	Chomp Shark, omnomnomnomnom
 29	Ptooie
 2A	Nipper, jumping stationary
 	Nipper, stationary and chasing
@@ -304,4 +305,5 @@ A6	Pipe Spawner (Down)
 	Pipe Cannon Spawner (Up)
 	Pipe Cannon Spawner (Right)
 C0	Homing Bill Shooter
-C1	Cooligan shooter.
+C1	Cooligan shooter, shoots right.
+	Cooligan shooter, shoots left.

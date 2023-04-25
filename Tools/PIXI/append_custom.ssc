@@ -94,6 +94,11 @@ See .asm file for more details
 0E 30530 Big fire-spitting green Snifit, hops in place
 0E 30532 0,-16,8BC 16,-16,8BD 0,0,8CC 16,0,8CD -16,0,822
 
+; Cooligan
+0F 0020 A cooligan. It slides around and takes 2 hits to kill.
+0F 0022 0,0,8A1 16,0,8A2
+
+; Muncher bridge
 10 30020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
 10 30020 Muncher bridge
@@ -103,8 +108,11 @@ See .asm file for more details
 10 30032 -32,1,830 -16,1,830 0,1,830 16,1,830 32,1,830
 10 30132 0,-31,830 0,-15,830 0,1,830 0,17,830 0,33,830
 
+; Pot
 11 0020 The first byte (first two digits) determines the sprite number to spawn. The next digit determines which status ($14C8) the sprite should spawn in (if unsure, use 1). The fourth digit is the extra bit of the sprite to spawn. 0 and 1 spawn a normal sprite with its extra bit clear or set, 2 and 3 spawn a custom sprite with its extra bit clear or set.
 11 0022 0,0,834
+
+; Roto Disc
 12 0020 Custom Roto disc, counter-clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
 12 0022 0,0,835
 12 0030 Custom Roto disc, clockwise\n- Extra Byte 1 : the X radius of the circle the sprite will travel in.\n- Extra Byte 2 : the Y radius of the circle the sprite will travel in.\n- Extra Byte 3 : the speed of the sprites movement.\n- Extra Byte 4 : which half of the circle the sprite starts in.\nSee the sprite's .asm file for more details
@@ -130,18 +138,22 @@ See .asm file for more details
 
 14 30020 Ceiling Thwimp
 14 30022 0,0,884
+
 15 0020 A Blooper from SMB1.
 15 0022 0,-16,890 0,0,8A0
 
 16 0020 Stationary Hammer Bro, doesn't require platform.
 16 0022 0,0,5BC 16,0,5BD 8,-8,5AE -16,0,5BB
+
 17 0020 Gray Castle Block, horizontal
 17 0022 0,1,498 16,1,499 0,17,4A8 16,17,4A9 0,9,825
 17 0030 Gray Castle Block, vertical
 17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 8,8,823
+
 18 0020 Flying Spiny
 18 0022 0,0,429 12,-8,414
 
+; Magikoopa
 19 0020 Magikoopa sits in one place repeatedly firing magic.
 19 0022 0,1,454 0,-15,444
 1B 30020 This magikoopa casts magic that teleports player to a different level/entrance.
@@ -361,10 +373,9 @@ See .asm file for more details
 20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
 20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
 
-
 ; Para-beetles
-24 30020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
-24 30022 0,0,0
+24 0020 This is a sprite from SMB3, a Buzzy Beetle that flies through the air and can carry the player.
+24 0022 0,0,0
 
 24 30220 Yellow para-beetle, face player
 24 30222 0,0,940
@@ -437,6 +448,45 @@ See .asm file for more details
 24 32D22 0,0,956 16,0,957 0,16,966 16,16,967
 24 33D22 Big Green para-beetle, move away
 24 33D22 0,0,956 16,0,957 0,16,966 16,16,967
+
+; Cloud Drop
+25 0020 A Cloud Drop that swoops back and forth the number of tiles in its extension byte.
+25 0022 0,0,864 16,0,865
+25 0030 A Cloud Drop that swoops up and down the number of tiles in its extension byte.
+25 0032 0,0,866 0,16,867
+
+; Phanto
+26 0020 The sprite will only hurt Mario when he's carrying a key.
+26 0022 0,0,845
+
+; Chain chomp
+27 0020 A Chain Chomp from SMB3 on a chain
+27 0022 0,0,874 16,0,875
+
+; Chomp shark
+28 0020 Chomps along in a straight line, but stops when it hits a solid block.
+28 0022 0,0,885
+28 0030 Eats through any tiles in front of it.
+28 0032 0,0,885
+
+; Ptooie
+29 0020 Ptooie from SMB3
+29 0022 0,0,0
+
+; Nipper
+2A 0020 This is the Nipper from SMB3
+2A 30020 A jumping Nipper
+2A 30022 0,0,856
+2A 30120 A stationary Nipper that will start chasing Mario
+2A 30122 0,0,855
+2A 30220 A Nipper that will hop back and forth
+2A 30222 0,0,855
+2A 30320 A stationary Nipper that will spit fireballs
+2A 30322 0,0,857, -16,-16,822
+
+; Bumper
+2B 30020 When the player touches this sprite, they're bumped away.
+2B 30022 0,0,848 16,0,849 0,16,858 16,16,859
 
 ; Giant Thwomp
 3C 0020 A giant Twhomp that attemps to stun and crush the player. It goes downwards.
@@ -575,6 +625,8 @@ See .asm file for more details
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
 81 0032 0,0,40A 0,0,114
 
+;;;; UTILITY SPRITES ;;;;
+
 ; Sprite Stacks
 A1 0022 0,0,* Sprite \n  Stack *
 A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
@@ -601,3 +653,15 @@ A6 30022 0,0, * Pipe Spawn Down *
 A6 30122 0,0, * Pipe Spawn Left *
 A6 30222 0,0, * Pipe Spawn Up *
 A6 30322 0,0, * Pipe Spawn Right *
+
+;;;; SHOOTERS ;;;;
+
+; Homing bullet
+C0 0020 Homing bullet shooter
+C0 0022 0,0,8A3 0,0,114
+
+; Cooligan
+C1 0020 A Cooligan shooter. The extra bit determines the shooting direction. It is currently set to shoot right.
+C1 0022 0,0,891 16,0,892 0,0,114
+C1 0030 A Cooligan shooter. The extra bit determines the shooting direction. It is currently set to shoot left.
+C1 0032 0,0,8A1 16,0,8A2 0,0,114
