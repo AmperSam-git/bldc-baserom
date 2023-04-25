@@ -63,39 +63,9 @@
       "ExtraBit": false,
       "Tiles": [
         {
-          "X offset": 36,
-          "Y offset": 20,
-          "map16 tile": 276
-        },
-        {
-          "X offset": 4,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 20,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 12,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 28,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 36,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 44,
-          "Y offset": 4,
-          "map16 tile": 182
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 0
         }
       ],
       "X": 0,
@@ -108,39 +78,9 @@
       "ExtraBit": true,
       "Tiles": [
         {
-          "X offset": 36,
-          "Y offset": -12,
-          "map16 tile": 276
-        },
-        {
-          "X offset": 20,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 12,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 4,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 28,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 36,
-          "Y offset": 4,
-          "map16 tile": 182
-        },
-        {
-          "X offset": 44,
-          "Y offset": 4,
-          "map16 tile": 182
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 0
         }
       ],
       "X": 0,

@@ -56,7 +56,7 @@
   "Extra Property Byte 2": 11,
   "Additional Byte Count (extra bit clear)": 1,
   "Additional Byte Count (extra bit set)": 1,
-  "Map16": "5hX2FecV9xU=",
+  "Map16": "",
   "Displays": [
     {
       "Description": "A Panser from SMB2 with many available configurations. Palette and behaviors are set through Extra Byte 1 (Extension).",
@@ -80,7 +80,7 @@
         {
           "X offset": 0,
           "Y offset": 0,
-          "map16 tile": 1
+          "map16 tile": 0
         }
       ],
       "X": 0,

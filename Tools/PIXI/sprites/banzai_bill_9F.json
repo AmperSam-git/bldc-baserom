@@ -56,7 +56,7 @@
   "Extra Property Byte 2": 0,
   "Additional Byte Count (extra bit clear)": 0,
   "Additional Byte Count (extra bit set)": 0,
-  "Map16": "h0WXRYZFlkXvQe9B7kHuQYVFlUWERZRFl8WHxZbFhsXPRc9FzkXORZXFhcWUxYTFg0WTRYJFkkWBRZFFgEWQRYlFmUWIRZhFoUWxRaBFsEXDRdNFwkXSRcFF0UXARdBFr0W/Ra5FvkWPRZ9FjkWeRQ==",
+  "Map16": "",
   "Displays": [
     {
       "Description": "A SMW Banzai Bill that faces left.",
@@ -81,11 +81,6 @@
           "X offset": 0,
           "Y offset": 0,
           "map16 tile": 0
-        },
-        {
-          "X offset": 0,
-          "Y offset": 0,
-          "map16 tile": 266
         }
       ],
       "X": 0,

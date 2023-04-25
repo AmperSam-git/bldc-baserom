@@ -63,14 +63,9 @@
       "ExtraBit": false,
       "Tiles": [
         {
-          "X offset": -8,
+          "X offset": 0,
           "Y offset": 0,
-          "map16 tile": 233
-        },
-        {
-          "X offset": 8,
-          "Y offset": 0,
-          "map16 tile": 234
+          "map16 tile": 0
         }
       ],
       "X": 0,

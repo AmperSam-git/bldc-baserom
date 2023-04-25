@@ -64,23 +64,8 @@
       "Tiles": [
         {
           "X offset": 0,
-          "Y offset": 1,
-          "map16 tile": 183
-        },
-        {
-          "X offset": 16,
-          "Y offset": 1,
-          "map16 tile": 183
-        },
-        {
-          "X offset": 32,
-          "Y offset": 1,
-          "map16 tile": 183
-        },
-        {
-          "X offset": 48,
-          "Y offset": 1,
-          "map16 tile": 183
+          "Y offset": 0,
+          "map16 tile": 0
         }
       ],
       "X": 0,
