@@ -5,7 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-!GFX_FileNum = $A0      ; DSS ExGraphic file number
+!GFX_FileNum = $A8      ; DSS ExGraphic file number
 !TILEMAP = $06			;ball tile
 
 SpeedX:

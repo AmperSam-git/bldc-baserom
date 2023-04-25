@@ -169,7 +169,7 @@ exgfx_length:
     db $02              ;# A5 - Icicle
     db $10              ;# A6 - Giant Thwomp
     db $07              ;# A7 - Cooligan
-    db $0              ;# A8 - Unused
+    db $01              ;# A8 - YI Spike, ball
     db $0              ;# A9 - Unused
     db $0              ;# AA - Unused
     db $0              ;# AB - Unused
