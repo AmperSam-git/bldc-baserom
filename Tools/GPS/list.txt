@@ -61,13 +61,6 @@
 383-385	mm2_conv/conveyer move right normal.asm
 390-392	mm2_conv/conveyer move left slow.asm
 393-395	mm2_conv/conveyer move right slow.asm
-; On/Off
-376-378	mm2_conv/conveyer onoff move left fast.asm
-379-37B	mm2_conv/conveyer onoff move right fast.asm
-386-388	mm2_conv/conveyer onoff move left normal.asm
-389-38B	mm2_conv/conveyer onoff move right normal.asm
-396-398	mm2_conv/conveyer onoff move left slow.asm
-398-39B	mm2_conv/conveyer onoff move right slow.asm
 
 ; STACK BLOCKS --------------------------------------------;
 3A0 stack/StackBlockSpawn_Down.asm

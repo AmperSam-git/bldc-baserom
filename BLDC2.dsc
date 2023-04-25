@@ -116,36 +116,18 @@
 373	0	conveyer move right fast
 374	0	conveyer move right fast
 375	0	conveyer move right fast
-376	0	conveyer on-off is on move left fast
-377	0	conveyer on-off is on move left fast
-378	0	conveyer on-off is on move left fast
-379	0	conveyer on-off is on move right fast
-37a	0	conveyer on-off is on move right fast
-37b	0	conveyer on-off is on move right fast
 380	0	conveyer move left normal
 381	0	conveyer move left normal
 382	0	conveyer move left normal
 383	0	conveyer move right normal
 384	0	conveyer move right normal
 385	0	conveyer move right normal
-386	0	conveyer on-off is on move left normal
-387	0	conveyer on-off is on move left normal
-388	0	conveyer on-off is on move left normal
-389	0	conveyer on-off is on move right normal
-38a	0	conveyer on-off is on move right normal
-38b	0	conveyer on-off is on move right normal
 390	0	conveyer move left slow
 391	0	conveyer move left slow
 392	0	conveyer move left slow
 393	0	conveyer move right slow
 394	0	conveyer move right slow
 395	0	conveyer move right slow
-396	0	conveyer on-off is on move left slow
-397	0	conveyer on-off is on move left slow
-398	0	conveyer on-off is on move right slow
-399	0	conveyer on-off is on move right slow
-39a	0	conveyer on-off is on move right slow
-39b	0	conveyer on-off is on move right slow
 3a0	0	stack/StackBlockSpawn_Down.asm
 3a1	0	stack/StackBlockSpawn_Up.asm
 3a2	0	stack/StackBlockSpawn_Left.asm
