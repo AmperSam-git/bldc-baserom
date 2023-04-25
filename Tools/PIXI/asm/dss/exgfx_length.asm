@@ -163,7 +163,7 @@ exgfx_length:
     db $04              ;# 9F - Homing bullet
     db $07              ;# A0 - YI Spike
     db $01              ;# A1 - Bumper
-    db $03              ;# A2 - SMB3 Directional Platform
+    db $05              ;# A2 - SMB3 Directional Platform
     db $10              ;# A3 - Albatoss
     db $01              ;# A4 - Torpedo
     db $02              ;# A5 - Icicle

@@ -48,8 +48,8 @@
 ;==============================;
 
 ;Tilemaps
-    !arrow_tile_vertical    = $8C
-    !arrow_tile_horizontal  = $8E
+    !arrow_tile_vertical    = $03
+    !arrow_tile_horizontal  = $04
 
     !platform_tile_left     = $00
     !platform_tile_middle   = $01
@@ -111,9 +111,9 @@ print "INIT ",pc
     STA !nextDirectionRAM,x
     CMP #$03                    ;\ Store the arrow tile to draw based on the
     BCS +                       ;| initial direction.
-    LDA !arrow_tile_horizontal ;| Arrow Horizontal
+    LDA !dss_tile_buffer+!arrow_tile_horizontal ;| Arrow Horizontal
     BRA ++                      ;|
-+   LDA !arrow_tile_vertical   ;| Arrow Vertical
++   LDA !dss_tile_buffer+!arrow_tile_vertical   ;| Arrow Vertical
 ++  STA !1602,x                 ;/
     RTL
 
@@ -219,9 +219,9 @@ MakeSolid:
     STA !directionRAM,x         ;/
     CMP #$03                    ;\ Store the arrow tile to draw based on the
     BCS +                       ;| direction.
-    LDA !arrow_tile_horizontal ;| Arrow Horizontal
+    LDA !dss_tile_buffer+!arrow_tile_horizontal ;| Arrow Horizontal
     BRA ++                      ;|
-+   LDA !arrow_tile_vertical   ;| Arrow Vertical
++   LDA !dss_tile_buffer+!arrow_tile_vertical   ;| Arrow Vertical
 ++  STA !1602,x                 ;/
     STZ !nextDirectionRAM,x     ; Set next direction to 0 to skip this next time.
     BRA Return
@@ -250,13 +250,18 @@ XDisp:
     db $00,$10,$20,$30
 
 ArrowProps:
-    db $62,$22,$A2,$62          ; right,left,down,up (also contains palette date for the arrows)
+    db $63,$23,$A3,$63          ; right,left,down,up (also contains palette date for the arrows)
 
 ArrowXDisp:
     db $08,$10,$18
 
 
 Graphics:
+    lda #!GFX_FileNum
+    %FindAndQueueGFX()
+    bcs .gfx_loaded
+    rts
+.gfx_loaded
     LDA !shouldDisappear,x  ;\ If the platform should not disappear, always draw it.
     BEQ .draw               ;/
     LDA !directionRAM,x     ;\ If the platform is still...
@@ -271,11 +276,6 @@ Graphics:
     BEQ Return              ;/
 
 .draw
-    lda #!GFX_FileNum
-    %FindAndQueueGFX()
-    bcs .gfx_loaded
-    rts
-.gfx_loaded
     %GetDrawInfo()
     LDA !extra_prop_1,x     ;\ Store the amount of tiles to draw (not including the arrow).
     AND #$07                ;|
