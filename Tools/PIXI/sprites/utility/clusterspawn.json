@@ -98,6 +98,12 @@
       "ExtraBit": false,
       "Extra Property Byte 1": 4,
       "Extra Property Byte 2": 9
+    },
+    {
+      "Name": "Cluster Fire Spawner",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 4
     }
   ]
 }
