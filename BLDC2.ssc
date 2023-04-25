@@ -1795,8 +1795,14 @@ See .asm file for more details
 3C 0032 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,-48,823
 
 ; Bumpty
-3D 0020 Bumpty
-3D 0022 0,0,84A -3,8,84B
+3D 0020 Bumpty, walks back and forth
+3D 0022 0,0,84A -3,8,84B,
+3D 0120 Bumpty, slides and tackles Mario
+3D 0122 0,0,84A -3,8,84B -8,-8,114
+3D 0030 Flying bumpty, goes back and forth
+3D 0032 0,0,84A 10,0,85A 0,13,85B
+3D 0130 Flying Bumpty, won't change direction
+3D 0132 0,0,84A 10,0,85A 0,13,85B -8,-8,114
 
 ; Hammer Bros
 40 30020 Hammer Bro

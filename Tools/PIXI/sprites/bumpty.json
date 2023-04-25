@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "Bumpty",
+      "Description": "Bumpty, will have different abilities depending on extra bits and initial X position.",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -76,8 +76,24 @@
   ],
   "Collection": [
     {
-      "Name": "Bumpty",
+      "Name": "Bumpty, tackles Mario based on x-position.",
       "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Flying Bumpty, changes flying pattern based on x-position.",
+      "ExtraBit": true,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,

@@ -224,7 +224,8 @@
 3B	Falling Icicle
 3C	Giant Thwomp, Down.
 	Giant Thwomp, Up.
-3D	Bumpty
+3D	Bumpty, tackles Mario based on x-position.
+	Flying Bumpty, changes flying pattern based on x-position.
 40	Hammer Bro
 	Hammer Bro, small jump only
 	Hammer Bro Continuous
