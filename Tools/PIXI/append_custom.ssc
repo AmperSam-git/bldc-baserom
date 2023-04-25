@@ -141,12 +141,15 @@ See .asm file for more details
 17 0032 0,1,498 16,1,499 0,17,4A8 16,17,4A9 8,8,823
 18 0020 Flying Spiny
 18 0022 0,0,429 12,-8,414
+
 19 0020 Magikoopa sits in one place repeatedly firing magic.
 19 0022 0,1,454 0,-15,444
 1B 30020 This magikoopa casts magic that teleports player to a different level/entrance.
 1B 30022 0,1,454 0,-15,444
 1B 30030 Same as above but stationary.
 1B 30032 0,1,454 0,-15,444 0,-16,10A
+
+; Firebars
 1C 0020 Firebar Clockwise
 1C 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1C 0030 Firebar Counter
@@ -155,6 +158,14 @@ See .asm file for more details
 1D 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 1D 0030 Firebar Counter
 1D 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
+
+; Springboards
+1E 0020 Left Wall Springboards\n\nExtra byte 1 :\n00 - Up-diagonal\n01 - Down-diagonal
+1E 0022 0,-8,829 4,-12,829 8,-16,829 0,0,82B 4,4,82B 8,8,82B
+1E 0030 Right Wall Springboards\n\nExtra byte 1 :\n00 - Up-diagonal\n01 - Down-diagonal
+1E 0032 -16,-8,82B -20,-12,82B -24,-16,82B -16,0,829 -20,4,829 -24,8,829
+1F 0020 Trampoline
+1F 0022 0,1,82A 16,1,82A 32,1,82A 48,1,82A
 
 ; Piranha/Venus Plants
 20 30020 A vertical Green Piranha Plant moving up (long range).
@@ -350,6 +361,12 @@ See .asm file for more details
 20 33F30 A horizontal Red Venus Plant moving right (short range, 2 fireballs)
 20 33F32 8,8,81C 24,8,819 31,18,821 37,24,821
 
+; Giant Thwomp
+3C 0020 A giant Twhomp that attemps to stun and crush the player. It goes downwards.
+3C 0022 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,48,824
+3C 0030 A giant Twhomp that attemps to stun and crush the player. It goes upwards.
+3C 0032 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,-48,823
+
 ; Hammer Bros
 40 30020 Hammer Bro
 40 30022 0,-16,8D5 0,0,8E5 8,-16,5BB
@@ -480,15 +497,30 @@ See .asm file for more details
 81 0022 0,0,40A 0,0,114
 81 0030 Burst-spawns a set number of Snakes, then stops forever.This variant is best to use with non-despawning snakes since not all slots can be filled up
 81 0032 0,0,40A 0,0,114
+
+; Sprite Stacks
+A1 0022 0,0,* Sprite \n  Stack *
 A1 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
-A1 0022 0,0,0
+A2 0022 0,0,* Sprite Stack \n Upside-Down  *
 A2 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top FF for an empty slot.  The 9th extra byte (bitwise) marks each sprite in the stack as a custom sprite.
-A2 0022 0,0,0
-A3 0020 Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\nSS = Sprite number\nXX = X offset for position sprite ($80-$FF = negative offset)\nYY = Y offset for position sprite ($80-$FF = negative offset)\nCC = Custom settings. Format: epP-SSSS\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\n   (0 acts as 1 because state 0 doesn't make sense here).\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\n   State 9 is carryable, useful for sprites like shells or throwblocks.\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\n - p: to be used with platforms: if set (i.e. add 40 to the number)\n   Mario will move with the platform instead of sliding on it.\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\n - P: second platform option, which does the same thing as the p option\n   but it's recommended for sprites that use custom solid sprite code\n   (for example, MarioFanGamer's Numbered Platform sprite).\n   Note: this option doesn't work for sprites that naturally move horizontally.\n   Also, this option is overriden by the p option: don't use them together.\nSP = speed multiplier (+1)\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\n - FF (or any negative value) = stationary (the sprite won't move at all)\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
-A3 0022 0,0,0
+
+; Line-guided Sprites
+A3 30020 Options are set using the extension box in LM using 8 bytes: SS XX YY CC SP E1 E2 E3 E4\nSS = Sprite number\nXX = X offset for position sprite ($80-$FF = negative offset)\nYY = Y offset for position sprite ($80-$FF = negative offset)\nCC = Custom settings. Format: epP-SSSS\n - SSSS: the state the sprite will be spawned in (using the $14C8 format).\n   (0 acts as 1 because state 0 doesn't make sense here).\n   State 1 (set with either 0 or 1) is init, which is what you usually want.\n   State 9 is carryable, useful for sprites like shells or throwblocks.\n - e: if 1 (i.e. add 80 to the number), will set the extra bit for the spawned sprite.\n - p: to be used with platforms: if set (i.e. add 40 to the number)\n   Mario will move with the platform instead of sliding on it.\n   Note: it doesn't work with Carrot Lifts, Keys and Boo Blocks.\n - P: second platform option, which does the same thing as the p option\n   but it's recommended for sprites that use custom solid sprite code\n   (for example, MarioFanGamer's Numbered Platform sprite).\n   Note: this option doesn't work for sprites that naturally move horizontally.\n   Also, this option is overriden by the p option: don't use them together.\nSP = speed multiplier (+1)\n - 00 = normal speed, 01 = double speed, etc. (max 7F)\n - FF (or any negative value) = stationary (the sprite won't move at all)\nE1-E4 = these 4 values set the 4 extra bytes for the other sprite (if custom).
+A3 30022 0,0,* Line-Guided Sprite \n  Vanilla           *
+A3 30032 0,0,* Line-Guided Sprite \n  Custom            *
+
+; XY Follow Sprite
 A4 0020 A sprite which spawns another sprite and makes it stay on the same X or Y position as Mario.
-A4 0022 0,0,0
+A4 0022 0,0, * Follow \n Sprite *
+
+; Sprite Offsetter
 A5 0020 A sprite that spawns another sprite in an offset position. For regular sprites, the X/Y-dependent properties will be read in the original position of this custom sprite.\nExtra Byte 1: Regular or custom sprite number.\nExtra Byte 2: 'Extra Bit' information of the sprite. Set it to 0 or 1 for a regular sprite, or set it to 2 or 3 for a custom sprite with the Extra Bit clear or set, respectively.\nExtra Byte 3: X position offset in pixels.\nExtra Byte 4: Y position offset in pixels.\nExtra Bit: If clear, the offset will be additive, so the sprite will be moved down and right from the custom sprite's position. If set, it will subtract from the custom sprite's position and move up and left instead.\nExtra Bytes 5-8: Correspond to Extra Bytes 1-4 of the spawned custom sprite. Can be ignored if not applicable.
-A5 0022 0,0,0
-A6 0020 Pipe Spawner Uses 10 Extra Bytes\n- Extra Byte 1 - Direction - 0 - down, 1 - left, 2 - up, 3 - right\n- Extra Byte 2 - Delay - How many frames between spawns\n- Extra Byte 3 - Spawn Mode - 0 = Spawn sprite specified in extra bytes, 1 = Spawn sprites using list below\n- Extra Byte 4 - Sprite # - Sprite to spawn if using mode 0\n- Extra Byte 5 - Sprite Extra Bits - Extra bits for spawned sprite if using mode 0, same as in LM 2 = custom, 3 = custom with extra bit, 0 = normal\n- Extra Byte 6 - Max on screen - How many sprites can exist from the sprite at once, max of 0 = no limit, must be 0-8\n- Extra Byte 7 - Total Spawn - How many sprites can come out of the pipe total, Total of 0 = no limit \n- Extra Byte 8 - Fire Mode - If 0 the sprite will just slowly push out of the pipe, otherwise it will fire out of the pipe like a cannon\n- Extra Byte 9  - X Speed - Horizontal fire speed if using cannon mode\n- Extra Byte 10 - Y Speed - Vertical fire speed if using cannon mode
-A6 0022 0,0,0
+A5 30022 0,0, * Sprite    \n Offsetter *
+
+; Pipe Spawner
+A6 30020 Pipe Spawner Uses 10 Extra Bytes\n- Extra Byte 1 - Direction - 0 - down, 1 - left, 2 - up, 3 - right\n- Extra Byte 2 - Delay - How many frames between spawns\n- Extra Byte 3 - Spawn Mode - 0 = Spawn sprite specified in extra bytes, 1 = Spawn sprites using list below\n- Extra Byte 4 - Sprite # - Sprite to spawn if using mode 0\n- Extra Byte 5 - Sprite Extra Bits - Extra bits for spawned sprite if using mode 0, same as in LM 2 = custom, 3 = custom with extra bit, 0 = normal\n- Extra Byte 6 - Max on screen - How many sprites can exist from the sprite at once, max of 0 = no limit, must be 0-8\n- Extra Byte 7 - Total Spawn - How many sprites can come out of the pipe total, Total of 0 = no limit \n- Extra Byte 8 - Fire Mode - If 0 the sprite will just slowly push out of the pipe, otherwise it will fire out of the pipe like a cannon\n- Extra Byte 9  - X Speed - Horizontal fire speed if using cannon mode\n- Extra Byte 10 - Y Speed - Vertical fire speed if using cannon mode
+
+A6 30022 0,0, * Pipe Spawn Down *
+A6 30122 0,0, * Pipe Spawn Left *
+A6 30222 0,0, * Pipe Spawn Up *
+A6 30322 0,0, * Pipe Spawn Right *
