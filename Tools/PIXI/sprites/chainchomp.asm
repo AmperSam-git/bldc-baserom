@@ -8,8 +8,8 @@
 		!GFX_FileNum = $9D      	;DSS ExGFX number for this sprite
 
 		!CHAINTILE = $02
-		!OPENMOUTHTILE = $00
-		!CLOSEDMOUTHTILE = $01
+		!OPENMOUTHTILE = $01
+		!CLOSEDMOUTHTILE = $00
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
