@@ -1,9 +1,13 @@
 v1.11
-- many sprite additions:
-	- SMB2/3: ptooie, nipper, pansers, phanto, para-beetles, chain-chomps, directional platforms, albatoss
-	- YI: cloud drop, bumpty and varieties, spike & ball
-	- variants: other pokeys, diagonal springboards, sideways wooden spike, flying mega moles
-	- other: homing bullet bill, trampoline, bumper, cooligan
+- many sprite additions!
+- sprites added from SMB2/3:
+	ptooie, nipper, pansers, phanto, para-beetles, chain-chomps, directional platforms, albatoss
+- sprites from Yoshi's island:
+	cloud drop, bumpty and varieties, spike & ball
+- variants on vanilla sprites:
+	other pokeys, diagonal springboards, sideways wooden spike, flying mega moles
+- other sprites added:
+	homing bullet bill, trampoline, bumper, cooligan, icicle
 - patched controller optimization from spoonsss
 
 v1.10
