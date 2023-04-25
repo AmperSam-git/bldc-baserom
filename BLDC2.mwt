@@ -45,7 +45,6 @@
 	Big fire-spitting red Snifit, falls from ledges
 	Big fire-spitting blue Snifit, stays on ledges
 	Big fire-spitting green Snifit, hops in place
-0F	Bumpty
 10	Muncher Bridge
 	Muncher Bridge (Vertical)
 	Muncher Bridge, horizontal and vertical
@@ -192,6 +191,10 @@
 3B	Falling Icicle
 3C	Giant Thwomp, Down.
 	Giant Thwomp, Up.
+3D	Bumpty
+3E	Stationary Flying Bumpty
+	Stationary Flying Bumpty, Up and Down
+	Stationary Flying Bumpty, Up and Down, Faster
 40	Hammer Bro
 	Hammer Bro, small jump only
 	Hammer Bro Continuous

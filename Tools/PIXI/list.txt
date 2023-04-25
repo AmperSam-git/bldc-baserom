@@ -13,7 +13,7 @@
 0C Goombud.json
 0D punchy_gp.json
 0E Snifit.json
-0F Bumpty.json
+
 
 10 MuncherBridge.json
 11 pot.json
@@ -62,6 +62,8 @@
 3A directional_platform_4.json
 3B FallingIcicle.json
 3C GiantThwomp.json
+3D Bumpty.json
+3E StationaryFlyingBumpty.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json

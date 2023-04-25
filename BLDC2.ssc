@@ -1315,8 +1315,6 @@ See .asm file for more details
 0D 0022 0,0,0
 0E 0020 Small snifit
 0E 0022 0,0,0
-0F 0020 Bumpty
-0F 0022 0,0,0
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
 10 0022 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
@@ -1430,36 +1428,42 @@ See .asm file for more details
 3C 0022 0,0,0 8,0,84A -8,0,846 8,16,84B -8,16,847 -8,-16,845 -8,-32,844 8,-16,849 8,-32,848 24,-32,84C 24,-16,84D 24,0,84E 24,16,84F
 3C 0030 A giant Twhomp that attemps to stun and crush the player. It goes upwards.
 3C 0032 0,0,0 8,0,84A -8,0,846 8,16,84B -8,16,847 -8,-16,845 -8,-32,844 8,-16,849 8,-32,848 24,-32,84C 24,-16,84D 24,0,84E 24,16,84F
+3D 0020 Bumpty
+3D 0022 0,0,0
+3E 0020 A flying bumpty that stays in place.
+3E 0022 0,13,856 -5,13,856 0,0,854 0,2,855
+3E 0030 A flying bumpty that flies up and down only. Extra byte 1 - Y-speed max, Extra Byte 2 - Acceleration.
+3E 0032 0,13,856 -5,13,856 0,0,854 0,2,855 4,-4,857
 40 0020 Hammer Bro
-40 0022 -5,-14,854 0,0,855 -2,1,856 4,-20,1DB 5,-6,857
+40 0022 -5,-14,858 0,0,859 -2,1,85A 4,-20,1DB 5,-6,85B
 41 0030 Bomb Bro
-41 0032 -5,-14,859 0,0,85A -2,1,85B 0,-20,3F 5,-6,85C
+41 0032 -5,-14,860 0,0,861 -2,1,862 0,-20,3F 5,-6,863
 42 0030 Boomerang Bro
-42 0032 -5,-14,860 0,0,861 -2,1,862 4,-17,864 5,-6,863
+42 0032 -5,-14,865 0,0,866 -2,1,867 4,-17,869 5,-6,868
 43 0020 Bullet Bro
-43 0022 -5,-14,865 0,0,866 -2,1,867 0,-20,25 5,-6,868
+43 0022 -5,-14,86A 0,0,86B -2,1,86C 0,-20,25 5,-6,86D
 44 0020 Elec Bro
-44 0022 -5,-14,86A 0,0,86B -2,1,86C 5,-6,86D
+44 0022 -5,-14,86F 0,0,870 -2,1,871 5,-6,872
 45 0030 Fire Bro
-45 0032 -5,-14,86F 0,0,870 -2,1,871 5,-6,872
+45 0032 -5,-14,874 0,0,875 -2,1,876 5,-6,877
 46 0020 Flame Bro
-46 0022 5,-3,877 0,0,875 0,1,876 -5,-14,874
+46 0022 5,-3,87C 0,0,87A 0,1,87B -5,-14,879
 47 0030 Ball Bro
-47 0032 -5,-14,8F0 0,0,8F1 -2,1,8F2 0,-20,8F4 5,-6,8F3
+47 0032 -5,-14,8AB 0,0,8AC -2,1,8AD 0,-20,8AF 5,-6,8AE
 48 0030 Fire Bro
-48 0032 -5,-14,8F5 0,0,8F6 -2,1,8F7 5,-6,8F8
+48 0032 -5,-14,8F0 0,0,8F1 -2,1,8F2 5,-6,8F3
 49 0020 Mix Bro
-49 0022 -5,-14,8FA 0,0,8FB -2,1,8FC 5,-6,8FD 6,-17,10A
+49 0022 -5,-14,8F5 0,0,8F6 -2,1,8F7 5,-6,8F8 6,-17,10A
 4A 0030 Shell Bro
-4A 0032 -5,-14,8FF 0,0,900 -2,1,901 0,-20,30 5,-6,902
+4A 0032 -5,-14,8FA 0,0,8FB -2,1,8FC 0,-20,30 5,-6,8FD
 4B 0020 Sledge Bro
-4B 0022 -6,-16,917 2,-16,918 -6,0,919 2,0,91A 10,-22,91C 9,-8,91B
+4B 0022 -6,-16,8FF 2,-16,900 -6,0,901 2,0,902 10,-22,904 9,-8,903
 4C 0020 Curve Bro
-4C 0022 -6,-16,91D 2,-16,91E -6,0,91F 10,-19,922 2,0,920 9,-8,921
+4C 0022 -6,-16,917 2,-16,918 -6,0,919 10,-19,91C 2,0,91A 9,-8,91B
 4D 0020 braze Bro
-4D 0022 -6,-16,923 2,-16,924 -6,0,925 2,0,926 9,-8,927
+4D 0022 -6,-16,91D 2,-16,91E -6,0,91F 2,0,920 9,-8,921
 4E 0020 Frost Bro
-4E 0022 -6,-16,929 2,-16,92A -6,0,92B 2,0,92C 9,-8,92D
+4E 0022 -6,-16,923 2,-16,924 -6,0,925 2,0,926 9,-8,927
 60 0020 Platform Megapack
 60 0022 0,0,0
 80 0020 Creating Block Snake
