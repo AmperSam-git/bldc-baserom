@@ -63,7 +63,6 @@
 3B FallingIcicle.json
 3C GiantThwomp.json
 3D Bumpty.json
-3E StationaryFlyingBumpty.json
 
 40 C_Hammer_Bro.json
 41 C_Bomb_Bro.json

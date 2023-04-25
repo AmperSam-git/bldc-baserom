@@ -3,7 +3,7 @@ v1.11
 - sprites added from SMB2/3:
 	ptooie, nipper, pansers, phanto, para-beetles, chain-chomps, directional platforms, albatoss
 - sprites from Yoshi's island:
-	cloud drop, bumpty and varieties, spike & ball
+	cloud drop, bumpty, spike & ball
 - variants on vanilla sprites:
 	other pokeys, diagonal springboards, sideways wooden spike, flying mega moles
 - other sprites added:
