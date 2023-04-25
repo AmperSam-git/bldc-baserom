@@ -62,14 +62,19 @@ elseif read1($00FFD5) == $23
 	!addr = $6000
 	!sa1 = 1
 endif
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;Check for other hijacks
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+!Setting_SSP_Hijack_00EA18 = 0
+
 ;Walljump/Note Block Glitch Fix
-	!WalljumpNoteBlockFixPatch = 0
-	if read1($00EA16) != $C2		;>Originally [REP #$20] [C2 20]
-		!WalljumpNoteBlockFixPatch = 1
-	endif
+!WalljumpNoteBlockFixPatch = 0
+if read1($00EA16) != $C2		;>Originally [REP #$20] [C2 20]
+	!WalljumpNoteBlockFixPatch = 1
+endif
 
 incsrc "../../Defines/ScreenScrollingPipes.asm"
 
@@ -243,9 +248,9 @@ incsrc "../../Defines/ScreenScrollingPipes.asm"
 		autoclean JML MakeGoombaInvisible
 		nop
 
-;	org $01A1EC
-;		autoclean JSL MakeBobOmbInvisible
-;		nop
+	org $01A1EC
+		autoclean JSL MakeBobOmbInvisible
+		nop
 
 	org $01A352
 		autoclean JSL MakeBabyYoshiInvisible
@@ -740,9 +745,9 @@ DontUnstunInPipes:   ;>$JML from $0196A1
 	BCC .NoFreeze
 
 	.FreezeTimerAtMinimum
-		LDA.b #($04+!Setting_SSP_Minimal_StuntimerSprites)	;\If #$04 is less than timer (or timer >= #$04),
-		CMP !1540,x						;|don't set it to be 1 frame before unstun.
-		BCC ..NotDecrementPast					;/
+		LDA #$5E   				;\If #$04 is less than timer (or timer >= #$04),
+		CMP !1540,x				;|don't set it to be 1 frame before unstun.
+		BCC ..NotDecrementPast	;/
 
 		..DecrementPast
 			STA !1540,x
