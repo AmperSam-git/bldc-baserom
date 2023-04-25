@@ -1315,6 +1315,8 @@ See .asm file for more details
 0D 0022 0,0,0
 0E 0020 Small snifit
 0E 0022 0,0,0
+0F 0020 A cooligan. It slides around and takes 2 hits to kill.
+0F 0022 0,0,0
 10 0020 Muncher Bridge.\nExtra Byte 1: If set it will start as vertical, if the extra bit is set while extra byte 1 is set it will start vertical then go horizontal.\nExtra Byte 2: If set will insta kill the player even if they have a star or riding yoshi.\nExtra Byte 3:\nif set to 00 then it will use the default palette set in the CFG editor\nif set to 1 it will use palette 8, 2 palette 9, 3 palette A, ..., 8 palette F\nif anything greater than 8 it will just do (value modulo 8)
 
 10 0022 -32,0,17 -16,0,17 0,0,17 16,0,17 32,0,17
@@ -1449,7 +1451,7 @@ See .asm file for more details
 46 0020 Flame Bro
 46 0022 5,-3,87C 0,0,87A 0,1,87B -5,-14,879
 47 0030 Ball Bro
-47 0032 -5,-14,8AB 0,0,8AC -2,1,8AD 0,-20,8AF 5,-6,8AE
+47 0032 -5,-14,89E 0,0,89F -2,1,8A0 0,-20,8A2 5,-6,8A1
 48 0030 Fire Bro
 48 0032 -5,-14,8F0 0,0,8F1 -2,1,8F2 5,-6,8F3
 49 0020 Mix Bro
@@ -1488,3 +1490,7 @@ A6 0020 Pipe Spawner Uses 10 Extra Bytes\n- Extra Byte 1 - Direction - 0 - down,
 A6 0022 0,0,0
 C0 0020 Undefined Sprite
 C0 0022 0,0,0
+C1 0020 A Cooligan shooter. The extra bit determines the shooting direction. It is currently set to shoot right.
+C1 0022 0,0,0
+C1 0030 A Cooligan shooter. The extra bit determines the shooting direction. It is currently set to shoot left.
+C1 0032 0,0,0

@@ -13,7 +13,7 @@
 0C Goombud.json
 0D punchy_gp.json
 0E Snifit.json
-
+0F cooligan.json
 
 10 MuncherBridge.json
 11 pot.json
@@ -119,6 +119,7 @@ B9 projectiles/torpedo.cfg
 
 ; SHOOTERS
 C0 RealHomingShooter.json
+C1 cooliganshooter.json
 
 EXTENDED:
 00 boomerang.asm
@@ -129,6 +130,7 @@ EXTENDED:
 05 Ball.asm
 06 Needle.asm
 07 ElecBall.asm
+08 sunglasses.asm
 
 CLUSTER:
 10 cluster_sparkle.asm

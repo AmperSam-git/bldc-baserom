@@ -168,7 +168,7 @@ exgfx_length:
     db $01              ;# A4 - Torpedo
     db $02              ;# A5 - Icicle
     db $10              ;# A6 - Giant Thwomp
-    db $0              ;# A7 - Unused
+    db $07              ;# A7 - Cooligan
     db $0              ;# A8 - Unused
     db $0              ;# A9 - Unused
     db $0              ;# AA - Unused

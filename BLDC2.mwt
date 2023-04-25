@@ -45,6 +45,7 @@
 	Big fire-spitting red Snifit, falls from ledges
 	Big fire-spitting blue Snifit, stays on ledges
 	Big fire-spitting green Snifit, hops in place
+0F	Cooligan.
 10	Muncher Bridge
 	Muncher Bridge (Vertical)
 	Muncher Bridge, horizontal and vertical
@@ -272,3 +273,4 @@ A6	Pipe Spawner (Down)
 	Pipe Cannon Spawner (Up)
 	Pipe Cannon Spawner (Right)
 C0	Homing Bill Shooter
+C1	Cooligan shooter.
