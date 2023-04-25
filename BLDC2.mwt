@@ -212,8 +212,16 @@
 	Throwaway Pokey (Alternative)
 32	Bouncing Pokey (3 or 5 segments)
 	Bouncing Pokey (4 segment)
-34	Albatoss
-	Albatoss Bomber
+33	Albatoss
+	Bomber Albatoss
+	Bomber Albatoss, pauses before bombing
+	Bomber Albatoss (Custom)
+	Bomber Albatoss (Custom), pauses before bombing
+34	Rideable Albatoss
+	Rideable Bomber Albatoss
+	Rideable Bomber Albatoss, pauses before bombing
+	Rideable Bomber Albatoss (Custom)
+	Rideable Bomber Albatoss (Custom), pauses before bombing
 35	Sideway Wood Spike, facing right
 	Sideway Wood Spike, facing-left
 36	Flyin Mega Mole, flies forward

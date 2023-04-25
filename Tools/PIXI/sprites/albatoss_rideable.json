@@ -13,7 +13,7 @@
   },
   "$166E": {
     "Use second graphics page": true,
-    "Palette": 4,
+    "Palette": 3,
     "Disable fireball killing": false,
     "Disable cape killing": false,
     "Disable water splash": false,
@@ -27,7 +27,7 @@
     "Can't be kicked like shell": false,
     "Process interaction with Mario every frame": true,
     "Gives power-up when eaten by yoshi": false,
-    "Don't use default interaction with Mario": false
+    "Don't use default interaction with Mario": true
   },
   "$1686": {
     "Inedible": false,
@@ -91,7 +91,7 @@
   ],
   "Collection": [
     {
-      "Name": "Albatoss",
+      "Name": "Rideable Albatoss",
       "ExtraBit": false,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
@@ -107,7 +107,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Bomber Albatoss",
+      "Name": "Rideable Bomber Albatoss",
       "ExtraBit": true,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
@@ -123,7 +123,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Bomber Albatoss, pauses before bombing",
+      "Name": "Rideable Bomber Albatoss, pauses before bombing",
       "ExtraBit": true,
       "Extra Property Byte 1": 4,
       "Extra Property Byte 2": 0,
@@ -139,7 +139,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Bomber Albatoss (Custom)",
+      "Name": "Rideable Bomber Albatoss (Custom)",
       "ExtraBit": true,
       "Extra Property Byte 1": 128,
       "Extra Property Byte 2": 0,
@@ -155,7 +155,7 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Bomber Albatoss (Custom), pauses before bombing",
+      "Name": "Rideable Bomber Albatoss (Custom), pauses before bombing",
       "ExtraBit": true,
       "Extra Property Byte 1": 132,
       "Extra Property Byte 2": 0,

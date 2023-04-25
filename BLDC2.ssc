@@ -1804,6 +1804,21 @@ See .asm file for more details
 32 0030 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses alternative segment 
 32 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C
 
+
+; Albatoss
+33 30020 Albatoss
+33 30022 0,0,898 16,0,899
+33 30032 0,0,898 16,0,899, 8,16,846
+33 30432 0,0,898 16,0,899, 8,16,846 -4,-4,10A
+33 38032 0,0,898 16,0,899, 8,16,893
+33 38432 0,0,898 16,0,899, 8,16,893 -4,-4,10A
+34 30020 Rideable Albatoss
+34 30022 0,0,89A 16,0,89B
+34 30032 0,0,89A 16,0,89B, 8,16,846
+34 30432 0,0,89A 16,0,89B, 8,16,846 -4,-4,10A
+34 38032 0,0,89A 16,0,89B, 8,16,893
+34 38432 0,0,89A 16,0,89B, 8,16,893 -4,-4,10A
+
 ; Sideway Wood Spike
 35 0020 Sideway Wood Spike, facing-right
 35 0022 0,0,8F8 16,0,8F8 32,0,8F8 48,0,8F8 64,0,8F9
