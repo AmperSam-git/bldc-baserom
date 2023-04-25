@@ -1790,6 +1790,20 @@ See .asm file for more details
 2F 0030 Yellow Spike, turns to face Mario will jump over sprites
 2F 0032 0,0,863
 
+; Pokeys
+30 0020 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+30 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C 0,64,27
+30 0030 A pokey that regenerates its segments. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+30 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C 0,64,27
+31 0020 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+31 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C -24,48,56C 16,0,10A
+31 0030 This pokey throws its segments at the player. It'll use different number of segments on extra bit set. Currently it uses alternative segment settings.
+31 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C 16,16,10A -24,48,56C
+32 0020 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses default segment settings.
+32 0022 0,0,55C 0,16,56C 0,32,56C 0,48,56C 0,64,56C
+32 0030 This pokey moves like Football (bounces on surfaces). It'll use different number of segments on extra bit set. Currently it uses alternative segment 
+32 0032 0,16,55C 0,32,56C 0,48,56C 0,64,56C
+
 ; Sideway Wood Spike
 35 0020 Sideway Wood Spike, facing-right
 35 0022 0,0,8F8 16,0,8F8 32,0,8F8 48,0,8F8 64,0,8F9
