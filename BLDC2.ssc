@@ -1778,6 +1778,16 @@ See .asm file for more details
 2B 30020 When the player touches this sprite, they're bumped away.
 2B 30022 0,0,848 16,0,849 0,16,858 16,16,859
 
+; YI Spike
+2C 0030 Green Spike, does nothing special.
+2C 0032 0,0,860
+2D 0030 Red Spike, stays on ledges.
+2D 0032 0,0,861
+2E 0030 Blue Spike, walks fast will stay on ledges.
+2E 0032 0,0,862
+2F 0030 Yellow Spike, turns to face Mario will jump over sprites
+2F 0032 0,0,863
+
 ; Giant Thwomp
 3C 0020 A giant Twhomp that attemps to stun and crush the player. It goes downwards.
 3C 0022 0,0,0 8,0,921 -8,0,920 8,16,931 -8,16,930 -8,-16,910 -8,-32,900 8,-16,911 8,-32,901 24,-32,902 24,-16,912 24,0,922 24,16,932 0,48,824
