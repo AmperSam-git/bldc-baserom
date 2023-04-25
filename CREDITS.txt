@@ -135,6 +135,7 @@ SMB3 Ptooie - Romi - https://smwc.me/s/16134
 SMW Hammer Bro (Stationary) - Sonikku - https://smwc.me/s/3406
 Sprite Offsetter - Koopster - https://smwc.me/s/26541
 Stationary Magikoopa - yoshicookiezeus - https://smwc.me/s/9479
+Stationary/Vertical Flying Bumpty - RussianMan - https://smwc.me/s/32816
 Super Mario Maker Flying Spiny - RussianMan - https://smwc.me/s/22096
 Throwaway Pokey - RussianMan - https://smwc.me/s/30194
 Thwomp Pack - Tattletale, Atari2.0 (modifications) - https://smwc.me/s/19430
@@ -142,7 +143,6 @@ Trampoline - Donut - https://smwc.me/s/32476
 Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 YI/SMB3 Spike (non-dynamic) - mikeyk - https://smwc.me/s/3570
-Stationary/Vertical Flying Bumpty - RussianMan - https://smwc.me/s/32816
 
 ~~ NOTE: All custom sprites have been modified to work with DSS.
 
