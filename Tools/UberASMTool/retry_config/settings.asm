@@ -73,7 +73,7 @@
 
 ; If 1, Start+Select out of a level is always possible.
 ; Otherwise, it's only possible with the instant Retry option, or with the Retry prompt with the "Exit" option disabled, or if the level is already beaten like vanilla.
-    !always_start_select = 0
+    !always_start_select = 1
 
 ; If 1, the camera won't scroll vertically during Mario's death animation.
     !death_camera_lock = 1
