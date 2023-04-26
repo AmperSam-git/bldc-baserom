@@ -43,6 +43,7 @@ ExGraphics
 8D - Cave Layer 3 Graphics and Animation
 8E - Cave Layer 3 Tilemap
 8F - Forest Layer 3 Graphics
+
 90 - Forest Layer 3 Tilemap
 91 - Choco Mountain 1 Layer 3 Graphics
 92 - Choco Mountain 1 Layer 3 Tilemap
@@ -64,8 +65,9 @@ A1 - Castle 2 Layer 3 Tilemap
 A2 - SMAS SMB3 Pipes BG (BG1)
 A3 - SMAS SMB3 Castle BG (BG1)
 A4 - SMAS SMB3 Castle FG (FG3)
-
+A5 - SMAS SMB3 Desert BG (BG1)
 A6 - SMAS SMB3 Green Hills 2 BG (BG1)
+A7 - SMAS SMB3 Desert FG (BG1)
 
 B1 - SMW Underwater Layer 3 Graphics (LG4)
 B2 - SMW Underwater Layer 3 Tilemap (LT3)
