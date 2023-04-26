@@ -138,4 +138,5 @@ CLUSTER:
 02 flowers.asm
 03 rain.asm
 04 sandstorm.asm
+05 fire.asm
 10 cluster_sparkle.asm
