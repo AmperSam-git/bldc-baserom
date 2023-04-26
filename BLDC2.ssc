@@ -1752,8 +1752,10 @@ See .asm file for more details
 25 0032 0,0,866 0,16,867
 
 ; Phanto
-26 0020 The sprite will only hurt Mario when he's carrying a key.
+26 0020 Phanto, always harmful. Chases Mario when he has a key
 26 0022 0,0,845
+26 0030 Phanto, harmless unless Mario has a key
+26 0032 0,0,845 0,0,10A
 
 ; Chain chomp
 27 0020 A Chain Chomp from SMB3 on a chain

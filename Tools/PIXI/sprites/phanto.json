@@ -59,7 +59,7 @@
   "Map16": "",
   "Displays": [
     {
-      "Description": "The sprite will only hurt Mario when he's carrying a key.",
+      "Description": "Chases Mario when he's carrying a key. If the extra bit is set, the sprite will ONLY hurt Mario when he's carrying a key.",
       "ExtraBit": false,
       "Tiles": [
         {
@@ -76,8 +76,24 @@
   ],
   "Collection": [
     {
-      "Name": "Phanto",
+      "Name": "Phanto, always harmful",
       "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Phanto, harmless unless key",
+      "ExtraBit": true,
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,

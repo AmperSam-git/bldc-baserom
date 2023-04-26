@@ -191,7 +191,8 @@
 	Big Green para-beetle, move away
 25	Cloud Drop, horizontal
 	Cloud Drop, vertical
-26	Phanto
+26	Phanto, always harmful
+	Phanto, harmless unless key
 27	Chain Chomp
 28	Chomp Shark, disappears
 	Chomp Shark, omnomnomnomnom
