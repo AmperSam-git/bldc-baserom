@@ -145,7 +145,8 @@ Tricky Magikoopa - RussianMan - https://smwc.me/s/27365
 X/Y Position Locked Sprite v1.2 - Kevin - https://smwc.me/s/24622
 YI/SMB3 Spike (non-dynamic) - mikeyk - https://smwc.me/s/3570
 
-~~ NOTE: All custom sprites have been modified to work with DSS.
+NOTE: All custom sprites have been modified to work with the Dynamic Spritesheet System
+
 
 -- Graphics --
 Super Mario All-Stars themed resources - Amomario123w, AmperSam, Batata Douce, Black Sabbath, cheeyev, DragonFire6780, MarioFanGamer, Dan, Green Jerry, Hinalyte, imamelia, Merio, Natsuz2, pieguy1372, RaindropDry, Skewer, Sonikku, Telinc1, Tornado, yno14jax
@@ -157,16 +158,16 @@ NOTE: search the Graphics section on SMW Central to find much of the graphics re
 
 
 -- UberASM --
+Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 Horizontal/Vertical Level Wrap - Thomas - https://smwc.me/s/18441
 Instant Death on Powerup Loss v2.1 - badummzi - https://smwc.me/s/22847
 ON/OFF Double Hit fix - Kevin - https://smwc.me/s/30011
 One-Way Scroll - Thomas - https://smwc.me/s/17094
 Retry System - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.4.4
-Controller Read Optimization - spooonsss - https://smwc.me/s/32580
 
 
 -- Custom Blocks --
-Custom Conveyor Blocks v1.0 - EternityLarva - https://smwc.me/s/20327
+Custom Conveyor Blocks v1.0* - EternityLarva - https://smwc.me/s/20327
 Donut Lift Block v1.1 - Davros, mikeyk, AmperSam (modifications) - https://smwc.me/s/20418
 Doors* - MarioFanGamer - https://smwc.me/s/21130
 Hurt / Death Block for Kaizo / Pit Hacks - dacin - https://smwc.me/s/27268
@@ -174,6 +175,7 @@ Icy/Frozen Blocks Pack - Ersanio - https://smwc.me/s/27360
 Key lock blocks* - HammerBrother - https://smwc.me/s/13540
 Key Teleport - smkdan - https://smwc.me/s/21068
 Ledge Vine - ASM - https://smwc.me/s/3944
+Miscellaneous Other Blocks - AmperSam
 No Jump - Darolac - https://smwc.me/s/21777
 One-way blocks 1.2 - HammerBrother - https://smwc.me/s/18158
 Outline Coin - MarioE - https://smwc.me/s/3819

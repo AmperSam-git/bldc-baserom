@@ -27,6 +27,9 @@
 2aa	0	A small Silver P-switch door.
 2ab	0	A block that will teleport Mario to the current screen exit.
 2ac	0	A single-use bounce block.
+2ad	0	The top part of a door which you can only enter if you carry a key.
+2ae	0	A door which you can only enter if you carry a key.
+2af	0	The bottom part of a boss door which you can only enter if you carry a key.
 2b0	0	The bottom of the 1x2 key block.
 2b1	0	The left of the 2x1 key block.
 2b2	0	The right of the 2x1 key block.

@@ -1,14 +1,17 @@
 v1.11
 - many sprite additions!
-- sprites added from SMB2/3:
-	ptooie, nipper, pansers, phanto, para-beetles, chain-chomps, directional platforms, albatoss
-- sprites from Yoshi's island:
-	cloud drop, bumpty, spike & ball
-- variants on vanilla sprites:
-	other pokeys, diagonal springboards, sideways wooden spike, flying mega moles
-- other sprites added:
-	homing bullet bill, trampoline, bumper, cooligan, icicle
-- patched controller optimization from spoonsss
+	- sprites added from SMB2/3:
+		- ptooie, nipper, pansers, phanto, para-beetles, chain-chomps, directional platforms, albatoss
+	- sprites from Yoshi's island:
+		- cloud drop, bumpty, spike & ball
+	- variants on vanilla sprites:
+		- other pokeys, diagonal springboards, sideways wooden spike, flying mega moles
+	- other sprites added:
+		- homing bullet bill, trampoline, bumper, cooligan, icicle, cluster effects pack
+- block additions!
+	- locked doors, single-use bounce block, fast pipes that kill held item
+- tidied up all the sprite display data in LM
+- controller read optimization contributed from spoonsss
 
 v1.10
 - update piranha and venus plant graphics to vanilla
