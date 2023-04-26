@@ -109,12 +109,6 @@ print "INIT ",pc
 
     LDA !extra_byte_1,x         ;|
     STA !nextDirectionRAM,x
-    CMP #$03                    ;\ Store the arrow tile to draw based on the
-    BCS +                       ;| initial direction.
-    LDA !dss_tile_buffer+!arrow_tile_horizontal ;| Arrow Horizontal
-    BRA ++                      ;|
-+   LDA !dss_tile_buffer+!arrow_tile_vertical   ;| Arrow Vertical
-++  STA !1602,x                 ;/
     RTL
 
 print "MAIN ",pc
@@ -262,6 +256,16 @@ Graphics:
     bcs .gfx_loaded
     rts
 .gfx_loaded
+
+
+    LDA !directionRAM,x
+    CMP #$03                    ;\ Store the arrow tile to draw based on the
+    BCS +                       ;| initial direction.
+    LDA !dss_tile_buffer+!arrow_tile_horizontal ;| Arrow Horizontal
+    BRA ++                      ;|
++   LDA !dss_tile_buffer+!arrow_tile_vertical   ;| Arrow Vertical
+++  STA !1602,x
+
     LDA !shouldDisappear,x  ;\ If the platform should not disappear, always draw it.
     BEQ .draw               ;/
     LDA !directionRAM,x     ;\ If the platform is still...

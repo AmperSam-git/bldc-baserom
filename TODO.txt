@@ -1,2 +1,1 @@
-- fix arrow in smb3 directional platform
 - update customizable sprite documentation
